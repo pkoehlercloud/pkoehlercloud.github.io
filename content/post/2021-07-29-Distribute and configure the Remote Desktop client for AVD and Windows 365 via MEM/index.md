@@ -6,6 +6,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Endpoint Manager"]
 categories: ["Azure Virtual Desktop", "Intune"]
+description: "Discover how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming Windows 365 Cloud PC service through Microsoft Endpoint Manager (Intune) in this blog. Learn the step-by-step process, from packaging the Remote Desktop Client to uploading it to Intune, importing it to your tenant, configuring auto feed discovery, and more. Enhance user experience and streamline access to remote computing resources from the Microsoft Cloud. "
 ---
 
 Hi everyone,

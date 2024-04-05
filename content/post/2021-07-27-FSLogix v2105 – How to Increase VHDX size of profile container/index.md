@@ -7,6 +7,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["VMware Horizon","Horizon Cloud", "Azure Virtual Desktop", "FSLogix", "Profile Management"]
 categories: ["VMware", "Citrix", "Azure Virtual Desktop", "FSLogix"]
+description: "Learn about increasing FSLogix profile size in Azure Virtual Desktop with our latest blog post. No PowerShell or data migration needed."
 ---
 
 Hi and welcome to my latest blog post about Azure Virtual Desktop and FSLogix v2105.

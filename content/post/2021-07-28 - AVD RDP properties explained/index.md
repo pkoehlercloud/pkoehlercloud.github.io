@@ -7,6 +7,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Azure Virtual Desktop", "Azure"]
 categories: ["Azure Virtual Desktop"]
+description: "Learn about managing RDP properties in Azure Virtual Desktop with our comprehensive guide. Discover where to define RDP properties and understand their impact on remote desktop sessions. Whether through the Azure Portal or PowerShell, we've got you covered."
 ---
 
 Hi everyone it´s Patrick again with a new article on the RDP properties in Windows Virtual Desktop.

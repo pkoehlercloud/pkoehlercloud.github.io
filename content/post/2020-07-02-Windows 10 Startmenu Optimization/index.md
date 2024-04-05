@@ -6,6 +6,7 @@ draft = false
 author = "Patrick Koehler"
 tags = ["Azure Virtual Desktop", "Azure"]
 categories = ["Azure Virtual Desktop", "Windows"]
+description = "This blog is focused on enhancing the User Experience in Azure Virtual Desktop for both end-users and admins, leveraging the capabilities of the WVD Spring Release. He dives into configuring the Windows 10 Start Menu and Taskbar, providing detailed insights and tips for optimization, empowering administrators to tailor the environment to meet their users' needs effectively."
 +++
 
 Hi everybody it´s Patrick again with another blog post!

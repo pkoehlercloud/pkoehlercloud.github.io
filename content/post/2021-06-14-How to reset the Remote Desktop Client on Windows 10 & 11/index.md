@@ -6,6 +6,7 @@ draft = false
 author = "Patrick Koehler"
 tags = ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
 categories = ["Azure Virtual Desktop", "Windows", "Microsoft Azure"]
+description = "A quick tip on how to reset the Remote Desktop client."
 +++
 
 Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.

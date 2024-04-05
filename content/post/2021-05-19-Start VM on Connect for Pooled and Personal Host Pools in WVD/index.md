@@ -6,6 +6,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
 categories: ["Azure Virtual Desktop", "FSLogix", "Microsoft Azure"]
+description: "Discover how to configure the Start VM on Connect feature for both Pooled and Personal Host Pools in this blog by Eva Seydl, a Program Manager at Microsoft. Learn about the prerequisites, including the supported Remote Desktop Clients and the creation of a custom role. Dive into step-by-step instructions on enabling and disabling the feature using PowerShell commands and the Azure Portal. Explore additional features like shutting down virtual machines at logoff and discover two methods to achieve this for Pooled Session Hosts. Follow along to optimize your Windows Virtual Desktop environment and save costs effectively."
 ---
 
 This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.

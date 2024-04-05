@@ -7,6 +7,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Edge", "Azure", "Windows 11", "Windows 10"]
 categories: ["Azure Virtual Desktop", "Microsoft Azure"]
+description: "Learn how to optimize browsing experiences, especially in multi-session environments like Azure Virtual Desktop, with Microsoft Edge Chromium's latest version 89, featuring startup boost and sleeping tabs functionalities. Explore configuration steps and the impact on resource consumption, enhancing productivity for users navigating numerous tabs and resource-heavy websites."
 ---
 
 Hi everyone,

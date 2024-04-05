@@ -6,6 +6,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Intune", "Endpoint Management"]
 categories: ["Windows 365"]
+description: "Learn the essentials of managing images in Windows 365 with this guide. Discover prerequisites, preparation steps, and strategies for replacing images. Find out how to import images to Windows 365 and get tips for updating provisioning policies. Plus, don't miss the important notice about reprovisionings impact on user configurations and files."
 ---
 
 Hello everyone and welcome back to the Windows 365 full guide. This week we continue the guide with Image Management capabilities and what you need to take care of, when replacing the currently used image for your Cloud PCs.

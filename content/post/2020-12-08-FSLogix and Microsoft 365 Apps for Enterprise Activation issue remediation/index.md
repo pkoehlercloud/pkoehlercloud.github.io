@@ -6,6 +6,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "MSIX", "MSIX App Attach", "Azure", "Windows 11", "Windows 10"]
 categories: [ "Azure Virtual Desktop", "Windows"]
+description: "Discover how I resolved an Office activation issue on Windows Virtual Desktop (WVD) by investigating parameters like FSLogix version and Office update channel. Utilize my free tool, available on GitHub, to automatically reset user-related information in the registry and renew the activation token, ensuring seamless Office functionality without data loss."
 ---
 
 Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.

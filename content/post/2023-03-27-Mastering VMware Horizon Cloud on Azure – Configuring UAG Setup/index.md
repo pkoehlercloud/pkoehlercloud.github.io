@@ -13,6 +13,7 @@ tags = [
 ]
 categories = ["Horizon Cloud", "Microsoft Azure", "VMware"]
 image = "title.png"
+description = "This blog series dives into setting up VMware Horizon Cloud on Microsoft Azure. In this installment, we focus on configuring a Service Principal for the VMware Universal Console. Learn how to securely grant administrative privileges, generate necessary credentials, and create a custom role with minimal permissions. Follow step-by-step instructions for seamless integration."
 +++
 
 Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial. 

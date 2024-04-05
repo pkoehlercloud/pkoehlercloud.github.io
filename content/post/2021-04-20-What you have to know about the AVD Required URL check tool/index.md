@@ -7,6 +7,7 @@ draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
 categories: ["Azure Virtual Desktop", "FSLogix", "Microsoft Azure"]
+description: "Expect insights on Microsoft's tool for checking Session Hosts' connectivity to WVD services and tips for configuring Azure Firewall for Windows Virtual Desktop. Discover tool requirements and execution steps for ensuring connectivity."
 ---
 
 On 16.04.2021 Tom Hickling (https://twitter.com/@tomhickling) announced via LinkedIn, that Microsoft released a tool to validate that Session Hosts can reach the required services to ensure full connectivity to the WVD services.

@@ -6,6 +6,7 @@ draft = false
 author = "Patrick Koehler"
 tags = ["VMware Horizon","Horizon Cloud"]
 categories = ["Horizon Cloud", "Microsoft Azure", "VMware"]
+description = "In this next chapter of Mastering Horizon Cloud on Azure, complete your setup by configuring Active Directory binding and enabling monitoring. Follow concise steps in the Horizon Universal Console to input domain information, LDAP settings, and service account details. Sign back in to access the dashboard after finalizing setup."
 +++
 
 Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series. 

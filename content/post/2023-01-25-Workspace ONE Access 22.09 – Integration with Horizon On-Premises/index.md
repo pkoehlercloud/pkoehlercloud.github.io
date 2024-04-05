@@ -6,6 +6,7 @@ draft = false
 author = "Patrick Koehler"
 tags = ["VMware Horizon","Horizon Cloud", "Workspace ONE", "Workspace ONE Access", "IdP"]
 categories = ["Horizon Cloud", "Microsoft Azure", "VMware"]
+description = "In this segment (Part 4/5) of the series, integrate Horizon assignments with Workspace ONE Access, enabling authentication redirection. Configure SAML authentication on the Horizon Connection Server(s) and set up the Workspace ONE Access Connector appliance to synchronize entitlements."
 +++
 
 Welcome to part 4 (actually 5) of the series on how to integrate Workspace ONE Access with Microsoft Azure and Horizon resources on-premises and in the Azure cloud.
