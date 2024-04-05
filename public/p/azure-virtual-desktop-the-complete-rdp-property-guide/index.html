@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="meta description">
+<title>Azure Virtual Desktop - The complete RDP Property guide</title>
+
+<link rel='canonical' href='http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/'>
+
+<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Azure Virtual Desktop - The complete RDP Property guide">
+<meta property='og:description' content="meta description">
+<meta property='og:url' content='http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/'>
+<meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Azure Virtual Desktop' /><meta property='article:tag' content='Azure' /><meta property='article:published_time' content='2021-07-27T16:56:47&#43;06:00'/><meta property='article:modified_time' content='2021-07-27T16:56:47&#43;06:00'/><meta property='og:image' content='http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/title.png' />
+<meta name="twitter:site" content="@wvdlogix">
+    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Azure Virtual Desktop - The complete RDP Property guide">
+<meta name="twitter:description" content="meta description"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/title.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc59d5fe30e8b430128cebedffe7532de_4365636_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Patrick&#39;s Multi-Cloud Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/patrick-koehler/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/wvdlogix'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.strava.com/athletes/117484839'
+                        target="_blank"
+                        title="Strava"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-strava"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 13l-5 -10l-5 10m6 0l4 8l4 -8" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/pkoehlercloud'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about-patrick/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Patrick</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/cycling/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bike"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M19 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0" /><path d="M17 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                
+                <span>Cycling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#where-to-define-rdp-properties">Where to define RDP properties</a></li>
+    <li><a href="#connection-information">Connection information</a></li>
+    <li><a href="#session-behaviour">Session behaviour</a></li>
+    <li><a href="#device-redirection">Device redirection</a></li>
+    <li><a href="#display-settings">Display settings</a></li>
+    <li><a href="#advanced">Advanced</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/azure-virtual-desktop-the-complete-rdp-property-guide/">
+                <img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/title_hu47f31a060c17741ed671fdc891fc1e2a_95454_800x0_resize_box_3.png"
+                        srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/title_hu47f31a060c17741ed671fdc891fc1e2a_95454_800x0_resize_box_3.png 800w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/title_hu47f31a060c17741ed671fdc891fc1e2a_95454_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="457" 
+                        loading="lazy"
+                        alt="Featured image of post Azure Virtual Desktop - The complete RDP Property guide" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/microsoft/" >
+                Microsoft
+            </a>
+        
+            <a href="/categories/avd/" >
+                AVD
+            </a>
+        
+            <a href="/categories/azure-virtual-desktop/" >
+                Azure Virtual Desktop
+            </a>
+        
+            <a href="/categories/rdp-properties/" >
+                RDP Properties
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/azure-virtual-desktop-the-complete-rdp-property-guide/">Azure Virtual Desktop - The complete RDP Property guide</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            meta description
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 27, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    11 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Hi everyone it´s Patrick again with a new article on the RDP properties in Windows Virtual Desktop.</p>
+<p>As some of you know, these popped up on the 5th October 2020 again, after a few months of disappearance. Some of you had a lot of questions, especially on the impact these settings have.</p>
+<p>The purpose of this article is to give you a general overview of the settings and their impact on the Remote Desktop itself.</p>
+<p>If you want to get a general overview of the new RDP settings, please watch the video below and use this guide to help you rock your AVD environment:</p>
+<h2 id="where-to-define-rdp-properties">
+    <a href="#where-to-define-rdp-properties" class="header-anchor">#</a>
+    Where to define RDP properties
+</h2><p>First of all you can define RDP properties from within the Azure Portal. To find them, simply logon to the Azure Portal on <a class="link" href="https://portal.azure.com"  target="_blank" rel="noopener"
+    >https://portal.azure.com</a> and navigate to the Windows Virtual Desktop service by using the search bar or using the quick link. To find the properties you must have at least one Host Pool in place. This can be created from within the portal or via PowerShell.</p>
+<p>Select one of the Host Pools, in my example this is “KCLD-WVD-TestAuto”</p>
+<p>Finally click in the menu on the left side on RDP properties to see the options.</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image.png"
+	width="1024"
+	height="543"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="452px"
+	
+></p>
+<p>You can also define RDP properties via Powershell. Same here, a Host Pool must be present in the current setup.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c">### Variables - Please replace Resource Group and HostPool with your values ###</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$RGHP</span> <span class="p">=</span> <span class="k">%</span><span class="n">Your</span> <span class="n">Resource</span> <span class="nb">group </span><span class="k">for</span> <span class="n">HostPools</span><span class="p">%</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$HPName</span> <span class="p">=</span> <span class="k">%</span><span class="n">Your</span> <span class="n">HostPool</span> <span class="n">name</span><span class="p">%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">### Install new Spring Release Powershell Module for WVD ###</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="n">Az</span><span class="p">.</span><span class="py">DesktopVirtualization</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">### Import Module ###</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="n">Az</span><span class="p">.</span><span class="py">DesktopVirtualization</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">### Login to Azure Account ###</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Connect-AzAccount</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">### Retrieve current settings from HostPool ###</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Get-AzWvdHostPool</span> <span class="n">-ResourceGroupName</span> <span class="nv">$RGHP</span> <span class="n">-Name</span> <span class="nv">$HPName</span> <span class="p">|</span> <span class="nb">fl </span><span class="n">Name</span><span class="p">,</span><span class="n">CustomRDPProperty</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="connection-information">
+    <a href="#connection-information" class="header-anchor">#</a>
+    Connection information
+</h2><p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1.png"
+	width="766"
+	height="250"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="306"
+		data-flex-basis="735px"
+	
+></p>
+<p>The connection information tab is the first of five to define the RDP properties for the Host Pool. Let me quickly explain you the different values:</p>
+<p>Credential Security Support Provider (CredSSP): Identifies whether Remote Desktop will use CredSSP for authentication if it´s available.</p>
+<p>For those of you, which doesn´t know what CredSSP is, it can be generally explained as Security Provider that will be used by the Support provider Interface. It helps an application “Remote Desktop Client” e.g. to delegate the user´s credentials from the client to the target server for remote authentication.</p>
+<p>Manual setting value: enablecredsspsupport:i:value</p>
+<hr>
+<p>Reconnection settings: This setting helps administrators to let their users reconnect to their existing session if the session reaches the state disconnected. This can happen when a user logs off or is just closing the window. If you want your users to get a new session, select “initiate a new connection”.</p>
+<p>Manual setting value: disableconnectionsharing:i:value</p>
+<p>Practical Tip! If you select the initiate a new connection setting, make sure the user will be properly logged off after a certain time limit has reached. Otherwise, the users will flood your environment with multiple logins which make an Auto Scaling logic impossible to apply! This can be reached by applying the Group Policy to enforce the logoff by determining a specific time limit:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2.png"
+	width="1024"
+	height="247"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="414"
+		data-flex-basis="994px"
+	
+></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">Computer</span> <span class="n">Configuration</span> <span class="p">/</span> <span class="n">Administrative</span> <span class="n">Templates</span> <span class="p">/</span> <span class="n">Windows</span> <span class="n">Components</span> <span class="p">/</span> <span class="n">Remote</span> <span class="n">Desktop</span> <span class="n">Services</span> <span class="p">/</span> <span class="n">Remote</span> <span class="n">Desktop</span> <span class="n">Session</span> <span class="n">Host</span> <span class="p">/</span> <span class="n">Session</span> <span class="n">Time</span> <span class="n">Limits</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This is a general tip, regardless of the RDP setting mentioned, it will help your users to properly logoff as well and to avoid issues with the FSLogix profile.</p>
+<hr>
+<p>Alternate Shell (Path): This setting defines a program to be started automatically ones a new user session has been initiated. It makes sense if you want to enforce a user to use a specific app at the start-up without linking an app to the user´s start-up folder. The path to that application must be defined as local path “C:\ProgramFiles\Office\word.exe” e.g..</p>
+<p>Manual setting value: alternate shell:s:value</p>
+<hr>
+<h2 id="session-behaviour">
+    <a href="#session-behaviour" class="header-anchor">#</a>
+    Session behaviour
+</h2><p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3.png"
+	width="757"
+	height="403"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="450px"
+	
+></p>
+<p>Reconnection: Defines, if a client should try to reconnect to a user´s session if the connection gets lost. This can happen when the internet connection is lost, or if there a any other unforeseeable reasons on a network level. You can choose whether you want to PREVENT or ALLOW a client to re-establish a connection.</p>
+<p>Recommended: Client automatically tries to reconnect.</p>
+<p>Manual setting value: autoreconnection enabled:i:value</p>
+<hr>
+<p>Bandwidth auto detect: Determines whether automatic network type detection is enabled or disabled. It helps to identify the currently available bandwidth. This setting correlates with the next setting “Network Auto Detect”</p>
+<p>Recommended: Enable automatic network type detection</p>
+<p>Manual setting value: bandwidthautodetect:i:value</p>
+<hr>
+<p>Network auto detect: Determines whether to use automatic network bandwidth detection or not. Requires the previous option to be set.
+Attention: Connection type 7 is required.</p>
+<p>Generally, these settings can be defined as well in a RDP file. We distinguish between the following modes on-premises:</p>
+<p>1 – Modem (56 Kbps).
+2 – Low-speed broadband (256 Kbps – 2 Mbps).
+3 – Satellite (2 Mbps – 16 Mbps with high latency).
+4 – High-speed broadband (2 Mbps – 10 Mbps).
+5 – WAN (10 Mbps or higher with high latency).
+6 – LAN (10 Mbps or higher).
+7 – Automatic bandwidth detection – REQUIRES bandwidthautodetect</p>
+<p>The setting itself, doesn´t do anything, when set. It becomes active, when select in the RDC GUI and changes automatically several performance related settings such as: Themes, Font Smoothing, Aminations etc.</p>
+<p>Recommended: Use automatic network bandwidth detection.</p>
+<p>Manual setting value: networkautodetect:i:value</p>
+<hr>
+<p>Compression: Determines whether bulk compression is enabled when it is transmitted by RDP to the local computer.</p>
+<p>This setting was first introduced in the RDP6 protocol and has helped in reducing the RDP network bandwidth significantly. In some cases you might want to disable this setting, as there are already mechanisms by your network vendors (e.g. Cisco Wide Area Application Services), where compression occurs problems. This must be identified together with your networking team.</p>
+<p>Recommendation: Enable RDP bulk compression.</p>
+<p>Manual setting value: compression:i:value</p>
+<hr>
+<p>Video playback: Determines if the connection will use RDP-efficient multimedia streaming for video playback.</p>
+<p>This setting has been first introduced in July 2009, where improvements have been made to optimize the overall video playback experience for Win7 and Win2008 R2 servers. Technically it means, that the client (endpoint) will receive the original compressed multimedia stream from the RDP server / WVD Session Host and decode it on the local hardware for displaying. This is also an improvement of the network bandwidth, as the data will be received compressed on the endpoint.</p>
+<p>Recommendation: Use RDP-efficient multimedia streaming for video playback when possible.</p>
+<p>Manual setting value: videoplaybackmode:i:value</p>
+<h2 id="device-redirection">
+    <a href="#device-redirection" class="header-anchor">#</a>
+    Device redirection
+</h2><p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4.png"
+	width="799"
+	height="636"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="301px"
+	
+></p>
+<p>Microphone redirection: Lets you decide if you want to redirect audio capturing devices from you local endpoint to the remote session. Required for video conferencing tools as Webcams with Mics and other microphones will not work.</p>
+<p>Recommendation: Enable audio capture from the local device and redirection to an audio application in the remote session</p>
+<p>Manual setting value: audiocapturemode:i:value</p>
+<hr>
+<p>Redirect video encoding: Enables or disables the video encoding on the local endpoint for the RDP session.</p>
+<p>Recommendation: Enable encoding of redirected video.</p>
+<p>Manual setting value: encode redirected video capture:i:value</p>
+<hr>
+<p>Encoded video quality: Helps to define how much a video will be compressed for the remote session. You have the following options with the impacts:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5.png"
+	width="480"
+	height="92"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="521"
+		data-flex-basis="1252px"
+	
+></p>
+<p>Manual setting value: encode redirected video capture encoding quality:i:value</p>
+<hr>
+<p>Audio output location: Defines, where audio will be played while being connected to the remote session. You can decide between the following options:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6.png"
+	width="269"
+	height="117"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="229"
+		data-flex-basis="551px"
+	
+></p>
+<p>Recommendation: Play sounds on the local computer</p>
+<p>Manual setting value: audiomode:i:value</p>
+<hr>
+<p>Camera redirection: Helps to define, if cameras / webcams can be redirected to the remote session from the local endpoint. You can redirect all cameras, or define manually a list of cameras to be redirected. Important! The redirection of the camera is mandatory for the usage of video conferencing tools such as Teams.</p>
+<p>Recommendation (simplified): Redirect cameras.</p>
+<p>Manual setting value: camerastoredirect:s:value</p>
+<hr>
+<p>USB device redirection: Helps to define, if and which USB devices shall be redirected to the remote session host from the local endpoint. You can define, whether you want to decline any redirected USB devices, redirect all supported drives including later connected ones or to manually enter the list of USB devices while using the hardware ID.</p>
+<p>Recommendation (simplified): Redirect all USB drives
+Attention! Redirecting all USB drives is just a very simplified option! For security I don´t recommend this setting as any foreign USB key with potential malware on it can be plugged and being redirected to the remote session. Please evaluate this setting from case to case!</p>
+<p>Manual setting value: devicestoredirect:s:value</p>
+<hr>
+<p>Drive/storage redirection: Determines, which local drives shall be redirected to the remote session. The following options are available:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7.png"
+	width="436"
+	height="115"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="379"
+		data-flex-basis="909px"
+	
+></p>
+<p>The options are nearly self-explaining. You can decide to redirect all drives, also those attached at a later time. You allow only drives, connected after the remote session has been established, or you define manually the drives and labels to be redirected.</p>
+<p>Recommendation: Depends on the security needs! Be aware that redirecting all drives is a potential security risk for your environment.</p>
+<p>If you want to manually allow the redirection, you can define this by defining the drive letter e.g.:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8.png"
+	width="487"
+	height="106"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="459"
+		data-flex-basis="1102px"
+	
+></p>
+<p>Manual setting value: drivestoredirect:s:value</p>
+<hr>
+<p>Clipboard redirection: Determines if the local clipboard from the local endpoint shall be redirected to the remote session. You can define if you want to allow it or block it.</p>
+<p>Recommendation: Depends on the security you want to provide. If somebody writes her / his password in cleartext in a text field and just copies it, it could be potentially captured. Be cautious!</p>
+<p>Manual setting value: redirectclipboard:i:value</p>
+<hr>
+<p>COM ports redirection: Determines if you want to redirect serial connections from your local endpoint to the remote session. Might be useable for legacy devices.</p>
+<p>Recommendations: COM ports are not available in the remote session. Depends on the case.</p>
+<p>Manual setting value: redirectcomports:i:value</p>
+<hr>
+<p>Printer redirection: This setting lets the local printers being redirected to the remote session from the local endpoint. This might be helpful for your end-users in home office scenarios, where printing is essential. You can decide whether you want to allow or decline the connection.</p>
+<p>Recommendation: Depends on the security. Printing out confidential documents might be a potential risk. This can also be protected by Windows security mechanisms like Information Protection, but if those features are not in place, printing could be declined.</p>
+<p>Manual setting value: redirectprinters:i:value</p>
+<hr>
+<p>Smart card redirection: Determines, whether you want to allow Smartcard redirection or not. Smartcards generally help to authenticate against a specific service. This can be useful especially for Middleware’s connecting to financial software, or the local authentication on the Session host.</p>
+<p>Recommendation: The smart card device on the local computer is available in the remote session.</p>
+<p>Manual setting value: redirectsmartcards:i:value</p>
+<hr>
+<p>USB redirection: Helps to define more granularly, which kind and type of USB device shall be redirected to the remote session. Compared to the other settings above, you can decide to allow or decline the following settings:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9.png"
+	width="488"
+	height="152"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="321"
+		data-flex-basis="770px"
+	
+></p>
+<p>Manual setting value: usbdevicestoredirect:s:value</p>
+<h2 id="display-settings">
+    <a href="#display-settings" class="header-anchor">#</a>
+    Display settings
+</h2><p>Multiple displays: Determines if the remote session supports all displays or just a single display. If Enabled, you can select, whether all monitors should be used by default, or if you want to enter a list of display IDs to allow only these monitors. Additionally, you can define the maximizing behavior for these screens, as well as a Multi to single display switch, which helps to switch from a multi-screen to single screen, when the full screen mode has been ended.</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10.png"
+	width="704"
+	height="290"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="242"
+		data-flex-basis="582px"
+	
+></p>
+<p>Recommendation: Enable multiple display support</p>
+<p>Manual setting value: use multimon:i:value</p>
+<hr>
+<p>Screen mode: Determines whether the remote session will appear in a windowed or full screen mode.</p>
+<p>Recommendation: The remote session will appear full screen.</p>
+<p>Manual setting value: screen mode id:i:value</p>
+<hr>
+<p>Smart sizing: Helps to scale the remote content in the remote session to fit to the size of the monitor. This will automatically adapt the resolution on the remote host. You can decide if you want to allow the scaling in case of resizing or not.</p>
+<p>Recommendation: The local window content will scale when resized.</p>
+<p>Manual setting value: smart sizing:i:value</p>
+<hr>
+<p>Dynamic resolution: Will define if the remote resolution will be adopted automatically, when sizing occurs. You can define if you want to keep the same resolution even if the size changes, or you can select a resolution update to the local windows resize and define the scaling factors:</p>
+<p><img src="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11.png"
+	width="736"
+	height="249"
+	srcset="/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_480x0_resize_box_3.png 480w, /p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="295"
+		data-flex-basis="709px"
+	
+></p>
+<p>Recommendation: Session resolution updates as the local window resizes.</p>
+<p>Manual setting value: dynamic resolution:i:value
+desktop size id:i:value | desktopheight:i:value | desktopwidth:i:value | desktopscalefactor:i:value</p>
+<h2 id="advanced">
+    <a href="#advanced" class="header-anchor">#</a>
+    Advanced
+</h2><p>The advanced tab represents the option previously available, where you can define all the settings mentioned above while using the parameters.</p>
+<p>All available parameters are available from the official Microsoft page, (<a class="link" href="https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/rdp-files?context=/azure/virtual-desktop/context/context%29"  target="_blank" rel="noopener"
+    >https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/rdp-files?context=/azure/virtual-desktop/context/context)</a>, or from the setting explanations above. To easily migrate these settings, just copy and paste the defined settings from the advanced settings once defined and paste them to another Host Pool if needed.</p>
+<h2 id="conclusion">
+    <a href="#conclusion" class="header-anchor">#</a>
+    Conclusion
+</h2><p>I hope this article will help you to understand all of the available options for Windows Virtual Desktop more in depth and are a good guidance for your decision. Keep in mind, that the settings might change over time and that all of my recommendations are based on simple environments. Organizations with advanced security requirements, should consider using the manual way of allowing certain device redirection features, over allowing all devices automatically being redirected.</p>
+<p>If you like my article, please share it, recommend it or leave a reply below!</p>
+<p>Looking forward to hear from you!
+Cheers,</p>
+<p>Patrick</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/azure-virtual-desktop/">Azure Virtual Desktop</a>
+        
+            <a href="/tags/azure/">Azure</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/">
+        
+        
+            <div class="article-image">
+                <img src="/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.fb91aa0881e312335207474101a885e9_hu47f31a060c17741ed671fdc891fc1e2a_227218_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide"
+                        
+                        data-hash="md5-&#43;5GqCIHjEjNSB0dBAaiF6Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Azure Virtual Desktop - Windows 10 Start menu optimization guide</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/title.eb610113a39cde4e831ea516120620b4_hu47f31a060c17741ed671fdc891fc1e2a_73748_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post FSLogix v2105 – How to Increase VHDX size of profile container"
+                        
+                        data-hash="md5-62EBE6Oc3k6DHqUWEgYgtA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FSLogix v2105 – How to Increase VHDX size of profile container</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/">
+        
+        
+            <div class="article-image">
+                <img src="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.3687ba9ce3835f14937762292aab7f88_hu47f31a060c17741ed671fdc891fc1e2a_106079_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD"
+                        
+                        data-hash="md5-Noe6nOODXxSTd2IpKqt/iA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Start VM on Connect for Pooled and Personal Host Pools in WVD</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.3d887d5b8567680066c722d4e44fd9d0_hu47f31a060c17741ed671fdc891fc1e2a_72005_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11"
+                        
+                        data-hash="md5-PYh9W4VnaABmxyLU5E/Z0A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to reset the Remote Desktop Client on Windows 10 &amp; 11</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/">
+        
+        
+            <div class="article-image">
+                <img src="/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.88515152412212926706d1e9d67726a1_hu47f31a060c17741ed671fdc891fc1e2a_68582_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What you have to know about the WVD Required URL check tool"
+                        
+                        data-hash="md5-iFFRUkEiEpJnBtHp1ncmoQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What you have to know about the WVD Required URL check tool</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Patrick Köhler
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

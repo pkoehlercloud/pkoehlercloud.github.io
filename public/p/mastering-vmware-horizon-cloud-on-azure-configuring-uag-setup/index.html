@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial. If you missed my previous articles, please find them hereafter: In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure.">
+<title>Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</title>
+
+<link rel='canonical' href='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/'>
+
+<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup">
+<meta property='og:description' content="Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial. If you missed my previous articles, please find them hereafter: In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure.">
+<meta property='og:url' content='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/'>
+<meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VMware Horizon' /><meta property='article:tag' content='Horizon Cloud on Azure' /><meta property='article:tag' content='Azure' /><meta property='article:tag' content='VMware' /><meta property='article:tag' content='EUC' /><meta property='article:published_time' content='2023-03-27T16:56:47&#43;06:00'/><meta property='article:modified_time' content='2023-03-27T16:56:47&#43;06:00'/><meta property='og:image' content='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png' />
+<meta name="twitter:site" content="@wvdlogix">
+    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup">
+<meta name="twitter:description" content="Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial. If you missed my previous articles, please find them hereafter: In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc59d5fe30e8b430128cebedffe7532de_4365636_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Patrick&#39;s Multi-Cloud Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/patrick-koehler/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/wvdlogix'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.strava.com/athletes/117484839'
+                        target="_blank"
+                        title="Strava"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-strava"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 13l-5 -10l-5 10m6 0l4 8l4 -8" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/pkoehlercloud'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about-patrick/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Patrick</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/cycling/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bike"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M19 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0" /><path d="M17 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                
+                <span>Cycling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/">
+                <img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title_hu47f31a060c17741ed671fdc891fc1e2a_100651_800x0_resize_box_3.png"
+                        srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title_hu47f31a060c17741ed671fdc891fc1e2a_100651_800x0_resize_box_3.png 800w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title_hu47f31a060c17741ed671fdc891fc1e2a_100651_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="457" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/horizon-cloud/" >
+                Horizon Cloud
+            </a>
+        
+            <a href="/categories/azure/" >
+                Azure
+            </a>
+        
+            <a href="/categories/vmware/" >
+                VMware
+            </a>
+        
+            <a href="/categories/article-series/" >
+                Article Series
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/">Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 27, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
+If you missed my previous articles, please find them hereafter:
+In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure.
+Table of Contents
+Prepare a Service Principal for the VMware Universal Console
+Before we can start to configure the Universal Console and create the core infrastructure, we need to ensure that we equip our account with administrative privileges in a secure way. For that reason we require to have a Service Principal in place that provides the console with the necessary rights in our tenant, while ensuring that no passwords are exchanged in clear text.
+To do so, please login to the Azure portal via <a class="link" href="https://portal.azure.com"  target="_blank" rel="noopener"
+    >https://portal.azure.com</a> and select Azure Active Directory.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png"
+	width="454"
+	height="67"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="677"
+		data-flex-basis="1626px"
+	
+></p>
+<p>In the following window, we need to select App registrations to be able to create our Service Account.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png"
+	width="123"
+	height="214"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="57"
+		data-flex-basis="137px"
+	
+></p>
+<p>Once, we entered the App registrations view, click on “+ New registration” in the top center of the screen.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png"
+	width="454"
+	height="121"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="375"
+		data-flex-basis="900px"
+	
+></p>
+<p>Now we can provide our Service Principal a random name that we want to assign, in my case I name the principal based on the naming convention from the previous article. Make sure to change the Redirect URI to “Web” and provide the URL “http://localhost:8000“. Once we provided the information, click on “Register” to complete the creation.
+Name: SP-HZNC-AVDLogix
+Redirect URI: Web
+URI: http://localhost:8000</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png"
+	width="454"
+	height="243"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="448px"
+	
+></p>
+<p>Attention! Once the Service Principal has been create make sure to copy the following information and store them in a safe location, as you will need them for later.</p>
+<p>Copy the application (client) ID and Directory ID (Azure AD tenant ID)</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png"
+	width="454"
+	height="95"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="477"
+		data-flex-basis="1146px"
+	
+></p>
+<p>Once you noted down the information, we navigate to “Certificates &amp; secrets” on the left hand side to generate the required secret.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png"
+	width="141"
+	height="286"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="49"
+		data-flex-basis="118px"
+	
+></p>
+<p>In here we need to click on “+ New client secret” and provide a client secret description, which is “Client Secret Horizon” in my case and we set the duration to “24 months“. You can also choose a lower time, before the secret expires, but you have to keep in mind to regenerate the secret and update the Universal Console to not lose access or control over the resources.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png"
+	width="454"
+	height="243"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="448px"
+	
+></p>
+<p>Attention! Please make sure to copy the Secret Value once you see it, because it will only appear once like this. In case that you missed to copy it, you need to regenerate the client secret.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png"
+	width="454"
+	height="52"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="873"
+		data-flex-basis="2095px"
+	
+></p>
+<p>Create a Custom Role for Service Principal (Least Privileges)
+Now we are nearly finished with our Service Principal creation, but need to equip it with the required permissions in order to perform tasks in our environment. While doing this we have two options. First, we can assign Contributor rights to our new Service Principal on our subscription, which provides quite a lot of permissions, which we might don’t want if we want to follow the principal of least permissions.</p>
+<p>I recommend creating a custom role, with only the required rights, the Service Principal needs on our subscription. I found an article on the VMware KB, stating the creation of the custom role, which unfortunately doesn’t work for my tenant, for that reason, I’m sharing with you the steps that worked out for me.
+To do so, we switch to the Subscription menu in our Azure tenant, while searching for “Subscriptions” or selecting it from the portal menu.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png"
+	width="454"
+	height="57"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="796"
+		data-flex-basis="1911px"
+	
+></p>
+<p>Now, we switch to the Access control (IAM) menu on the left hand side, clicking on “+ Add” and selecting “Add custom role” as the following step.</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png"
+	width="330"
+	height="181"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<p>Now we need to provide the name for our custom role, I called mine “CR-AVDLogix-HorizonCloudAzure“. Select “Start from scratch” as the Baseline permission and continue to the “JSON” tab by clicking “Next” two times or by directly clicking on “JSON“</p>
+<p><img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png"
+	width="342"
+	height="407"
+	srcset="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, /p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="84"
+		data-flex-basis="201px"
+	
+></p>
+<p>In the JSON menu, click the edit button on the right hand side, and navigate to the “Actions”: section, where you have to paste the following code, with the named permissions required.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vmware-horizon/">VMware Horizon</a>
+        
+            <a href="/tags/horizon-cloud-on-azure/">Horizon Cloud on Azure</a>
+        
+            <a href="/tags/azure/">Azure</a>
+        
+            <a href="/tags/vmware/">VMware</a>
+        
+            <a href="/tags/euc/">EUC</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.653568da128b9ba67626de1caff724bf_hu47f31a060c17741ed671fdc891fc1e2a_80306_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker"
+                        
+                        data-hash="md5-ZTVo2hKLm6Z2Jt4cr/ckvw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/workspace-one-access-22.09-integration-with-horizon-on-premises/">
+        
+        
+            <div class="article-image">
+                <img src="/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.101f2ebbe58075ff9b5b4893dba7a5dd_hu47f31a060c17741ed671fdc891fc1e2a_84440_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises"
+                        
+                        data-hash="md5-EB8uu&#43;WAdf&#43;bW0iT26el3Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Workspace ONE Access 22.09 – Integration with Horizon On-Premises</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/">
+        
+        
+            <div class="article-image">
+                <img src="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.3687ba9ce3835f14937762292aab7f88_hu47f31a060c17741ed671fdc891fc1e2a_106079_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD"
+                        
+                        data-hash="md5-Noe6nOODXxSTd2IpKqt/iA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Start VM on Connect for Pooled and Personal Host Pools in WVD</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/title.eb610113a39cde4e831ea516120620b4_hu47f31a060c17741ed671fdc891fc1e2a_73748_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post FSLogix v2105 – How to Increase VHDX size of profile container"
+                        
+                        data-hash="md5-62EBE6Oc3k6DHqUWEgYgtA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FSLogix v2105 – How to Increase VHDX size of profile container</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.3d887d5b8567680066c722d4e44fd9d0_hu47f31a060c17741ed671fdc891fc1e2a_72005_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11"
+                        
+                        data-hash="md5-PYh9W4VnaABmxyLU5E/Z0A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to reset the Remote Desktop Client on Windows 10 &amp; 11</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Patrick Köhler
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

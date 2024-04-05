@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hi everyone, today I have another blog for you about how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming service release of Windows 365 Cloud PC. We will perform the distribution to your clients via Microsoft Endpoint Manager (Intune). The first thing we need to do is to package our Remote Desktop Client in the current version: 1.2.2130 Please find the latest version here: What’s new in the Windows Desktop client | Microsoft Doc">
+<title>Distribute and Configure the Remote Desktop app via Intune</title>
+
+<link rel='canonical' href='http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/'>
+
+<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Distribute and Configure the Remote Desktop app via Intune">
+<meta property='og:description' content="Hi everyone, today I have another blog for you about how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming service release of Windows 365 Cloud PC. We will perform the distribution to your clients via Microsoft Endpoint Manager (Intune). The first thing we need to do is to package our Remote Desktop Client in the current version: 1.2.2130 Please find the latest version here: What’s new in the Windows Desktop client | Microsoft Doc">
+<meta property='og:url' content='http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/'>
+<meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Windows 365' /><meta property='article:tag' content='Azure Virtual Desktop' /><meta property='article:tag' content='Microsoft Intune' /><meta property='article:tag' content='Endpoint Manager' /><meta property='article:published_time' content='2021-07-29T16:56:47&#43;06:00'/><meta property='article:modified_time' content='2021-07-29T16:56:47&#43;06:00'/><meta property='og:image' content='http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/title.png' />
+<meta name="twitter:site" content="@wvdlogix">
+    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Distribute and Configure the Remote Desktop app via Intune">
+<meta name="twitter:description" content="Hi everyone, today I have another blog for you about how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming service release of Windows 365 Cloud PC. We will perform the distribution to your clients via Microsoft Endpoint Manager (Intune). The first thing we need to do is to package our Remote Desktop Client in the current version: 1.2.2130 Please find the latest version here: What’s new in the Windows Desktop client | Microsoft Doc"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/title.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc59d5fe30e8b430128cebedffe7532de_4365636_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Patrick&#39;s Multi-Cloud Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/patrick-koehler/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/wvdlogix'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.strava.com/athletes/117484839'
+                        target="_blank"
+                        title="Strava"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-strava"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 13l-5 -10l-5 10m6 0l4 8l4 -8" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/pkoehlercloud'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about-patrick/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Patrick</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/cycling/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bike"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M19 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0" /><path d="M17 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                
+                <span>Cycling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#import-remote-desktop-manager-via-mem-intune">Import Remote Desktop Manager via MEM (Intune)</a></li>
+        <li><a href="#configure-auto-feed-discovery-for-the-remote-desktop-client-app-mem-and-gpo">Configure auto feed discovery for the Remote Desktop Client app (MEM and GPO)</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/distribute-and-configure-the-remote-desktop-app-via-intune/">
+                <img src="/p/distribute-and-configure-the-remote-desktop-app-via-intune/title_hu47f31a060c17741ed671fdc891fc1e2a_105712_800x0_resize_box_3.png"
+                        srcset="/p/distribute-and-configure-the-remote-desktop-app-via-intune/title_hu47f31a060c17741ed671fdc891fc1e2a_105712_800x0_resize_box_3.png 800w, /p/distribute-and-configure-the-remote-desktop-app-via-intune/title_hu47f31a060c17741ed671fdc891fc1e2a_105712_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="457" 
+                        loading="lazy"
+                        alt="Featured image of post Distribute and Configure the Remote Desktop app via Intune" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/euc/" >
+                EUC
+            </a>
+        
+            <a href="/categories/avd/" >
+                AVD
+            </a>
+        
+            <a href="/categories/azure-virtual-desktop/" >
+                Azure Virtual Desktop
+            </a>
+        
+            <a href="/categories/intune/" >
+                Intune
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/distribute-and-configure-the-remote-desktop-app-via-intune/">Distribute and Configure the Remote Desktop app via Intune</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 29, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Hi everyone,</p>
+<p>today I have another blog for you about how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming service release of Windows 365 Cloud PC. We will perform the distribution to your clients via Microsoft Endpoint Manager (Intune).</p>
+<p>The first thing we need to do is to package our Remote Desktop Client in the current version: 1.2.2130</p>
+<p>Please find the latest version here: <a class="link" href="https://web.archive.org/web/20230321230532/https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/windowsdesktop-whatsnew"  target="_blank" rel="noopener"
+    >What’s new in the Windows Desktop client | Microsoft Doc</a></p>
+<p><b>Packaging of the Remote Desktop Client app and upload to Microsoft Endpoint Manager (Intune)</b></p>
+<p>The first thing we need to do now is to select the architecture, we use to distribute the client. In my case, I take the 64-bit client and download it to my computer.</p>
+<p>I’ve used the following download link for the 64-bit version: (<a class="link" href="https://go.microsoft.com/fwlink/?linkid=2139233"  target="_blank" rel="noopener"
+    >https://go.microsoft.com/fwlink/?linkid=2139233</a>)</p>
+<p>Now I copy the downloaded file to a location that is easily accessible from my packaging PC. For this reason, I create a new folder called: “RemoteDesktopClient_122130″ in my favorite location.</p>
+<p>In the next step, we need to download the Microsoft Win32 Content Prep tool, to package our MSI file into an IntuneWin container.</p>
+<p>Go to the following GitHub page and download the exe: (<a class="link" href="https://web.archive.org/web/20230321230532/https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool"  target="_blank" rel="noopener"
+    >https://web.archive.org/web/20230321230532/https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool</a>)</p>
+<p>For this demonstration I’ve created a folder called “MEM” where I store the file.</p>
+<p>Now, we need to open a PowerShell window with elevated rights (Administrator) and set the Execution Policy to “RemoteSigned” and approve with “Y(es)”:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Next, we navigate to the folder, that has our IntuneWinAppUtil, which is in my example C:\MEM. Do this using:
+Now we need to specify the Source file, which is our recently downloaded Remote Desktop Client and the destination location for the IntuneWin file. We start with opening the IntuneWinAppUtil.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">cd </span><span class="n">C:</span><span class="p">\</span><span class="n">MEM</span>
+</span></span><span class="line"><span class="cl"><span class="p">.\</span><span class="n">IntuneWinAppUtil</span><span class="p">.</span><span class="py">exe</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The tool asks us to specify the source folder, we select the one where our Remote Desktop Client is stored, give the tool the file name and select the output folder. We don’t want to specify a catalog folder.</p>
+<p>We can see the intunewin file besides the MSI file.</p>
+<h3 id="import-remote-desktop-manager-via-mem-intune">
+    <a href="#import-remote-desktop-manager-via-mem-intune" class="header-anchor">#</a>
+    Import Remote Desktop Manager via MEM (Intune)
+</h3><p>To import the package to Intune, we need to login first to our tenant using: (<a class="link" href="https://endpoint.microsoft.com"  target="_blank" rel="noopener"
+    >https://endpoint.microsoft.com</a>)</p>
+<p>Now we need to navigate to Apps / Windows</p>
+<p>Now we see the collection of all Windows apps available and we click on “+Add” to import our Remote Desktop Client.</p>
+<p>Now we need to select the App type, which is “Windows app (Win32)” and click on select.</p>
+<p>The process asks us now for the app package file, which is the intunewin file we’ve just created.</p>
+<p>Once everything is fine, we click on OK and specify the parameters for the installer. In my case I only had to add the Publisher information to the package. I specified “Microsoft” and click on next.</p>
+<p>The advantage of using an MSI is that the IntuneAppWinUtil automatically detects the installation parameters, additional ones can be added, but that’s not required and we can continue with the next steps.</p>
+<p>In the next tab, we need to provide the requirements, which is obviously the 64-bit architecture and the minimum operating system (that can be adjusted to your environment), which is Windows 10 1909 in my case. We click next, once finished.</p>
+<p>The next step requires us to define a detection policy, we click on “+Add” and specify the MSI product code option, as this is already prefilled.</p>
+<p>For the next steps we don’t define dependencies, supersedence and we can continue to select the Scope Tags and do the assignment if needed. In my case I select a Windows 11 based laptop that is completely Azure AD joined. I define to install the app asap with no user interaction (so Toast notifications wont appear).</p>
+<p>Last but not least we validate the configuration and apply it.</p>
+<h3 id="configure-auto-feed-discovery-for-the-remote-desktop-client-app-mem-and-gpo">
+    <a href="#configure-auto-feed-discovery-for-the-remote-desktop-client-app-mem-and-gpo" class="header-anchor">#</a>
+    Configure auto feed discovery for the Remote Desktop Client app (MEM and GPO)
+</h3><p>Now we want that our users don’t need to log into the Remote Desktop Client with their user credentials. For this reason, we can define a configuration policy in Intune, which helps us to improve the user experience.</p>
+<p>Now that the Remote Desktop App is prepared, we need to navigate to Devices &gt; Configuration policies in Intune and create a new profile.</p>
+<p>Select “Windows 10 and later” as a platform and the profile type as “Settings catalog (preview)“.</p>
+<p>We name our policy “Remote Desktop Client Auto Feed Registration” and click on next.</p>
+<p>Now we click on “+Add settings” and type “remote desktop” in the search bar. Scroll down to “Administrative Templates / Windows Components / Remote Desktop Services / Remote App and Desktop Connections”</p>
+<p>Check the box for “Specify default connection URL (User)“. Back in the settings, switch the toggle to “Enabled” and specify the “Default connection URL” as: <a class="link" href="https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery"  target="_blank" rel="noopener"
+    >https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery</a></p>
+<p>IMPORTANT! Keep in mind that this setting is currently only available for Windows Insiders! For all other use cases you can use the corresponding Group Policy Setting in your on-premises environment to configure the auto configuration.</p>
+<p>The last step is to select the users/groups you want to assign this policy to and create it!</p>
+<p>And that’s it – a super-easy way of packaging and deploying as well as auto-configuring the Remote Desktop Client for accessing your remote computing resources from the Microsoft Cloud!</p>
+<p>If you have any questions, feel free to reach out in the comments or on Social Media, I’m always happy to help!</p>
+<p>Cheers,</p>
+<p>Patrick</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/windows-365/">Windows 365</a>
+        
+            <a href="/tags/azure-virtual-desktop/">Azure Virtual Desktop</a>
+        
+            <a href="/tags/microsoft-intune/">Microsoft Intune</a>
+        
+            <a href="/tags/endpoint-manager/">Endpoint Manager</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/">
+        
+        
+            <div class="article-image">
+                <img src="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.3687ba9ce3835f14937762292aab7f88_hu47f31a060c17741ed671fdc891fc1e2a_106079_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD"
+                        
+                        data-hash="md5-Noe6nOODXxSTd2IpKqt/iA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Start VM on Connect for Pooled and Personal Host Pools in WVD</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.3d887d5b8567680066c722d4e44fd9d0_hu47f31a060c17741ed671fdc891fc1e2a_72005_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11"
+                        
+                        data-hash="md5-PYh9W4VnaABmxyLU5E/Z0A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to reset the Remote Desktop Client on Windows 10 &amp; 11</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/">
+        
+        
+            <div class="article-image">
+                <img src="/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.88515152412212926706d1e9d67726a1_hu47f31a060c17741ed671fdc891fc1e2a_68582_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What you have to know about the WVD Required URL check tool"
+                        
+                        data-hash="md5-iFFRUkEiEpJnBtHp1ncmoQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What you have to know about the WVD Required URL check tool</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/">
+        
+        
+            <div class="article-image">
+                <img src="/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.da30728ab94caecf89726192936ae4a1_hu47f31a060c17741ed671fdc891fc1e2a_102445_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session"
+                        
+                        data-hash="md5-2jByirlMrs&#43;JcmGSk2rkoQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/">
+        
+        
+            <div class="article-image">
+                <img src="/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.05aa5e48f03fa0fa8d8a8eb8a92dee3e_hu47f31a060c17741ed671fdc891fc1e2a_65534_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach"
+                        
+                        data-hash="md5-BapeSPA/oPqNio64qS3uPg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Container up your applications: fast, secure &amp; efficient with MSIX App Attach</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Patrick Köhler
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
