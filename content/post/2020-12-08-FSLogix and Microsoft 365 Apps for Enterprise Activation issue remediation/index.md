@@ -5,7 +5,7 @@ date: 2020-12-08T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "MSIX", "MSIX App Attach", "Azure", "Windows 11", "Windows 10"]
-categories: ["EUC", "Cloud Service","AVD" , "Azure Virtual Desktop", "Edge", "Azure", "MSIX"]
+categories: [ "Azure Virtual Desktop", "Windows"]
 ---
 
 Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.

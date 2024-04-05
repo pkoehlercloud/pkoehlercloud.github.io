@@ -5,7 +5,7 @@ date = 2021-06-14T16:56:47+06:00
 draft = false
 author = "Patrick Koehler"
 tags = ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
-categories = ["EUC", "AVD", "Azure Virtual Desktop", "FSLogix", "Azure"]
+categories = ["Azure Virtual Desktop", "Windows", "Microsoft Azure"]
 +++
 
 Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.

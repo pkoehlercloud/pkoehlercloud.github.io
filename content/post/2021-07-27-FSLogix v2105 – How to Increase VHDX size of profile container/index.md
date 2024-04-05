@@ -6,7 +6,7 @@ date: 2021-07-27T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["VMware Horizon","Horizon Cloud", "Azure Virtual Desktop", "FSLogix", "Profile Management"]
-categories: ["VMware", "Citrix", "Microsoft", "AVD", "Azure Virtual Desktop", "FSLogix"]
+categories: ["VMware", "Citrix", "Azure Virtual Desktop", "FSLogix"]
 ---
 
 Hi and welcome to my latest blog post about Azure Virtual Desktop and FSLogix v2105.

@@ -6,7 +6,7 @@ date: 2021-07-27T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Azure Virtual Desktop", "Azure"]
-categories: ["Microsoft", "AVD", "Azure Virtual Desktop", "RDP Properties"]
+categories: ["Azure Virtual Desktop"]
 ---
 
 Hi everyone it´s Patrick again with a new article on the RDP properties in Windows Virtual Desktop.

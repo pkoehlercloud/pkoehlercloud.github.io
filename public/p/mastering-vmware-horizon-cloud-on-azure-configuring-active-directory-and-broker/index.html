@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series. In the past articles, I have shown you how to setup the Azure subscription, Resource Groups, networks and accounts as well as the creation of the first POD infrastructure on Azure. In this article, we’re going to complete the setup by enabling the infrastructure to authenticate to the domain controller, that you should have in place on Azure or on-premises.">
 <title>Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker</title>
 
-<link rel='canonical' href='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/'>
+<link rel='canonical' href='https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/'>
 
 <link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker">
 <meta property='og:description' content="Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series. In the past articles, I have shown you how to setup the Azure subscription, Resource Groups, networks and accounts as well as the creation of the first POD infrastructure on Azure. In this article, we’re going to complete the setup by enabling the infrastructure to authenticate to the domain controller, that you should have in place on Azure or on-premises.">
-<meta property='og:url' content='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/'>
+<meta property='og:url' content='https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/'>
 <meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VMware Horizon' /><meta property='article:tag' content='Horizon Cloud' /><meta property='article:published_time' content='2023-03-27T16:56:47&#43;06:00'/><meta property='article:modified_time' content='2023-03-27T16:56:47&#43;06:00'/><meta property='og:image' content='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VMware Horizon' /><meta property='article:tag' content='Horizon Cloud' /><meta property='article:published_time' content='2023-03-27T16:56:47&#43;06:00'/><meta property='article:modified_time' content='2023-03-27T16:56:47&#43;06:00'/><meta property='og:image' content='https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.png' />
 <meta name="twitter:site" content="@wvdlogix">
     <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker">
 <meta name="twitter:description" content="Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series. In the past articles, I have shown you how to setup the Azure subscription, Resource Groups, networks and accounts as well as the creation of the first POD infrastructure on Azure. In this article, we’re going to complete the setup by enabling the infrastructure to authenticate to the domain controller, that you should have in place on Azure or on-premises."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.png' />
+    <meta name="twitter:image" content='https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.png' />
     </head>
     <body class="
     article-page
@@ -316,20 +316,16 @@
     
     <header class="article-category">
         
-            <a href="/categories/horizon-cloud/" >
+            <a href="/categories/horizon-cloud/" style="background-color: #2a9d8f; color: #fff;">
                 Horizon Cloud
             </a>
         
-            <a href="/categories/azure/" >
-                Azure
+            <a href="/categories/microsoft-azure/" style="background-color: #2a9d8f; color: #fff;">
+                Microsoft Azure
             </a>
         
-            <a href="/categories/vmware/" >
+            <a href="/categories/vmware/" style="background-color: #2a9d8f; color: #fff;">
                 VMware
-            </a>
-        
-            <a href="/categories/article-series/" >
-                Article Series
             </a>
         
     </header>

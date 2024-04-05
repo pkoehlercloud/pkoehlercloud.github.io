@@ -5,7 +5,7 @@ date: 2021-07-29T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
-categories: ["EUC", "Cloud Service","AVD" , "Azure Virtual Desktop", "FSLogix", "Azure"]
+categories: ["Azure Virtual Desktop", "FSLogix", "Microsoft Azure"]
 ---
 
 This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.

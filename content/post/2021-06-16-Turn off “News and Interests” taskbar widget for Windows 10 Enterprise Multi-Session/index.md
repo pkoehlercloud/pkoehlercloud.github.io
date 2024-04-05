@@ -6,7 +6,7 @@ date: 2021-07-29T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Endpoint Manager"]
-categories: ["EUC", "Azure Virtual Desktop", "FSLogix"]
+categories: ["Azure Virtual Desktop", "Windows"]
 ---
 
 A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.

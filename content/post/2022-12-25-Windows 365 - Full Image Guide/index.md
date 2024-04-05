@@ -5,7 +5,7 @@ date: 2022-12-25T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Intune", "Endpoint Management"]
-categories: ["Windows 365", "EUC"]
+categories: ["Windows 365"]
 ---
 
 Hello everyone and welcome back to the Windows 365 full guide. This week we continue the guide with Image Management capabilities and what you need to take care of, when replacing the currently used image for your Cloud PCs.

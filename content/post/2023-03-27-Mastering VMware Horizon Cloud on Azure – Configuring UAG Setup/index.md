@@ -11,7 +11,7 @@ tags = [
     "VMware",
     "EUC"
 ]
-categories = ["Horizon Cloud", "Azure", "VMware", "Article Series"]
+categories = ["Horizon Cloud", "Microsoft Azure", "VMware"]
 image = "title.png"
 +++
 

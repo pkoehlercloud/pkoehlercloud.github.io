@@ -6,7 +6,7 @@ date: 2021-04-20T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
-categories: ["EUC", "AVD", "Azure Virtual Desktop", "FSLogix", "Azure"]
+categories: ["Azure Virtual Desktop", "FSLogix", "Microsoft Azure"]
 ---
 
 On 16.04.2021 Tom Hickling (https://twitter.com/@tomhickling) announced via LinkedIn, that Microsoft released a tool to validate that Session Hosts can reach the required services to ensure full connectivity to the WVD services.

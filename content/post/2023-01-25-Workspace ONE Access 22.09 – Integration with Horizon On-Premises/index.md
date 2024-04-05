@@ -5,7 +5,7 @@ date = 2023-01-25T16:56:47+06:00
 draft = false
 author = "Patrick Koehler"
 tags = ["VMware Horizon","Horizon Cloud", "Workspace ONE", "Workspace ONE Access", "IdP"]
-categories = ["Horizon Cloud", "Azure", "VMware", "Article Series"]
+categories = ["Horizon Cloud", "Microsoft Azure", "VMware"]
 +++
 
 Welcome to part 4 (actually 5) of the series on how to integrate Workspace ONE Access with Microsoft Azure and Horizon resources on-premises and in the Azure cloud.

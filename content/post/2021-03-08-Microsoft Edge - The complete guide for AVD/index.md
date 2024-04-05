@@ -6,7 +6,7 @@ date: 2021-03-08T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Edge", "Azure", "Windows 11", "Windows 10"]
-categories: ["EUC", "Azure Virtual Desktop", "Azure","User Experience"]
+categories: ["Azure Virtual Desktop", "Microsoft Azure"]
 ---
 
 Hi everyone,

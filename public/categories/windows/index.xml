@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Windows on Patrick&#39;s Multi-Cloud Blog</title>
+        <link>https://patrick-koehler.com/categories/windows/</link>
+        <description>Recent content in Windows on Patrick&#39;s Multi-Cloud Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Patrick Köhler</copyright>
+        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session</title>
+        <link>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
+        <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
+	width=&#34;650&#34;
+	height=&#34;573&#34;
+	srcset=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;272px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;How you can easily turn this feature off is what we’re covering in today’s blog post!&lt;/p&gt;
+&lt;h2 id=&#34;turn-off-the-feature-via-group-policy--registry&#34;&gt;
+    &lt;a href=&#34;#turn-off-the-feature-via-group-policy--registry&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Turn off the feature via Group Policy / Registry
+&lt;/h2&gt;&lt;p&gt;The easiest way I would recommend deactivating the features for all users is via Group Policy. As there is currently no official option to turn this feature off, you can achieve this by using a registry key.&lt;/p&gt;
+&lt;p&gt;Navigate to the Group Policy Management console on your Active Directory server and create a new Registry Key for your Session Hosts:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;HKEY_CURRENT_USER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Software&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CurrentVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Feeds&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Create a new entry:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DWORD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ShellFeedsTaskbarViewMode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Value&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;b&gt;IMPORTANT! Value “2” deactivates the feature in the next couple of minutes from the virtual machine. If the value is set to “0”, the feature remains enabled!&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;That’s it! With that trick you can deactivate the widget easily.&lt;/p&gt;
+&lt;p&gt;Nevertheless I would be interested to know your opinion about the feature! Do you any sense in keeping it enabled on multi-session VMs? Let me know!&lt;/p&gt;
+&lt;p&gt;Cheers,
+Patrick&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>How to reset the Remote Desktop Client on Windows 10 &amp; 11</title>
+        <link>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
+        <pubDate>Mon, 14 Jun 2021 16:56:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
+&lt;p&gt;For that reason, you can reset the Remote Desktop Client on Windows easily via PowerShell.&lt;/p&gt;
+&lt;p&gt;The feature is available from version 1.2.790, which has been released already in 2020.&lt;/p&gt;
+&lt;p&gt;Just run this small line of code and you’ll be fine again:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;C:\Program Files\Remote Desktop\&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;msrdcw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reset&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I hope this helps in case that you encounter that kind of issue one day.&lt;/p&gt;
+&lt;p&gt;Cheers,
+Patrick&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation</title>
+        <link>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
+        <pubDate>Tue, 08 Dec 2020 16:56:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
+&lt;p&gt;In the menu bar in the center top we can see Word [Non-Commercial Use] [Unlicensed Product]&lt;/p&gt;
+&lt;p&gt;Office has worked for the last couple of months perfectly on WVD, so I had to investigate the issue and obviously, the first thing I’ve tried, is to Sign in again to see the application behavior. Finally, the screen was flickering a few times, but the error message persists and Office was simply unusable for all users on the system.&lt;/p&gt;
+&lt;p&gt;So first of all I started to analyze the base parameters like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FSLogix version used (it was 2.9.7349.30108 at the time of doc creation)&lt;/li&gt;
+&lt;li&gt;Office version used (shown in the screenshot below)&lt;/li&gt;
+&lt;li&gt;Office update channel in use (shown in the screenshot below)&lt;/li&gt;
+&lt;li&gt;Roaming license token for Microsoft Apps in place&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I quickly realized that the client updated the image and changed the Update Channel from Semi-Annual channel to Current Channel.&lt;/p&gt;
+&lt;p&gt;This is in general not a big issue, but you need to make sure that Office is always in it’s latest version, which was not the case in this scenario!&lt;/p&gt;
+&lt;h3 id=&#34;tip-1-if-you-need-to-choose-current-channel-make-sure-office-is-in-its-latest-version&#34;&gt;
+    &lt;a href=&#34;#tip-1-if-you-need-to-choose-current-channel-make-sure-office-is-in-its-latest-version&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Tip 1: If you need to choose Current Channel, make sure Office is in it’s latest version!
+&lt;/h3&gt;&lt;p&gt;But this didn’t solve the problem at all, it just brought us to the latest version. So the next thing to check is, what happened with our existing License Token for Microsoft Apps for Enterprise.&lt;/p&gt;
+&lt;p&gt;Usually, when using FSLogix Profile and Office365 Container, we have the possibility and include the Office Activation Data inside the Office365 Container. This can be defined easily through Group Policies.&lt;/p&gt;
+&lt;p&gt;If thats the case for you, you’ll find the activation token as if you’re working with local profiles underneath the following location:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; %LOCALAPPDATA%\Microsoft\Office\16.0 &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;And it turned out that no files were present here! This was our starting point. Next, we need to ensure, that all user-related information is removed from the registry and that the Work or School Account settings are reset for the user to be able to renew the activation token.&lt;/p&gt;
+&lt;p&gt;For that reason, I’ve created a tool, which performs all of these tasks for you automatically and it can be used for one-shot remediation.&lt;/p&gt;
+&lt;p&gt;Please find the video and the tool download afterwards:&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Pflz2Cdp0w8?si=9ZfCsrwc5vqflwTs&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;The tool is free usable and can be downloaded from my GitHub repository:
+(&lt;a class=&#34;link&#34; href=&#34;https://github.com/wvdlogix/M365TroubleshooterWVD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/wvdlogix/M365TroubleshooterWVD&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Finally, you can start one of your office apps again and you just need to click on accept license agreement, like it’s your first time starting office. Outlook data and configuration settings won’t be lost!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Azure Virtual Desktop - Windows 10 Start menu optimization guide</title>
+        <link>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</link>
+        <pubDate>Thu, 02 Jul 2020 16:56:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.png" alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide" /&gt;&lt;p&gt;Hi everybody it´s Patrick again with another blog post!
+It´s been busy weeks since my last article about Host Pool Automation (part 3), where I´ve shared with you my first Automation Scaling script, check it out if you´re interested how you can get started with automating your WVD session hosts to save costs!&lt;/p&gt;
+&lt;p&gt;But this week I´m going to start a new article series, focusing on increasing the User Experience in Windows Virtual Desktop for end-users as well as for admins!&lt;/p&gt;
+&lt;p&gt;Since WVD Spring Release is available in public preview I was searching for the state of the art User Experience and finally I came to the conclusion that every environment has its own signature so that you can´t summarize and give the “final answer” to all usability questions, but at least we can try to optimize the environment, to make our end-users curious about what they can do in WVD, especially with the new Windows 10 Multi-Session 2004 version!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1-windows-10-startmenu-and-taskbar-the-basics&#34;&gt;
+    &lt;a href=&#34;#chapter-1-windows-10-startmenu-and-taskbar-the-basics&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 1: Windows 10 Startmenu and Taskbar: The basics
+&lt;/h2&gt;&lt;p&gt;The Windows 10 startmenu or taskbar is the place in Windows to consolidate all installed applications on the system and to provide an easy to use navigation point while providing direct shortcuts to the applications without directly impacting the application installation.&lt;/p&gt;
+&lt;p&gt;Customizing the Windows 10 startmenu and taskbar is possible since the release of version 1607.&lt;/p&gt;
+&lt;p&gt;By default, a Windows 10 startmenu provides the following view, while opening it:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
+	width=&#34;720&#34;
+	height=&#34;406&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;425px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;While having a deeper look at the startmenu itself, we can separate it into the following areas:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
+	width=&#34;606&#34;
+	height=&#34;518&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;116&#34;
+		data-flex-basis=&#34;280px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recently Added: The place that displays, which applications have been installed recently&lt;/li&gt;
+&lt;li&gt;Most used: A time-based consolidation, which presents a view of the most used applications on the system&lt;/li&gt;
+&lt;li&gt;User tile: Shows the avatar of the user and allows to Change Account settings (for the logged-on user), Lock the system, Sign Out from the system&lt;/li&gt;
+&lt;li&gt;Suggestions: Not necessary for enterprise usage. Most likely advertisement of Microsoft Store Apps.&lt;/li&gt;
+&lt;li&gt;All Apps: Shows a list of all applications within the startmenu&lt;/li&gt;
+&lt;li&gt;Power: Normally allows you to shut down, restart, sleep – but in Windows Virtual Desktop you only have the possibility to disconnect the session from the end-user perspective.&lt;/li&gt;
+&lt;li&gt;Start layout: Can be separated into several groups, which include Tiles to start the applications. Tiles can be static (icon) or dynamic (animated). You can pin apps and folders to be started.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;%AppData%\Microsoft\Windows\Start Menu\Programs&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;In here you can find the folders represented in your startmenu while viewing “All Apps”.&lt;/p&gt;
+&lt;p&gt;To review the location for default users in your environment and to review, where the default icons and application shortcuts are coming from, please find the location for the “all user startmenu”:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; %ProgramData%\Microsoft\Windows\Start Menu\Programs. &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Finally the startmenu combines both locations and represents the results in the users startmenu.&lt;/p&gt;
+&lt;p&gt;The important startmenu rules&lt;/p&gt;
+&lt;p&gt;To get started with startmenu modifications you need to have in mind, that Microsoft has specific rules on how the whole background process around these startmenus are working, please find them here:&lt;/p&gt;
+&lt;h3 id=&#34;indexiation&#34;&gt;
+    &lt;a href=&#34;#indexiation&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Indexiation!
+&lt;/h3&gt;&lt;p&gt;As you now know, the startmenu combines the both avalable locations from the user´s startmenu location in the profile with the one available for all users on the local C: drive.&lt;/p&gt;
+&lt;p&gt;There is a kind of indexiation process behind the scenes which identifies the existance of the same shortcut within the user´s profile and keeps only one version. This means: You cannot have two copies of the same EXE file in the startmenu!&lt;/p&gt;
+&lt;h3 id=&#34;the-emptier-the-folder-the-less-will-be-displayed&#34;&gt;
+    &lt;a href=&#34;#the-emptier-the-folder-the-less-will-be-displayed&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The emptier the folder.. the less will be displayed..
+&lt;/h3&gt;&lt;p&gt;If you´re managing application folders within your startmenu and you have no shortcuts within a specified folder, it wont be displayed!&lt;/p&gt;
+&lt;h3 id=&#34;the-startmenu-is-no-porsche&#34;&gt;
+    &lt;a href=&#34;#the-startmenu-is-no-porsche&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The startmenu is NO PORSCHE!
+&lt;/h3&gt;&lt;p&gt;Very important to keep in mind is, when you do changes to the startmenu or folders, in most cases it requires some time to be applied. In some cases even a re-login to the system!&lt;/p&gt;
+&lt;h3 id=&#34;troubleshooting&#34;&gt;
+    &lt;a href=&#34;#troubleshooting&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Troubleshooting!
+&lt;/h3&gt;&lt;p&gt;I remember my early days in IT, when my colleagues told me to check the event viewer for the exact error messages. If you see that there is an error related to the start menu or taskbar please find the appropriate log files here: Event Viewer &amp;gt; Applications and Services Log &amp;gt; Microsoft &amp;gt; Windows &amp;gt; ShellCommon-StartLayoutPopulation &amp;gt; Operational&lt;/p&gt;
+&lt;h2 id=&#34;chapter-2-configure-the-startmenu&#34;&gt;
+    &lt;a href=&#34;#chapter-2-configure-the-startmenu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 2: Configure the startmenu
+&lt;/h2&gt;&lt;p&gt;There are a lot of possibilities given to optimize the startmenu to your end-users needs! Beginning from the installation of new software over the deinstallation of Microsoft´s built-in applications (Appx) to the configuration of the visual setting and groupings of the startmenu. In this section you will learn to cleanup the startmenu and free it from consumer experiences and finally adapt it to your needs while respecting best practices and lessons learned from the past years.&lt;/p&gt;
+&lt;h3 id=&#34;remove-consumer-experience-applications&#34;&gt;
+    &lt;a href=&#34;#remove-consumer-experience-applications&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Remove Consumer Experience Applications
+&lt;/h3&gt;&lt;p&gt;Removing the Consumer Experience Applications should always be the first start of optimizing Windows 10 to prevent, that our users are utilizing applications which aren´t supporting the productivity.&lt;/p&gt;
+&lt;p&gt;If you need to remove more application or just wanted to know, which AppX applications are installed by default, start a PowerShell as Administrator and type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-AppxPackage&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ft &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Here is a list of applications, I usually remove from the golden image by default:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxSpeechToTextOverlay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;OneConnect&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsFeedbackHub&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;windowscommunicationsapps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;BingWeather&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MicrosoftOfficeHub&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxIdentityProvider&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MicrosoftSolitaireCollection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MicrosoftStickyNotes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MSPaint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;People&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Print3D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsCamera&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Photos&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MixedReality&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Portal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Xbox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;TCUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ScreenSketch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Messaging&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;SkypeApp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxApp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;GetHelp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ZuneMusic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;YourPhone&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsAlarms&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsCalculator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ZuneVideo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxGameOverlay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxGamingOverlay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsMaps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsSoundRecorder&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Office&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;OneNote&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Getstarted&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Microsoft3Dviewer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To simply remove these applications you can also just run the following Powershell Script in your Windows 10 environment:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Microsoft.3DBuilder,Microsoft.Getstarted,Microsoft.MicrosoftOfficeHub,Microsoft.MicrosoftSolitaireCollection,Microsoft.People,Microsoft.SkypeApp,Microsoft.WindowsCommunicationsApps,Microsoft.XboxApp,Microsoft.ZuneMusic,Microsoft.ZuneVideo,Microsoft.BingFinance,Microsoft.BingNews,Microsoft.BingSports,Microsoft.BingWeather,Microsoft.Windows.Photos,Microsoft.WindowsCamera,Microsoft.WindowsMaps,Microsoft.YourPhone,Microsoft.WindowsSoundRecorder,Microsoft.WindowsAlarms,Microsoft.GetHelp, Microsoft.Microsoft3Dviewer,Microsoft.Messaging, Microsoft.MixedReality.Portal, Microsoft.WindowsFeedbackHub, Microsoft.Wallet, Microsoft.Print3D,&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Get-AppxPackage&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Allusers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Remove-AppxPackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
+	width=&#34;646&#34;
+	height=&#34;677&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;229px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You will immediately identify, that the applications mentioned above are removed for all users of the system, meaning that future users in our WVD environment wont get those applications installed. But you might wonder, why we are able to see still some consumer applications in the StartMenu?&lt;/p&gt;
+&lt;p&gt;This is something related to the Windows 10 version you are using (in my example for testing purposes Win10 Pro), where you can disable the usage of consumer apps easily via GPO later on.&lt;/p&gt;
+&lt;p&gt;The required settings can be defined from the Group Policy Management console of your administrative computer (having the RSAT tools installed), or from any domain controller in your environment.&lt;/p&gt;
+&lt;h3 id=&#34;pre-configure-shortcuts-for-deployments&#34;&gt;
+    &lt;a href=&#34;#pre-configure-shortcuts-for-deployments&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Pre-configure shortcuts for deployments
+&lt;/h3&gt;&lt;p&gt;Now it´s most likely the time for you to install your required applications. When this is done you can start creating the startmenu with the presets you want to give your endusers. You can do this in multiple ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Drag&amp;amp;Drop the Shortcuts into the StartMenu&lt;/li&gt;
+&lt;li&gt;Right-Click on a Shortcut “Pin to Start”&lt;/li&gt;
+&lt;li&gt;Directly into an XML file for the very manual approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My tip: Do it with Drag&amp;amp;Drop and the Pinning method first!&lt;/p&gt;
+&lt;p&gt;Now let´s start removing not required application shortcuts by performing a right-click on the tile and select: “Unpin folder from Start”.&lt;/p&gt;
+&lt;p&gt;We do this for all our applications and start adding the new tiles by searching them in the StartMenu, performing a right-click and selecting: “Pin to Start”.&lt;/p&gt;
+&lt;p&gt;By hovering over the name of the group, you can even modify it here:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
+	width=&#34;346&#34;
+	height=&#34;206&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;403px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In my example I specify the group name for my end users, that even the guy with less IT experience knows what these apps are about – hopefully 😉&lt;/p&gt;
+&lt;p&gt;Finally the startmenu can look like this:&lt;/p&gt;
+&lt;p&gt;%ScreenShot WVD Environment%&lt;/p&gt;
+&lt;h3 id=&#34;user-experience-tips&#34;&gt;
+    &lt;a href=&#34;#user-experience-tips&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    User Experience Tips!
+&lt;/h3&gt;&lt;p&gt;One thing that dramatically helps users to understand what they have to do when they finish their working day is to provide them with a dedicated Logoff button in the start menu. Like this the users, at least for my customers, are more willed to perform a clean logoff instead of just closing the session window or performing an unclean disconnect.&lt;/p&gt;
+&lt;p&gt;To create such a loggoff button, follow these steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new batch file and enter the following line:
+shutdown -l -f -t 0&lt;/li&gt;
+&lt;li&gt;Save it in a location untouchable for your end users (in my case I´ve created C:\Windows\WVDSupport)&lt;/li&gt;
+&lt;li&gt;Create a shortcut and paste it into the startmenu folder: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\&lt;/li&gt;
+&lt;li&gt;When doing a right click on the shortcut you can change the icon, I´ve selected this one.&lt;/li&gt;
+&lt;li&gt;Now reference it via Drag and Drop into the startmenu and export it and follow the steps descripted in chapter 4!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;chapter-3-configure-the-taskbar&#34;&gt;
+    &lt;a href=&#34;#chapter-3-configure-the-taskbar&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 3: Configure the Taskbar
+&lt;/h2&gt;&lt;p&gt;Since the version Windows 10 1607 you have the possibility to remove and pin additional applications to the Taskbar of Windows 10. In our case this is really helpful to pre-define the default settings for our end-users in the WVD environment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
+	width=&#34;799&#34;
+	height=&#34;39&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2048&#34;
+		data-flex-basis=&#34;4916px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;To add new icons to the taskbar, simply drag and drop them from the start menu or perform a right-click &amp;gt; More &amp;gt; Pin to Taskbar&lt;/p&gt;
+&lt;h3 id=&#34;user-experience-tips-1&#34;&gt;
+    &lt;a href=&#34;#user-experience-tips-1&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    User Experience Tips!
+&lt;/h3&gt;&lt;p&gt;Don´t forget to pin the Windows Explorer / File Explorer! By default this is not the case but it will drastically improve the user experience.&lt;/p&gt;
+&lt;p&gt;Just search for the Windows Explorer in your start menu and make a right-click &amp;gt; Pin to taskbar!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-4-provisioning-options-for-windows-virtual-desktop&#34;&gt;
+    &lt;a href=&#34;#chapter-4-provisioning-options-for-windows-virtual-desktop&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 4: Provisioning options for Windows Virtual Desktop
+&lt;/h2&gt;&lt;p&gt;For our deployment in WVD it´s really important to know the different ways of deploying the predefined settings to our end users. I will not be able to mention every single option in detail, but I will explain you most likely the pro´s and con´s of each approach and by interest I´m available to guide you through the setup in detail.&lt;/p&gt;
+&lt;p&gt;Let me quickly present you, which characteristics a Startmenu or Taskbar can have for the end users and how we as administrators can benefit from some settings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mandatory startmenu: A predefined layout that end-users are NOT able to change in any way. It´s completely configured by the administrator and there is no way of removing Tiles or adding new ones
+&lt;ul&gt;
+&lt;li&gt;Pro´s: Easy administrative effort, as Admins have the full control over what is presented to the end-users&lt;/li&gt;
+&lt;li&gt;Con´s: The users will heavily complain in some cases, because the IT department doesn´t integrate their daily business application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Partially Customizable startmenu: This allows the administrator to predefine the startlayout and set specific groups to a mandatory state. This means, that certain groups are not modifiable, while other areas can be modified by the end-users.
+&lt;ul&gt;
+&lt;li&gt;Pro´s: Mandatory applications are always pinned to the startmenu, this allows easy access to mandatory applications everyone needs. Additionally the user can modify and add his / her favorite tools on top of that.&lt;/li&gt;
+&lt;li&gt;Con´s: Administrative effort can be a bit higher, when troubleshooting user interaction mistakes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Default Start Menu: Enables the predefined settings by the administrators and allows the user to fully optimize and adopt the startmenu
+&lt;ul&gt;
+&lt;li&gt;Pro´s: Allows the IT department to completely pre-define the startmenu and give the user the full flexibility afterwards&lt;/li&gt;
+&lt;li&gt;Con´s: Need to be implemented in the Golden Image by either importing the Layout via PowerShell or by copying the LayoutModification.xml into the Default User Profile (Explained later)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let me present you quickly how to setup every of these three possibilities:&lt;/p&gt;
+&lt;h3 id=&#34;configure-the-mandatory-startmenu&#34;&gt;
+    &lt;a href=&#34;#configure-the-mandatory-startmenu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Configure the mandatory startmenu
+&lt;/h3&gt;&lt;p&gt;The first thing, after defining the startmenu is to export it. To do so you must start the Powershell as an administrator and run the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Export-StartLayout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UNC&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;xml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The result will be exported as an XML and should look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
+	width=&#34;720&#34;
+	height=&#34;223&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;322&#34;
+		data-flex-basis=&#34;774px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the XML is structured based on the shortcuts you defined in your startmenu layout.&lt;/p&gt;
+&lt;p&gt;I highly recommend you to have a look at the official Microsoft documentation for more information about, how this XML file is built:
+(&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/configuration/start-layout-xml-desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.microsoft.com/en-us/windows/configuration/start-layout-xml-desktop&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;To make this startlayout finally mandatory, we need to define the XML as StartLayout via Group Policy. To do so, open up the Group Policy Management Console and create a new GPO or edit an existing one:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; User Configuration &amp;gt; Administrative Templates &amp;gt; Start Menu and Taskbar &amp;gt; Start Layout &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Once applied the startlayout will be enforced for all users, where it applies!&lt;/p&gt;
+&lt;h3 id=&#34;configure-the-partially-customizable-startmenu&#34;&gt;
+    &lt;a href=&#34;#configure-the-partially-customizable-startmenu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Configure the partially customizable startmenu
+&lt;/h3&gt;&lt;p&gt;To define a partially customizable startmenu we need to go back to the point, where we have exported our startmenu. As a small reminder, you have to open the PowerShell as Administrator and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Export-StartLayout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UNC&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;xml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now you need to open this XML file and define the groups, you want to lock or prevent the user from changing it.&lt;/p&gt;
+&lt;p&gt;You will see the start of the seciton “DefaultLayoutOverride” in this XML, which needs to be adapted for the usage of partial customizable menus.&lt;/p&gt;
+&lt;p&gt;To enable that feature just replace this value by: &lt;DefaultLayoutOverride LayoutCustomizationRestrictionType=”OnlySpecifiedGroups”&gt;&lt;/p&gt;
+&lt;p&gt;Now, all definitions you did in this XML file will become active, once you reimport that file on your golden image or user session.&lt;/p&gt;
+&lt;p&gt;This can be done by re-importing it via Powershell using this command as Administrator:&lt;/p&gt;
+&lt;p&gt;Import-StartLayout -LayoutPath \%UNCToStartLayout%\StartLayout.xml -MountPath c:&lt;br&gt;
+Or by renaming your XML into LayoutModification.xml and place it into the Default user Shell folder:&lt;/p&gt;
+&lt;p&gt;“C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml”&lt;/p&gt;
+&lt;p&gt;This will activate the settings for all users, that will be created on that system.&lt;/p&gt;
+&lt;h3 id=&#34;configure-a-default-start-menu&#34;&gt;
+    &lt;a href=&#34;#configure-a-default-start-menu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Configure a Default Start Menu
+&lt;/h3&gt;&lt;p&gt;The last option is to simply export the startmenu as mentioned above and place it into the Shell folder without any modification on the XML file itself!
+Please keep in mind that the XML must be named “LayoutModification.xml”, otherwise your process of enabling the default layout will fail!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-5-download-the-resources&#34;&gt;
+    &lt;a href=&#34;#chapter-5-download-the-resources&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 5: Download the resources
+&lt;/h2&gt;&lt;p&gt;If you want to get my start layout, please find it here to be used for your deployments! Via the tasks descripted in chapter 4 you can adapt it to your individual needs. Please keep in mind that my startlayout requires to work the updated Edge Browser and the installed Office365 ProPlus package.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;LayoutModificationTemplate&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:defaultlayout=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/Start/2014/FullDefaultLayout&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:start=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/Start/2014/StartLayout&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Version=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/Start/2014/LayoutModification&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;LayoutOptions&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;StartTileGroupCellWidth=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;DefaultLayoutOverride&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;StartLayoutCollection&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;defaultlayout:StartLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;GroupCellWidth=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Browsers&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%APPDATA%\Microsoft\Windows\Start Menu\Programs\Accessories\Internet Explorer.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;/start:Group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Utilities&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Accessories\Snipping Tool.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Accessories\Quick Assist.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Tile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;AppUserModelID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Microsoft.PPIProjection_cw5n1h2txyewy!Microsoft.PPIProjection&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Tile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;AppUserModelID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Administrative Tools\GaaschTools\Logoff.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;/start:Group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Microsoft 365 ProPlus&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\PowerPoint.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Outlook.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Publisher.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Word.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Excel.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Access.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;/start:Group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;/defaultlayout:StartLayout&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/StartLayoutCollection&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/DefaultLayoutOverride&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LayoutModificationTemplate&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I hope you like this article and if you have any kind of questions, ping me on Twitter, LinkedIn or down in the comments!&lt;/p&gt;
+&lt;p&gt;Have a great weekend everyone!
+Cheers,&lt;/p&gt;
+&lt;p&gt;Patrick&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -6,7 +6,7 @@ date: 2020-12-11T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "MSIX", "MSIX App Attach", "Azure", "Windows 11", "Windows 10"]
-categories: ["EUC", "AVD", "Azure Virtual Desktop", "Edge", "Azure", "MSIX"]
+categories: ["Azure Virtual Desktop", "Microsoft Azure", "MSIX"]
 ---
 
 <iframe width="650" height="500" src="https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

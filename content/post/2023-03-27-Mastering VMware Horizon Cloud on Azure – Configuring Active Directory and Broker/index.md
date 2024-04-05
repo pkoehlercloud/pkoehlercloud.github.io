@@ -5,7 +5,7 @@ date = 2023-03-27T16:56:47+06:00
 draft = false
 author = "Patrick Koehler"
 tags = ["VMware Horizon","Horizon Cloud"]
-categories = ["Horizon Cloud", "Azure", "VMware", "Article Series"]
+categories = ["Horizon Cloud", "Microsoft Azure", "VMware"]
 +++
 
 Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series. 

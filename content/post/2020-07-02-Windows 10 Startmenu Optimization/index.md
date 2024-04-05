@@ -5,7 +5,7 @@ date = 2020-07-02T16:56:47+06:00
 draft = false
 author = "Patrick Koehler"
 tags = ["Azure Virtual Desktop", "Azure"]
-categories = ["Microsoft", "AVD", "Azure Virtual Desktop"]
+categories = ["Azure Virtual Desktop", "Windows"]
 +++
 
 Hi everybody it´s Patrick again with another blog post!
