@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Microsoft Edge on Patrick&#39;s Multi-Cloud Blog</title>
+        <link>http://localhost:1313/tags/microsoft-edge/</link>
+        <description>Recent content in Microsoft Edge on Patrick&#39;s Multi-Cloud Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Patrick Köhler</copyright>
+        <lastBuildDate>Mon, 08 Mar 2021 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/microsoft-edge/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Microsoft Edge – The complete guide for AVD</title>
+        <link>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</link>
+        <pubDate>Mon, 08 Mar 2021 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</guid>
+        <description>&lt;img src="http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/title.png" alt="Featured image of post Microsoft Edge – The complete guide for AVD" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
+&lt;p&gt;it’s been a while since my last blog post and I think it’s getting time for a very important topic for your end users – BROWSING!&lt;/p&gt;
+&lt;p&gt;Regardless of which browser you’re using, we know that the correct configuration, paired with optimization and security is key to let users work smoothly.&lt;/p&gt;
+&lt;p&gt;But why do we need to optimize the browsing experience?&lt;/p&gt;
+&lt;p&gt;I’m sure you know at least one of the types of users:&lt;/p&gt;
+&lt;p&gt;At least 15 tabs open because closing is too dangerous and pages need to be directly accessible
+From those 15 tabs, 3 are videos where specific playlists are running, even if the Tab itself is muted
+The virtual session starts to slow down over time
+All these mentioned topics depend on the right setup of your Browsing experience.&lt;/p&gt;
+&lt;h2 id=&#34;overview--microsoft-edge--chromium&#34;&gt;
+    &lt;a href=&#34;#overview--microsoft-edge--chromium&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Overview – Microsoft Edge – Chromium
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
+	width=&#34;2120&#34;
+	height=&#34;1192&#34;
+	srcset=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Microsoft released the evolution of its classic Edge browser on 15. January 2020, so about one year ago. Since October 2020, the browser will be installed by default into the operating system by Windows Version 20H2. This version of Microsoft Edge is based on Chromium, an open-source project behind the Google Chrome Browser project.&lt;/p&gt;
+&lt;p&gt;But the Edge Chromium version isn’t just a copy of Google Chrome with a Microsoft branding – furthermore it includes additional functionalities and removes several interfaces to Google directly (which are obviously part of the Chromium project itself).&lt;/p&gt;
+&lt;p&gt;Some of the advantages, why to choose the Edge Chromium Browser are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Own Add-On store Microsoft Edge-Add-Ons (&lt;a class=&#34;link&#34; href=&#34;https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=de&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Advanced Privacy options, which can be configured using this link (edge://settings/privacy)&lt;/li&gt;
+&lt;li&gt;Progressive Web Apps (literally converting Websites in to small apps which can be added to the Desktop or Startmenu – basically an advanced shortcut)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;edge-stable-version-89-released&#34;&gt;
+    &lt;a href=&#34;#edge-stable-version-89-released&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Edge Stable version 89 released
+&lt;/h2&gt;&lt;p&gt;Microsoft announced on 04.03.2021, that the new stable version 89 of Edge is being released.
+The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;A summary of the key features can be found below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Startup boost functionality – improves app start time from 29% – 41% depending on your hardware resources&lt;/li&gt;
+&lt;li&gt;Sleeping Tabs – Previously, Tabs that were opened in the background, still consumed hardware resources on the system. With resource heavy websites opened (such as video portals), the performance might suffer a lot! This has been tackled by Sleeping Tabs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;impact-on-azure-virtual-desktop&#34;&gt;
+    &lt;a href=&#34;#impact-on-azure-virtual-desktop&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Impact on Azure Virtual Desktop
+&lt;/h2&gt;&lt;p&gt;Especially those two new features, have a major impact on systems with shared hardware resources such as Windows 10 Enterprise Multi-Session. As browsing is an essential part of our work time and several applications transforming from classical Windows Apps to web applications, speed and intelligent resource consumptions are key to operate a virtual desktop environment.&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1--configure-sleeping-tabs&#34;&gt;
+    &lt;a href=&#34;#chapter-1--configure-sleeping-tabs&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 1 – Configure Sleeping Tabs
+&lt;/h2&gt;&lt;p&gt;To enable the sleeping tabs functionality, simply type the following path into the address bar of your Edge Chromium browser:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#edge-sleeping-tabs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You will be presented with the option to enable the setting, by clicking on “Default” on the right side and select “Enabled” from the drop-down list.&lt;/p&gt;
+&lt;p&gt;Afterwards, Microsoft Edge requires you to perform a restart of the browser.&lt;/p&gt;
+&lt;p&gt;Now, back in the browser, you can use the following path in the address bar to adjust your settings:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleeping&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;20tabs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The now visible options allow you to configure, when a tab will be set to “sleep”. By default this value is set to 2 hours of inactivity. I recommend you to change this value to really benefit of resource savings. I made good experiences, which the setting defined to 15 minutes. Simply click on the drop down of the value and select what fits for you the best.&lt;/p&gt;
+&lt;p&gt;If there are pages, you never want to go to sleep, you can select and define them below “add” underneath the point “Never put these sites to sleep”.&lt;/p&gt;
+&lt;p&gt;Type the URL or wildcard and click on add to enable your selection.&lt;/p&gt;
+&lt;p&gt;When does this make sense? Especially, when you’re using CRMs or other database relying applications it might make sense to exclude them to avoid data loss in case that you forgot to return to a specific application.&lt;/p&gt;
+&lt;h3 id=&#34;chapter-1-1-enable-sleeping-tabs-via-group-policy&#34;&gt;
+    &lt;a href=&#34;#chapter-1-1-enable-sleeping-tabs-via-group-policy&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 1-1 Enable Sleeping Tabs via Group Policy
+&lt;/h3&gt;&lt;p&gt;The more company related approach would be to enable Sleeping Tabs via Group Policies.&lt;/p&gt;
+&lt;p&gt;You can find the specific setting to define sleeping tabs here:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Computer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Configuration&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Administrative&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Templates&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Edge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Select Sleeping Tabs settings and set the policy to “Enabled“&lt;/p&gt;
+&lt;h2 id=&#34;chapter-2--how-to-enable-startup-boost&#34;&gt;
+    &lt;a href=&#34;#chapter-2--how-to-enable-startup-boost&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 2 – How to enable startup boost
+&lt;/h2&gt;&lt;p&gt;To give your browser the required boost to startup, you can configure startup boost via the settings of your Edge browser:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SOFTWARE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Policies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Edge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Create a “DWORD” with the name “StartupBoostEnabled” and set it to “1”&lt;/p&gt;
+&lt;h2 id=&#34;chapter-3--conclusion&#34;&gt;
+    &lt;a href=&#34;#chapter-3--conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 3 – Conclusion
+&lt;/h2&gt;&lt;p&gt;Microsoft have released a great way in Edge version 89 to optimize the browsing performance and experience in mutli-session environments. I can just highly encourage everyone to enable the above defined settings. I’m looking forward hearing your feedback about it!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

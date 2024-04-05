@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Microsoft on Patrick&#39;s Multi-Cloud Blog</title>
+        <link>http://localhost:1313/categories/microsoft/</link>
+        <description>Recent content in Microsoft on Patrick&#39;s Multi-Cloud Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Patrick Köhler</copyright>
+        <lastBuildDate>Tue, 27 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/microsoft/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Azure Virtual Desktop - The complete RDP Property guide</title>
+        <link>http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/</link>
+        <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/</guid>
+        <description>&lt;img src="http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/title.png" alt="Featured image of post Azure Virtual Desktop - The complete RDP Property guide" /&gt;&lt;p&gt;Hi everyone it´s Patrick again with a new article on the RDP properties in Windows Virtual Desktop.&lt;/p&gt;
+&lt;p&gt;As some of you know, these popped up on the 5th October 2020 again, after a few months of disappearance. Some of you had a lot of questions, especially on the impact these settings have.&lt;/p&gt;
+&lt;p&gt;The purpose of this article is to give you a general overview of the settings and their impact on the Remote Desktop itself.&lt;/p&gt;
+&lt;p&gt;If you want to get a general overview of the new RDP settings, please watch the video below and use this guide to help you rock your AVD environment:&lt;/p&gt;
+&lt;h2 id=&#34;where-to-define-rdp-properties&#34;&gt;
+    &lt;a href=&#34;#where-to-define-rdp-properties&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Where to define RDP properties
+&lt;/h2&gt;&lt;p&gt;First of all you can define RDP properties from within the Azure Portal. To find them, simply logon to the Azure Portal on &lt;a class=&#34;link&#34; href=&#34;https://portal.azure.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://portal.azure.com&lt;/a&gt; and navigate to the Windows Virtual Desktop service by using the search bar or using the quick link. To find the properties you must have at least one Host Pool in place. This can be created from within the portal or via PowerShell.&lt;/p&gt;
+&lt;p&gt;Select one of the Host Pools, in my example this is “KCLD-WVD-TestAuto”&lt;/p&gt;
+&lt;p&gt;Finally click in the menu on the left side on RDP properties to see the options.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;543&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You can also define RDP properties via Powershell. Same here, a Host Pool must be present in the current setup.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;### Variables - Please replace Resource Group and HostPool with your values ###&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$RGHP&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Resource&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;group &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HostPools&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$HPName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HostPool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;### Install new Spring Release Powershell Module for WVD ###&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Install-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Az&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;DesktopVirtualization&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;### Import Module ###&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Import-Module&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Az&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;DesktopVirtualization&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;### Login to Azure Account ###&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Connect-AzAccount&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;### Retrieve current settings from HostPool ###&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-AzWvdHostPool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-ResourceGroupName&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$RGHP&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Name&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HPName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;fl &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CustomRDPProperty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;connection-information&#34;&gt;
+    &lt;a href=&#34;#connection-information&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Connection information
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1.png&#34;
+	width=&#34;766&#34;
+	height=&#34;250&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;306&#34;
+		data-flex-basis=&#34;735px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The connection information tab is the first of five to define the RDP properties for the Host Pool. Let me quickly explain you the different values:&lt;/p&gt;
+&lt;p&gt;Credential Security Support Provider (CredSSP): Identifies whether Remote Desktop will use CredSSP for authentication if it´s available.&lt;/p&gt;
+&lt;p&gt;For those of you, which doesn´t know what CredSSP is, it can be generally explained as Security Provider that will be used by the Support provider Interface. It helps an application “Remote Desktop Client” e.g. to delegate the user´s credentials from the client to the target server for remote authentication.&lt;/p&gt;
+&lt;p&gt;Manual setting value: enablecredsspsupport:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Reconnection settings: This setting helps administrators to let their users reconnect to their existing session if the session reaches the state disconnected. This can happen when a user logs off or is just closing the window. If you want your users to get a new session, select “initiate a new connection”.&lt;/p&gt;
+&lt;p&gt;Manual setting value: disableconnectionsharing:i:value&lt;/p&gt;
+&lt;p&gt;Practical Tip! If you select the initiate a new connection setting, make sure the user will be properly logged off after a certain time limit has reached. Otherwise, the users will flood your environment with multiple logins which make an Auto Scaling logic impossible to apply! This can be reached by applying the Group Policy to enforce the logoff by determining a specific time limit:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;247&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;414&#34;
+		data-flex-basis=&#34;994px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Computer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Configuration&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Administrative&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Templates&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Components&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Remote&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Desktop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Services&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Remote&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Desktop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Time&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Limits&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is a general tip, regardless of the RDP setting mentioned, it will help your users to properly logoff as well and to avoid issues with the FSLogix profile.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Alternate Shell (Path): This setting defines a program to be started automatically ones a new user session has been initiated. It makes sense if you want to enforce a user to use a specific app at the start-up without linking an app to the user´s start-up folder. The path to that application must be defined as local path “C:\ProgramFiles\Office\word.exe” e.g..&lt;/p&gt;
+&lt;p&gt;Manual setting value: alternate shell:s:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;session-behaviour&#34;&gt;
+    &lt;a href=&#34;#session-behaviour&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Session behaviour
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3.png&#34;
+	width=&#34;757&#34;
+	height=&#34;403&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Reconnection: Defines, if a client should try to reconnect to a user´s session if the connection gets lost. This can happen when the internet connection is lost, or if there a any other unforeseeable reasons on a network level. You can choose whether you want to PREVENT or ALLOW a client to re-establish a connection.&lt;/p&gt;
+&lt;p&gt;Recommended: Client automatically tries to reconnect.&lt;/p&gt;
+&lt;p&gt;Manual setting value: autoreconnection enabled:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Bandwidth auto detect: Determines whether automatic network type detection is enabled or disabled. It helps to identify the currently available bandwidth. This setting correlates with the next setting “Network Auto Detect”&lt;/p&gt;
+&lt;p&gt;Recommended: Enable automatic network type detection&lt;/p&gt;
+&lt;p&gt;Manual setting value: bandwidthautodetect:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Network auto detect: Determines whether to use automatic network bandwidth detection or not. Requires the previous option to be set.
+Attention: Connection type 7 is required.&lt;/p&gt;
+&lt;p&gt;Generally, these settings can be defined as well in a RDP file. We distinguish between the following modes on-premises:&lt;/p&gt;
+&lt;p&gt;1 – Modem (56 Kbps).
+2 – Low-speed broadband (256 Kbps – 2 Mbps).
+3 – Satellite (2 Mbps – 16 Mbps with high latency).
+4 – High-speed broadband (2 Mbps – 10 Mbps).
+5 – WAN (10 Mbps or higher with high latency).
+6 – LAN (10 Mbps or higher).
+7 – Automatic bandwidth detection – REQUIRES bandwidthautodetect&lt;/p&gt;
+&lt;p&gt;The setting itself, doesn´t do anything, when set. It becomes active, when select in the RDC GUI and changes automatically several performance related settings such as: Themes, Font Smoothing, Aminations etc.&lt;/p&gt;
+&lt;p&gt;Recommended: Use automatic network bandwidth detection.&lt;/p&gt;
+&lt;p&gt;Manual setting value: networkautodetect:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Compression: Determines whether bulk compression is enabled when it is transmitted by RDP to the local computer.&lt;/p&gt;
+&lt;p&gt;This setting was first introduced in the RDP6 protocol and has helped in reducing the RDP network bandwidth significantly. In some cases you might want to disable this setting, as there are already mechanisms by your network vendors (e.g. Cisco Wide Area Application Services), where compression occurs problems. This must be identified together with your networking team.&lt;/p&gt;
+&lt;p&gt;Recommendation: Enable RDP bulk compression.&lt;/p&gt;
+&lt;p&gt;Manual setting value: compression:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Video playback: Determines if the connection will use RDP-efficient multimedia streaming for video playback.&lt;/p&gt;
+&lt;p&gt;This setting has been first introduced in July 2009, where improvements have been made to optimize the overall video playback experience for Win7 and Win2008 R2 servers. Technically it means, that the client (endpoint) will receive the original compressed multimedia stream from the RDP server / WVD Session Host and decode it on the local hardware for displaying. This is also an improvement of the network bandwidth, as the data will be received compressed on the endpoint.&lt;/p&gt;
+&lt;p&gt;Recommendation: Use RDP-efficient multimedia streaming for video playback when possible.&lt;/p&gt;
+&lt;p&gt;Manual setting value: videoplaybackmode:i:value&lt;/p&gt;
+&lt;h2 id=&#34;device-redirection&#34;&gt;
+    &lt;a href=&#34;#device-redirection&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Device redirection
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4.png&#34;
+	width=&#34;799&#34;
+	height=&#34;636&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;301px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Microphone redirection: Lets you decide if you want to redirect audio capturing devices from you local endpoint to the remote session. Required for video conferencing tools as Webcams with Mics and other microphones will not work.&lt;/p&gt;
+&lt;p&gt;Recommendation: Enable audio capture from the local device and redirection to an audio application in the remote session&lt;/p&gt;
+&lt;p&gt;Manual setting value: audiocapturemode:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Redirect video encoding: Enables or disables the video encoding on the local endpoint for the RDP session.&lt;/p&gt;
+&lt;p&gt;Recommendation: Enable encoding of redirected video.&lt;/p&gt;
+&lt;p&gt;Manual setting value: encode redirected video capture:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Encoded video quality: Helps to define how much a video will be compressed for the remote session. You have the following options with the impacts:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5.png&#34;
+	width=&#34;480&#34;
+	height=&#34;92&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;521&#34;
+		data-flex-basis=&#34;1252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Manual setting value: encode redirected video capture encoding quality:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Audio output location: Defines, where audio will be played while being connected to the remote session. You can decide between the following options:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6.png&#34;
+	width=&#34;269&#34;
+	height=&#34;117&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;229&#34;
+		data-flex-basis=&#34;551px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Recommendation: Play sounds on the local computer&lt;/p&gt;
+&lt;p&gt;Manual setting value: audiomode:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Camera redirection: Helps to define, if cameras / webcams can be redirected to the remote session from the local endpoint. You can redirect all cameras, or define manually a list of cameras to be redirected. Important! The redirection of the camera is mandatory for the usage of video conferencing tools such as Teams.&lt;/p&gt;
+&lt;p&gt;Recommendation (simplified): Redirect cameras.&lt;/p&gt;
+&lt;p&gt;Manual setting value: camerastoredirect:s:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;USB device redirection: Helps to define, if and which USB devices shall be redirected to the remote session host from the local endpoint. You can define, whether you want to decline any redirected USB devices, redirect all supported drives including later connected ones or to manually enter the list of USB devices while using the hardware ID.&lt;/p&gt;
+&lt;p&gt;Recommendation (simplified): Redirect all USB drives
+Attention! Redirecting all USB drives is just a very simplified option! For security I don´t recommend this setting as any foreign USB key with potential malware on it can be plugged and being redirected to the remote session. Please evaluate this setting from case to case!&lt;/p&gt;
+&lt;p&gt;Manual setting value: devicestoredirect:s:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Drive/storage redirection: Determines, which local drives shall be redirected to the remote session. The following options are available:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7.png&#34;
+	width=&#34;436&#34;
+	height=&#34;115&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;379&#34;
+		data-flex-basis=&#34;909px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The options are nearly self-explaining. You can decide to redirect all drives, also those attached at a later time. You allow only drives, connected after the remote session has been established, or you define manually the drives and labels to be redirected.&lt;/p&gt;
+&lt;p&gt;Recommendation: Depends on the security needs! Be aware that redirecting all drives is a potential security risk for your environment.&lt;/p&gt;
+&lt;p&gt;If you want to manually allow the redirection, you can define this by defining the drive letter e.g.:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8.png&#34;
+	width=&#34;487&#34;
+	height=&#34;106&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;459&#34;
+		data-flex-basis=&#34;1102px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Manual setting value: drivestoredirect:s:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Clipboard redirection: Determines if the local clipboard from the local endpoint shall be redirected to the remote session. You can define if you want to allow it or block it.&lt;/p&gt;
+&lt;p&gt;Recommendation: Depends on the security you want to provide. If somebody writes her / his password in cleartext in a text field and just copies it, it could be potentially captured. Be cautious!&lt;/p&gt;
+&lt;p&gt;Manual setting value: redirectclipboard:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;COM ports redirection: Determines if you want to redirect serial connections from your local endpoint to the remote session. Might be useable for legacy devices.&lt;/p&gt;
+&lt;p&gt;Recommendations: COM ports are not available in the remote session. Depends on the case.&lt;/p&gt;
+&lt;p&gt;Manual setting value: redirectcomports:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Printer redirection: This setting lets the local printers being redirected to the remote session from the local endpoint. This might be helpful for your end-users in home office scenarios, where printing is essential. You can decide whether you want to allow or decline the connection.&lt;/p&gt;
+&lt;p&gt;Recommendation: Depends on the security. Printing out confidential documents might be a potential risk. This can also be protected by Windows security mechanisms like Information Protection, but if those features are not in place, printing could be declined.&lt;/p&gt;
+&lt;p&gt;Manual setting value: redirectprinters:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Smart card redirection: Determines, whether you want to allow Smartcard redirection or not. Smartcards generally help to authenticate against a specific service. This can be useful especially for Middleware’s connecting to financial software, or the local authentication on the Session host.&lt;/p&gt;
+&lt;p&gt;Recommendation: The smart card device on the local computer is available in the remote session.&lt;/p&gt;
+&lt;p&gt;Manual setting value: redirectsmartcards:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;USB redirection: Helps to define more granularly, which kind and type of USB device shall be redirected to the remote session. Compared to the other settings above, you can decide to allow or decline the following settings:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9.png&#34;
+	width=&#34;488&#34;
+	height=&#34;152&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;321&#34;
+		data-flex-basis=&#34;770px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Manual setting value: usbdevicestoredirect:s:value&lt;/p&gt;
+&lt;h2 id=&#34;display-settings&#34;&gt;
+    &lt;a href=&#34;#display-settings&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Display settings
+&lt;/h2&gt;&lt;p&gt;Multiple displays: Determines if the remote session supports all displays or just a single display. If Enabled, you can select, whether all monitors should be used by default, or if you want to enter a list of display IDs to allow only these monitors. Additionally, you can define the maximizing behavior for these screens, as well as a Multi to single display switch, which helps to switch from a multi-screen to single screen, when the full screen mode has been ended.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10.png&#34;
+	width=&#34;704&#34;
+	height=&#34;290&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;242&#34;
+		data-flex-basis=&#34;582px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Recommendation: Enable multiple display support&lt;/p&gt;
+&lt;p&gt;Manual setting value: use multimon:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Screen mode: Determines whether the remote session will appear in a windowed or full screen mode.&lt;/p&gt;
+&lt;p&gt;Recommendation: The remote session will appear full screen.&lt;/p&gt;
+&lt;p&gt;Manual setting value: screen mode id:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Smart sizing: Helps to scale the remote content in the remote session to fit to the size of the monitor. This will automatically adapt the resolution on the remote host. You can decide if you want to allow the scaling in case of resizing or not.&lt;/p&gt;
+&lt;p&gt;Recommendation: The local window content will scale when resized.&lt;/p&gt;
+&lt;p&gt;Manual setting value: smart sizing:i:value&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Dynamic resolution: Will define if the remote resolution will be adopted automatically, when sizing occurs. You can define if you want to keep the same resolution even if the size changes, or you can select a resolution update to the local windows resize and define the scaling factors:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11.png&#34;
+	width=&#34;736&#34;
+	height=&#34;249&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;295&#34;
+		data-flex-basis=&#34;709px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Recommendation: Session resolution updates as the local window resizes.&lt;/p&gt;
+&lt;p&gt;Manual setting value: dynamic resolution:i:value
+desktop size id:i:value | desktopheight:i:value | desktopwidth:i:value | desktopscalefactor:i:value&lt;/p&gt;
+&lt;h2 id=&#34;advanced&#34;&gt;
+    &lt;a href=&#34;#advanced&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Advanced
+&lt;/h2&gt;&lt;p&gt;The advanced tab represents the option previously available, where you can define all the settings mentioned above while using the parameters.&lt;/p&gt;
+&lt;p&gt;All available parameters are available from the official Microsoft page, (&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/rdp-files?context=/azure/virtual-desktop/context/context%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/rdp-files?context=/azure/virtual-desktop/context/context)&lt;/a&gt;, or from the setting explanations above. To easily migrate these settings, just copy and paste the defined settings from the advanced settings once defined and paste them to another Host Pool if needed.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Conclusion
+&lt;/h2&gt;&lt;p&gt;I hope this article will help you to understand all of the available options for Windows Virtual Desktop more in depth and are a good guidance for your decision. Keep in mind, that the settings might change over time and that all of my recommendations are based on simple environments. Organizations with advanced security requirements, should consider using the manual way of allowing certain device redirection features, over allowing all devices automatically being redirected.&lt;/p&gt;
+&lt;p&gt;If you like my article, please share it, recommend it or leave a reply below!&lt;/p&gt;
+&lt;p&gt;Looking forward to hear from you!
+Cheers,&lt;/p&gt;
+&lt;p&gt;Patrick&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>FSLogix v2105 – How to Increase VHDX size of profile container</title>
+        <link>http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</link>
+        <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</guid>
+        <description>&lt;img src="http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/title.png" alt="Featured image of post FSLogix v2105 – How to Increase VHDX size of profile container" /&gt;&lt;p&gt;Hi and welcome to my latest blog post about Azure Virtual Desktop and FSLogix v2105.&lt;/p&gt;
+&lt;p&gt;On the 12th of July, Microsoft announced a new version of FSLogix, which has a bunch of features, that could help you in maintaining your profiles. In this blog post, we will focus on: “How to increase the vhd/vhdx profile size” without the need for PowerShell or any migration of profile data into a new container.&lt;/p&gt;
+&lt;p&gt;But let’s start with a question that I previously get to show you the real advantage of this new capability.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-the-default-size-and-is-that-not-enough-for-most-use-cases&#34;&gt;
+    &lt;a href=&#34;#what-is-the-default-size-and-is-that-not-enough-for-most-use-cases&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    What is the default size, and is that not enough for most use cases?
+&lt;/h2&gt;&lt;p&gt;As many of you know, an FSLogix default profile has a maximum size of 30GB per profile disk. For most use cases this should be absolutely sufficient, however, there are quite a few examples, where this isn’t enough (Hotline / HelpDesk workers with a lot of data that needs to be available in the profile and where OneDrive isn’t an option).&lt;/p&gt;
+&lt;p&gt;So you had two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider a right sizing from the beginning and configure the SizeInMB registry / GPO setting accordingly&lt;/li&gt;
+&lt;li&gt;Migrate the files to a container with an increased size and migrate the data properly and set the permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As you can imagine, both options aren’t really optimal from the administration’s perspective.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-i-increase-the-fslogix-profile-size-using-version-2105&#34;&gt;
+    &lt;a href=&#34;#how-to-i-increase-the-fslogix-profile-size-using-version-2105&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    How to I increase the FSLogix Profile size using version 2105?
+&lt;/h2&gt;&lt;p&gt;First, you need to perform the update to version 2105 from your current version. This can easily be achieved by downloading the installer files from Microsoft here.&lt;/p&gt;
+&lt;p&gt;You just need to install the application and restart the system to apply the update.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; Attention! Ensure that no users are logged on the system, while you’re performing the update to avoid data loss. Also, try to not log on with a user, that owns an FSLogix profile otherwise, you risk that your profile is corrupted. &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Now you need to follow these easy steps to achieve the profile increasing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to your available Domain Controller, where you’re using the FSLogix Administrative Templates (available from the download link above)&lt;/li&gt;
+&lt;li&gt;Navigate to the Group Policy Management mmc.&lt;/li&gt;
+&lt;li&gt;Create a new Group Policy Object or navigate to your existing one (shown in my example below)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image.png&#34;
+	width=&#34;320&#34;
+	height=&#34;268&#34;
+	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image_hu4cebe46fbef63254684ef42a9ec5c4b4_19109_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image_hu4cebe46fbef63254684ef42a9ec5c4b4_19109_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;119&#34;
+		data-flex-basis=&#34;286px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Perform a right click and click on “Edit”&lt;/li&gt;
+&lt;li&gt;Navigate to “Computer Configuration / Administrative Templates / FSLogix / Profile Containers“&lt;/li&gt;
+&lt;li&gt;Adjust the setting “Size in MBs” and set it to your preferred value. The increasing of the profile disk will become active, once the user logs on again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1.png&#34;
+	width=&#34;686&#34;
+	height=&#34;636&#34;
+	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1_huc8a59454a3075309b66239db6fad8f98_25200_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1_huc8a59454a3075309b66239db6fad8f98_25200_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;258px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Once the user logged in, you can verify the change while navigating in your Windows Explorer to: “C:\Program Files\FSLogix\Apps” and open the frxtray.exe to see the current status of the profile.&lt;/li&gt;
+&lt;li&gt;Make a double click on the green light, which opens the tool to verify the new maximum profile size.&lt;/li&gt;
+&lt;li&gt;As you can see the new profile size has directly been applied.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3.png&#34;
+	width=&#34;859&#34;
+	height=&#34;174&#34;
+	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3_hub322ec6da8f1cf4b5ad856b53712267a_12871_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3_hub322ec6da8f1cf4b5ad856b53712267a_12871_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;493&#34;
+		data-flex-basis=&#34;1184px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; If I’m not able to upgrade to v2105, how do I increase the profile size with option 2 mentioned above? &lt;/b&gt;
+If you still need to perform the increasing of the profile disk manually, you have to follow these steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to a session host / virtual machine that has the FSLogix Apps installed&lt;/li&gt;
+&lt;li&gt;Navigate to: “C:\Program Files\FSLogix\Apps”&lt;/li&gt;
+&lt;li&gt;Collect the actual disk file of the profile that you want to increase. In my example this is a profile located on a storage account, that I’ve mounted using drive letter “Z”. E.g. Z:\sstrange\sstrange.vhdx&lt;/li&gt;
+&lt;li&gt;&lt;b&gt; IMPORTANT! Make sure to create a backup of the disk to avoid any corruption that could occur! &lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Use the following command to increase the size from 30GB to 35GB:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;migrate-vhd&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-src&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Z:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sstrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Profile_sstrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;vhdx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-dest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Z:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sstrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Profile_sstrange_increased&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;vhdx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-size-mbs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;35840&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-dynamic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;175&#34;
+	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4_hu01ca3f50f637a1cb760e6ed6dabc9ae1_161556_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4_hu01ca3f50f637a1cb760e6ed6dabc9ae1_161556_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;585&#34;
+		data-flex-basis=&#34;1404px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; ATTENTION! If you might see an error coming up while migrating/increasing the user’s profile that sounds like: &lt;/b&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error Mirroring files (0x0000001D): The system cannot write to the specified device.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is most likely due to cache files that couldn’t be copied to the new disk files (most likely coming from Microsoft Edge cache). You can ignore this error for now and continue with the next step.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now you need to rename the profile, now that you have the previous and the new one. This means that you would need to rename Profile_sstrange.vhdx to Profile_sstrange_old.vhdx and Profile_sstrange_increased.vhdx to Profile_sstrange.vhdx. (Apply to your current naming settings defined in FSLogix). The result could look like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5.png&#34;
+	width=&#34;536&#34;
+	height=&#34;110&#34;
+	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5_hu9e1522e42b4f9f39d988862b88afc3e4_10631_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5_hu9e1522e42b4f9f39d988862b88afc3e4_10631_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;487&#34;
+		data-flex-basis=&#34;1169px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now keep the old profile and advise the user to perform a login test before removing the old profile.&lt;/li&gt;
+&lt;li&gt;Once the user logged in, you can verify the change while navigating in your Windows Explorer to: “C:\Program Files\FSLogix\Apps” and open the frxtray.exe to see the current status of the profile.&lt;/li&gt;
+&lt;li&gt;Make a double click on the green light, which opens the tool to verify the new maximum profile size.&lt;/li&gt;
+&lt;li&gt;As you can see the new profile size has directly been applied.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6.png&#34;
+	width=&#34;859&#34;
+	height=&#34;174&#34;
+	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6_hub322ec6da8f1cf4b5ad856b53712267a_12871_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6_hub322ec6da8f1cf4b5ad856b53712267a_12871_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;493&#34;
+		data-flex-basis=&#34;1184px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As you have seen, the new version 2105 with the capability of increasing the profile disk size will help customers a lot. It’s a very streamlined administrative experience that does exactly what it should. The results can be verified and work perfectly with FSLogix Cloud Cache as well!&lt;/p&gt;
+&lt;p&gt;I can just recommend performing the task via Group Policy if you want to apply the setting at a global scale, rather than doing it via Group Policy.&lt;/p&gt;
+&lt;p&gt;Nevertheless, there is one remark I want to make in terms of implementing this change. Keep in mind that all users, that have the right to use an FSLogix profile will be targeted with this setting, which leads into problems with your current allocated storage capacity! Make sure to keep your scoping right, or perform the manual way of doing it as stated in chapter “If I’m not able to upgrade to v2105, how do I increase the profile size with option 2 mentioned above?” if that fix should be applied to only a single / bunch of users.&lt;/p&gt;
+&lt;p&gt;If you have any questions, write them down in the comments and I will try to answer them asap!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Azure Virtual Desktop - Windows 10 Start menu optimization guide</title>
+        <link>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</link>
+        <pubDate>Thu, 02 Jul 2020 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</guid>
+        <description>&lt;img src="http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.png" alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide" /&gt;&lt;p&gt;Hi everybody it´s Patrick again with another blog post!
+It´s been busy weeks since my last article about Host Pool Automation (part 3), where I´ve shared with you my first Automation Scaling script, check it out if you´re interested how you can get started with automating your WVD session hosts to save costs!&lt;/p&gt;
+&lt;p&gt;But this week I´m going to start a new article series, focusing on increasing the User Experience in Windows Virtual Desktop for end-users as well as for admins!&lt;/p&gt;
+&lt;p&gt;Since WVD Spring Release is available in public preview I was searching for the state of the art User Experience and finally I came to the conclusion that every environment has its own signature so that you can´t summarize and give the “final answer” to all usability questions, but at least we can try to optimize the environment, to make our end-users curious about what they can do in WVD, especially with the new Windows 10 Multi-Session 2004 version!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1-windows-10-startmenu-and-taskbar-the-basics&#34;&gt;
+    &lt;a href=&#34;#chapter-1-windows-10-startmenu-and-taskbar-the-basics&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 1: Windows 10 Startmenu and Taskbar: The basics
+&lt;/h2&gt;&lt;p&gt;The Windows 10 startmenu or taskbar is the place in Windows to consolidate all installed applications on the system and to provide an easy to use navigation point while providing direct shortcuts to the applications without directly impacting the application installation.&lt;/p&gt;
+&lt;p&gt;Customizing the Windows 10 startmenu and taskbar is possible since the release of version 1607.&lt;/p&gt;
+&lt;p&gt;By default, a Windows 10 startmenu provides the following view, while opening it:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
+	width=&#34;720&#34;
+	height=&#34;406&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;425px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;While having a deeper look at the startmenu itself, we can separate it into the following areas:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
+	width=&#34;606&#34;
+	height=&#34;518&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;116&#34;
+		data-flex-basis=&#34;280px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recently Added: The place that displays, which applications have been installed recently&lt;/li&gt;
+&lt;li&gt;Most used: A time-based consolidation, which presents a view of the most used applications on the system&lt;/li&gt;
+&lt;li&gt;User tile: Shows the avatar of the user and allows to Change Account settings (for the logged-on user), Lock the system, Sign Out from the system&lt;/li&gt;
+&lt;li&gt;Suggestions: Not necessary for enterprise usage. Most likely advertisement of Microsoft Store Apps.&lt;/li&gt;
+&lt;li&gt;All Apps: Shows a list of all applications within the startmenu&lt;/li&gt;
+&lt;li&gt;Power: Normally allows you to shut down, restart, sleep – but in Windows Virtual Desktop you only have the possibility to disconnect the session from the end-user perspective.&lt;/li&gt;
+&lt;li&gt;Start layout: Can be separated into several groups, which include Tiles to start the applications. Tiles can be static (icon) or dynamic (animated). You can pin apps and folders to be started.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;%AppData%\Microsoft\Windows\Start Menu\Programs&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;In here you can find the folders represented in your startmenu while viewing “All Apps”.&lt;/p&gt;
+&lt;p&gt;To review the location for default users in your environment and to review, where the default icons and application shortcuts are coming from, please find the location for the “all user startmenu”:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; %ProgramData%\Microsoft\Windows\Start Menu\Programs. &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Finally the startmenu combines both locations and represents the results in the users startmenu.&lt;/p&gt;
+&lt;p&gt;The important startmenu rules&lt;/p&gt;
+&lt;p&gt;To get started with startmenu modifications you need to have in mind, that Microsoft has specific rules on how the whole background process around these startmenus are working, please find them here:&lt;/p&gt;
+&lt;h3 id=&#34;indexiation&#34;&gt;
+    &lt;a href=&#34;#indexiation&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Indexiation!
+&lt;/h3&gt;&lt;p&gt;As you now know, the startmenu combines the both avalable locations from the user´s startmenu location in the profile with the one available for all users on the local C: drive.&lt;/p&gt;
+&lt;p&gt;There is a kind of indexiation process behind the scenes which identifies the existance of the same shortcut within the user´s profile and keeps only one version. This means: You cannot have two copies of the same EXE file in the startmenu!&lt;/p&gt;
+&lt;h3 id=&#34;the-emptier-the-folder-the-less-will-be-displayed&#34;&gt;
+    &lt;a href=&#34;#the-emptier-the-folder-the-less-will-be-displayed&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The emptier the folder.. the less will be displayed..
+&lt;/h3&gt;&lt;p&gt;If you´re managing application folders within your startmenu and you have no shortcuts within a specified folder, it wont be displayed!&lt;/p&gt;
+&lt;h3 id=&#34;the-startmenu-is-no-porsche&#34;&gt;
+    &lt;a href=&#34;#the-startmenu-is-no-porsche&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The startmenu is NO PORSCHE!
+&lt;/h3&gt;&lt;p&gt;Very important to keep in mind is, when you do changes to the startmenu or folders, in most cases it requires some time to be applied. In some cases even a re-login to the system!&lt;/p&gt;
+&lt;h3 id=&#34;troubleshooting&#34;&gt;
+    &lt;a href=&#34;#troubleshooting&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Troubleshooting!
+&lt;/h3&gt;&lt;p&gt;I remember my early days in IT, when my colleagues told me to check the event viewer for the exact error messages. If you see that there is an error related to the start menu or taskbar please find the appropriate log files here: Event Viewer &amp;gt; Applications and Services Log &amp;gt; Microsoft &amp;gt; Windows &amp;gt; ShellCommon-StartLayoutPopulation &amp;gt; Operational&lt;/p&gt;
+&lt;h2 id=&#34;chapter-2-configure-the-startmenu&#34;&gt;
+    &lt;a href=&#34;#chapter-2-configure-the-startmenu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 2: Configure the startmenu
+&lt;/h2&gt;&lt;p&gt;There are a lot of possibilities given to optimize the startmenu to your end-users needs! Beginning from the installation of new software over the deinstallation of Microsoft´s built-in applications (Appx) to the configuration of the visual setting and groupings of the startmenu. In this section you will learn to cleanup the startmenu and free it from consumer experiences and finally adapt it to your needs while respecting best practices and lessons learned from the past years.&lt;/p&gt;
+&lt;h3 id=&#34;remove-consumer-experience-applications&#34;&gt;
+    &lt;a href=&#34;#remove-consumer-experience-applications&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Remove Consumer Experience Applications
+&lt;/h3&gt;&lt;p&gt;Removing the Consumer Experience Applications should always be the first start of optimizing Windows 10 to prevent, that our users are utilizing applications which aren´t supporting the productivity.&lt;/p&gt;
+&lt;p&gt;If you need to remove more application or just wanted to know, which AppX applications are installed by default, start a PowerShell as Administrator and type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Get-AppxPackage&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;ft &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Here is a list of applications, I usually remove from the golden image by default:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxSpeechToTextOverlay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;OneConnect&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsFeedbackHub&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;windowscommunicationsapps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;BingWeather&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MicrosoftOfficeHub&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxIdentityProvider&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MicrosoftSolitaireCollection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MicrosoftStickyNotes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MSPaint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;People&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Print3D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsCamera&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Photos&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;MixedReality&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Portal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Xbox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;TCUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ScreenSketch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Messaging&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;SkypeApp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxApp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;GetHelp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ZuneMusic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;YourPhone&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsAlarms&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsCalculator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ZuneVideo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxGameOverlay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;XboxGamingOverlay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsMaps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;WindowsSoundRecorder&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Office&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;OneNote&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Getstarted&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Microsoft3Dviewer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To simply remove these applications you can also just run the following Powershell Script in your Windows 10 environment:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Microsoft.3DBuilder,Microsoft.Getstarted,Microsoft.MicrosoftOfficeHub,Microsoft.MicrosoftSolitaireCollection,Microsoft.People,Microsoft.SkypeApp,Microsoft.WindowsCommunicationsApps,Microsoft.XboxApp,Microsoft.ZuneMusic,Microsoft.ZuneVideo,Microsoft.BingFinance,Microsoft.BingNews,Microsoft.BingSports,Microsoft.BingWeather,Microsoft.Windows.Photos,Microsoft.WindowsCamera,Microsoft.WindowsMaps,Microsoft.YourPhone,Microsoft.WindowsSoundRecorder,Microsoft.WindowsAlarms,Microsoft.GetHelp, Microsoft.Microsoft3Dviewer,Microsoft.Messaging, Microsoft.MixedReality.Portal, Microsoft.WindowsFeedbackHub, Microsoft.Wallet, Microsoft.Print3D,&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Get-AppxPackage&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Allusers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Remove-AppxPackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
+	width=&#34;646&#34;
+	height=&#34;677&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;229px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You will immediately identify, that the applications mentioned above are removed for all users of the system, meaning that future users in our WVD environment wont get those applications installed. But you might wonder, why we are able to see still some consumer applications in the StartMenu?&lt;/p&gt;
+&lt;p&gt;This is something related to the Windows 10 version you are using (in my example for testing purposes Win10 Pro), where you can disable the usage of consumer apps easily via GPO later on.&lt;/p&gt;
+&lt;p&gt;The required settings can be defined from the Group Policy Management console of your administrative computer (having the RSAT tools installed), or from any domain controller in your environment.&lt;/p&gt;
+&lt;h3 id=&#34;pre-configure-shortcuts-for-deployments&#34;&gt;
+    &lt;a href=&#34;#pre-configure-shortcuts-for-deployments&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Pre-configure shortcuts for deployments
+&lt;/h3&gt;&lt;p&gt;Now it´s most likely the time for you to install your required applications. When this is done you can start creating the startmenu with the presets you want to give your endusers. You can do this in multiple ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Drag&amp;amp;Drop the Shortcuts into the StartMenu&lt;/li&gt;
+&lt;li&gt;Right-Click on a Shortcut “Pin to Start”&lt;/li&gt;
+&lt;li&gt;Directly into an XML file for the very manual approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My tip: Do it with Drag&amp;amp;Drop and the Pinning method first!&lt;/p&gt;
+&lt;p&gt;Now let´s start removing not required application shortcuts by performing a right-click on the tile and select: “Unpin folder from Start”.&lt;/p&gt;
+&lt;p&gt;We do this for all our applications and start adding the new tiles by searching them in the StartMenu, performing a right-click and selecting: “Pin to Start”.&lt;/p&gt;
+&lt;p&gt;By hovering over the name of the group, you can even modify it here:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
+	width=&#34;346&#34;
+	height=&#34;206&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;403px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In my example I specify the group name for my end users, that even the guy with less IT experience knows what these apps are about – hopefully 😉&lt;/p&gt;
+&lt;p&gt;Finally the startmenu can look like this:&lt;/p&gt;
+&lt;p&gt;%ScreenShot WVD Environment%&lt;/p&gt;
+&lt;h3 id=&#34;user-experience-tips&#34;&gt;
+    &lt;a href=&#34;#user-experience-tips&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    User Experience Tips!
+&lt;/h3&gt;&lt;p&gt;One thing that dramatically helps users to understand what they have to do when they finish their working day is to provide them with a dedicated Logoff button in the start menu. Like this the users, at least for my customers, are more willed to perform a clean logoff instead of just closing the session window or performing an unclean disconnect.&lt;/p&gt;
+&lt;p&gt;To create such a loggoff button, follow these steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new batch file and enter the following line:
+shutdown -l -f -t 0&lt;/li&gt;
+&lt;li&gt;Save it in a location untouchable for your end users (in my case I´ve created C:\Windows\WVDSupport)&lt;/li&gt;
+&lt;li&gt;Create a shortcut and paste it into the startmenu folder: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\&lt;/li&gt;
+&lt;li&gt;When doing a right click on the shortcut you can change the icon, I´ve selected this one.&lt;/li&gt;
+&lt;li&gt;Now reference it via Drag and Drop into the startmenu and export it and follow the steps descripted in chapter 4!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;chapter-3-configure-the-taskbar&#34;&gt;
+    &lt;a href=&#34;#chapter-3-configure-the-taskbar&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 3: Configure the Taskbar
+&lt;/h2&gt;&lt;p&gt;Since the version Windows 10 1607 you have the possibility to remove and pin additional applications to the Taskbar of Windows 10. In our case this is really helpful to pre-define the default settings for our end-users in the WVD environment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
+	width=&#34;799&#34;
+	height=&#34;39&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2048&#34;
+		data-flex-basis=&#34;4916px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;To add new icons to the taskbar, simply drag and drop them from the start menu or perform a right-click &amp;gt; More &amp;gt; Pin to Taskbar&lt;/p&gt;
+&lt;h3 id=&#34;user-experience-tips-1&#34;&gt;
+    &lt;a href=&#34;#user-experience-tips-1&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    User Experience Tips!
+&lt;/h3&gt;&lt;p&gt;Don´t forget to pin the Windows Explorer / File Explorer! By default this is not the case but it will drastically improve the user experience.&lt;/p&gt;
+&lt;p&gt;Just search for the Windows Explorer in your start menu and make a right-click &amp;gt; Pin to taskbar!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-4-provisioning-options-for-windows-virtual-desktop&#34;&gt;
+    &lt;a href=&#34;#chapter-4-provisioning-options-for-windows-virtual-desktop&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 4: Provisioning options for Windows Virtual Desktop
+&lt;/h2&gt;&lt;p&gt;For our deployment in WVD it´s really important to know the different ways of deploying the predefined settings to our end users. I will not be able to mention every single option in detail, but I will explain you most likely the pro´s and con´s of each approach and by interest I´m available to guide you through the setup in detail.&lt;/p&gt;
+&lt;p&gt;Let me quickly present you, which characteristics a Startmenu or Taskbar can have for the end users and how we as administrators can benefit from some settings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mandatory startmenu: A predefined layout that end-users are NOT able to change in any way. It´s completely configured by the administrator and there is no way of removing Tiles or adding new ones
+&lt;ul&gt;
+&lt;li&gt;Pro´s: Easy administrative effort, as Admins have the full control over what is presented to the end-users&lt;/li&gt;
+&lt;li&gt;Con´s: The users will heavily complain in some cases, because the IT department doesn´t integrate their daily business application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Partially Customizable startmenu: This allows the administrator to predefine the startlayout and set specific groups to a mandatory state. This means, that certain groups are not modifiable, while other areas can be modified by the end-users.
+&lt;ul&gt;
+&lt;li&gt;Pro´s: Mandatory applications are always pinned to the startmenu, this allows easy access to mandatory applications everyone needs. Additionally the user can modify and add his / her favorite tools on top of that.&lt;/li&gt;
+&lt;li&gt;Con´s: Administrative effort can be a bit higher, when troubleshooting user interaction mistakes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Default Start Menu: Enables the predefined settings by the administrators and allows the user to fully optimize and adopt the startmenu
+&lt;ul&gt;
+&lt;li&gt;Pro´s: Allows the IT department to completely pre-define the startmenu and give the user the full flexibility afterwards&lt;/li&gt;
+&lt;li&gt;Con´s: Need to be implemented in the Golden Image by either importing the Layout via PowerShell or by copying the LayoutModification.xml into the Default User Profile (Explained later)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let me present you quickly how to setup every of these three possibilities:&lt;/p&gt;
+&lt;h3 id=&#34;configure-the-mandatory-startmenu&#34;&gt;
+    &lt;a href=&#34;#configure-the-mandatory-startmenu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Configure the mandatory startmenu
+&lt;/h3&gt;&lt;p&gt;The first thing, after defining the startmenu is to export it. To do so you must start the Powershell as an administrator and run the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Export-StartLayout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UNC&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;xml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The result will be exported as an XML and should look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
+	width=&#34;720&#34;
+	height=&#34;223&#34;
+	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;322&#34;
+		data-flex-basis=&#34;774px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the XML is structured based on the shortcuts you defined in your startmenu layout.&lt;/p&gt;
+&lt;p&gt;I highly recommend you to have a look at the official Microsoft documentation for more information about, how this XML file is built:
+(&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/configuration/start-layout-xml-desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.microsoft.com/en-us/windows/configuration/start-layout-xml-desktop&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;To make this startlayout finally mandatory, we need to define the XML as StartLayout via Group Policy. To do so, open up the Group Policy Management Console and create a new GPO or edit an existing one:&lt;/p&gt;
+&lt;p&gt;&lt;b&gt; User Configuration &amp;gt; Administrative Templates &amp;gt; Start Menu and Taskbar &amp;gt; Start Layout &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Once applied the startlayout will be enforced for all users, where it applies!&lt;/p&gt;
+&lt;h3 id=&#34;configure-the-partially-customizable-startmenu&#34;&gt;
+    &lt;a href=&#34;#configure-the-partially-customizable-startmenu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Configure the partially customizable startmenu
+&lt;/h3&gt;&lt;p&gt;To define a partially customizable startmenu we need to go back to the point, where we have exported our startmenu. As a small reminder, you have to open the PowerShell as Administrator and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Export-StartLayout&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Path&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UNC&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;xml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now you need to open this XML file and define the groups, you want to lock or prevent the user from changing it.&lt;/p&gt;
+&lt;p&gt;You will see the start of the seciton “DefaultLayoutOverride” in this XML, which needs to be adapted for the usage of partial customizable menus.&lt;/p&gt;
+&lt;p&gt;To enable that feature just replace this value by: &lt;DefaultLayoutOverride LayoutCustomizationRestrictionType=”OnlySpecifiedGroups”&gt;&lt;/p&gt;
+&lt;p&gt;Now, all definitions you did in this XML file will become active, once you reimport that file on your golden image or user session.&lt;/p&gt;
+&lt;p&gt;This can be done by re-importing it via Powershell using this command as Administrator:&lt;/p&gt;
+&lt;p&gt;Import-StartLayout -LayoutPath \%UNCToStartLayout%\StartLayout.xml -MountPath c:&lt;br&gt;
+Or by renaming your XML into LayoutModification.xml and place it into the Default user Shell folder:&lt;/p&gt;
+&lt;p&gt;“C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\LayoutModification.xml”&lt;/p&gt;
+&lt;p&gt;This will activate the settings for all users, that will be created on that system.&lt;/p&gt;
+&lt;h3 id=&#34;configure-a-default-start-menu&#34;&gt;
+    &lt;a href=&#34;#configure-a-default-start-menu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Configure a Default Start Menu
+&lt;/h3&gt;&lt;p&gt;The last option is to simply export the startmenu as mentioned above and place it into the Shell folder without any modification on the XML file itself!
+Please keep in mind that the XML must be named “LayoutModification.xml”, otherwise your process of enabling the default layout will fail!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-5-download-the-resources&#34;&gt;
+    &lt;a href=&#34;#chapter-5-download-the-resources&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 5: Download the resources
+&lt;/h2&gt;&lt;p&gt;If you want to get my start layout, please find it here to be used for your deployments! Via the tasks descripted in chapter 4 you can adapt it to your individual needs. Please keep in mind that my startlayout requires to work the updated Edge Browser and the installed Office365 ProPlus package.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;LayoutModificationTemplate&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:defaultlayout=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/Start/2014/FullDefaultLayout&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:start=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/Start/2014/StartLayout&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Version=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.microsoft.com/Start/2014/LayoutModification&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;LayoutOptions&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;StartTileGroupCellWidth=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;DefaultLayoutOverride&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;StartLayoutCollection&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;defaultlayout:StartLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;GroupCellWidth=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;6&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Browsers&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%APPDATA%\Microsoft\Windows\Start Menu\Programs\Accessories\Internet Explorer.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;/start:Group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Utilities&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Accessories\Snipping Tool.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Accessories\Quick Assist.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Tile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;AppUserModelID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Microsoft.PPIProjection_cw5n1h2txyewy!Microsoft.PPIProjection&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Tile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1x1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;AppUserModelID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Administrative Tools\GaaschTools\Logoff.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;/start:Group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:Group&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Microsoft 365 ProPlus&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\PowerPoint.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Outlook.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Publisher.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Word.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Excel.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;lt;start:DesktopApplicationTile&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Size=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2x2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Column=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Row=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;DesktopApplicationLinkPath=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs\Access.lnk&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;lt;/start:Group&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;/defaultlayout:StartLayout&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/StartLayoutCollection&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/DefaultLayoutOverride&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LayoutModificationTemplate&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I hope you like this article and if you have any kind of questions, ping me on Twitter, LinkedIn or down in the comments!&lt;/p&gt;
+&lt;p&gt;Have a great weekend everyone!
+Cheers,&lt;/p&gt;
+&lt;p&gt;Patrick&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
