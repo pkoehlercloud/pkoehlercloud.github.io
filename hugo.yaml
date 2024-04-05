@@ -1,4 +1,4 @@
-baseurl: https://pkoehlercloud.github.io
+baseurl: https://patrick-koehler.com
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
