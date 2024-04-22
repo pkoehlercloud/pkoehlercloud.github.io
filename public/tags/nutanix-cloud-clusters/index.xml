@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Nutanix Cloud Clusters on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/nutanix-cloud-clusters/</link>
+        <link>http://localhost:1313/tags/nutanix-cloud-clusters/</link>
         <description>Recent content in Nutanix Cloud Clusters on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/nutanix-cloud-clusters/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/nutanix-cloud-clusters/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Azure VMware Solution - The fastest path to the cloud?</title>
-        <link>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
+        <link>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
         <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
+        <guid>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
+        <description>&lt;img src="http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
 &lt;p&gt;This time I want to share with you my experiences with Azure VMware Solution and if it&amp;rsquo;s really the fastest path to the cloud.
 In this blog series we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
 &lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog series has the intention of&amp;hellip;&lt;/p&gt;
@@ -28,10 +28,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;h2 id=&#34;azure-vmware-solution---technical-overview&#34;&gt;
     &lt;a href=&#34;#azure-vmware-solution---technical-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Azure VMware Solution - Technical Overview
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
 	width=&#34;895&#34;
 	height=&#34;487&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Slide from Patrick Köhler - Datacentre evacuation using AVS - presented at VMUG 2023&#34;
@@ -62,10 +62,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;h2 id=&#34;alternative-nutanix-cloud-clusters-nc2&#34;&gt;
     &lt;a href=&#34;#alternative-nutanix-cloud-clusters-nc2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Alternative: Nutanix Cloud Clusters (NC2)
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
 	width=&#34;903&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
@@ -78,10 +78,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &gt;&lt;/p&gt;
 &lt;p&gt;Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
 	width=&#34;1250&#34;
 	height=&#34;871&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;

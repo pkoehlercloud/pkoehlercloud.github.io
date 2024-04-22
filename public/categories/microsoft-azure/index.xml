@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Microsoft Azure on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/categories/microsoft-azure/</link>
+        <link>http://localhost:1313/categories/microsoft-azure/</link>
         <description>Recent content in Microsoft Azure on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/categories/microsoft-azure/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/microsoft-azure/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Azure VMware Solution - The fastest path to the cloud?</title>
-        <link>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
+        <link>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
         <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
+        <guid>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
+        <description>&lt;img src="http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
 &lt;p&gt;This time I want to share with you my experiences with Azure VMware Solution and if it&amp;rsquo;s really the fastest path to the cloud.
 In this blog series we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
 &lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog series has the intention of&amp;hellip;&lt;/p&gt;
@@ -28,10 +28,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;h2 id=&#34;azure-vmware-solution---technical-overview&#34;&gt;
     &lt;a href=&#34;#azure-vmware-solution---technical-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Azure VMware Solution - Technical Overview
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
 	width=&#34;895&#34;
 	height=&#34;487&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Slide from Patrick Köhler - Datacentre evacuation using AVS - presented at VMUG 2023&#34;
@@ -62,10 +62,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;h2 id=&#34;alternative-nutanix-cloud-clusters-nc2&#34;&gt;
     &lt;a href=&#34;#alternative-nutanix-cloud-clusters-nc2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Alternative: Nutanix Cloud Clusters (NC2)
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
 	width=&#34;903&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
@@ -78,10 +78,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &gt;&lt;/p&gt;
 &lt;p&gt;Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
 	width=&#34;1250&#34;
 	height=&#34;871&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;
@@ -109,11 +109,11 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
         </item>
         <item>
         <title>Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</title>
-        <link>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
+        <link>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
+        <guid>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
 If you missed my previous articles, please find them hereafter:
 In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure.
 Table of Contents
@@ -121,10 +121,10 @@ Prepare a Service Principal for the VMware Universal Console
 Before we can start to configure the Universal Console and create the core infrastructure, we need to ensure that we equip our account with administrative privileges in a secure way. For that reason we require to have a Service Principal in place that provides the console with the necessary rights in our tenant, while ensuring that no passwords are exchanged in clear text.
 To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&#34;https://portal.azure.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://portal.azure.com&lt;/a&gt; and select Azure Active Directory.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
 	width=&#34;454&#34;
 	height=&#34;67&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -136,10 +136,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In the following window, we need to select App registrations to be able to create our Service Account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
 	width=&#34;123&#34;
 	height=&#34;214&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -151,10 +151,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once, we entered the App registrations view, click on “+ New registration” in the top center of the screen.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
 	width=&#34;454&#34;
 	height=&#34;121&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -169,10 +169,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 Name: SP-HZNC-AVDLogix
 Redirect URI: Web
 URI: http://localhost:8000&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -185,10 +185,10 @@ URI: http://localhost:8000&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;Attention! Once the Service Principal has been create make sure to copy the following information and store them in a safe location, as you will need them for later.&lt;/p&gt;
 &lt;p&gt;Copy the application (client) ID and Directory ID (Azure AD tenant ID)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
 	width=&#34;454&#34;
 	height=&#34;95&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -200,10 +200,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once you noted down the information, we navigate to “Certificates &amp;amp; secrets” on the left hand side to generate the required secret.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
 	width=&#34;141&#34;
 	height=&#34;286&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -215,10 +215,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here we need to click on “+ New client secret” and provide a client secret description, which is “Client Secret Horizon” in my case and we set the duration to “24 months“. You can also choose a lower time, before the secret expires, but you have to keep in mind to regenerate the secret and update the Universal Console to not lose access or control over the resources.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -230,10 +230,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Attention! Please make sure to copy the Secret Value once you see it, because it will only appear once like this. In case that you missed to copy it, you need to regenerate the client secret.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
 	width=&#34;454&#34;
 	height=&#34;52&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -248,10 +248,10 @@ URI: http://localhost:8000&lt;/p&gt;
 Now we are nearly finished with our Service Principal creation, but need to equip it with the required permissions in order to perform tasks in our environment. While doing this we have two options. First, we can assign Contributor rights to our new Service Principal on our subscription, which provides quite a lot of permissions, which we might don’t want if we want to follow the principal of least permissions.&lt;/p&gt;
 &lt;p&gt;I recommend creating a custom role, with only the required rights, the Service Principal needs on our subscription. I found an article on the VMware KB, stating the creation of the custom role, which unfortunately doesn’t work for my tenant, for that reason, I’m sharing with you the steps that worked out for me.
 To do so, we switch to the Subscription menu in our Azure tenant, while searching for “Subscriptions” or selecting it from the portal menu.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
 	width=&#34;454&#34;
 	height=&#34;57&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -263,10 +263,10 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Now, we switch to the Access control (IAM) menu on the left hand side, clicking on “+ Add” and selecting “Add custom role” as the following step.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
 	width=&#34;330&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -278,10 +278,10 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Now we need to provide the name for our custom role, I called mine “CR-AVDLogix-HorizonCloudAzure“. Select “Start from scratch” as the Baseline permission and continue to the “JSON” tab by clicking “Next” two times or by directly clicking on “JSON“&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
 	width=&#34;342&#34;
 	height=&#34;407&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -297,11 +297,11 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
         </item>
         <item>
         <title>Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker</title>
-        <link>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/</link>
+        <link>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/</link>
         <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker" /&gt;&lt;p&gt;Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series.
+        <guid>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker" /&gt;&lt;p&gt;Welcome back everyone to the next chapter of the Mastering Horizon Cloud on Azure article series.
 In the past articles, I have shown you how to setup the Azure subscription, Resource Groups, networks and accounts as well as the creation of the first POD infrastructure on Azure.
 In this article, we’re going to complete the setup by enabling the infrastructure to authenticate to the domain controller, that you should have in place on Azure or on-premises. In addition to that we will configure the Broker and will enable monitoring.&lt;/p&gt;
 &lt;h2 id=&#34;configure-active-directory&#34;&gt;
@@ -311,10 +311,10 @@ In this article, we’re going to complete the setup by enabling the infrastruct
 After signing in to the Horizon Universal Console using: &lt;a class=&#34;link&#34; href=&#34;https://cloud-de.horizon.vmware.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://cloud-de.horizon.vmware.com/&lt;/a&gt;
 We will be back in the Getting Started guide, where we left of in the previous chapter.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-5.png&#34;
 	width=&#34;454&#34;
 	height=&#34;176&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-5_hu5cd91953e425ee592cc4f96b64335cff_16062_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-5_hu5cd91953e425ee592cc4f96b64335cff_16062_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-5_hu5cd91953e425ee592cc4f96b64335cff_16062_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-5_hu5cd91953e425ee592cc4f96b64335cff_16062_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -326,10 +326,10 @@ We will be back in the Getting Started guide, where we left of in the previous c
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In this chapter we will primarely focus on working on the second tab, which we will need to expand to complete the general setup. To configure the Active Directory connection, we need to click on “Configure” on the right hand site of Active Directory.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-4.png&#34;
 	width=&#34;454&#34;
 	height=&#34;197&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-4_hud26071d3de2a34d47a4d01dd75959f8b_21216_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-4_hud26071d3de2a34d47a4d01dd75959f8b_21216_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-4_hud26071d3de2a34d47a4d01dd75959f8b_21216_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-4_hud26071d3de2a34d47a4d01dd75959f8b_21216_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -351,10 +351,10 @@ Bind password: The corresponding password
 Port: 389 (LDAP) or 636 (LDAPS) are supported
 Domain Controller IP: In case that the name cannot be resolved the DC can be contacted by IP
 Context: Search context within the domain&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-3.png&#34;
 	width=&#34;454&#34;
 	height=&#34;322&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-3_hua7e63e1141d3a99c8ce0a9e372369d11_31883_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-3_hua7e63e1141d3a99c8ce0a9e372369d11_31883_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-3_hua7e63e1141d3a99c8ce0a9e372369d11_31883_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-3_hua7e63e1141d3a99c8ce0a9e372369d11_31883_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -367,10 +367,10 @@ Context: Search context within the domain&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;Once all the settings have been made, click on “Domain Bind” to perform the operation.
 On the following page, you have to provide the information about the DNS server and the default OU you want VMs to join in. Provide the information that are right for your environment and finalize the setup by clicking on “Save”.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-2.png&#34;
 	width=&#34;454&#34;
 	height=&#34;198&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-2_hubbd22007f62797b13ecf53d8daac098f_15848_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-2_hubbd22007f62797b13ecf53d8daac098f_15848_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-2_hubbd22007f62797b13ecf53d8daac098f_15848_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-2_hubbd22007f62797b13ecf53d8daac098f_15848_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -382,10 +382,10 @@ On the following page, you have to provide the information about the DNS server 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Finally, provide information about the Horizon Admins that you want to enable in your environment. The picture below shows Domain Admins, I highly recommend to choose another group over domain admins, but just wanted to point this out.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-1.png&#34;
 	width=&#34;454&#34;
 	height=&#34;183&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-1_hu3ac86ab63af0c2ab5699ac98b2ebb6d1_11197_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-1_hu3ac86ab63af0c2ab5699ac98b2ebb6d1_11197_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-1_hu3ac86ab63af0c2ab5699ac98b2ebb6d1_11197_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image-1_hu3ac86ab63af0c2ab5699ac98b2ebb6d1_11197_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -397,10 +397,10 @@ On the following page, you have to provide the information about the DNS server 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Click on “Save” to finalize the setup. Afterwards you get signed out by the Horizon Universal Console and log back in using first the VMware Account followed by an Admin Account from the group that we have just defined.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image.png&#34;
 	width=&#34;454&#34;
 	height=&#34;570&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image_hudab7f5807b4f3c58e991b81c23d2f7eb_27997_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image_hudab7f5807b4f3c58e991b81c23d2f7eb_27997_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image_hudab7f5807b4f3c58e991b81c23d2f7eb_27997_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/image_hudab7f5807b4f3c58e991b81c23d2f7eb_27997_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -416,11 +416,11 @@ On the following page, you have to provide the information about the DNS server 
         </item>
         <item>
         <title>Workspace ONE Access 22.09 – Integration with Horizon On-Premises</title>
-        <link>https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</link>
+        <link>http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</link>
         <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.png" alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises" /&gt;&lt;p&gt;Welcome to part 4 (actually 5) of the series on how to integrate Workspace ONE Access with Microsoft Azure and Horizon resources on-premises and in the Azure cloud.&lt;/p&gt;
+        <guid>http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</guid>
+        <description>&lt;img src="http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.png" alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises" /&gt;&lt;p&gt;Welcome to part 4 (actually 5) of the series on how to integrate Workspace ONE Access with Microsoft Azure and Horizon resources on-premises and in the Azure cloud.&lt;/p&gt;
 &lt;p&gt;In this smaller part of the series, we’re highlighting the integration of Horizon (on-premises) assignments to Workspace ONE Access, including the capability of using the Workspace ONE mode, which is a dedicated mode to redirect the authentication for all Horizon sign ins to Workspace ONE Access.&lt;/p&gt;
 &lt;h2 id=&#34;enabling-saml-authentication-on-the-horizon-connection-servers&#34;&gt;
     &lt;a href=&#34;#enabling-saml-authentication-on-the-horizon-connection-servers&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -432,10 +432,10 @@ On the following page, you have to provide the information about the DNS server 
 &lt;p&gt;Up next, we see a new pop up opening and navigate to Authentication, where we switch the Delegation of authentication to VMware Horizon (SAML 2.0 Authenticator) from Disallowed to Allowed. To configure the SAML authenticators, select Manage SAML Authenticators below.&lt;/p&gt;
 &lt;p&gt;On the following screen, proceed by clicking Add. Now you must provide the information matching the Workspace ONE Access environment. The value Label is only an identifier for administrative purposes. The important part is the Metadata URL which must match your internally and externally reachable domain. In my case this is &lt;a class=&#34;link&#34; href=&#34;https://access.avdlogix.com/SAAS/API/1.0/metadata.idp.xml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://access.avdlogix.com/SAAS/API/1.0/metadata.idp.xml&lt;/a&gt;. As shown in the screen below. When all the settings have been corrected, apply by clicking “OK”.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1142&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -452,10 +452,10 @@ On the following page, you have to provide the information about the DNS server 
     Configuring the Workspace ONE Access Connector appliance for entitlement synchronisation
 &lt;/h3&gt;&lt;p&gt;An important step which is often overseen is the reconfiguration / import of the certificate of the Connection server into the Workspace ONE Access Connector appliance. This will be required to trust the certificate used by the Connection Server, when establishing a secure connection.&lt;/p&gt;
 &lt;p&gt;To apply the configuration I make sure to connect to the Access Connector VM we’ve created in the previous parts, download the certificate from the Horizon Connection Server and go to Control Panel &amp;gt; Programs &amp;gt; Programs and Features and click Change on the Workspace ONE Access Connector installer.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1.png&#34;
 	width=&#34;998&#34;
 	height=&#34;772&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -468,10 +468,10 @@ On the following page, you have to provide the information about the DNS server 
 &gt;&lt;/p&gt;
 &lt;p&gt;Confirm by clicking Add / Remove Services and click on Next &amp;gt;.&lt;/p&gt;
 &lt;p&gt;On the next page, the installer allows you to adjust the installation services. Make sure that Virtual App Service is installed before proceeding by clicking Next &amp;gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2.png&#34;
 	width=&#34;992&#34;
 	height=&#34;768&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -484,10 +484,10 @@ On the following page, you have to provide the information about the DNS server 
 &gt;&lt;/p&gt;
 &lt;p&gt;If you are using a Proxy or Syslog server, you have the change to configure it at the next following pages, if this isn’t the case proceed (and also skip the Citrix configuration part), until you reach the point “Trust Root Certificates”.&lt;/p&gt;
 &lt;p&gt;On this screen click browse and select the Horizon Connection Server certificate.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3.png&#34;
 	width=&#34;996&#34;
 	height=&#34;766&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -499,10 +499,10 @@ On the following page, you have to provide the information about the DNS server 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once you’ve selected the certificates, you can validate that they’re correctly recognized by the installer by clicking “Cert Details..”. If the certificates have been imported correctly, proceed by clicking Next &amp;gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4.png&#34;
 	width=&#34;996&#34;
 	height=&#34;762&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -514,10 +514,10 @@ On the following page, you have to provide the information about the DNS server 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Proceed over the next pages by clicking Next &amp;gt;. Stop at the Servic Account level, where you have to provide your credentials again for the Sync service.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5.png&#34;
 	width=&#34;994&#34;
 	height=&#34;772&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -529,10 +529,10 @@ On the following page, you have to provide the information about the DNS server 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Confirm by clicking the check box on “Do you want to restart already installed services and complete this task by clicking Install.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6.png&#34;
 	width=&#34;1008&#34;
 	height=&#34;784&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -547,11 +547,11 @@ On the following page, you have to provide the information about the DNS server 
         </item>
         <item>
         <title>Start VM on Connect for Pooled and Personal Host Pools in WVD</title>
-        <link>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
+        <link>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
+        <guid>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
+        <description>&lt;img src="http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
 &lt;p&gt;In this blog you will learn, how to configure Start VM on Connect for Pooled Host Pools, Personal Host Pools and how to shut down VMs, when the users are logging off.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -865,10 +865,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Using the WVDLogix Autoscale Tool to scale down machines&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To shut down the VMs based on a time based metric, we need to create an Automation Account in our subscription.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
 	width=&#34;682&#34;
 	height=&#34;342&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -880,10 +880,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;On the next page, we´ll give our Automation Account a name, select the subscription, the RG we´ve created, and the operating location, which is West Europe in my case. You also have the possibility to create a RunAs Account, which is not needed for the solution, which we´re going to provision right afterwards. Hit “Create” once you´re finished.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
 	width=&#34;371&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -895,10 +895,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After a few seconds, our storage account is ready to be used and we can go to the resource, which presents us the basic overview of an Automation account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;823&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -910,10 +910,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here, we need to scroll down on the left hend side until we reach “Start/Stop VM”, which is the solution we want to install.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;705&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -925,10 +925,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;It´s obvious that we´re going to click on “Create”, but I´m very excited to see, what you´re saying about what this solution delivers additionally, when correctly configured. For now we click “Create” again to provision the solution.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
 	width=&#34;823&#34;
 	height=&#34;317&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -945,10 +945,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Azure Automation Account (which has been created previously)&lt;/li&gt;
 &lt;li&gt;Parameters&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
 	width=&#34;787&#34;
 	height=&#34;704&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -960,10 +960,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After you´ve created the Log Analytics Workspace and select the Automation Account created by us earlier, we leave the parameters empty for the moment. To not hide the possibilities from you, here is the screenshot of the initial configuration, to be defined from over here already.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
 	width=&#34;773&#34;
 	height=&#34;733&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -984,11 +984,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>How to reset the Remote Desktop Client on Windows 10 &amp; 11</title>
-        <link>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
+        <link>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
         <pubDate>Mon, 14 Jun 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
+        <guid>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
+        <description>&lt;img src="http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
 &lt;p&gt;For that reason, you can reset the Remote Desktop Client on Windows easily via PowerShell.&lt;/p&gt;
 &lt;p&gt;The feature is available from version 1.2.790, which has been released already in 2020.&lt;/p&gt;
 &lt;p&gt;Just run this small line of code and you’ll be fine again:&lt;/p&gt;
@@ -1009,11 +1009,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>What you have to know about the WVD Required URL check tool</title>
-        <link>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
+        <link>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
         <pubDate>Tue, 20 Apr 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
+        <description>&lt;img src="http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://twitter.com/@tomhickling&lt;/a&gt;) announced via LinkedIn, that Microsoft released a tool to validate that Session Hosts can reach the required services to ensure full connectivity to the WVD services.&lt;/p&gt;
 &lt;p&gt;The tool is built to present you the URLs which are accessible or not, if that’s the case. However there are a few things you need to keep in mind, before running the tool.&lt;/p&gt;
 &lt;p&gt;In this blog, I will tell you what you must know about the URLs and ports to be opened for WVD, as well as what the required URL check tool can do for not and what it can’t do!&lt;/p&gt;
@@ -1021,10 +1021,10 @@ Patrick&lt;/p&gt;
     &lt;a href=&#34;#which-urls-and-ports-are-required-for-a-session-host-to-connect-to-the-wvd-backplane&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Which URLs and ports are required for a Session Host to connect to the WVD backplane?
 &lt;/h2&gt;&lt;p&gt;Let’s start with the first question on which URLs and ports you need to open to let your Session Hosts access the WVD backplane. You will see a few URLs with an asterisk (*), or a wildcard in front of the URL, you have to know that the WVD required URL check tool is NOT able to resolve or check against those, so you have to ensure proper connectivity.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
 	width=&#34;846&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1038,10 +1038,10 @@ Patrick&lt;/p&gt;
 &lt;h2 id=&#34;is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34;&gt;
     &lt;a href=&#34;#is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Is there an easier way to enable the required ports if I’m using Azure Firewall?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
 	width=&#34;2700&#34;
 	height=&#34;1393&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1096,11 +1096,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Microsoft Edge – The complete guide for AVD</title>
-        <link>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</link>
+        <link>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</link>
         <pubDate>Mon, 08 Mar 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/title.png" alt="Featured image of post Microsoft Edge – The complete guide for AVD" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
+        <guid>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</guid>
+        <description>&lt;img src="http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/title.png" alt="Featured image of post Microsoft Edge – The complete guide for AVD" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
 &lt;p&gt;it’s been a while since my last blog post and I think it’s getting time for a very important topic for your end users – BROWSING!&lt;/p&gt;
 &lt;p&gt;Regardless of which browser you’re using, we know that the correct configuration, paired with optimization and security is key to let users work smoothly.&lt;/p&gt;
 &lt;p&gt;But why do we need to optimize the browsing experience?&lt;/p&gt;
@@ -1112,10 +1112,10 @@ All these mentioned topics depend on the right setup of your Browsing experience
 &lt;h2 id=&#34;overview--microsoft-edge--chromium&#34;&gt;
     &lt;a href=&#34;#overview--microsoft-edge--chromium&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Overview – Microsoft Edge – Chromium
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
 	width=&#34;2120&#34;
 	height=&#34;1192&#34;
-	srcset=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1212,11 +1212,11 @@ The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https
         </item>
         <item>
         <title>Container up your applications: fast, secure &amp; efficient with MSIX App Attach</title>
-        <link>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
+        <link>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+        <guid>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
+        <description>&lt;img src="http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;First of all a very huge thanks to Christiaan Brinkhoff and Dean Cefola for having me at this awesome event, happened today, the 11.12.2020 in an XXL format! Microsoft Meets Community: Windows Virtual Desktop.&lt;/p&gt;
 &lt;p&gt;It was an absolute honour to speak for 2000 registered users from the community!&lt;/p&gt;
 &lt;h2 id=&#34;chapter-1--what-is-msix--app-attach&#34;&gt;
@@ -1228,10 +1228,10 @@ The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https
     &lt;a href=&#34;#chapter-11--how-is-a-msix-package-built&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 1.1 – How is a MSIX package built?
 &lt;/h3&gt;&lt;p&gt;A MSIX package consists usually of the following set of files:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
 	width=&#34;290&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1247,10 +1247,10 @@ These are the files that represents the application/s itself and the dependencie
 &lt;p&gt;&lt;b&gt; AppManifest: &lt;/b&gt;
 The App Manifest is an XML based document that contains information an OS needs for the deployment, display and update of an MSIX application. This info includes usually identity, package dependency information, required capabilities, visual elements of extensibility points.&lt;/p&gt;
 &lt;p&gt;The following example represents a screenshot from an opened AppManifest.xml:
-&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1269,10 +1269,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h2 id=&#34;chapter-2--msix-app-attach&#34;&gt;
     &lt;a href=&#34;#chapter-2--msix-app-attach&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2 – MSIX App Attach
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
 	width=&#34;347&#34;
 	height=&#34;504&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1300,10 +1300,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-211--expand&#34;&gt;
     &lt;a href=&#34;#chapter-211--expand&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.1 – Expand
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1319,10 +1319,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-212--stage&#34;&gt;
     &lt;a href=&#34;#chapter-212--stage&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.2 – Stage
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;

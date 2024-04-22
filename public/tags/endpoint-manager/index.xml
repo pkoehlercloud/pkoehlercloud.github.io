@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Endpoint Manager on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/endpoint-manager/</link>
+        <link>http://localhost:1313/tags/endpoint-manager/</link>
         <description>Recent content in Endpoint Manager on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/endpoint-manager/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/endpoint-manager/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Distribute and Configure the Remote Desktop app via Intune</title>
-        <link>https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/</link>
+        <link>http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/title.png" alt="Featured image of post Distribute and Configure the Remote Desktop app via Intune" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
+        <guid>http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/</guid>
+        <description>&lt;img src="http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/title.png" alt="Featured image of post Distribute and Configure the Remote Desktop app via Intune" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
 &lt;p&gt;today I have another blog for you about how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming service release of Windows 365 Cloud PC. We will perform the distribution to your clients via Microsoft Endpoint Manager (Intune).&lt;/p&gt;
 &lt;p&gt;The first thing we need to do is to package our Remote Desktop Client in the current version: 1.2.2130&lt;/p&gt;
 &lt;p&gt;Please find the latest version here: &lt;a class=&#34;link&#34; href=&#34;https://web.archive.org/web/20230321230532/https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/windowsdesktop-whatsnew&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -85,15 +85,15 @@ Now we need to specify the Source file, which is our recently downloaded Remote 
         </item>
         <item>
         <title>Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session</title>
-        <link>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
+        <link>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
+        <guid>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
+        <description>&lt;img src="http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
 	width=&#34;650&#34;
 	height=&#34;573&#34;
-	srcset=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
