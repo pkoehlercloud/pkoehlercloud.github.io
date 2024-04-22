@@ -16,28 +16,20 @@
         <description>&lt;img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/2b14985a-c66e-4dbd-b09c-609fe0678dae/d4o96dy-c59b7496-2fb3-4f30-a7cd-35425bf92133.png" alt="Featured image of post VMware" /&gt;</description>
         </item>
         <item>
-        <title>Azure VMware Solution</title>
-        <link>https://patrick-koehler.com/categories/azure-vmware-solution/</link>
-        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/categories/azure-vmware-solution/</guid>
-        <description>&lt;img src="https://assets-global.website-files.com/5fa58eb04302c6e6eb23144c/6452600f3b3fe404f930963e_AVD.png" alt="Featured image of post Azure VMware Solution" /&gt;</description>
-        </item>
-        <item>
-        <title>Microsoft Azure</title>
-        <link>https://patrick-koehler.com/categories/microsoft-azure/</link>
-        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/categories/microsoft-azure/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/categories/microsoft-azure/azure.png" alt="Featured image of post Microsoft Azure" /&gt;</description>
-        </item>
-        <item>
         <title>Horizon Cloud</title>
         <link>https://patrick-koehler.com/categories/horizon-cloud/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
         <guid>https://patrick-koehler.com/categories/horizon-cloud/</guid>
         <description>&lt;img src="https://patrick-koehler.com/categories/horizon-cloud/horizoncloud.jpeg" alt="Featured image of post Horizon Cloud" /&gt;</description>
+        </item>
+        <item>
+        <title>Microsoft Azure</title>
+        <link>https://patrick-koehler.com/categories/microsoft-azure/</link>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/categories/microsoft-azure/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/categories/microsoft-azure/azure.png" alt="Featured image of post Microsoft Azure" /&gt;</description>
         </item>
         <item>
         <title>Windows 365</title>
@@ -94,6 +86,14 @@
         
         <guid>https://patrick-koehler.com/categories/msix/</guid>
         <description>&lt;img src="https://store-images.s-microsoft.com/image/apps.18628.14031151132292068.6bde6b56-1b87-42a0-8e15-712ff716525a.9b8819a3-5e02-469d-aeae-6aef6d38f312" alt="Featured image of post MSIX" /&gt;</description>
+        </item>
+        <item>
+        <title>Azure VMware Solution</title>
+        <link>https://patrick-koehler.com/categories/azure-vmware-solution/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://patrick-koehler.com/categories/azure-vmware-solution/</guid>
+        <description>&lt;img src="https://assets-global.website-files.com/5fa58eb04302c6e6eb23144c/6452600f3b3fe404f930963e_AVD.png" alt="Featured image of post Azure VMware Solution" /&gt;</description>
         </item>
         
     </channel>

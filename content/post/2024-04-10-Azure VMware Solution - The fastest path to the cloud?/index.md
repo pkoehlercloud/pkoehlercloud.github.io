@@ -2,7 +2,7 @@
 title = "Azure VMware Solution - The fastest path to the cloud"
 image = "title.png"
 date = 2024-04-22T11:00:47+06:00
-draft = false
+draft = true
 author = "Patrick Koehler"
 tags = ["Azure","Azure VMware Solution","AVS","Nutanix NC2"]
 categories = ["Azure VMware Solution", "Microsoft Azure"]
