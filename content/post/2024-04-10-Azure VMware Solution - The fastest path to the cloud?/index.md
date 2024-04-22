@@ -1,7 +1,7 @@
 +++
 title = "Azure VMware Solution - The fastest path to the cloud?"
 date = 2024-04-22T13:30:47+06:00
-draft = false
+draft = true
 author = "Patrick Koehler"
 
 tags = [
