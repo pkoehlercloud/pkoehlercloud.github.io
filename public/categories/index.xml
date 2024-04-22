@@ -7,26 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Wed, 10 Apr 2024 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Azure VMware Solution</title>
-        <link>http://localhost:1313/categories/azure-vmware-solution/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/categories/azure-vmware-solution/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Microsoft Azure</title>
-        <link>http://localhost:1313/categories/microsoft-azure/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/categories/microsoft-azure/</guid>
-        <description>&lt;img src="http://localhost:1313/categories/microsoft-azure/azure.png" alt="Featured image of post Microsoft Azure" /&gt;</description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VMware</title>
         <link>http://localhost:1313/categories/vmware/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
+        <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
         <guid>http://localhost:1313/categories/vmware/</guid>
         <description>&lt;img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/2b14985a-c66e-4dbd-b09c-609fe0678dae/d4o96dy-c59b7496-2fb3-4f30-a7cd-35425bf92133.png" alt="Featured image of post VMware" /&gt;</description>
@@ -34,10 +18,18 @@
         <item>
         <title>Horizon Cloud</title>
         <link>http://localhost:1313/categories/horizon-cloud/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
         <guid>http://localhost:1313/categories/horizon-cloud/</guid>
         <description>&lt;img src="http://localhost:1313/categories/horizon-cloud/horizoncloud.jpeg" alt="Featured image of post Horizon Cloud" /&gt;</description>
+        </item>
+        <item>
+        <title>Microsoft Azure</title>
+        <link>http://localhost:1313/categories/microsoft-azure/</link>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/categories/microsoft-azure/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/microsoft-azure/azure.png" alt="Featured image of post Microsoft Azure" /&gt;</description>
         </item>
         <item>
         <title>Windows 365</title>

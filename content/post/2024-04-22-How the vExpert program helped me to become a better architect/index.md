@@ -1,19 +1,17 @@
 +++
 title = "How the vExpert program helped me to become a better Cloud architect."
-date = 2024-04-10T16:56:47+06:00
-draft = true
+date = 2024-04-22T12:50:47+06:00
+draft = false
 author = "Patrick Koehler"
 
 tags = [
-    "Azure",
-    "Azure VMware Solution",
-    "Azure Stack HCI",
-    "Nutanix Cloud Clusters",
-    "NC2"
+    "VMware",
+    "Community",
+    "vExpert",
 ]
-categories = ["Azure VMware Solution", "Microsoft Azure", "VMware"]
+categories = [ "VMware" ]
 image = "title.png"
-description = "This blog series dives into setting up VMware Horizon Cloud on Microsoft Azure. In this installment, we focus on configuring a Service Principal for the VMware Universal Console. Learn how to securely grant administrative privileges, generate necessary credentials, and create a custom role with minimal permissions. Follow step-by-step instructions for seamless integration."
+description = "Patrick shares his journey of how joining the vExpert program enhanced his skills as an IT architect, connecting him with a community of experts, providing access to lab infrastructure licenses, and fostering collaboration and learning. He encourages aspiring vExperts to connect with the community, start blogging, participate in VMware User Groups, and seek guidance to build their expertise and apply for the program."
 +++
 
 Hey everybody it's Patrick again from the new blog site (yes I finally made it to GitHub with a static page build with Hugo),

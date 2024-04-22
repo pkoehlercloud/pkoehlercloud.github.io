@@ -7,52 +7,60 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Wed, 10 Apr 2024 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Community</title>
+        <link>http://localhost:1313/tags/community/</link>
+        <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/community/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VExpert</title>
+        <link>http://localhost:1313/tags/vexpert/</link>
+        <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/vexpert/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VMware</title>
+        <link>http://localhost:1313/tags/vmware/</link>
+        <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/vmware/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Azure</title>
         <link>http://localhost:1313/tags/azure/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
         <guid>http://localhost:1313/tags/azure/</guid>
         <description></description>
         </item>
         <item>
-        <title>Azure Stack HCI</title>
-        <link>http://localhost:1313/tags/azure-stack-hci/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/azure-stack-hci/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Azure VMware Solution</title>
-        <link>http://localhost:1313/tags/azure-vmware-solution/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/azure-vmware-solution/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>NC2</title>
-        <link>http://localhost:1313/tags/nc2/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/nc2/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Nutanix Cloud Clusters</title>
-        <link>http://localhost:1313/tags/nutanix-cloud-clusters/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/nutanix-cloud-clusters/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>EUC</title>
         <link>http://localhost:1313/tags/euc/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
         <guid>http://localhost:1313/tags/euc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Horizon Cloud on Azure</title>
+        <link>http://localhost:1313/tags/horizon-cloud-on-azure/</link>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/horizon-cloud-on-azure/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VMware Horizon</title>
+        <link>http://localhost:1313/tags/vmware-horizon/</link>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/vmware-horizon/</guid>
         <description></description>
         </item>
         <item>
@@ -61,30 +69,6 @@
         <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
         
         <guid>http://localhost:1313/tags/horizon-cloud/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Horizon Cloud on Azure</title>
-        <link>http://localhost:1313/tags/horizon-cloud-on-azure/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/horizon-cloud-on-azure/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>VMware</title>
-        <link>http://localhost:1313/tags/vmware/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/vmware/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>VMware Horizon</title>
-        <link>http://localhost:1313/tags/vmware-horizon/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
-        
-        <guid>http://localhost:1313/tags/vmware-horizon/</guid>
         <description></description>
         </item>
         <item>

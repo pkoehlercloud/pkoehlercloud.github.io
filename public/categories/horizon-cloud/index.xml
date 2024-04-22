@@ -7,10 +7,10 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 27 Mar 2023 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/horizon-cloud/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Dec 2023 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/horizon-cloud/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</title>
         <link>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
+        <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
         <guid>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
         <description>&lt;img src="http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
