@@ -1,12 +1,17 @@
 +++
-title = "Azure VMware Solution - The fastest path to the cloud"
-image = "title.png"
-date = 2024-04-22T11:00:47+06:00
-draft = true
+title = "Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup"
+date = 2024-04-22T11:56:47+06:00
+draft = false
 author = "Patrick Koehler"
-tags = ["Azure","Azure VMware Solution","AVS","Nutanix NC2"]
-categories = ["Azure VMware Solution", "Microsoft Azure"]
-description = "In my latest blog post, I delve into Azure VMware Solution as a potential fast track to the cloud, comparing it with Nutanix Cloud Clusters. I explore the technical details of both solutions, emphasizing Azure VMware Solutions seamless integration with Azure services and pointing out the complexity of planning and deploying Nutanix. This is part 1 of the exciting journey towards your VMware Multi Cloud story."
+
+tags = [
+    "Azure VMware Solution",
+    "Azure",
+    "VMware"
+]
+categories = ["Microsoft Azure", "VMware"]
+image = "title.png"
+description = "This is part one of a blog post series about Azure VMware Solution."
 +++
 
 Hi everyone it's Patrick again with the first blogpost on my new site! 
@@ -26,7 +31,7 @@ If you like this series, let me know and I will be happy to dive deeper in one o
 
 ## Azure VMware Solution - Technical Overview
 
-![Slide from Patrick Köhler - Datacentre evacuation using AVS - presented at VMUG 2023](image.png)
+![Slide from Patrick Koehler - Datacentre evacuation using AVS - presented at VMUG 2023](image.png)
 
 Azure VMware Solution is a first party solution of Microsoft that's been around for years already, firstly hosted by CloudSimple, nowadays hosted by Microsoft directly on Bare Metal hardware in Azure datacenters around the world. 
 
