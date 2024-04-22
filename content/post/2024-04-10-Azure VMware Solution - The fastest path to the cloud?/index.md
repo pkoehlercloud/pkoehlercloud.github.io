@@ -4,7 +4,7 @@ image = "title.png"
 date = 2024-04-22T11:00:47+06:00
 draft = false
 author = "Patrick Koehler"
-tags = ["Azure","Azure VMware Solution", "AVS", "Nutanix NC2"]
+tags = ["Azure","Azure VMware Solution","AVS","Nutanix NC2"]
 categories = ["Azure VMware Solution", "Microsoft Azure"]
 description = "In my latest blog post, I delve into Azure VMware Solution as a potential fast track to the cloud, comparing it with Nutanix Cloud Clusters. I explore the technical details of both solutions, emphasizing Azure VMware Solutions seamless integration with Azure services and pointing out the complexity of planning and deploying Nutanix. This is part 1 of the exciting journey towards your VMware Multi Cloud story."
 +++

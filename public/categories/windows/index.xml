@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Windows on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>http://localhost:1313/categories/windows/</link>
+        <link>https://patrick-koehler.com/categories/windows/</link>
         <description>Recent content in Windows on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session</title>
-        <link>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
+        <link>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
-        <description>&lt;img src="http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
+        <guid>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
 	width=&#34;650&#34;
 	height=&#34;573&#34;
-	srcset=&#34;http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -64,11 +64,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>How to reset the Remote Desktop Client on Windows 10 &amp; 11</title>
-        <link>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
+        <link>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
         <pubDate>Mon, 14 Jun 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
-        <description>&lt;img src="http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
 &lt;p&gt;For that reason, you can reset the Remote Desktop Client on Windows easily via PowerShell.&lt;/p&gt;
 &lt;p&gt;The feature is available from version 1.2.790, which has been released already in 2020.&lt;/p&gt;
 &lt;p&gt;Just run this small line of code and you’ll be fine again:&lt;/p&gt;
@@ -89,11 +89,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation</title>
-        <link>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
+        <link>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
         <pubDate>Tue, 08 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
-        <description>&lt;img src="http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
 &lt;p&gt;In the menu bar in the center top we can see Word [Non-Commercial Use] [Unlicensed Product]&lt;/p&gt;
 &lt;p&gt;Office has worked for the last couple of months perfectly on WVD, so I had to investigate the issue and obviously, the first thing I’ve tried, is to Sign in again to see the application behavior. Finally, the screen was flickering a few times, but the error message persists and Office was simply unusable for all users on the system.&lt;/p&gt;
 &lt;p&gt;So first of all I started to analyze the base parameters like:&lt;/p&gt;
@@ -124,11 +124,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Azure Virtual Desktop - Windows 10 Start menu optimization guide</title>
-        <link>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</link>
+        <link>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</link>
         <pubDate>Thu, 02 Jul 2020 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</guid>
-        <description>&lt;img src="http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.png" alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide" /&gt;&lt;p&gt;Hi everybody it´s Patrick again with another blog post!
+        <guid>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.png" alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide" /&gt;&lt;p&gt;Hi everybody it´s Patrick again with another blog post!
 It´s been busy weeks since my last article about Host Pool Automation (part 3), where I´ve shared with you my first Automation Scaling script, check it out if you´re interested how you can get started with automating your WVD session hosts to save costs!&lt;/p&gt;
 &lt;p&gt;But this week I´m going to start a new article series, focusing on increasing the User Experience in Windows Virtual Desktop for end-users as well as for admins!&lt;/p&gt;
 &lt;p&gt;Since WVD Spring Release is available in public preview I was searching for the state of the art User Experience and finally I came to the conclusion that every environment has its own signature so that you can´t summarize and give the “final answer” to all usability questions, but at least we can try to optimize the environment, to make our end-users curious about what they can do in WVD, especially with the new Windows 10 Multi-Session 2004 version!&lt;/p&gt;
@@ -138,10 +138,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;/h2&gt;&lt;p&gt;The Windows 10 startmenu or taskbar is the place in Windows to consolidate all installed applications on the system and to provide an easy to use navigation point while providing direct shortcuts to the applications without directly impacting the application installation.&lt;/p&gt;
 &lt;p&gt;Customizing the Windows 10 startmenu and taskbar is possible since the release of version 1607.&lt;/p&gt;
 &lt;p&gt;By default, a Windows 10 startmenu provides the following view, while opening it:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
 	width=&#34;720&#34;
 	height=&#34;406&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -153,10 +153,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;While having a deeper look at the startmenu itself, we can separate it into the following areas:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
 	width=&#34;606&#34;
 	height=&#34;518&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -303,10 +303,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Get-AppxPackage&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Allusers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Remove-AppxPackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
 	width=&#34;646&#34;
 	height=&#34;677&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -333,10 +333,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;p&gt;Now let´s start removing not required application shortcuts by performing a right-click on the tile and select: “Unpin folder from Start”.&lt;/p&gt;
 &lt;p&gt;We do this for all our applications and start adding the new tiles by searching them in the StartMenu, performing a right-click and selecting: “Pin to Start”.&lt;/p&gt;
 &lt;p&gt;By hovering over the name of the group, you can even modify it here:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
 	width=&#34;346&#34;
 	height=&#34;206&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -367,10 +367,10 @@ shutdown -l -f -t 0&lt;/li&gt;
     &lt;a href=&#34;#chapter-3-configure-the-taskbar&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 3: Configure the Taskbar
 &lt;/h2&gt;&lt;p&gt;Since the version Windows 10 1607 you have the possibility to remove and pin additional applications to the Taskbar of Windows 10. In our case this is really helpful to pre-define the default settings for our end-users in the WVD environment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
 	width=&#34;799&#34;
 	height=&#34;39&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -426,10 +426,10 @@ shutdown -l -f -t 0&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The result will be exported as an XML and should look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
 	width=&#34;720&#34;
 	height=&#34;223&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
