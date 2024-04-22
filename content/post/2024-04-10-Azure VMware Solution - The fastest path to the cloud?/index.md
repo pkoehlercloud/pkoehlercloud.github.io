@@ -6,7 +6,7 @@ draft = false
 author = "Patrick Koehler"
 tags = ["Azure","Azure VMware Solution", "AVS", "Nutanix NC2"]
 categories = ["Azure VMware Solution", "Microsoft Azure"]
-description = "In my latest blog post, I delve into Azure VMware Solution as a potential fast track to the cloud, comparing it with Nutanix Cloud Clusters. I explore the technical details of both solutions, emphasizing Azure VMware Solution's seamless integration with Azure services and pointing out the complexity of planning and deploying Nutanix. This is part 1 of the exciting journey towards your VMware Multi-Cloud story."
+description = "In my latest blog post, I delve into Azure VMware Solution as a potential fast track to the cloud, comparing it with Nutanix Cloud Clusters. I explore the technical details of both solutions, emphasizing Azure VMware Solutions seamless integration with Azure services and pointing out the complexity of planning and deploying Nutanix. This is part 1 of the exciting journey towards your VMware Multi Cloud story."
 +++
 
 Hi everyone it's Patrick again with the first blogpost on my new site! 
