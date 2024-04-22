@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MSIX on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/categories/msix/</link>
+        <link>http://localhost:1313/categories/msix/</link>
         <description>Recent content in MSIX on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Fri, 11 Dec 2020 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/categories/msix/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 11 Dec 2020 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/msix/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Container up your applications: fast, secure &amp; efficient with MSIX App Attach</title>
-        <link>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
+        <link>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+        <guid>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
+        <description>&lt;img src="http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;First of all a very huge thanks to Christiaan Brinkhoff and Dean Cefola for having me at this awesome event, happened today, the 11.12.2020 in an XXL format! Microsoft Meets Community: Windows Virtual Desktop.&lt;/p&gt;
 &lt;p&gt;It was an absolute honour to speak for 2000 registered users from the community!&lt;/p&gt;
 &lt;h2 id=&#34;chapter-1--what-is-msix--app-attach&#34;&gt;
@@ -25,10 +25,10 @@
     &lt;a href=&#34;#chapter-11--how-is-a-msix-package-built&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 1.1 – How is a MSIX package built?
 &lt;/h3&gt;&lt;p&gt;A MSIX package consists usually of the following set of files:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
 	width=&#34;290&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -44,10 +44,10 @@ These are the files that represents the application/s itself and the dependencie
 &lt;p&gt;&lt;b&gt; AppManifest: &lt;/b&gt;
 The App Manifest is an XML based document that contains information an OS needs for the deployment, display and update of an MSIX application. This info includes usually identity, package dependency information, required capabilities, visual elements of extensibility points.&lt;/p&gt;
 &lt;p&gt;The following example represents a screenshot from an opened AppManifest.xml:
-&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -66,10 +66,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h2 id=&#34;chapter-2--msix-app-attach&#34;&gt;
     &lt;a href=&#34;#chapter-2--msix-app-attach&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2 – MSIX App Attach
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
 	width=&#34;347&#34;
 	height=&#34;504&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -97,10 +97,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-211--expand&#34;&gt;
     &lt;a href=&#34;#chapter-211--expand&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.1 – Expand
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -116,10 +116,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-212--stage&#34;&gt;
     &lt;a href=&#34;#chapter-212--stage&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.2 – Stage
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
