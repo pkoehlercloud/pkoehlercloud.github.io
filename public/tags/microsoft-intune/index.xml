@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Microsoft Intune on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/microsoft-intune/</link>
+        <link>http://localhost:1313/tags/microsoft-intune/</link>
         <description>Recent content in Microsoft Intune on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/microsoft-intune/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/microsoft-intune/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Distribute and Configure the Remote Desktop app via Intune</title>
-        <link>https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/</link>
+        <link>http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/title.png" alt="Featured image of post Distribute and Configure the Remote Desktop app via Intune" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
+        <guid>http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/</guid>
+        <description>&lt;img src="http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/title.png" alt="Featured image of post Distribute and Configure the Remote Desktop app via Intune" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
 &lt;p&gt;today I have another blog for you about how to distribute the Remote Desktop Client for Azure Virtual Desktop and the upcoming service release of Windows 365 Cloud PC. We will perform the distribution to your clients via Microsoft Endpoint Manager (Intune).&lt;/p&gt;
 &lt;p&gt;The first thing we need to do is to package our Remote Desktop Client in the current version: 1.2.2130&lt;/p&gt;
 &lt;p&gt;Please find the latest version here: &lt;a class=&#34;link&#34; href=&#34;https://web.archive.org/web/20230321230532/https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/windowsdesktop-whatsnew&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -85,11 +85,11 @@ Now we need to specify the Source file, which is our recently downloaded Remote 
         </item>
         <item>
         <title>Start VM on Connect for Pooled and Personal Host Pools in WVD</title>
-        <link>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
+        <link>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
+        <guid>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
+        <description>&lt;img src="http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
 &lt;p&gt;In this blog you will learn, how to configure Start VM on Connect for Pooled Host Pools, Personal Host Pools and how to shut down VMs, when the users are logging off.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -403,10 +403,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Using the WVDLogix Autoscale Tool to scale down machines&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To shut down the VMs based on a time based metric, we need to create an Automation Account in our subscription.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
 	width=&#34;682&#34;
 	height=&#34;342&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -418,10 +418,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;On the next page, we´ll give our Automation Account a name, select the subscription, the RG we´ve created, and the operating location, which is West Europe in my case. You also have the possibility to create a RunAs Account, which is not needed for the solution, which we´re going to provision right afterwards. Hit “Create” once you´re finished.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
 	width=&#34;371&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -433,10 +433,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After a few seconds, our storage account is ready to be used and we can go to the resource, which presents us the basic overview of an Automation account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;823&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -448,10 +448,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here, we need to scroll down on the left hend side until we reach “Start/Stop VM”, which is the solution we want to install.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;705&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -463,10 +463,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;It´s obvious that we´re going to click on “Create”, but I´m very excited to see, what you´re saying about what this solution delivers additionally, when correctly configured. For now we click “Create” again to provision the solution.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
 	width=&#34;823&#34;
 	height=&#34;317&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -483,10 +483,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Azure Automation Account (which has been created previously)&lt;/li&gt;
 &lt;li&gt;Parameters&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
 	width=&#34;787&#34;
 	height=&#34;704&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -498,10 +498,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After you´ve created the Log Analytics Workspace and select the Automation Account created by us earlier, we leave the parameters empty for the moment. To not hide the possibilities from you, here is the screenshot of the initial configuration, to be defined from over here already.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
 	width=&#34;773&#34;
 	height=&#34;733&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -522,15 +522,15 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session</title>
-        <link>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
+        <link>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
+        <guid>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</guid>
+        <description>&lt;img src="http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/title.png" alt="Featured image of post Turn off “News and Interests” taskbar widget for Windows 10 Enterprise Multi-Session" /&gt;&lt;p&gt;A feature that came with the latest Windows Update is the “News and Interests” taskbar widget for Windows 10. A feature that might make sense for the user experience on stationary PC’s is definetly something that can confuse users in multi-session environments – like such on Azure Virtual Desktop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image.png&#34;
 	width=&#34;650&#34;
 	height=&#34;573&#34;
-	srcset=&#34;https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_480x0_resize_box_3.png 480w, http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/image_hue232e807b761c8b4e4e982651bf6d91e_122963_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -577,11 +577,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>How to reset the Remote Desktop Client on Windows 10 &amp; 11</title>
-        <link>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
+        <link>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
         <pubDate>Mon, 14 Jun 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
+        <guid>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
+        <description>&lt;img src="http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
 &lt;p&gt;For that reason, you can reset the Remote Desktop Client on Windows easily via PowerShell.&lt;/p&gt;
 &lt;p&gt;The feature is available from version 1.2.790, which has been released already in 2020.&lt;/p&gt;
 &lt;p&gt;Just run this small line of code and you’ll be fine again:&lt;/p&gt;
@@ -602,11 +602,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>What you have to know about the WVD Required URL check tool</title>
-        <link>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
+        <link>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
         <pubDate>Tue, 20 Apr 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
+        <description>&lt;img src="http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://twitter.com/@tomhickling&lt;/a&gt;) announced via LinkedIn, that Microsoft released a tool to validate that Session Hosts can reach the required services to ensure full connectivity to the WVD services.&lt;/p&gt;
 &lt;p&gt;The tool is built to present you the URLs which are accessible or not, if that’s the case. However there are a few things you need to keep in mind, before running the tool.&lt;/p&gt;
 &lt;p&gt;In this blog, I will tell you what you must know about the URLs and ports to be opened for WVD, as well as what the required URL check tool can do for not and what it can’t do!&lt;/p&gt;
@@ -614,10 +614,10 @@ Patrick&lt;/p&gt;
     &lt;a href=&#34;#which-urls-and-ports-are-required-for-a-session-host-to-connect-to-the-wvd-backplane&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Which URLs and ports are required for a Session Host to connect to the WVD backplane?
 &lt;/h2&gt;&lt;p&gt;Let’s start with the first question on which URLs and ports you need to open to let your Session Hosts access the WVD backplane. You will see a few URLs with an asterisk (*), or a wildcard in front of the URL, you have to know that the WVD required URL check tool is NOT able to resolve or check against those, so you have to ensure proper connectivity.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
 	width=&#34;846&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -631,10 +631,10 @@ Patrick&lt;/p&gt;
 &lt;h2 id=&#34;is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34;&gt;
     &lt;a href=&#34;#is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Is there an easier way to enable the required ports if I’m using Azure Firewall?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
 	width=&#34;2700&#34;
 	height=&#34;1393&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;

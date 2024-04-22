@@ -1,6 +1,6 @@
 +++
 title = "Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup"
-date = 2023-03-27T16:56:47+06:00
+date = 2023-12-14T16:56:47+06:00
 draft = false
 author = "Patrick Koehler"
 

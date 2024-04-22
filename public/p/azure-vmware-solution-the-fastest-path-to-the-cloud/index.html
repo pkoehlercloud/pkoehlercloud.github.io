@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This blog series dives into setting up VMware Horizon Cloud on Microsoft Azure. In this installment, we focus on configuring a Service Principal for the VMware Universal Console. Learn how to securely grant administrative privileges, generate necessary credentials, and create a custom role with minimal permissions. Follow step-by-step instructions for seamless integration.">
+<title>Azure VMware Solution - The fastest path to the cloud?</title>
+
+<link rel='canonical' href='http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/'>
+
+<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Azure VMware Solution - The fastest path to the cloud?">
+<meta property='og:description' content="This blog series dives into setting up VMware Horizon Cloud on Microsoft Azure. In this installment, we focus on configuring a Service Principal for the VMware Universal Console. Learn how to securely grant administrative privileges, generate necessary credentials, and create a custom role with minimal permissions. Follow step-by-step instructions for seamless integration.">
+<meta property='og:url' content='http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/'>
+<meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Azure' /><meta property='article:tag' content='Azure VMware Solution' /><meta property='article:tag' content='Azure Stack HCI' /><meta property='article:tag' content='Nutanix Cloud Clusters' /><meta property='article:tag' content='NC2' /><meta property='article:published_time' content='2024-04-10T16:56:47&#43;06:00'/><meta property='article:modified_time' content='2024-04-10T16:56:47&#43;06:00'/><meta property='og:image' content='http://localhost:1313/title.png' />
+<meta name="twitter:site" content="@wvdlogix">
+    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Azure VMware Solution - The fastest path to the cloud?">
+<meta name="twitter:description" content="This blog series dives into setting up VMware Horizon Cloud on Microsoft Azure. In this installment, we focus on configuring a Service Principal for the VMware Universal Console. Learn how to securely grant administrative privileges, generate necessary credentials, and create a custom role with minimal permissions. Follow step-by-step instructions for seamless integration."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/title.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc59d5fe30e8b430128cebedffe7532de_4365636_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Patrick&#39;s Multi-Cloud Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/patrick-koehler/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/wvdlogix'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.strava.com/athletes/117484839'
+                        target="_blank"
+                        title="Strava"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-strava"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 13l-5 -10l-5 10m6 0l4 8l4 -8" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/pkoehlercloud'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about-patrick/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Patrick</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/cycling/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bike"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M19 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0" /><path d="M17 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                
+                <span>Cycling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#azure-vmware-solution---technical-overview">Azure VMware Solution - Technical Overview</a></li>
+    <li><a href="#alternative-nutanix-cloud-clusters-nc2">Alternative: Nutanix Cloud Clusters (NC2)</a></li>
+    <li><a href="#comparison">Comparison</a>
+      <ol>
+        <li><a href="#time-to-production">Time To Production</a>
+          <ol>
+            <li><a href="#deployment-complexity">Deployment complexity</a></li>
+            <li><a href="#deployment-speed">Deployment speed</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/">
+                
+                    <img src="/title.png" loading="lazy" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/azure-vmware-solution/" >
+                Azure VMware Solution
+            </a>
+        
+            <a href="/categories/microsoft-azure/" style="background-color: #2a9d8f; color: #fff;">
+                Microsoft Azure
+            </a>
+        
+            <a href="/categories/vmware/" style="background-color: #2a9d8f; color: #fff;">
+                VMware
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/">Azure VMware Solution - The fastest path to the cloud?</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            This blog series dives into setting up VMware Horizon Cloud on Microsoft Azure. In this installment, we focus on configuring a Service Principal for the VMware Universal Console. Learn how to securely grant administrative privileges, generate necessary credentials, and create a custom role with minimal permissions. Follow step-by-step instructions for seamless integration.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 10, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Hi everyone it&rsquo;s Patrick again with the first blogpost on my new site!</p>
+<p>This time I want to share with you my experiences with Azure VMware Solution and if it&rsquo;s really the fastest path to the cloud.
+In this blog we&rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).</p>
+<p>After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog has the intention of&hellip;</p>
+<ul>
+<li>Giving you a good overview of what Azure VMware Solution is and who provides the service.</li>
+<li>How the service incorporates with other Azure Services and which are the most commonly used in this scenario.</li>
+<li>What is crucial in planning Azure VMware Solution for your organisation.</li>
+<li>Lessons learned from the field.</li>
+</ul>
+<p>If you like this series, let me know and I&rsquo;m happy to produce more architectural content around Azure VMware Solution. But for now, let&rsquo;s dive into the topic:</p>
+<h2 id="azure-vmware-solution---technical-overview">
+    <a href="#azure-vmware-solution---technical-overview" class="header-anchor">#</a>
+    Azure VMware Solution - Technical Overview
+</h2><p><img src="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png"
+	width="895"
+	height="487"
+	srcset="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, /p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="alt text"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="183"
+		data-flex-basis="441px"
+	
+></p>
+<p>Azure VMware Solution is a first party solution of Microsoft that&rsquo;s been around for years already, firstly hosted by CloudSimple, nowadays hosted by Microsoft directly on Bare Metal hardware in Azure datacenters around the world.</p>
+<p>It consists of the well known product stack, that VMware by Broadcom is providing customers known as VMware Cloud Foundation, consisting of products like:</p>
+<ul>
+<li>VMware vSphere - Which is VMware&rsquo;s virtualization platform</li>
+<li>vSAN - VMware&rsquo;s storage solution</li>
+<li>NSX-T - Provides Network &amp; Security virtualization capabilities</li>
+<li>VMware HCX - Migration &amp; Network Extension solution provided by VMware, which is optional.</li>
+</ul>
+<p>Besides that, it&rsquo;s important to understand also the Azure footprint of resources which should be utilized:</p>
+<ul>
+<li>Microsoft Entra ID - IAM for administrative access for Azure based resources</li>
+<li>Virtual networks - Termination of VPN / Express Route - depending on the topology spoke for Azure native services.</li>
+<li>Site-2-Site VPN or Express Route - Used to establish connectivity between on-premises and Azure, but also to interconnect Azure VMware Platforms on Azure and interconnect with Azure services.</li>
+<li>Azure Virtual WAN - A networking service that bring networking, security, and routing functionalities together in a central place.</li>
+<li>Azure Disk Pools or Azure NetApp Files - If datastore must be extended with high performant storage.</li>
+</ul>
+<p>While the stack that Microsoft uses to deploy AVS sounds interesting for customers that are coming from a VMware based background, ensuring that they keep the same user and administrative experience than on-premises, it might be exciting to have a quick comperative look at Nutanix Cloud Clusters (NC2), which is offering an alternative for Hybrid connectivity as well:</p>
+<h2 id="alternative-nutanix-cloud-clusters-nc2">
+    <a href="#alternative-nutanix-cloud-clusters-nc2" class="header-anchor">#</a>
+    Alternative: Nutanix Cloud Clusters (NC2)
+</h2><p><img src="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png"
+	width="903"
+	height="364"
+	srcset="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, /p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="248"
+		data-flex-basis="595px"
+	
+></p>
+<p>Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.</p>
+<p>With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:</p>
+<p><img src="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png"
+	width="1250"
+	height="871"
+	srcset="/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, /p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="143"
+		data-flex-basis="344px"
+	
+></p>
+<ul>
+<li>Virtual Machines for Flow Gateways</li>
+<li>A NAT Gateway</li>
+<li>2 Virtual Networks (One for Bare Metal Management, the other for managing the cluster from a software perspective)</li>
+</ul>
+<p>While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning (please keep in mind that I consider the deployment and preparation of resources to be deployed as a plus of complexity compared to AVS), it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.</p>
+<h2 id="comparison">
+    <a href="#comparison" class="header-anchor">#</a>
+    Comparison
+</h2><p>Now we want to take a closer look at both solutions and try to compare them from a technical perspective.
+I will make this comparision based on the following values:</p>
+<ul>
+<li>Time to Production
+<ul>
+<li>Deployment complexity</li>
+<li>Deployment speed</li>
+</ul>
+</li>
+<li>Reliability &amp; Availability
+<ul>
+<li>Regional Availability</li>
+<li>Hardware SKU&rsquo;s</li>
+<li>High Availability</li>
+</ul>
+</li>
+<li>Scalability
+<ul>
+<li>Horizontal Scaling (Increase hardware ressources, time to spin up)</li>
+<li>Auto scaling possibilities</li>
+</ul>
+</li>
+<li>Interoperability and Compatibility
+<ul>
+<li>Feature Set</li>
+<li>Automation capabilities (Initial deployment up to Day 2 operations)</li>
+</ul>
+</li>
+<li>Security
+<ul>
+<li>Data encryption</li>
+<li>Data in transit</li>
+<li>Identity and Access Management (Azure native and in-platform)</li>
+</ul>
+</li>
+<li>Documentation and Support</li>
+<li>Costs to consider (Last update: May 2024)</li>
+</ul>
+<h3 id="time-to-production">
+    <a href="#time-to-production" class="header-anchor">#</a>
+    Time To Production
+</h3><h4 id="deployment-complexity">
+    <a href="#deployment-complexity" class="header-anchor">#</a>
+    Deployment complexity
+</h4><p>Having a look at the deployment complixity it&rsquo;s crucial to understand the circumstances and environmental variables that I used to perform the ramp up. The following subchapters define the complexity based on metrics like:</p>
+<h5 id="prerequisites">
+    <a href="#prerequisites" class="header-anchor">#</a>
+    Prerequisites
+</h5><p>To get started with Azure VMware Solution we need to have an appropriate subscription type in order to get started.
+Currently, Microsoft supports only AVS deployments with the use of the following subscription types:</p>
+<ul>
+<li>Microsoft Enterprise Agreement (EA)</li>
+<li>Cloud Solution Provider (CSP)</li>
+<li>Microsoft Customer Agreement (MCA)</li>
+</ul>
+<p>More information and reference can be found here: <a class="link" href="https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment"  target="_blank" rel="noopener"
+    >https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment</a></p>
+<p>In addition, we need to request the host quota for our deployment, which requires a Microsoft support ticket from the Azure portal. The case have been closed within 2 business days (up to five business days are noted in the Microsoft reference).</p>
+<p>Afterwards we need to ensure, that our resource provider in our subscription is registered (the whole process took 5 minutes to complete).</p>
+<p>Besides that AVS only requires a /22 CIDR as bare minimum for the deployment to get started. Pretty easy and all steps could be resolved within 2 business days (including support ticket waiting time).</p>
+<p>For Nutanix NC2 we had to ensure the following tasks. While Microsoft requires certain subscription types to work with Azure VMware Solution, Nutanix offers a broader way of booking the service which isn&rsquo;t limited to any subscription type. However the booking is a bit more complex as you require a my.nutanix.com account and need to sign up for the cloud portal at Nutanix first, before you can actually purchase the service and start the deployment itself.</p>
+<p>Like AVS, Nutanix requires also to have the Microsoft support team involved to ensure that the quota and required nodes are made available to your subscription and the desired region. This process is off our influence and took also two business days to complete.</p>
+<p>As we will deploy a few more resources on Azure, Nutanix created a custom role to fullfil the zero trust principle and by leveraging the least permission principle. As this is not required for AVS I can&rsquo;t put it into comparision. The custom role creation and assignment to an Enterprise Application for the deployment took 15 minutes to complete.</p>
+<p>Next is to register the Resource Provider for Nutanix on Azure. This took 5 minutes to complete.</p>
+<h4 id="deployment-speed">
+    <a href="#deployment-speed" class="header-anchor">#</a>
+    Deployment speed
+</h4><p>In this test I performed a deployment for both Azure VMware Solution as well as Nutanix Cloud Clusters on Azure within the same region. As a baseline it is important to have the same node count, that means that we have to take the minimum production ready node count for both solutions, which is 3 nodes (based on the bare minimum of Azure VMware Solution). Whereas Nutanix Cloud Clusters support Single-Node deployments it is important that even Nutanix says that those are meant for testing and PoC&rsquo;s, rather than production environments.</p>
+<p>In addition, we have chosen West Europe as our region for the deployment, to have a direct comparision.</p>
+<h5 id="result">
+    <a href="#result" class="header-anchor">#</a>
+    Result
+</h5><p>Both deployments of three node clusters have been accomplished in around four hours from the initial deployment kickoff. Nutanix Cloud Clusters completed a bit earlier, which relates to <b>3 hours and 56 minutes</b> for the completion, whereas <b>Azure VMware Solution took 4 hours and 13 minutes</b> to complete.</p>
+<p>This makes <b> Nutanix </b> winner for at least the initial deployment based on the timely value.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/azure/">Azure</a>
+        
+            <a href="/tags/azure-vmware-solution/">Azure VMware Solution</a>
+        
+            <a href="/tags/azure-stack-hci/">Azure Stack HCI</a>
+        
+            <a href="/tags/nutanix-cloud-clusters/">Nutanix Cloud Clusters</a>
+        
+            <a href="/tags/nc2/">NC2</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.5e9b7416c6eefd4754b64989bdd44265_hu47f31a060c17741ed671fdc891fc1e2a_100651_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup"
+                        
+                        data-hash="md5-Xpt0Fsbu/UdUtkmJvdRCZQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.653568da128b9ba67626de1caff724bf_hu47f31a060c17741ed671fdc891fc1e2a_80306_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker"
+                        
+                        data-hash="md5-ZTVo2hKLm6Z2Jt4cr/ckvw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/workspace-one-access-22.09-integration-with-horizon-on-premises/">
+        
+        
+            <div class="article-image">
+                <img src="/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.101f2ebbe58075ff9b5b4893dba7a5dd_hu47f31a060c17741ed671fdc891fc1e2a_84440_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises"
+                        
+                        data-hash="md5-EB8uu&#43;WAdf&#43;bW0iT26el3Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Workspace ONE Access 22.09 – Integration with Horizon On-Premises</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/">
+        
+        
+            <div class="article-image">
+                <img src="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.3687ba9ce3835f14937762292aab7f88_hu47f31a060c17741ed671fdc891fc1e2a_106079_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD"
+                        
+                        data-hash="md5-Noe6nOODXxSTd2IpKqt/iA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Start VM on Connect for Pooled and Personal Host Pools in WVD</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.3d887d5b8567680066c722d4e44fd9d0_hu47f31a060c17741ed671fdc891fc1e2a_72005_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11"
+                        
+                        data-hash="md5-PYh9W4VnaABmxyLU5E/Z0A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to reset the Remote Desktop Client on Windows 10 &amp; 11</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Patrick Köhler
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

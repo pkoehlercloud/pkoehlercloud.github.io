@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Azure Stack HCI on Patrick&#39;s Multi-Cloud Blog</title>
+        <link>http://localhost:1313/tags/azure-stack-hci/</link>
+        <description>Recent content in Azure Stack HCI on Patrick&#39;s Multi-Cloud Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Patrick Köhler</copyright>
+        <lastBuildDate>Wed, 10 Apr 2024 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/azure-stack-hci/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Azure VMware Solution - The fastest path to the cloud?</title>
+        <link>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
+        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
+        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
+&lt;p&gt;This time I want to share with you my experiences with Azure VMware Solution and if it&amp;rsquo;s really the fastest path to the cloud.
+In this blog we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
+&lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog has the intention of&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Giving you a good overview of what the technology can do for you and how it competes to other &amp;ldquo;Hybrid solutions&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;How the service incorporates with other Azure Services and which are the most commonly used in this scenario&lt;/li&gt;
+&lt;li&gt;What is crucial in planning Azure VMware Solution for your organisation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you like this series, let me know and I&amp;rsquo;m happy to produce more architectural content around Azure VMware Solution. But for now, let&amp;rsquo;s dive into the topic:&lt;/p&gt;
+&lt;h2 id=&#34;azure-vmware-solution---technical-overview&#34;&gt;
+    &lt;a href=&#34;#azure-vmware-solution---technical-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Azure VMware Solution - Technical Overview
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
+	width=&#34;895&#34;
+	height=&#34;487&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;441px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Azure VMware Solution is a first party solution of Microsoft that&amp;rsquo;s been around for years already, firstly hosted by CloudSimple, nowadays hosted by Microsoft directly on Bare Metal hardware.&lt;/p&gt;
+&lt;p&gt;It consists of the well known product stack, that VMware by Broadcom is providing customers known as VMware Cloud Foundation, consisting of products like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VMware vSphere - Which is VMware&amp;rsquo;s virtualization platform&lt;/li&gt;
+&lt;li&gt;vSAN - VMware&amp;rsquo;s storage solution&lt;/li&gt;
+&lt;li&gt;NSX-T - Provides Network &amp;amp; Security virtualization capabilities&lt;/li&gt;
+&lt;li&gt;VMware HCX - Migration &amp;amp; Network Extension solution provided by VMware, which is optional.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Besides that, it&amp;rsquo;s important to understand also the Azure footprint of resources which should be utilized:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Entra ID - IAM for administrative access for Azure based resources&lt;/li&gt;
+&lt;li&gt;Virtual networks - Termination of VPN / Express Route - depending on the topology spoke for Azure native services.&lt;/li&gt;
+&lt;li&gt;Site-2-Site VPN or Express Route - Used to establish connectivity between on-premises and Azure, but also to interconnect Azure VMware Platforms on Azure and interconnect with Azure services.&lt;/li&gt;
+&lt;li&gt;Azure Disk Pools or Azure NetApp Files - If datastore must be extended with high performant storage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While the stack that Microsoft uses to deploy AVS sound interesting for customers that are coming from a VMware based background, ensuring that they keep the same user and administrative experience than on-premises it might be exciting to have a comperative look at two other solutions in short, which are offered for Hybrid connectivity as well:&lt;/p&gt;
+&lt;h3 id=&#34;azure-stack-hci&#34;&gt;
+    &lt;a href=&#34;#azure-stack-hci&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Azure Stack HCI
+&lt;/h3&gt;&lt;h3 id=&#34;nutanix-cloud-clusters-nc2&#34;&gt;
+    &lt;a href=&#34;#nutanix-cloud-clusters-nc2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Nutanix Cloud Clusters (NC2)
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
+	width=&#34;903&#34;
+	height=&#34;364&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;595px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from the same hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.&lt;/p&gt;
+&lt;p&gt;With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS, AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
+	width=&#34;1250&#34;
+	height=&#34;871&#34;
+	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;344px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Virtual Machines for Flow Gateways&lt;/li&gt;
+&lt;li&gt;A NAT Gateway&lt;/li&gt;
+&lt;li&gt;2 Virtual Networks (One for Bare Metal Management, the other for managing the cluster from a software perspective)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning, it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&amp;rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
