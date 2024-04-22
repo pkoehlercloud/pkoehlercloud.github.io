@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Patrick shares his journey of how joining the vExpert program enhanced his skills as an IT architect, connecting him with a community of experts, providing access to lab infrastructure licenses, and fostering collaboration and learning. He encourages aspiring vExperts to connect with the community, start blogging, participate in VMware User Groups, and seek guidance to build their expertise and apply for the program.">
-<title>How the vExpert program helped me to become a better Cloud architect.</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This is part one of a blog post series about Azure VMware Solution.">
+<title>Mastering Azure VMware Solution - Is it the fastest path to the cloud?</title>
 
-<link rel='canonical' href='https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./'>
+<link rel='canonical' href='https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/'>
 
-<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="How the vExpert program helped me to become a better Cloud architect.">
-<meta property='og:description' content="Patrick shares his journey of how joining the vExpert program enhanced his skills as an IT architect, connecting him with a community of experts, providing access to lab infrastructure licenses, and fostering collaboration and learning. He encourages aspiring vExperts to connect with the community, start blogging, participate in VMware User Groups, and seek guidance to build their expertise and apply for the program.">
-<meta property='og:url' content='https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./'>
+<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Mastering Azure VMware Solution - Is it the fastest path to the cloud?">
+<meta property='og:description' content="This is part one of a blog post series about Azure VMware Solution.">
+<meta property='og:url' content='https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/'>
 <meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VMware' /><meta property='article:tag' content='Community' /><meta property='article:tag' content='vExpert' /><meta property='article:published_time' content='2024-04-22T12:50:47&#43;06:00'/><meta property='article:modified_time' content='2024-04-22T12:50:47&#43;06:00'/><meta property='og:image' content='https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Azure VMware Solution' /><meta property='article:tag' content='Azure' /><meta property='article:tag' content='VMware' /><meta property='article:published_time' content='2024-04-22T11:56:47&#43;06:00'/><meta property='article:modified_time' content='2024-04-22T11:56:47&#43;06:00'/><meta property='og:image' content='https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title.png' />
 <meta name="twitter:site" content="@wvdlogix">
-    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="How the vExpert program helped me to become a better Cloud architect.">
-<meta name="twitter:description" content="Patrick shares his journey of how joining the vExpert program enhanced his skills as an IT architect, connecting him with a community of experts, providing access to lab infrastructure licenses, and fostering collaboration and learning. He encourages aspiring vExperts to connect with the community, start blogging, participate in VMware User Groups, and seek guidance to build their expertise and apply for the program."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.png' />
+    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Mastering Azure VMware Solution - Is it the fastest path to the cloud?">
+<meta name="twitter:description" content="This is part one of a blog post series about Azure VMware Solution."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title.png' />
     </head>
     <body class="
     article-page
@@ -285,11 +285,11 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#azure-vmware-solution---technical-overview">Azure VMware Solution - Technical Overview</a></li>
+    <li><a href="#alternative-nutanix-cloud-clusters-nc2">Alternative: Nutanix Cloud Clusters (NC2)</a>
       <ol>
-        <li><a href="#but-what-did-the-vexpert-program-supported-you-with">But what did the vExpert program supported you with?</a></li>
-        <li><a href="#but-what-do-i-need-to-do-to-become-a-vexpert">But what do I need to do to become a vExpert?</a></li>
-        <li><a href="#but-what-happens-if-i-didnt-get-the-vexpert-status">But what happens if I didn&rsquo;t get the vExpert status?</a></li>
+        <li><a href="#first-summary">First summary</a></li>
+        <li><a href="#how-we-continue-to-explore-avs">How we continue to explore AVS</a></li>
       </ol>
     </li>
   </ol>
@@ -306,13 +306,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./">
-                <img src="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title_hu47f31a060c17741ed671fdc891fc1e2a_99060_800x0_resize_box_3.png"
-                        srcset="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title_hu47f31a060c17741ed671fdc891fc1e2a_99060_800x0_resize_box_3.png 800w, /p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title_hu47f31a060c17741ed671fdc891fc1e2a_99060_1600x0_resize_box_3.png 1600w"
+            <a href="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/">
+                <img src="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title_hu47f31a060c17741ed671fdc891fc1e2a_85444_800x0_resize_box_3.png"
+                        srcset="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title_hu47f31a060c17741ed671fdc891fc1e2a_85444_800x0_resize_box_3.png 800w, /p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title_hu47f31a060c17741ed671fdc891fc1e2a_85444_1600x0_resize_box_3.png 1600w"
                         width="800" 
                         height="457" 
                         loading="lazy"
-                        alt="Featured image of post How the vExpert program helped me to become a better Cloud architect." />
+                        alt="Featured image of post Mastering Azure VMware Solution - Is it the fastest path to the cloud?" />
                 
             </a>
         </div>
@@ -321,6 +321,10 @@
     <div class="article-details">
     
     <header class="article-category">
+        
+            <a href="/categories/microsoft-azure/" style="background-color: #2a9d8f; color: #fff;">
+                Microsoft Azure
+            </a>
         
             <a href="/categories/vmware/" style="background-color: #2a9d8f; color: #fff;">
                 VMware
@@ -331,12 +335,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./">How the vExpert program helped me to become a better Cloud architect.</a>
+            <a href="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/">Mastering Azure VMware Solution - Is it the fastest path to the cloud?</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Patrick shares his journey of how joining the vExpert program enhanced his skills as an IT architect, connecting him with a community of experts, providing access to lab infrastructure licenses, and fostering collaboration and learning. He encourages aspiring vExperts to connect with the community, start blogging, participate in VMware User Groups, and seek guidance to build their expertise and apply for the program.
+            This is part one of a blog post series about Azure VMware Solution.
         </h3>
         
     </div>
@@ -372,7 +376,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -387,34 +391,98 @@
     <section class="article-content">
     
     
-    <p>Hey everybody it&rsquo;s Patrick again from the new blog site (yes I finally made it to GitHub with a static page build with Hugo),</p>
-<p>this time I want to share my story around why I believe the vExpert program has helped me become a better architect.
-As some of you know, I started my IT career already a while back in 2009 where I completed an apprenticeship at IT-Haus (a local German consulting firm and reseller). I started to dig deeper into emerging technologies, got my first steps in vCenter done, learned how cool vMotion is and what it means to host and manage larger IT estates. Moving forward in my career I brought cloud technologies like Microsoft Azure, Amazon Web Services etc. to the mix and I transitioned slightly from the on-premises three tier architecture towards more cloud consultancy.</p>
-<p>But from who did I learn all these things, and what are my resources? Is something I got asked frequently. And to tell you the trough, besides reading books and searching the internet for the solutions I needed, most of the time I landed on pages from vExperts, MVP&rsquo;s etc. Those guys I considered as my rockstars (and they obviously are) in the industry. The knowledge they shared, the passion for technology combined with the willing to help the community inspired me a lot, which is the reason why I started my first blog page back in 2020 with wvdlogix.net. The blog should help me get into EUC and to share my thoughts around Azure Virtual Desktop, VMware Horizon and later on the combination of both.</p>
-<p>After one year of blogging I thought that I should give it a try to apply for the vExpert program, as I want to contribute even more to the awesome community and to learn how to ask the right questions and to help the product team to even improve the technology that we love and that we kind of grew up with.</p>
-<p>And it happened! I got accepted for the first time to become a VMware vExpert myself in 2021.
-Which by the way should later be the year when I join the incredible company VMware is.</p>
-<h3 id="but-what-did-the-vexpert-program-supported-you-with">
-    <a href="#but-what-did-the-vexpert-program-supported-you-with" class="header-anchor">#</a>
-    But what did the vExpert program supported you with?
-</h3><p>First of all, it&rsquo;s important to mention that the vExpert program is meant to share knowledge and to collaborate with other tech enthusiasts. That was the first support and one of the most important things I always mention when somebody asks me about the program.
-I got access to the group of people via Slack where I was able to ask questions, share my thoughts and get comments and ideas on other peoples experience which helped me also a lot in improving the content that I&rsquo;m sharing with the community.</p>
-<p>It&rsquo;s a great place and actually one of the greatest assets of the program to get access to these fantastic people!</p>
-<p>Second, it was the licenses for your lab infrastructure. These helped me a lot to improve my architecture and automation skills while implementing the technology in my homelab, tinkering around with the VCF stack, destroying it, rebuilding and starting to become more solid in my conversations with customers which indeed helped to become a better architect. And this again helped me to become a better community member who wants to share expert knowledge and experiences with others.</p>
-<p>Besides all of that there is a fantastic community lead named Corey Romero, who build the program and has several opportunities and events for you to learn from the product groups and get into deep technical details!</p>
-<h3 id="but-what-do-i-need-to-do-to-become-a-vexpert">
-    <a href="#but-what-do-i-need-to-do-to-become-a-vexpert" class="header-anchor">#</a>
-    But what do I need to do to become a vExpert?
-</h3><p>To become a vExpert yourself it&rsquo;s important to understand that this recognition is not only a badge to polish your CV, it&rsquo;s also not just an entitlement, it means dedication and willigness to support. To be part of the community a good thing is to connect with other vExperts or vExperts pro via Twitter / X or LinkedIn and ask them for guidance and support (I&rsquo;m sure most of them will be open to support! Otherwise reach out to me at any time). Next should be that you start to blog! Write about your experiences, start to share knowledge regardless how easy it may seem to you, I&rsquo;m sure somebody else with profit from it! Next could be to sign up for a variety of VMUGs (VMware User Groups or UserCons) or even speak at those events! And if you are new to speaking, ask the vExpert community again to provide you with tips and tricks and help to get you prepared for your first showtime, I&rsquo;m sure everybody is willing to help!</p>
-<p>Once you get into blogging and speaking, it may be time to apply for the vExpert program at <a class="link" href="https://vexpert.vmware.com"  target="_blank" rel="noopener"
-    >https://vexpert.vmware.com</a></p>
-<p>There you have to select if you are an Evangelist, customer, partner, VCDX, Moderator or VMUG Leader and provide as much details as you can to your application! After the registration / application time closes you will be notified if you are eligible to become a vExpert!</p>
-<h3 id="but-what-happens-if-i-didnt-get-the-vexpert-status">
-    <a href="#but-what-happens-if-i-didnt-get-the-vexpert-status" class="header-anchor">#</a>
-    But what happens if I didn&rsquo;t get the vExpert status?
-</h3><p>Don&rsquo;t worry! Sometimes it takes time and patience. Most importantly is, that you do what you love and share knowledge with the wider community. If you need any assistance please feel free to reach out and I try to be as supportive as I can!</p>
-<p>Cheers,
-Patrick</p>
+    <p>Hi everyone it&rsquo;s Patrick again with the first blogpost on my new site!</p>
+<p>This time I want to share with you my experiences with Azure VMware Solution and if it&rsquo;s really the fastest path to the cloud.
+In this blog series we&rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).</p>
+<p>After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog series has the intention of&hellip;</p>
+<ul>
+<li>Giving you a good overview of what Azure VMware Solution is and who provides the service.</li>
+<li>How the service incorporates with other Azure Services and which are the most commonly used in this scenario.</li>
+<li>What is crucial in planning Azure VMware Solution for your organisation.</li>
+<li>Lessons learned from the field.</li>
+<li>Providing a big comparision of features, scalability, security and cost for your decision making process!</li>
+</ul>
+<p>If you like this series, let me know and I will be happy to dive deeper in one or the other topic as demanded. But let&rsquo;s start with part 1 - the technical overview of Azure VMware Solution and its competitor Nutanix NC2.</p>
+<h2 id="azure-vmware-solution---technical-overview">
+    <a href="#azure-vmware-solution---technical-overview" class="header-anchor">#</a>
+    Azure VMware Solution - Technical Overview
+</h2><p><img src="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image.png"
+	width="895"
+	height="487"
+	srcset="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, /p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Slide from Patrick Koehler - Datacentre evacuation using AVS - presented at VMUG 2023"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="183"
+		data-flex-basis="441px"
+	
+></p>
+<p>Azure VMware Solution is a first party solution of Microsoft that&rsquo;s been around for years already, firstly hosted by CloudSimple, nowadays hosted by Microsoft directly on Bare Metal hardware in Azure datacenters around the world.</p>
+<p>It consists of the well known product stack, that VMware by Broadcom is providing customers known as VMware Cloud Foundation, consisting of products like:</p>
+<ul>
+<li>VMware vSphere - Which is VMware&rsquo;s virtualization platform</li>
+<li>vSAN - VMware&rsquo;s storage solution</li>
+<li>NSX-T - Provides Network &amp; Security virtualization capabilities</li>
+<li>VMware HCX - Migration &amp; Network Extension solution provided by VMware, which is optional.</li>
+</ul>
+<p>Besides that, it&rsquo;s important to understand also the Azure footprint of resources which should be utilized:</p>
+<ul>
+<li>Microsoft Entra ID - IAM for administrative access for Azure based resources</li>
+<li>Virtual networks - Termination of VPN / Express Route - depending on the topology spoke for Azure native services.</li>
+<li>Site-2-Site VPN or Express Route - Used to establish connectivity between on-premises and Azure, but also to interconnect Azure VMware Platforms on Azure and interconnect with Azure services.</li>
+<li>Azure Virtual WAN - A networking service that bring networking, security, and routing functionalities together in a central place.</li>
+<li>Azure Disk Pools or Azure NetApp Files - If datastore must be extended with high performant storage.</li>
+</ul>
+<p>While the stack that Microsoft uses to deploy AVS sounds interesting for customers that are coming from a VMware based background, ensuring that they keep the same user and administrative experience than on-premises, it might be exciting to have a quick comperative look at Nutanix Cloud Clusters (NC2), which is offering an alternative for Hybrid connectivity as well:</p>
+<h2 id="alternative-nutanix-cloud-clusters-nc2">
+    <a href="#alternative-nutanix-cloud-clusters-nc2" class="header-anchor">#</a>
+    Alternative: Nutanix Cloud Clusters (NC2)
+</h2><p><img src="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1.png"
+	width="903"
+	height="364"
+	srcset="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, /p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="248"
+		data-flex-basis="595px"
+	
+></p>
+<p>Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.</p>
+<p>With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:</p>
+<p><img src="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2.png"
+	width="1250"
+	height="871"
+	srcset="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, /p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="143"
+		data-flex-basis="344px"
+	
+></p>
+<ul>
+<li>Virtual Machines for Flow Gateways</li>
+<li>A NAT Gateway</li>
+<li>2 Virtual Networks (One for Bare Metal Management, the other for managing the cluster from a software perspective)</li>
+</ul>
+<h3 id="first-summary">
+    <a href="#first-summary" class="header-anchor">#</a>
+    First summary
+</h3><p>While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning (please keep in mind that I consider the deployment and preparation of resources to be deployed as a plus of complexity compared to AVS), it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.</p>
+<h3 id="how-we-continue-to-explore-avs">
+    <a href="#how-we-continue-to-explore-avs" class="header-anchor">#</a>
+    How we continue to explore AVS
+</h3><p>As this article provided you with a very good first touchpoint of both solutions, we will focus again on Azure VMware Solution as our core product. In the next blog article, I&rsquo;m going to walk you through the process of deploying an AVS datacenter and the preparation tasks you have to consider from a design perspective.</p>
 
 </section>
 
@@ -423,11 +491,11 @@ Patrick</p>
     
     <section class="article-tags">
         
+            <a href="/tags/azure-vmware-solution/">Azure VMware Solution</a>
+        
+            <a href="/tags/azure/">Azure</a>
+        
             <a href="/tags/vmware/">VMware</a>
-        
-            <a href="/tags/community/">Community</a>
-        
-            <a href="/tags/vexpert/">VExpert</a>
         
     </section>
 
@@ -446,30 +514,6 @@ Patrick</p>
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/">
-        
-        
-            <div class="article-image">
-                <img src="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title.196c0e73a7c33133221ea846116dcb50_hu47f31a060c17741ed671fdc891fc1e2a_85444_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Mastering Azure VMware Solution - Is it the fastest path to the cloud?"
-                        
-                        data-hash="md5-GWwOc6fDMTMiHqhGEW3LUA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Mastering Azure VMware Solution - Is it the fastest path to the cloud?</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="has-image">
@@ -545,23 +589,47 @@ Patrick</p>
             
                 
 <article class="has-image">
-    <a href="/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/">
+    <a href="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./">
         
         
             <div class="article-image">
-                <img src="/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/title.eb610113a39cde4e831ea516120620b4_hu47f31a060c17741ed671fdc891fc1e2a_73748_250x150_fill_box_smart1_3.png" 
+                <img src="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.bdbc8185070ee32a847b72071b603a4b_hu47f31a060c17741ed671fdc891fc1e2a_99060_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
-                        alt="Featured image of post FSLogix v2105 – How to Increase VHDX size of profile container"
+                        alt="Featured image of post How the vExpert program helped me to become a better Cloud architect."
                         
-                        data-hash="md5-62EBE6Oc3k6DHqUWEgYgtA==">
+                        data-hash="md5-vbyBhQcO4yqEe3IHG2A6Sw==">
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">FSLogix v2105 – How to Increase VHDX size of profile container</h2>
+            <h2 class="article-title">How the vExpert program helped me to become a better Cloud architect.</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/">
+        
+        
+            <div class="article-image">
+                <img src="/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.3687ba9ce3835f14937762292aab7f88_hu47f31a060c17741ed671fdc891fc1e2a_106079_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD"
+                        
+                        data-hash="md5-Noe6nOODXxSTd2IpKqt/iA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Start VM on Connect for Pooled and Personal Host Pools in WVD</h2>
         </div>
     </a>
 </article>

@@ -1,5 +1,5 @@
 +++
-title = "Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup"
+title = "Mastering Azure VMware Solution - Is it the fastest path to the cloud?"
 date = 2024-04-22T11:56:47+06:00
 draft = false
 author = "Patrick Koehler"
