@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>http://localhost:1313/page/</link>
+        <link>https://patrick-koehler.com/page/</link>
         <description>Recent content in Pages on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://patrick-koehler.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>https://patrick-koehler.com/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>https://patrick-koehler.com/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>About Patrick</title>
-        <link>http://localhost:1313/about-patrick/</link>
+        <link>https://patrick-koehler.com/about-patrick/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/about-patrick/</guid>
-        <description>&lt;img src="http://localhost:1313/about-patrick/title.png" alt="Featured image of post About Patrick" /&gt;&lt;p&gt;Patrick is a passionate Cloud Solution Architect with focus on Cloud Adoption and customer success using Microsoft Azure. As an emphatic leader, he aims to identify potential for customer growth and excellence through cloud technology. As a community leader, Patrick focusses on Azure Virtual Desktop, Windows 365 as well as Azure native infrastructure services and ways to increase productivity while ensuring user satisfaction.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/about-patrick/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/about-patrick/title.png" alt="Featured image of post About Patrick" /&gt;&lt;p&gt;Patrick is a passionate Cloud Solution Architect with focus on Cloud Adoption and customer success using Microsoft Azure. As an emphatic leader, he aims to identify potential for customer growth and excellence through cloud technology. As a community leader, Patrick focusses on Azure Virtual Desktop, Windows 365 as well as Azure native infrastructure services and ways to increase productivity while ensuring user satisfaction.&lt;/p&gt;
 &lt;h2 id=&#34;community-recognitions&#34;&gt;
     &lt;a href=&#34;#community-recognitions&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Community recognitions
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/about-patrick/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/about-patrick/image.png&#34;
 	width=&#34;751&#34;
 	height=&#34;303&#34;
-	srcset=&#34;http://localhost:1313/about-patrick/image_hu8dccb62db1604b76e20c6785501a6c33_24929_480x0_resize_box_3.png 480w, http://localhost:1313/about-patrick/image_hu8dccb62db1604b76e20c6785501a6c33_24929_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/about-patrick/image_hu8dccb62db1604b76e20c6785501a6c33_24929_480x0_resize_box_3.png 480w, https://patrick-koehler.com/about-patrick/image_hu8dccb62db1604b76e20c6785501a6c33_24929_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -45,10 +45,10 @@ Award Groups:&lt;/p&gt;
 &lt;li&gt;Enterprise Mobility (Azure Virtual Desktop)&lt;/li&gt;
 &lt;li&gt;Microsoft Azure (Azure Hybrid)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/about-patrick/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/about-patrick/image-1.png&#34;
 	width=&#34;253&#34;
 	height=&#34;165&#34;
-	srcset=&#34;http://localhost:1313/about-patrick/image-1_hu1e87dd555ca976d212995ae615c2d90b_21489_480x0_resize_box_3.png 480w, http://localhost:1313/about-patrick/image-1_hu1e87dd555ca976d212995ae615c2d90b_21489_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/about-patrick/image-1_hu1e87dd555ca976d212995ae615c2d90b_21489_480x0_resize_box_3.png 480w, https://patrick-koehler.com/about-patrick/image-1_hu1e87dd555ca976d212995ae615c2d90b_21489_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -69,19 +69,19 @@ Award Groups:&lt;/p&gt;
         </item>
         <item>
         <title>Cycling</title>
-        <link>http://localhost:1313/cycling/</link>
+        <link>https://patrick-koehler.com/cycling/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/cycling/</guid>
+        <guid>https://patrick-koehler.com/cycling/</guid>
         <description>&lt;iframe height=&#39;450&#39; width=&#39;500&#39; frameborder=&#39;0&#39; allowtransparency=&#39;true&#39; scrolling=&#39;no&#39; src=&#39;https://www.strava.com/athletes/117484839/activity-summary/152a4fdc13bee505423534d85aa7563ac3668acb&#39;&gt;&lt;/iframe&gt;
 &lt;iframe height=&#39;450&#39; width=&#39;500&#39; frameborder=&#39;0&#39; allowtransparency=&#39;true&#39; scrolling=&#39;no&#39; src=&#39;https://www.strava.com/athletes/117484839/latest-rides/152a4fdc13bee505423534d85aa7563ac3668acb&#39;&gt;&lt;/iframe&gt;</description>
         </item>
         <item>
         <title>Links</title>
-        <link>http://localhost:1313/links/</link>
+        <link>https://patrick-koehler.com/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/links/</guid>
+        <guid>https://patrick-koehler.com/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -113,10 +113,10 @@ Award Groups:&lt;/p&gt;
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>https://patrick-koehler.com/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>https://patrick-koehler.com/search/</guid>
         <description></description>
         </item>
         
