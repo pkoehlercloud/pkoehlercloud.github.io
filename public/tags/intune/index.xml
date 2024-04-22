@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Intune on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>http://localhost:1313/tags/intune/</link>
+        <link>https://patrick-koehler.com/tags/intune/</link>
         <description>Recent content in Intune on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Sun, 25 Dec 2022 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/intune/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 25 Dec 2022 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/intune/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows 365 - Full Image Guide</title>
-        <link>http://localhost:1313/p/windows-365-full-image-guide/</link>
+        <link>https://patrick-koehler.com/p/windows-365-full-image-guide/</link>
         <pubDate>Sun, 25 Dec 2022 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/windows-365-full-image-guide/</guid>
-        <description>&lt;img src="http://localhost:1313/p/windows-365-full-image-guide/title.png" alt="Featured image of post Windows 365 - Full Image Guide" /&gt;&lt;p&gt;Hello everyone and welcome back to the Windows 365 full guide. This week we continue the guide with Image Management capabilities and what you need to take care of, when replacing the currently used image for your Cloud PCs.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/windows-365-full-image-guide/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/windows-365-full-image-guide/title.png" alt="Featured image of post Windows 365 - Full Image Guide" /&gt;&lt;p&gt;Hello everyone and welcome back to the Windows 365 full guide. This week we continue the guide with Image Management capabilities and what you need to take care of, when replacing the currently used image for your Cloud PCs.&lt;/p&gt;
 &lt;p&gt;Mainly I will focus on these topics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Image prerequisites for Windows 365&lt;/li&gt;
