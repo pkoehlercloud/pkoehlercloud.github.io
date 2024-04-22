@@ -2,38 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Azure Stack HCI on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>http://localhost:1313/tags/azure-stack-hci/</link>
+        <link>https://patrick-koehler.com/tags/azure-stack-hci/</link>
         <description>Recent content in Azure Stack HCI on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Wed, 10 Apr 2024 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/azure-stack-hci/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/azure-stack-hci/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Azure VMware Solution - The fastest path to the cloud?</title>
-        <link>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
+        <link>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
+        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
-        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
 &lt;p&gt;This time I want to share with you my experiences with Azure VMware Solution and if it&amp;rsquo;s really the fastest path to the cloud.
-In this blog we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
-&lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog has the intention of&amp;hellip;&lt;/p&gt;
+In this blog series we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
+&lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog series has the intention of&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Giving you a good overview of what Azure VMware Solution is and who provides the service.&lt;/li&gt;
 &lt;li&gt;How the service incorporates with other Azure Services and which are the most commonly used in this scenario.&lt;/li&gt;
 &lt;li&gt;What is crucial in planning Azure VMware Solution for your organisation.&lt;/li&gt;
 &lt;li&gt;Lessons learned from the field.&lt;/li&gt;
+&lt;li&gt;Providing a big comparision of features, scalability, security and cost for your decision making process!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you like this series, let me know and I&amp;rsquo;m happy to produce more architectural content around Azure VMware Solution. But for now, let&amp;rsquo;s dive into the topic:&lt;/p&gt;
+&lt;p&gt;If you like this series, let me know and I will be happy to dive deeper in one or the other topic as demanded. But let&amp;rsquo;s start with part 1 - the technical overview of Azure VMware Solution and its competitor Nutanix NC2.&lt;/p&gt;
 &lt;h2 id=&#34;azure-vmware-solution---technical-overview&#34;&gt;
     &lt;a href=&#34;#azure-vmware-solution---technical-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Azure VMware Solution - Technical Overview
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
 	width=&#34;895&#34;
 	height=&#34;487&#34;
-	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;alt text&#34;
+		alt=&#34;Slide from Patrick Köhler - Datacentre evacuation using AVS - presented at VMUG 2023&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -61,10 +62,10 @@ In this blog we&amp;rsquo;re discovering the service from a technical perspectiv
 &lt;h2 id=&#34;alternative-nutanix-cloud-clusters-nc2&#34;&gt;
     &lt;a href=&#34;#alternative-nutanix-cloud-clusters-nc2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Alternative: Nutanix Cloud Clusters (NC2)
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
 	width=&#34;903&#34;
 	height=&#34;364&#34;
-	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
@@ -77,10 +78,10 @@ In this blog we&amp;rsquo;re discovering the service from a technical perspectiv
 &gt;&lt;/p&gt;
 &lt;p&gt;Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
 	width=&#34;1250&#34;
 	height=&#34;871&#34;
-	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;
@@ -96,85 +97,14 @@ In this blog we&amp;rsquo;re discovering the service from a technical perspectiv
 &lt;li&gt;A NAT Gateway&lt;/li&gt;
 &lt;li&gt;2 Virtual Networks (One for Bare Metal Management, the other for managing the cluster from a software perspective)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning (please keep in mind that I consider the deployment and preparation of resources to be deployed as a plus of complexity compared to AVS), it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&amp;rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.&lt;/p&gt;
-&lt;h2 id=&#34;comparison&#34;&gt;
-    &lt;a href=&#34;#comparison&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Comparison
-&lt;/h2&gt;&lt;p&gt;Now we want to take a closer look at both solutions and try to compare them from a technical perspective.
-I will make this comparision based on the following values:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Time to Production
-&lt;ul&gt;
-&lt;li&gt;Deployment complexity&lt;/li&gt;
-&lt;li&gt;Deployment speed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Reliability &amp;amp; Availability
-&lt;ul&gt;
-&lt;li&gt;Regional Availability&lt;/li&gt;
-&lt;li&gt;Hardware SKU&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;High Availability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Scalability
-&lt;ul&gt;
-&lt;li&gt;Horizontal Scaling (Increase hardware ressources, time to spin up)&lt;/li&gt;
-&lt;li&gt;Auto scaling possibilities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Interoperability and Compatibility
-&lt;ul&gt;
-&lt;li&gt;Feature Set&lt;/li&gt;
-&lt;li&gt;Automation capabilities (Initial deployment up to Day 2 operations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security
-&lt;ul&gt;
-&lt;li&gt;Data encryption&lt;/li&gt;
-&lt;li&gt;Data in transit&lt;/li&gt;
-&lt;li&gt;Identity and Access Management (Azure native and in-platform)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Documentation and Support&lt;/li&gt;
-&lt;li&gt;Costs to consider (Last update: May 2024)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;time-to-production&#34;&gt;
-    &lt;a href=&#34;#time-to-production&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Time To Production
-&lt;/h3&gt;&lt;h4 id=&#34;deployment-complexity&#34;&gt;
-    &lt;a href=&#34;#deployment-complexity&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Deployment complexity
-&lt;/h4&gt;&lt;p&gt;Having a look at the deployment complixity it&amp;rsquo;s crucial to understand the circumstances and environmental variables that I used to perform the ramp up. The following subchapters define the complexity based on metrics like:&lt;/p&gt;
-&lt;h5 id=&#34;prerequisites&#34;&gt;
-    &lt;a href=&#34;#prerequisites&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Prerequisites
-&lt;/h5&gt;&lt;p&gt;To get started with Azure VMware Solution we need to have an appropriate subscription type in order to get started.
-Currently, Microsoft supports only AVS deployments with the use of the following subscription types:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Microsoft Enterprise Agreement (EA)&lt;/li&gt;
-&lt;li&gt;Cloud Solution Provider (CSP)&lt;/li&gt;
-&lt;li&gt;Microsoft Customer Agreement (MCA)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;More information and reference can be found here: &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In addition, we need to request the host quota for our deployment, which requires a Microsoft support ticket from the Azure portal. The case have been closed within 2 business days (up to five business days are noted in the Microsoft reference).&lt;/p&gt;
-&lt;p&gt;Afterwards we need to ensure, that our resource provider in our subscription is registered (the whole process took 5 minutes to complete).&lt;/p&gt;
-&lt;p&gt;Besides that AVS only requires a /22 CIDR as bare minimum for the deployment to get started. Pretty easy and all steps could be resolved within 2 business days (including support ticket waiting time).&lt;/p&gt;
-&lt;p&gt;For Nutanix NC2 we had to ensure the following tasks. While Microsoft requires certain subscription types to work with Azure VMware Solution, Nutanix offers a broader way of booking the service which isn&amp;rsquo;t limited to any subscription type. However the booking is a bit more complex as you require a my.nutanix.com account and need to sign up for the cloud portal at Nutanix first, before you can actually purchase the service and start the deployment itself.&lt;/p&gt;
-&lt;p&gt;Like AVS, Nutanix requires also to have the Microsoft support team involved to ensure that the quota and required nodes are made available to your subscription and the desired region. This process is off our influence and took also two business days to complete.&lt;/p&gt;
-&lt;p&gt;As we will deploy a few more resources on Azure, Nutanix created a custom role to fullfil the zero trust principle and by leveraging the least permission principle. As this is not required for AVS I can&amp;rsquo;t put it into comparision. The custom role creation and assignment to an Enterprise Application for the deployment took 15 minutes to complete.&lt;/p&gt;
-&lt;p&gt;Next is to register the Resource Provider for Nutanix on Azure. This took 5 minutes to complete.&lt;/p&gt;
-&lt;p&gt;As for Nutanix we need to plan our network a bit more, as the deployment wizard requires us to define three networks in total, one for the BareMetal instance NICs, one for the Management of resources via Prism Central and Flow Gateways, and one for connecitity.&lt;/p&gt;
-&lt;h4 id=&#34;deployment-speed&#34;&gt;
-    &lt;a href=&#34;#deployment-speed&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Deployment speed
-&lt;/h4&gt;&lt;p&gt;In this test I performed a deployment for both Azure VMware Solution as well as Nutanix Cloud Clusters on Azure within the same region. As a baseline it is important to have the same node count, that means that we have to take the minimum production ready node count for both solutions, which is 3 nodes (based on the bare minimum of Azure VMware Solution). Whereas Nutanix Cloud Clusters support Single-Node deployments it is important that even Nutanix says that those are meant for testing and PoC&amp;rsquo;s, rather than production environments.&lt;/p&gt;
-&lt;p&gt;In addition, we have chosen West Europe as our region for the deployment, to have a direct comparision.&lt;/p&gt;
-&lt;h5 id=&#34;result&#34;&gt;
-    &lt;a href=&#34;#result&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Result
-&lt;/h5&gt;&lt;p&gt;Both deployments of three node clusters have been accomplished in around four hours from the initial deployment kickoff. Nutanix Cloud Clusters completed a bit earlier, which relates to &lt;b&gt;3 hours and 56 minutes&lt;/b&gt; for the completion, whereas &lt;b&gt;Azure VMware Solution took 4 hours and 13 minutes&lt;/b&gt; to complete.&lt;/p&gt;
-&lt;p&gt;This makes &lt;b&gt; Nutanix &lt;/b&gt; winner for at least the initial deployment based on the timely value.&lt;/p&gt;
+&lt;h3 id=&#34;first-summary&#34;&gt;
+    &lt;a href=&#34;#first-summary&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    First summary
+&lt;/h3&gt;&lt;p&gt;While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning (please keep in mind that I consider the deployment and preparation of resources to be deployed as a plus of complexity compared to AVS), it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&amp;rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.&lt;/p&gt;
+&lt;h3 id=&#34;how-we-continue-to-explore-avs&#34;&gt;
+    &lt;a href=&#34;#how-we-continue-to-explore-avs&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    How we continue to explore AVS
+&lt;/h3&gt;&lt;p&gt;As this article provided you with a very good first touchpoint of both solutions, we will focus again on Azure VMware Solution as our core product. In the next blog article, I&amp;rsquo;m going to walk you through the process of deploying an AVS datacenter and the preparation tasks you have to consider from a design perspective.&lt;/p&gt;
 </description>
         </item>
         

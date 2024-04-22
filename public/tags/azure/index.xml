@@ -2,38 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Azure on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>http://localhost:1313/tags/azure/</link>
+        <link>https://patrick-koehler.com/tags/azure/</link>
         <description>Recent content in Azure on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Wed, 10 Apr 2024 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/azure/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Azure VMware Solution - The fastest path to the cloud?</title>
-        <link>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
-        <pubDate>Wed, 10 Apr 2024 16:56:47 +0600</pubDate>
+        <link>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</link>
+        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
-        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Azure VMware Solution - The fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
 &lt;p&gt;This time I want to share with you my experiences with Azure VMware Solution and if it&amp;rsquo;s really the fastest path to the cloud.
-In this blog we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
-&lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog has the intention of&amp;hellip;&lt;/p&gt;
+In this blog series we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
+&lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog series has the intention of&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Giving you a good overview of what Azure VMware Solution is and who provides the service.&lt;/li&gt;
 &lt;li&gt;How the service incorporates with other Azure Services and which are the most commonly used in this scenario.&lt;/li&gt;
 &lt;li&gt;What is crucial in planning Azure VMware Solution for your organisation.&lt;/li&gt;
 &lt;li&gt;Lessons learned from the field.&lt;/li&gt;
+&lt;li&gt;Providing a big comparision of features, scalability, security and cost for your decision making process!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you like this series, let me know and I&amp;rsquo;m happy to produce more architectural content around Azure VMware Solution. But for now, let&amp;rsquo;s dive into the topic:&lt;/p&gt;
+&lt;p&gt;If you like this series, let me know and I will be happy to dive deeper in one or the other topic as demanded. But let&amp;rsquo;s start with part 1 - the technical overview of Azure VMware Solution and its competitor Nutanix NC2.&lt;/p&gt;
 &lt;h2 id=&#34;azure-vmware-solution---technical-overview&#34;&gt;
     &lt;a href=&#34;#azure-vmware-solution---technical-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Azure VMware Solution - Technical Overview
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image.png&#34;
 	width=&#34;895&#34;
 	height=&#34;487&#34;
-	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;alt text&#34;
+		alt=&#34;Slide from Patrick Köhler - Datacentre evacuation using AVS - presented at VMUG 2023&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -61,10 +62,10 @@ In this blog we&amp;rsquo;re discovering the service from a technical perspectiv
 &lt;h2 id=&#34;alternative-nutanix-cloud-clusters-nc2&#34;&gt;
     &lt;a href=&#34;#alternative-nutanix-cloud-clusters-nc2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Alternative: Nutanix Cloud Clusters (NC2)
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1.png&#34;
 	width=&#34;903&#34;
 	height=&#34;364&#34;
-	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
@@ -77,10 +78,10 @@ In this blog we&amp;rsquo;re discovering the service from a technical perspectiv
 &gt;&lt;/p&gt;
 &lt;p&gt;Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2.png&#34;
 	width=&#34;1250&#34;
 	height=&#34;871&#34;
-	srcset=&#34;http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;
@@ -96,94 +97,23 @@ In this blog we&amp;rsquo;re discovering the service from a technical perspectiv
 &lt;li&gt;A NAT Gateway&lt;/li&gt;
 &lt;li&gt;2 Virtual Networks (One for Bare Metal Management, the other for managing the cluster from a software perspective)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning (please keep in mind that I consider the deployment and preparation of resources to be deployed as a plus of complexity compared to AVS), it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&amp;rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.&lt;/p&gt;
-&lt;h2 id=&#34;comparison&#34;&gt;
-    &lt;a href=&#34;#comparison&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Comparison
-&lt;/h2&gt;&lt;p&gt;Now we want to take a closer look at both solutions and try to compare them from a technical perspective.
-I will make this comparision based on the following values:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Time to Production
-&lt;ul&gt;
-&lt;li&gt;Deployment complexity&lt;/li&gt;
-&lt;li&gt;Deployment speed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Reliability &amp;amp; Availability
-&lt;ul&gt;
-&lt;li&gt;Regional Availability&lt;/li&gt;
-&lt;li&gt;Hardware SKU&amp;rsquo;s&lt;/li&gt;
-&lt;li&gt;High Availability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Scalability
-&lt;ul&gt;
-&lt;li&gt;Horizontal Scaling (Increase hardware ressources, time to spin up)&lt;/li&gt;
-&lt;li&gt;Auto scaling possibilities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Interoperability and Compatibility
-&lt;ul&gt;
-&lt;li&gt;Feature Set&lt;/li&gt;
-&lt;li&gt;Automation capabilities (Initial deployment up to Day 2 operations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Security
-&lt;ul&gt;
-&lt;li&gt;Data encryption&lt;/li&gt;
-&lt;li&gt;Data in transit&lt;/li&gt;
-&lt;li&gt;Identity and Access Management (Azure native and in-platform)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Documentation and Support&lt;/li&gt;
-&lt;li&gt;Costs to consider (Last update: May 2024)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;time-to-production&#34;&gt;
-    &lt;a href=&#34;#time-to-production&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Time To Production
-&lt;/h3&gt;&lt;h4 id=&#34;deployment-complexity&#34;&gt;
-    &lt;a href=&#34;#deployment-complexity&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Deployment complexity
-&lt;/h4&gt;&lt;p&gt;Having a look at the deployment complixity it&amp;rsquo;s crucial to understand the circumstances and environmental variables that I used to perform the ramp up. The following subchapters define the complexity based on metrics like:&lt;/p&gt;
-&lt;h5 id=&#34;prerequisites&#34;&gt;
-    &lt;a href=&#34;#prerequisites&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Prerequisites
-&lt;/h5&gt;&lt;p&gt;To get started with Azure VMware Solution we need to have an appropriate subscription type in order to get started.
-Currently, Microsoft supports only AVS deployments with the use of the following subscription types:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Microsoft Enterprise Agreement (EA)&lt;/li&gt;
-&lt;li&gt;Cloud Solution Provider (CSP)&lt;/li&gt;
-&lt;li&gt;Microsoft Customer Agreement (MCA)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;More information and reference can be found here: &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://learn.microsoft.com/en-us/azure/azure-vmware/plan-private-cloud-deployment&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In addition, we need to request the host quota for our deployment, which requires a Microsoft support ticket from the Azure portal. The case have been closed within 2 business days (up to five business days are noted in the Microsoft reference).&lt;/p&gt;
-&lt;p&gt;Afterwards we need to ensure, that our resource provider in our subscription is registered (the whole process took 5 minutes to complete).&lt;/p&gt;
-&lt;p&gt;Besides that AVS only requires a /22 CIDR as bare minimum for the deployment to get started. Pretty easy and all steps could be resolved within 2 business days (including support ticket waiting time).&lt;/p&gt;
-&lt;p&gt;For Nutanix NC2 we had to ensure the following tasks. While Microsoft requires certain subscription types to work with Azure VMware Solution, Nutanix offers a broader way of booking the service which isn&amp;rsquo;t limited to any subscription type. However the booking is a bit more complex as you require a my.nutanix.com account and need to sign up for the cloud portal at Nutanix first, before you can actually purchase the service and start the deployment itself.&lt;/p&gt;
-&lt;p&gt;Like AVS, Nutanix requires also to have the Microsoft support team involved to ensure that the quota and required nodes are made available to your subscription and the desired region. This process is off our influence and took also two business days to complete.&lt;/p&gt;
-&lt;p&gt;As we will deploy a few more resources on Azure, Nutanix created a custom role to fullfil the zero trust principle and by leveraging the least permission principle. As this is not required for AVS I can&amp;rsquo;t put it into comparision. The custom role creation and assignment to an Enterprise Application for the deployment took 15 minutes to complete.&lt;/p&gt;
-&lt;p&gt;Next is to register the Resource Provider for Nutanix on Azure. This took 5 minutes to complete.&lt;/p&gt;
-&lt;p&gt;As for Nutanix we need to plan our network a bit more, as the deployment wizard requires us to define three networks in total, one for the BareMetal instance NICs, one for the Management of resources via Prism Central and Flow Gateways, and one for connecitity.&lt;/p&gt;
-&lt;h4 id=&#34;deployment-speed&#34;&gt;
-    &lt;a href=&#34;#deployment-speed&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Deployment speed
-&lt;/h4&gt;&lt;p&gt;In this test I performed a deployment for both Azure VMware Solution as well as Nutanix Cloud Clusters on Azure within the same region. As a baseline it is important to have the same node count, that means that we have to take the minimum production ready node count for both solutions, which is 3 nodes (based on the bare minimum of Azure VMware Solution). Whereas Nutanix Cloud Clusters support Single-Node deployments it is important that even Nutanix says that those are meant for testing and PoC&amp;rsquo;s, rather than production environments.&lt;/p&gt;
-&lt;p&gt;In addition, we have chosen West Europe as our region for the deployment, to have a direct comparision.&lt;/p&gt;
-&lt;h5 id=&#34;result&#34;&gt;
-    &lt;a href=&#34;#result&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Result
-&lt;/h5&gt;&lt;p&gt;Both deployments of three node clusters have been accomplished in around four hours from the initial deployment kickoff. Nutanix Cloud Clusters completed a bit earlier, which relates to &lt;b&gt;3 hours and 56 minutes&lt;/b&gt; for the completion, whereas &lt;b&gt;Azure VMware Solution took 4 hours and 13 minutes&lt;/b&gt; to complete.&lt;/p&gt;
-&lt;p&gt;This makes &lt;b&gt; Nutanix &lt;/b&gt; winner for at least the initial deployment based on the timely value.&lt;/p&gt;
+&lt;h3 id=&#34;first-summary&#34;&gt;
+    &lt;a href=&#34;#first-summary&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    First summary
+&lt;/h3&gt;&lt;p&gt;While NC2 looks like a direct competitor, I have to admit that the solution is not only more complex in terms of planning (please keep in mind that I consider the deployment and preparation of resources to be deployed as a plus of complexity compared to AVS), it also incorporates more Azure native products, which have to be well planned ahead before starting the deployment. An additional point to consider is, that NC2 won&amp;rsquo;t be deployed directly from the Azure Marketplace (even though you have the chance of booking it there). You have to have a my.nutanix.com account, a valid subscription to the service and access the NC2 cloud platform via a dedicated and decentralized portal.&lt;/p&gt;
+&lt;h3 id=&#34;how-we-continue-to-explore-avs&#34;&gt;
+    &lt;a href=&#34;#how-we-continue-to-explore-avs&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    How we continue to explore AVS
+&lt;/h3&gt;&lt;p&gt;As this article provided you with a very good first touchpoint of both solutions, we will focus again on Azure VMware Solution as our core product. In the next blog article, I&amp;rsquo;m going to walk you through the process of deploying an AVS datacenter and the preparation tasks you have to consider from a design perspective.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</title>
-        <link>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
+        <link>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
-        <description>&lt;img src="http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
+        <guid>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
 If you missed my previous articles, please find them hereafter:
 In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure.
 Table of Contents
@@ -191,10 +121,10 @@ Prepare a Service Principal for the VMware Universal Console
 Before we can start to configure the Universal Console and create the core infrastructure, we need to ensure that we equip our account with administrative privileges in a secure way. For that reason we require to have a Service Principal in place that provides the console with the necessary rights in our tenant, while ensuring that no passwords are exchanged in clear text.
 To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&#34;https://portal.azure.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://portal.azure.com&lt;/a&gt; and select Azure Active Directory.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
 	width=&#34;454&#34;
 	height=&#34;67&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -206,10 +136,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In the following window, we need to select App registrations to be able to create our Service Account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
 	width=&#34;123&#34;
 	height=&#34;214&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -221,10 +151,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once, we entered the App registrations view, click on “+ New registration” in the top center of the screen.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
 	width=&#34;454&#34;
 	height=&#34;121&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -239,10 +169,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 Name: SP-HZNC-AVDLogix
 Redirect URI: Web
 URI: http://localhost:8000&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -255,10 +185,10 @@ URI: http://localhost:8000&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;Attention! Once the Service Principal has been create make sure to copy the following information and store them in a safe location, as you will need them for later.&lt;/p&gt;
 &lt;p&gt;Copy the application (client) ID and Directory ID (Azure AD tenant ID)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
 	width=&#34;454&#34;
 	height=&#34;95&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -270,10 +200,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once you noted down the information, we navigate to “Certificates &amp;amp; secrets” on the left hand side to generate the required secret.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
 	width=&#34;141&#34;
 	height=&#34;286&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -285,10 +215,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here we need to click on “+ New client secret” and provide a client secret description, which is “Client Secret Horizon” in my case and we set the duration to “24 months“. You can also choose a lower time, before the secret expires, but you have to keep in mind to regenerate the secret and update the Universal Console to not lose access or control over the resources.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -300,10 +230,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Attention! Please make sure to copy the Secret Value once you see it, because it will only appear once like this. In case that you missed to copy it, you need to regenerate the client secret.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
 	width=&#34;454&#34;
 	height=&#34;52&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -318,10 +248,10 @@ URI: http://localhost:8000&lt;/p&gt;
 Now we are nearly finished with our Service Principal creation, but need to equip it with the required permissions in order to perform tasks in our environment. While doing this we have two options. First, we can assign Contributor rights to our new Service Principal on our subscription, which provides quite a lot of permissions, which we might don’t want if we want to follow the principal of least permissions.&lt;/p&gt;
 &lt;p&gt;I recommend creating a custom role, with only the required rights, the Service Principal needs on our subscription. I found an article on the VMware KB, stating the creation of the custom role, which unfortunately doesn’t work for my tenant, for that reason, I’m sharing with you the steps that worked out for me.
 To do so, we switch to the Subscription menu in our Azure tenant, while searching for “Subscriptions” or selecting it from the portal menu.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
 	width=&#34;454&#34;
 	height=&#34;57&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -333,10 +263,10 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Now, we switch to the Access control (IAM) menu on the left hand side, clicking on “+ Add” and selecting “Add custom role” as the following step.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
 	width=&#34;330&#34;
 	height=&#34;181&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -348,10 +278,10 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Now we need to provide the name for our custom role, I called mine “CR-AVDLogix-HorizonCloudAzure“. Select “Start from scratch” as the Baseline permission and continue to the “JSON” tab by clicking “Next” two times or by directly clicking on “JSON“&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
 	width=&#34;342&#34;
 	height=&#34;407&#34;
-	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -367,11 +297,11 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
         </item>
         <item>
         <title>Start VM on Connect for Pooled and Personal Host Pools in WVD</title>
-        <link>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
+        <link>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
-        <description>&lt;img src="http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
 &lt;p&gt;In this blog you will learn, how to configure Start VM on Connect for Pooled Host Pools, Personal Host Pools and how to shut down VMs, when the users are logging off.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -685,10 +615,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Using the WVDLogix Autoscale Tool to scale down machines&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To shut down the VMs based on a time based metric, we need to create an Automation Account in our subscription.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
 	width=&#34;682&#34;
 	height=&#34;342&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -700,10 +630,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;On the next page, we´ll give our Automation Account a name, select the subscription, the RG we´ve created, and the operating location, which is West Europe in my case. You also have the possibility to create a RunAs Account, which is not needed for the solution, which we´re going to provision right afterwards. Hit “Create” once you´re finished.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
 	width=&#34;371&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -715,10 +645,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After a few seconds, our storage account is ready to be used and we can go to the resource, which presents us the basic overview of an Automation account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;823&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -730,10 +660,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here, we need to scroll down on the left hend side until we reach “Start/Stop VM”, which is the solution we want to install.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;705&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -745,10 +675,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;It´s obvious that we´re going to click on “Create”, but I´m very excited to see, what you´re saying about what this solution delivers additionally, when correctly configured. For now we click “Create” again to provision the solution.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
 	width=&#34;823&#34;
 	height=&#34;317&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -765,10 +695,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Azure Automation Account (which has been created previously)&lt;/li&gt;
 &lt;li&gt;Parameters&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
 	width=&#34;787&#34;
 	height=&#34;704&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -780,10 +710,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After you´ve created the Log Analytics Workspace and select the Automation Account created by us earlier, we leave the parameters empty for the moment. To not hide the possibilities from you, here is the screenshot of the initial configuration, to be defined from over here already.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
 	width=&#34;773&#34;
 	height=&#34;733&#34;
-	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -804,11 +734,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Azure Virtual Desktop - The complete RDP Property guide</title>
-        <link>http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/</link>
+        <link>https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/</link>
         <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/</guid>
-        <description>&lt;img src="http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/title.png" alt="Featured image of post Azure Virtual Desktop - The complete RDP Property guide" /&gt;&lt;p&gt;Hi everyone it´s Patrick again with a new article on the RDP properties in Windows Virtual Desktop.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/title.png" alt="Featured image of post Azure Virtual Desktop - The complete RDP Property guide" /&gt;&lt;p&gt;Hi everyone it´s Patrick again with a new article on the RDP properties in Windows Virtual Desktop.&lt;/p&gt;
 &lt;p&gt;As some of you know, these popped up on the 5th October 2020 again, after a few months of disappearance. Some of you had a lot of questions, especially on the impact these settings have.&lt;/p&gt;
 &lt;p&gt;The purpose of this article is to give you a general overview of the settings and their impact on the Remote Desktop itself.&lt;/p&gt;
 &lt;p&gt;If you want to get a general overview of the new RDP settings, please watch the video below and use this guide to help you rock your AVD environment:&lt;/p&gt;
@@ -819,10 +749,10 @@ Patrick&lt;/p&gt;
     &gt;https://portal.azure.com&lt;/a&gt; and navigate to the Windows Virtual Desktop service by using the search bar or using the quick link. To find the properties you must have at least one Host Pool in place. This can be created from within the portal or via PowerShell.&lt;/p&gt;
 &lt;p&gt;Select one of the Host Pools, in my example this is “KCLD-WVD-TestAuto”&lt;/p&gt;
 &lt;p&gt;Finally click in the menu on the left side on RDP properties to see the options.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;543&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -873,10 +803,10 @@ Patrick&lt;/p&gt;
 &lt;/div&gt;&lt;h2 id=&#34;connection-information&#34;&gt;
     &lt;a href=&#34;#connection-information&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Connection information
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1.png&#34;
 	width=&#34;766&#34;
 	height=&#34;250&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -895,10 +825,10 @@ Patrick&lt;/p&gt;
 &lt;p&gt;Reconnection settings: This setting helps administrators to let their users reconnect to their existing session if the session reaches the state disconnected. This can happen when a user logs off or is just closing the window. If you want your users to get a new session, select “initiate a new connection”.&lt;/p&gt;
 &lt;p&gt;Manual setting value: disableconnectionsharing:i:value&lt;/p&gt;
 &lt;p&gt;Practical Tip! If you select the initiate a new connection setting, make sure the user will be properly logged off after a certain time limit has reached. Otherwise, the users will flood your environment with multiple logins which make an Auto Scaling logic impossible to apply! This can be reached by applying the Group Policy to enforce the logoff by determining a specific time limit:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;247&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -925,10 +855,10 @@ Patrick&lt;/p&gt;
 &lt;h2 id=&#34;session-behaviour&#34;&gt;
     &lt;a href=&#34;#session-behaviour&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Session behaviour
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3.png&#34;
 	width=&#34;757&#34;
 	height=&#34;403&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -973,10 +903,10 @@ Attention: Connection type 7 is required.&lt;/p&gt;
 &lt;h2 id=&#34;device-redirection&#34;&gt;
     &lt;a href=&#34;#device-redirection&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Device redirection
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4.png&#34;
 	width=&#34;799&#34;
 	height=&#34;636&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -996,10 +926,10 @@ Attention: Connection type 7 is required.&lt;/p&gt;
 &lt;p&gt;Manual setting value: encode redirected video capture:i:value&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Encoded video quality: Helps to define how much a video will be compressed for the remote session. You have the following options with the impacts:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5.png&#34;
 	width=&#34;480&#34;
 	height=&#34;92&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1013,10 +943,10 @@ Attention: Connection type 7 is required.&lt;/p&gt;
 &lt;p&gt;Manual setting value: encode redirected video capture encoding quality:i:value&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Audio output location: Defines, where audio will be played while being connected to the remote session. You can decide between the following options:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6.png&#34;
 	width=&#34;269&#34;
 	height=&#34;117&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1040,10 +970,10 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;Manual setting value: devicestoredirect:s:value&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Drive/storage redirection: Determines, which local drives shall be redirected to the remote session. The following options are available:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7.png&#34;
 	width=&#34;436&#34;
 	height=&#34;115&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1057,10 +987,10 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;The options are nearly self-explaining. You can decide to redirect all drives, also those attached at a later time. You allow only drives, connected after the remote session has been established, or you define manually the drives and labels to be redirected.&lt;/p&gt;
 &lt;p&gt;Recommendation: Depends on the security needs! Be aware that redirecting all drives is a potential security risk for your environment.&lt;/p&gt;
 &lt;p&gt;If you want to manually allow the redirection, you can define this by defining the drive letter e.g.:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8.png&#34;
 	width=&#34;487&#34;
 	height=&#34;106&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1090,10 +1020,10 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;Manual setting value: redirectsmartcards:i:value&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;USB redirection: Helps to define more granularly, which kind and type of USB device shall be redirected to the remote session. Compared to the other settings above, you can decide to allow or decline the following settings:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9.png&#34;
 	width=&#34;488&#34;
 	height=&#34;152&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1109,10 +1039,10 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
     &lt;a href=&#34;#display-settings&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Display settings
 &lt;/h2&gt;&lt;p&gt;Multiple displays: Determines if the remote session supports all displays or just a single display. If Enabled, you can select, whether all monitors should be used by default, or if you want to enter a list of display IDs to allow only these monitors. Additionally, you can define the maximizing behavior for these screens, as well as a Multi to single display switch, which helps to switch from a multi-screen to single screen, when the full screen mode has been ended.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10.png&#34;
 	width=&#34;704&#34;
 	height=&#34;290&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1135,10 +1065,10 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;Manual setting value: smart sizing:i:value&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Dynamic resolution: Will define if the remote resolution will be adopted automatically, when sizing occurs. You can define if you want to keep the same resolution even if the size changes, or you can select a resolution update to the local windows resize and define the scaling factors:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11.png&#34;
 	width=&#34;736&#34;
 	height=&#34;249&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1170,11 +1100,11 @@ Cheers,&lt;/p&gt;
         </item>
         <item>
         <title>How to reset the Remote Desktop Client on Windows 10 &amp; 11</title>
-        <link>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
+        <link>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
         <pubDate>Mon, 14 Jun 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
-        <description>&lt;img src="http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
 &lt;p&gt;For that reason, you can reset the Remote Desktop Client on Windows easily via PowerShell.&lt;/p&gt;
 &lt;p&gt;The feature is available from version 1.2.790, which has been released already in 2020.&lt;/p&gt;
 &lt;p&gt;Just run this small line of code and you’ll be fine again:&lt;/p&gt;
@@ -1195,11 +1125,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>What you have to know about the WVD Required URL check tool</title>
-        <link>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
+        <link>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
         <pubDate>Tue, 20 Apr 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
-        <description>&lt;img src="http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://twitter.com/@tomhickling&lt;/a&gt;) announced via LinkedIn, that Microsoft released a tool to validate that Session Hosts can reach the required services to ensure full connectivity to the WVD services.&lt;/p&gt;
 &lt;p&gt;The tool is built to present you the URLs which are accessible or not, if that’s the case. However there are a few things you need to keep in mind, before running the tool.&lt;/p&gt;
 &lt;p&gt;In this blog, I will tell you what you must know about the URLs and ports to be opened for WVD, as well as what the required URL check tool can do for not and what it can’t do!&lt;/p&gt;
@@ -1207,10 +1137,10 @@ Patrick&lt;/p&gt;
     &lt;a href=&#34;#which-urls-and-ports-are-required-for-a-session-host-to-connect-to-the-wvd-backplane&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Which URLs and ports are required for a Session Host to connect to the WVD backplane?
 &lt;/h2&gt;&lt;p&gt;Let’s start with the first question on which URLs and ports you need to open to let your Session Hosts access the WVD backplane. You will see a few URLs with an asterisk (*), or a wildcard in front of the URL, you have to know that the WVD required URL check tool is NOT able to resolve or check against those, so you have to ensure proper connectivity.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
 	width=&#34;846&#34;
 	height=&#34;670&#34;
-	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1224,10 +1154,10 @@ Patrick&lt;/p&gt;
 &lt;h2 id=&#34;is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34;&gt;
     &lt;a href=&#34;#is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Is there an easier way to enable the required ports if I’m using Azure Firewall?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
 	width=&#34;2700&#34;
 	height=&#34;1393&#34;
-	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1282,11 +1212,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Microsoft Edge – The complete guide for AVD</title>
-        <link>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</link>
+        <link>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</link>
         <pubDate>Mon, 08 Mar 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</guid>
-        <description>&lt;img src="http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/title.png" alt="Featured image of post Microsoft Edge – The complete guide for AVD" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/title.png" alt="Featured image of post Microsoft Edge – The complete guide for AVD" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
 &lt;p&gt;it’s been a while since my last blog post and I think it’s getting time for a very important topic for your end users – BROWSING!&lt;/p&gt;
 &lt;p&gt;Regardless of which browser you’re using, we know that the correct configuration, paired with optimization and security is key to let users work smoothly.&lt;/p&gt;
 &lt;p&gt;But why do we need to optimize the browsing experience?&lt;/p&gt;
@@ -1298,10 +1228,10 @@ All these mentioned topics depend on the right setup of your Browsing experience
 &lt;h2 id=&#34;overview--microsoft-edge--chromium&#34;&gt;
     &lt;a href=&#34;#overview--microsoft-edge--chromium&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Overview – Microsoft Edge – Chromium
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
 	width=&#34;2120&#34;
 	height=&#34;1192&#34;
-	srcset=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1398,11 +1328,11 @@ The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https
         </item>
         <item>
         <title>Container up your applications: fast, secure &amp; efficient with MSIX App Attach</title>
-        <link>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
+        <link>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
-        <description>&lt;img src="http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+        <guid>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;First of all a very huge thanks to Christiaan Brinkhoff and Dean Cefola for having me at this awesome event, happened today, the 11.12.2020 in an XXL format! Microsoft Meets Community: Windows Virtual Desktop.&lt;/p&gt;
 &lt;p&gt;It was an absolute honour to speak for 2000 registered users from the community!&lt;/p&gt;
 &lt;h2 id=&#34;chapter-1--what-is-msix--app-attach&#34;&gt;
@@ -1414,10 +1344,10 @@ The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https
     &lt;a href=&#34;#chapter-11--how-is-a-msix-package-built&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 1.1 – How is a MSIX package built?
 &lt;/h3&gt;&lt;p&gt;A MSIX package consists usually of the following set of files:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
 	width=&#34;290&#34;
 	height=&#34;485&#34;
-	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1433,10 +1363,10 @@ These are the files that represents the application/s itself and the dependencie
 &lt;p&gt;&lt;b&gt; AppManifest: &lt;/b&gt;
 The App Manifest is an XML based document that contains information an OS needs for the deployment, display and update of an MSIX application. This info includes usually identity, package dependency information, required capabilities, visual elements of extensibility points.&lt;/p&gt;
 &lt;p&gt;The following example represents a screenshot from an opened AppManifest.xml:
-&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
+&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;301&#34;
-	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1455,10 +1385,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h2 id=&#34;chapter-2--msix-app-attach&#34;&gt;
     &lt;a href=&#34;#chapter-2--msix-app-attach&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2 – MSIX App Attach
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
 	width=&#34;347&#34;
 	height=&#34;504&#34;
-	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1486,10 +1416,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-211--expand&#34;&gt;
     &lt;a href=&#34;#chapter-211--expand&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.1 – Expand
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1505,10 +1435,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-212--stage&#34;&gt;
     &lt;a href=&#34;#chapter-212--stage&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.2 – Stage
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2001,11 +1931,11 @@ The schema above represents the signing process of an MSIX package. As you have 
         </item>
         <item>
         <title>FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation</title>
-        <link>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
+        <link>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
         <pubDate>Tue, 08 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
-        <description>&lt;img src="http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
 &lt;p&gt;In the menu bar in the center top we can see Word [Non-Commercial Use] [Unlicensed Product]&lt;/p&gt;
 &lt;p&gt;Office has worked for the last couple of months perfectly on WVD, so I had to investigate the issue and obviously, the first thing I’ve tried, is to Sign in again to see the application behavior. Finally, the screen was flickering a few times, but the error message persists and Office was simply unusable for all users on the system.&lt;/p&gt;
 &lt;p&gt;So first of all I started to analyze the base parameters like:&lt;/p&gt;
@@ -2036,11 +1966,11 @@ The schema above represents the signing process of an MSIX package. As you have 
         </item>
         <item>
         <title>Azure Virtual Desktop - Windows 10 Start menu optimization guide</title>
-        <link>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</link>
+        <link>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</link>
         <pubDate>Thu, 02 Jul 2020 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</guid>
-        <description>&lt;img src="http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.png" alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide" /&gt;&lt;p&gt;Hi everybody it´s Patrick again with another blog post!
+        <guid>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/title.png" alt="Featured image of post Azure Virtual Desktop - Windows 10 Start menu optimization guide" /&gt;&lt;p&gt;Hi everybody it´s Patrick again with another blog post!
 It´s been busy weeks since my last article about Host Pool Automation (part 3), where I´ve shared with you my first Automation Scaling script, check it out if you´re interested how you can get started with automating your WVD session hosts to save costs!&lt;/p&gt;
 &lt;p&gt;But this week I´m going to start a new article series, focusing on increasing the User Experience in Windows Virtual Desktop for end-users as well as for admins!&lt;/p&gt;
 &lt;p&gt;Since WVD Spring Release is available in public preview I was searching for the state of the art User Experience and finally I came to the conclusion that every environment has its own signature so that you can´t summarize and give the “final answer” to all usability questions, but at least we can try to optimize the environment, to make our end-users curious about what they can do in WVD, especially with the new Windows 10 Multi-Session 2004 version!&lt;/p&gt;
@@ -2050,10 +1980,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;/h2&gt;&lt;p&gt;The Windows 10 startmenu or taskbar is the place in Windows to consolidate all installed applications on the system and to provide an easy to use navigation point while providing direct shortcuts to the applications without directly impacting the application installation.&lt;/p&gt;
 &lt;p&gt;Customizing the Windows 10 startmenu and taskbar is possible since the release of version 1607.&lt;/p&gt;
 &lt;p&gt;By default, a Windows 10 startmenu provides the following view, while opening it:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
 	width=&#34;720&#34;
 	height=&#34;406&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2065,10 +1995,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;While having a deeper look at the startmenu itself, we can separate it into the following areas:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
 	width=&#34;606&#34;
 	height=&#34;518&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2215,10 +2145,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appxpackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Get-AppxPackage&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$appx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-Allusers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Remove-AppxPackage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
 	width=&#34;646&#34;
 	height=&#34;677&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2245,10 +2175,10 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;p&gt;Now let´s start removing not required application shortcuts by performing a right-click on the tile and select: “Unpin folder from Start”.&lt;/p&gt;
 &lt;p&gt;We do this for all our applications and start adding the new tiles by searching them in the StartMenu, performing a right-click and selecting: “Pin to Start”.&lt;/p&gt;
 &lt;p&gt;By hovering over the name of the group, you can even modify it here:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
 	width=&#34;346&#34;
 	height=&#34;206&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2279,10 +2209,10 @@ shutdown -l -f -t 0&lt;/li&gt;
     &lt;a href=&#34;#chapter-3-configure-the-taskbar&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 3: Configure the Taskbar
 &lt;/h2&gt;&lt;p&gt;Since the version Windows 10 1607 you have the possibility to remove and pin additional applications to the Taskbar of Windows 10. In our case this is really helpful to pre-define the default settings for our end-users in the WVD environment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
 	width=&#34;799&#34;
 	height=&#34;39&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2338,10 +2268,10 @@ shutdown -l -f -t 0&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The result will be exported as an XML and should look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
 	width=&#34;720&#34;
 	height=&#34;223&#34;
-	srcset=&#34;http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;

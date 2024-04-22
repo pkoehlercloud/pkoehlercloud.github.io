@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>FSLogix on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>http://localhost:1313/tags/fslogix/</link>
+        <link>https://patrick-koehler.com/tags/fslogix/</link>
         <description>Recent content in FSLogix on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Tue, 27 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/fslogix/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 27 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/fslogix/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>FSLogix v2105 – How to Increase VHDX size of profile container</title>
-        <link>http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</link>
+        <link>https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</link>
         <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</guid>
-        <description>&lt;img src="http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/title.png" alt="Featured image of post FSLogix v2105 – How to Increase VHDX size of profile container" /&gt;&lt;p&gt;Hi and welcome to my latest blog post about Azure Virtual Desktop and FSLogix v2105.&lt;/p&gt;
+        <guid>https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/title.png" alt="Featured image of post FSLogix v2105 – How to Increase VHDX size of profile container" /&gt;&lt;p&gt;Hi and welcome to my latest blog post about Azure Virtual Desktop and FSLogix v2105.&lt;/p&gt;
 &lt;p&gt;On the 12th of July, Microsoft announced a new version of FSLogix, which has a bunch of features, that could help you in maintaining your profiles. In this blog post, we will focus on: “How to increase the vhd/vhdx profile size” without the need for PowerShell or any migration of profile data into a new container.&lt;/p&gt;
 &lt;p&gt;But let’s start with a question that I previously get to show you the real advantage of this new capability.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-the-default-size-and-is-that-not-enough-for-most-use-cases&#34;&gt;
@@ -38,10 +38,10 @@
 &lt;li&gt;Navigate to the Group Policy Management mmc.&lt;/li&gt;
 &lt;li&gt;Create a new Group Policy Object or navigate to your existing one (shown in my example below)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image.png&#34;
 	width=&#34;320&#34;
 	height=&#34;268&#34;
-	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image_hu4cebe46fbef63254684ef42a9ec5c4b4_19109_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image_hu4cebe46fbef63254684ef42a9ec5c4b4_19109_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image_hu4cebe46fbef63254684ef42a9ec5c4b4_19109_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image_hu4cebe46fbef63254684ef42a9ec5c4b4_19109_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -57,10 +57,10 @@
 &lt;li&gt;Navigate to “Computer Configuration / Administrative Templates / FSLogix / Profile Containers“&lt;/li&gt;
 &lt;li&gt;Adjust the setting “Size in MBs” and set it to your preferred value. The increasing of the profile disk will become active, once the user logs on again.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1.png&#34;
 	width=&#34;686&#34;
 	height=&#34;636&#34;
-	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1_huc8a59454a3075309b66239db6fad8f98_25200_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1_huc8a59454a3075309b66239db6fad8f98_25200_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1_huc8a59454a3075309b66239db6fad8f98_25200_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-1_huc8a59454a3075309b66239db6fad8f98_25200_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -76,10 +76,10 @@
 &lt;li&gt;Make a double click on the green light, which opens the tool to verify the new maximum profile size.&lt;/li&gt;
 &lt;li&gt;As you can see the new profile size has directly been applied.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3.png&#34;
 	width=&#34;859&#34;
 	height=&#34;174&#34;
-	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3_hub322ec6da8f1cf4b5ad856b53712267a_12871_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3_hub322ec6da8f1cf4b5ad856b53712267a_12871_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3_hub322ec6da8f1cf4b5ad856b53712267a_12871_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-3_hub322ec6da8f1cf4b5ad856b53712267a_12871_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -107,10 +107,10 @@ If you still need to perform the increasing of the profile disk manually, you ha
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;migrate-vhd&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-src&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Z:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sstrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Profile_sstrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;vhdx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-dest&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Z:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sstrange&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Profile_sstrange_increased&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;vhdx&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-size-mbs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;35840&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-dynamic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;175&#34;
-	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4_hu01ca3f50f637a1cb760e6ed6dabc9ae1_161556_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4_hu01ca3f50f637a1cb760e6ed6dabc9ae1_161556_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4_hu01ca3f50f637a1cb760e6ed6dabc9ae1_161556_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-4_hu01ca3f50f637a1cb760e6ed6dabc9ae1_161556_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -134,10 +134,10 @@ If you still need to perform the increasing of the profile disk manually, you ha
 &lt;ul&gt;
 &lt;li&gt;Now you need to rename the profile, now that you have the previous and the new one. This means that you would need to rename Profile_sstrange.vhdx to Profile_sstrange_old.vhdx and Profile_sstrange_increased.vhdx to Profile_sstrange.vhdx. (Apply to your current naming settings defined in FSLogix). The result could look like this:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5.png&#34;
 	width=&#34;536&#34;
 	height=&#34;110&#34;
-	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5_hu9e1522e42b4f9f39d988862b88afc3e4_10631_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5_hu9e1522e42b4f9f39d988862b88afc3e4_10631_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5_hu9e1522e42b4f9f39d988862b88afc3e4_10631_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-5_hu9e1522e42b4f9f39d988862b88afc3e4_10631_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -154,10 +154,10 @@ If you still need to perform the increasing of the profile disk manually, you ha
 &lt;li&gt;Make a double click on the green light, which opens the tool to verify the new maximum profile size.&lt;/li&gt;
 &lt;li&gt;As you can see the new profile size has directly been applied.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6.png&#34;
 	width=&#34;859&#34;
 	height=&#34;174&#34;
-	srcset=&#34;http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6_hub322ec6da8f1cf4b5ad856b53712267a_12871_480x0_resize_box_3.png 480w, http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6_hub322ec6da8f1cf4b5ad856b53712267a_12871_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6_hub322ec6da8f1cf4b5ad856b53712267a_12871_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/image-6_hub322ec6da8f1cf4b5ad856b53712267a_12871_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;

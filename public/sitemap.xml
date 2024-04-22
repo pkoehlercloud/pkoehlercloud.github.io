@@ -2,198 +2,200 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://patrick-koehler.com/tags/azure/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/tags/azure-stack-hci/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/tags/azure-vmware-solution/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/categories/azure-vmware-solution/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/categories/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/categories/microsoft-azure/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/tags/nc2/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/tags/nutanix-cloud-clusters/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/post/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/tags/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/categories/vmware/</loc>
+    <lastmod>2024-04-22T13:30:47+06:00</lastmod>
+  </url><url>
+    <loc>https://patrick-koehler.com/tags/community/</loc>
     <lastmod>2024-04-22T12:50:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/community/</loc>
+    <loc>https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</loc>
     <lastmod>2024-04-22T12:50:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</loc>
+    <loc>https://patrick-koehler.com/tags/vexpert/</loc>
     <lastmod>2024-04-22T12:50:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://patrick-koehler.com/tags/vmware/</loc>
     <lastmod>2024-04-22T12:50:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-04-22T12:50:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-04-22T12:50:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vexpert/</loc>
-    <lastmod>2024-04-22T12:50:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vmware/</loc>
-    <lastmod>2024-04-22T12:50:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/vmware/</loc>
-    <lastmod>2024-04-22T12:50:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/azure/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/azure-stack-hci/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/azure-vmware-solution/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/azure-vmware-solution/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/p/azure-vmware-solution-the-fastest-path-to-the-cloud/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/microsoft-azure/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/nc2/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/nutanix-cloud-clusters/</loc>
-    <lastmod>2024-04-10T16:56:47+06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/euc/</loc>
+    <loc>https://patrick-koehler.com/tags/euc/</loc>
     <lastmod>2023-12-14T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/horizon-cloud/</loc>
+    <loc>https://patrick-koehler.com/categories/horizon-cloud/</loc>
     <lastmod>2023-12-14T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/horizon-cloud-on-azure/</loc>
+    <loc>https://patrick-koehler.com/tags/horizon-cloud-on-azure/</loc>
     <lastmod>2023-12-14T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</loc>
+    <loc>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</loc>
     <lastmod>2023-12-14T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vmware-horizon/</loc>
+    <loc>https://patrick-koehler.com/tags/vmware-horizon/</loc>
     <lastmod>2023-12-14T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/horizon-cloud/</loc>
+    <loc>https://patrick-koehler.com/tags/horizon-cloud/</loc>
     <lastmod>2023-03-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/</loc>
+    <loc>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/</loc>
     <lastmod>2023-03-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/idp/</loc>
+    <loc>https://patrick-koehler.com/tags/idp/</loc>
     <lastmod>2023-01-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/workspace-one/</loc>
+    <loc>https://patrick-koehler.com/tags/workspace-one/</loc>
     <lastmod>2023-01-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/workspace-one-access/</loc>
+    <loc>https://patrick-koehler.com/tags/workspace-one-access/</loc>
     <lastmod>2023-01-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</loc>
+    <loc>https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</loc>
     <lastmod>2023-01-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/endpoint-management/</loc>
+    <loc>https://patrick-koehler.com/tags/endpoint-management/</loc>
     <lastmod>2022-12-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/intune/</loc>
+    <loc>https://patrick-koehler.com/tags/intune/</loc>
     <lastmod>2022-12-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows-365/</loc>
+    <loc>https://patrick-koehler.com/tags/windows-365/</loc>
     <lastmod>2022-12-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/windows-365/</loc>
+    <loc>https://patrick-koehler.com/categories/windows-365/</loc>
     <lastmod>2022-12-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/windows-365-full-image-guide/</loc>
+    <loc>https://patrick-koehler.com/p/windows-365-full-image-guide/</loc>
     <lastmod>2022-12-25T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/azure-virtual-desktop/</loc>
+    <loc>https://patrick-koehler.com/tags/azure-virtual-desktop/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/azure-virtual-desktop/</loc>
+    <loc>https://patrick-koehler.com/categories/azure-virtual-desktop/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/distribute-and-configure-the-remote-desktop-app-via-intune/</loc>
+    <loc>https://patrick-koehler.com/p/distribute-and-configure-the-remote-desktop-app-via-intune/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/endpoint-manager/</loc>
+    <loc>https://patrick-koehler.com/tags/endpoint-manager/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/fslogix/</loc>
+    <loc>https://patrick-koehler.com/categories/fslogix/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/intune/</loc>
+    <loc>https://patrick-koehler.com/categories/intune/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microsoft-intune/</loc>
+    <loc>https://patrick-koehler.com/tags/microsoft-intune/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</loc>
+    <loc>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</loc>
+    <loc>https://patrick-koehler.com/p/turn-off-news-and-interests-taskbar-widget-for-windows-10-enterprise-multi-session/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/windows/</loc>
+    <loc>https://patrick-koehler.com/categories/windows/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows-10/</loc>
+    <loc>https://patrick-koehler.com/tags/windows-10/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows-11/</loc>
+    <loc>https://patrick-koehler.com/tags/windows-11/</loc>
     <lastmod>2021-07-29T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/azure-virtual-desktop-the-complete-rdp-property-guide/</loc>
+    <loc>https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/</loc>
     <lastmod>2021-07-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/citrix/</loc>
+    <loc>https://patrick-koehler.com/categories/citrix/</loc>
     <lastmod>2021-07-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fslogix/</loc>
+    <loc>https://patrick-koehler.com/tags/fslogix/</loc>
     <lastmod>2021-07-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</loc>
+    <loc>https://patrick-koehler.com/p/fslogix-v2105-how-to-increase-vhdx-size-of-profile-container/</loc>
     <lastmod>2021-07-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/profile-management/</loc>
+    <loc>https://patrick-koehler.com/tags/profile-management/</loc>
     <lastmod>2021-07-27T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</loc>
+    <loc>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</loc>
     <lastmod>2021-06-14T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</loc>
+    <loc>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</loc>
     <lastmod>2021-04-20T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microsoft-edge/</loc>
+    <loc>https://patrick-koehler.com/tags/microsoft-edge/</loc>
     <lastmod>2021-03-08T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-avd/</loc>
+    <loc>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</loc>
     <lastmod>2021-03-08T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</loc>
+    <loc>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</loc>
     <lastmod>2020-12-11T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/msix/</loc>
+    <loc>https://patrick-koehler.com/tags/msix/</loc>
     <lastmod>2020-12-11T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/msix/</loc>
+    <loc>https://patrick-koehler.com/categories/msix/</loc>
     <lastmod>2020-12-11T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/msix-app-attach/</loc>
+    <loc>https://patrick-koehler.com/tags/msix-app-attach/</loc>
     <lastmod>2020-12-11T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</loc>
+    <loc>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</loc>
     <lastmod>2020-12-08T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</loc>
+    <loc>https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/</loc>
     <lastmod>2020-07-02T16:56:47+06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://patrick-koehler.com/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/page/</loc>
+    <loc>https://patrick-koehler.com/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about-patrick/</loc>
+    <loc>https://patrick-koehler.com/p/</loc>
   </url><url>
-    <loc>http://localhost:1313/cycling/</loc>
+    <loc>https://patrick-koehler.com/about-patrick/</loc>
   </url><url>
-    <loc>http://localhost:1313/links/</loc>
+    <loc>https://patrick-koehler.com/cycling/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://patrick-koehler.com/links/</loc>
+  </url><url>
+    <loc>https://patrick-koehler.com/search/</loc>
   </url>
 </urlset>
