@@ -2,97 +2,97 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Recent content in Categories on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Azure VMware Solution</title>
-        <link>https://patrick-koehler.com/categories/azure-vmware-solution/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
+        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VMware</title>
+        <link>http://localhost:1313/categories/vmware/</link>
+        <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/azure-vmware-solution/</guid>
+        <guid>http://localhost:1313/categories/vmware/</guid>
+        <description>&lt;img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/2b14985a-c66e-4dbd-b09c-609fe0678dae/d4o96dy-c59b7496-2fb3-4f30-a7cd-35425bf92133.png" alt="Featured image of post VMware" /&gt;</description>
+        </item>
+        <item>
+        <title>Azure VMware Solution</title>
+        <link>http://localhost:1313/categories/azure-vmware-solution/</link>
+        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/categories/azure-vmware-solution/</guid>
         <description></description>
         </item>
         <item>
         <title>Microsoft Azure</title>
-        <link>https://patrick-koehler.com/categories/microsoft-azure/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
+        <link>http://localhost:1313/categories/microsoft-azure/</link>
+        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/microsoft-azure/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/categories/microsoft-azure/azure.png" alt="Featured image of post Microsoft Azure" /&gt;</description>
-        </item>
-        <item>
-        <title>VMware</title>
-        <link>https://patrick-koehler.com/categories/vmware/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/categories/vmware/</guid>
-        <description>&lt;img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/2b14985a-c66e-4dbd-b09c-609fe0678dae/d4o96dy-c59b7496-2fb3-4f30-a7cd-35425bf92133.png" alt="Featured image of post VMware" /&gt;</description>
+        <guid>http://localhost:1313/categories/microsoft-azure/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/microsoft-azure/azure.png" alt="Featured image of post Microsoft Azure" /&gt;</description>
         </item>
         <item>
         <title>Horizon Cloud</title>
-        <link>https://patrick-koehler.com/categories/horizon-cloud/</link>
+        <link>http://localhost:1313/categories/horizon-cloud/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/horizon-cloud/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/categories/horizon-cloud/horizoncloud.jpeg" alt="Featured image of post Horizon Cloud" /&gt;</description>
+        <guid>http://localhost:1313/categories/horizon-cloud/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/horizon-cloud/horizoncloud.jpeg" alt="Featured image of post Horizon Cloud" /&gt;</description>
         </item>
         <item>
         <title>Windows 365</title>
-        <link>https://patrick-koehler.com/categories/windows-365/</link>
+        <link>http://localhost:1313/categories/windows-365/</link>
         <pubDate>Sun, 25 Dec 2022 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/windows-365/</guid>
+        <guid>http://localhost:1313/categories/windows-365/</guid>
         <description>&lt;img src="https://cdn.worldvectorlogo.com/logos/microsoft-windows-365-cloud-pc-3.svg" alt="Featured image of post Windows 365" /&gt;</description>
         </item>
         <item>
         <title>Azure Virtual Desktop</title>
-        <link>https://patrick-koehler.com/categories/azure-virtual-desktop/</link>
+        <link>http://localhost:1313/categories/azure-virtual-desktop/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/azure-virtual-desktop/</guid>
+        <guid>http://localhost:1313/categories/azure-virtual-desktop/</guid>
         <description>&lt;img src="https://assets-global.website-files.com/5fa58eb04302c6e6eb23144c/6452600f3b3fe404f930963e_AVD.png" alt="Featured image of post Azure Virtual Desktop" /&gt;</description>
         </item>
         <item>
         <title>FSLogix</title>
-        <link>https://patrick-koehler.com/categories/fslogix/</link>
+        <link>http://localhost:1313/categories/fslogix/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/fslogix/</guid>
+        <guid>http://localhost:1313/categories/fslogix/</guid>
         <description>&lt;img src="https://www.htg.co.uk/hubfs/Imported_Blog_Media/FSlogixLogo2blue-2-1-1.png" alt="Featured image of post FSLogix" /&gt;</description>
         </item>
         <item>
         <title>Intune</title>
-        <link>https://patrick-koehler.com/categories/intune/</link>
+        <link>http://localhost:1313/categories/intune/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/intune/</guid>
+        <guid>http://localhost:1313/categories/intune/</guid>
         <description>&lt;img src="https://play-lh.googleusercontent.com/9jqnFF6rpeGZx92dyWCjfUocVSEI8D_elLj6IDRb_qko4nTwwQ_8QHW8mUQ3l3vkFTvi" alt="Featured image of post Intune" /&gt;</description>
         </item>
         <item>
         <title>Windows</title>
-        <link>https://patrick-koehler.com/categories/windows/</link>
+        <link>http://localhost:1313/categories/windows/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/windows/</guid>
+        <guid>http://localhost:1313/categories/windows/</guid>
         <description>&lt;img src="https://cdn.worldvectorlogo.com/logos/microsoft-windows-11.svg" alt="Featured image of post Windows" /&gt;</description>
         </item>
         <item>
         <title>Citrix</title>
-        <link>https://patrick-koehler.com/categories/citrix/</link>
+        <link>http://localhost:1313/categories/citrix/</link>
         <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/citrix/</guid>
+        <guid>http://localhost:1313/categories/citrix/</guid>
         <description>&lt;img src="https://www.citrix.com/content/dam/citrix61/en_us/images/logos/citrix/citrix-logo-black.png" alt="Featured image of post Citrix" /&gt;</description>
         </item>
         <item>
         <title>MSIX</title>
-        <link>https://patrick-koehler.com/categories/msix/</link>
+        <link>http://localhost:1313/categories/msix/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/categories/msix/</guid>
+        <guid>http://localhost:1313/categories/msix/</guid>
         <description>&lt;img src="https://store-images.s-microsoft.com/image/apps.18628.14031151132292068.6bde6b56-1b87-42a0-8e15-712ff716525a.9b8819a3-5e02-469d-aeae-6aef6d38f312" alt="Featured image of post MSIX" /&gt;</description>
         </item>
         

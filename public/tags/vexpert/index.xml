@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>VExpert on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/vexpert/</link>
+        <link>http://localhost:1313/tags/vexpert/</link>
         <description>Recent content in VExpert on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vexpert/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/vexpert/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How the vExpert program helped me to become a better Cloud architect.</title>
-        <link>https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</link>
+        <link>http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</link>
         <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.png" alt="Featured image of post How the vExpert program helped me to become a better Cloud architect." /&gt;&lt;p&gt;Hey everybody it&amp;rsquo;s Patrick again from the new blog site (yes I finally made it to GitHub with a static page build with Hugo),&lt;/p&gt;
+        <guid>http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</guid>
+        <description>&lt;img src="http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.png" alt="Featured image of post How the vExpert program helped me to become a better Cloud architect." /&gt;&lt;p&gt;Hey everybody it&amp;rsquo;s Patrick again from the new blog site (yes I finally made it to GitHub with a static page build with Hugo),&lt;/p&gt;
 &lt;p&gt;this time I want to share my story around why I believe the vExpert program has helped me become a better architect.
 As some of you know, I started my IT career already a while back in 2009 where I completed an apprenticeship at IT-Haus (a local German consulting firm and reseller). I started to dig deeper into emerging technologies, got my first steps in vCenter done, learned how cool vMotion is and what it means to host and manage larger IT estates. Moving forward in my career I brought cloud technologies like Microsoft Azure, Amazon Web Services etc. to the mix and I transitioned slightly from the on-premises three tier architecture towards more cloud consultancy.&lt;/p&gt;
 &lt;p&gt;But from who did I learn all these things, and what are my resources? Is something I got asked frequently. And to tell you the trough, besides reading books and searching the internet for the solutions I needed, most of the time I landed on pages from vExperts, MVP&amp;rsquo;s etc. Those guys I considered as my rockstars (and they obviously are) in the industry. The knowledge they shared, the passion for technology combined with the willing to help the community inspired me a lot, which is the reason why I started my first blog page back in 2020 with wvdlogix.net. The blog should help me get into EUC and to share my thoughts around Azure Virtual Desktop, VMware Horizon and later on the combination of both.&lt;/p&gt;

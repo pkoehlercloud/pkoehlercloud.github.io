@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Workspace ONE on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/workspace-one/</link>
+        <link>http://localhost:1313/tags/workspace-one/</link>
         <description>Recent content in Workspace ONE on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Wed, 25 Jan 2023 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/workspace-one/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 Jan 2023 16:56:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/workspace-one/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Workspace ONE Access 22.09 – Integration with Horizon On-Premises</title>
-        <link>https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</link>
+        <link>http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</link>
         <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.png" alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises" /&gt;&lt;p&gt;Welcome to part 4 (actually 5) of the series on how to integrate Workspace ONE Access with Microsoft Azure and Horizon resources on-premises and in the Azure cloud.&lt;/p&gt;
+        <guid>http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/</guid>
+        <description>&lt;img src="http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.png" alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises" /&gt;&lt;p&gt;Welcome to part 4 (actually 5) of the series on how to integrate Workspace ONE Access with Microsoft Azure and Horizon resources on-premises and in the Azure cloud.&lt;/p&gt;
 &lt;p&gt;In this smaller part of the series, we’re highlighting the integration of Horizon (on-premises) assignments to Workspace ONE Access, including the capability of using the Workspace ONE mode, which is a dedicated mode to redirect the authentication for all Horizon sign ins to Workspace ONE Access.&lt;/p&gt;
 &lt;h2 id=&#34;enabling-saml-authentication-on-the-horizon-connection-servers&#34;&gt;
     &lt;a href=&#34;#enabling-saml-authentication-on-the-horizon-connection-servers&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -25,10 +25,10 @@
 &lt;p&gt;Up next, we see a new pop up opening and navigate to Authentication, where we switch the Delegation of authentication to VMware Horizon (SAML 2.0 Authenticator) from Disallowed to Allowed. To configure the SAML authenticators, select Manage SAML Authenticators below.&lt;/p&gt;
 &lt;p&gt;On the following screen, proceed by clicking Add. Now you must provide the information matching the Workspace ONE Access environment. The value Label is only an identifier for administrative purposes. The important part is the Metadata URL which must match your internally and externally reachable domain. In my case this is &lt;a class=&#34;link&#34; href=&#34;https://access.avdlogix.com/SAAS/API/1.0/metadata.idp.xml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://access.avdlogix.com/SAAS/API/1.0/metadata.idp.xml&lt;/a&gt;. As shown in the screen below. When all the settings have been corrected, apply by clicking “OK”.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1142&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image_hu0de166753b563fda3f5bbba0f4b910fd_122805_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -45,10 +45,10 @@
     Configuring the Workspace ONE Access Connector appliance for entitlement synchronisation
 &lt;/h3&gt;&lt;p&gt;An important step which is often overseen is the reconfiguration / import of the certificate of the Connection server into the Workspace ONE Access Connector appliance. This will be required to trust the certificate used by the Connection Server, when establishing a secure connection.&lt;/p&gt;
 &lt;p&gt;To apply the configuration I make sure to connect to the Access Connector VM we’ve created in the previous parts, download the certificate from the Horizon Connection Server and go to Control Panel &amp;gt; Programs &amp;gt; Programs and Features and click Change on the Workspace ONE Access Connector installer.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1.png&#34;
 	width=&#34;998&#34;
 	height=&#34;772&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-1_huf945051700ab1a8d0538ba06d2113bd1_46883_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -61,10 +61,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;Confirm by clicking Add / Remove Services and click on Next &amp;gt;.&lt;/p&gt;
 &lt;p&gt;On the next page, the installer allows you to adjust the installation services. Make sure that Virtual App Service is installed before proceeding by clicking Next &amp;gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2.png&#34;
 	width=&#34;992&#34;
 	height=&#34;768&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-2_hua6100024d42daf199f24ba705aa40bf3_53051_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -77,10 +77,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;If you are using a Proxy or Syslog server, you have the change to configure it at the next following pages, if this isn’t the case proceed (and also skip the Citrix configuration part), until you reach the point “Trust Root Certificates”.&lt;/p&gt;
 &lt;p&gt;On this screen click browse and select the Horizon Connection Server certificate.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3.png&#34;
 	width=&#34;996&#34;
 	height=&#34;766&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-3_hu35ea890fbbade72e22373d573125002c_36990_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -92,10 +92,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once you’ve selected the certificates, you can validate that they’re correctly recognized by the installer by clicking “Cert Details..”. If the certificates have been imported correctly, proceed by clicking Next &amp;gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4.png&#34;
 	width=&#34;996&#34;
 	height=&#34;762&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-4_hu440921bed90ce77a247833c071447181_45854_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -107,10 +107,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Proceed over the next pages by clicking Next &amp;gt;. Stop at the Servic Account level, where you have to provide your credentials again for the Sync service.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5.png&#34;
 	width=&#34;994&#34;
 	height=&#34;772&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-5_hua05d4a83c1bd2bbcf751fadc0bb43cc7_44029_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -122,10 +122,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Confirm by clicking the check box on “Do you want to restart already installed services and complete this task by clicking Install.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6.png&#34;
 	width=&#34;1008&#34;
 	height=&#34;784&#34;
-	srcset=&#34;https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_480x0_resize_box_3.png 480w, http://localhost:1313/p/workspace-one-access-22.09-integration-with-horizon-on-premises/image-6_hu43c9de25cf26ce388d1ddd40b8ba7a3f_64078_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;

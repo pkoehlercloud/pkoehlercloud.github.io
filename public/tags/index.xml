@@ -2,233 +2,225 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Recent content in Tags on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 22 Apr 2024 13:30:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Azure</title>
-        <link>https://patrick-koehler.com/tags/azure/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/azure/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Azure Stack HCI</title>
-        <link>https://patrick-koehler.com/tags/azure-stack-hci/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/azure-stack-hci/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Azure VMware Solution</title>
-        <link>https://patrick-koehler.com/tags/azure-vmware-solution/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/azure-vmware-solution/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>NC2</title>
-        <link>https://patrick-koehler.com/tags/nc2/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/nc2/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Nutanix Cloud Clusters</title>
-        <link>https://patrick-koehler.com/tags/nutanix-cloud-clusters/</link>
-        <pubDate>Mon, 22 Apr 2024 13:30:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/nutanix-cloud-clusters/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Community</title>
-        <link>https://patrick-koehler.com/tags/community/</link>
+        <link>http://localhost:1313/tags/community/</link>
         <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/community/</guid>
+        <guid>http://localhost:1313/tags/community/</guid>
         <description></description>
         </item>
         <item>
         <title>VExpert</title>
-        <link>https://patrick-koehler.com/tags/vexpert/</link>
+        <link>http://localhost:1313/tags/vexpert/</link>
         <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/vexpert/</guid>
+        <guid>http://localhost:1313/tags/vexpert/</guid>
         <description></description>
         </item>
         <item>
         <title>VMware</title>
-        <link>https://patrick-koehler.com/tags/vmware/</link>
+        <link>http://localhost:1313/tags/vmware/</link>
         <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/vmware/</guid>
+        <guid>http://localhost:1313/tags/vmware/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AVS</title>
+        <link>http://localhost:1313/tags/avs/</link>
+        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/avs/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Azure</title>
+        <link>http://localhost:1313/tags/azure/</link>
+        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/azure/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Azure VMware Solution</title>
+        <link>http://localhost:1313/tags/azure-vmware-solution/</link>
+        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/azure-vmware-solution/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nutanix NC2</title>
+        <link>http://localhost:1313/tags/nutanix-nc2/</link>
+        <pubDate>Mon, 22 Apr 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/tags/nutanix-nc2/</guid>
         <description></description>
         </item>
         <item>
         <title>EUC</title>
-        <link>https://patrick-koehler.com/tags/euc/</link>
+        <link>http://localhost:1313/tags/euc/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/euc/</guid>
+        <guid>http://localhost:1313/tags/euc/</guid>
         <description></description>
         </item>
         <item>
         <title>Horizon Cloud on Azure</title>
-        <link>https://patrick-koehler.com/tags/horizon-cloud-on-azure/</link>
+        <link>http://localhost:1313/tags/horizon-cloud-on-azure/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/horizon-cloud-on-azure/</guid>
+        <guid>http://localhost:1313/tags/horizon-cloud-on-azure/</guid>
         <description></description>
         </item>
         <item>
         <title>VMware Horizon</title>
-        <link>https://patrick-koehler.com/tags/vmware-horizon/</link>
+        <link>http://localhost:1313/tags/vmware-horizon/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/vmware-horizon/</guid>
+        <guid>http://localhost:1313/tags/vmware-horizon/</guid>
         <description></description>
         </item>
         <item>
         <title>Horizon Cloud</title>
-        <link>https://patrick-koehler.com/tags/horizon-cloud/</link>
+        <link>http://localhost:1313/tags/horizon-cloud/</link>
         <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/horizon-cloud/</guid>
+        <guid>http://localhost:1313/tags/horizon-cloud/</guid>
         <description></description>
         </item>
         <item>
         <title>IdP</title>
-        <link>https://patrick-koehler.com/tags/idp/</link>
+        <link>http://localhost:1313/tags/idp/</link>
         <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/idp/</guid>
+        <guid>http://localhost:1313/tags/idp/</guid>
         <description></description>
         </item>
         <item>
         <title>Workspace ONE</title>
-        <link>https://patrick-koehler.com/tags/workspace-one/</link>
+        <link>http://localhost:1313/tags/workspace-one/</link>
         <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/workspace-one/</guid>
+        <guid>http://localhost:1313/tags/workspace-one/</guid>
         <description></description>
         </item>
         <item>
         <title>Workspace ONE Access</title>
-        <link>https://patrick-koehler.com/tags/workspace-one-access/</link>
+        <link>http://localhost:1313/tags/workspace-one-access/</link>
         <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/workspace-one-access/</guid>
+        <guid>http://localhost:1313/tags/workspace-one-access/</guid>
         <description></description>
         </item>
         <item>
         <title>Endpoint Management</title>
-        <link>https://patrick-koehler.com/tags/endpoint-management/</link>
+        <link>http://localhost:1313/tags/endpoint-management/</link>
         <pubDate>Sun, 25 Dec 2022 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/endpoint-management/</guid>
+        <guid>http://localhost:1313/tags/endpoint-management/</guid>
         <description></description>
         </item>
         <item>
         <title>Intune</title>
-        <link>https://patrick-koehler.com/tags/intune/</link>
+        <link>http://localhost:1313/tags/intune/</link>
         <pubDate>Sun, 25 Dec 2022 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/intune/</guid>
+        <guid>http://localhost:1313/tags/intune/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows 365</title>
-        <link>https://patrick-koehler.com/tags/windows-365/</link>
+        <link>http://localhost:1313/tags/windows-365/</link>
         <pubDate>Sun, 25 Dec 2022 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/windows-365/</guid>
+        <guid>http://localhost:1313/tags/windows-365/</guid>
         <description></description>
         </item>
         <item>
         <title>Azure Virtual Desktop</title>
-        <link>https://patrick-koehler.com/tags/azure-virtual-desktop/</link>
+        <link>http://localhost:1313/tags/azure-virtual-desktop/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/azure-virtual-desktop/</guid>
+        <guid>http://localhost:1313/tags/azure-virtual-desktop/</guid>
         <description></description>
         </item>
         <item>
         <title>Endpoint Manager</title>
-        <link>https://patrick-koehler.com/tags/endpoint-manager/</link>
+        <link>http://localhost:1313/tags/endpoint-manager/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/endpoint-manager/</guid>
+        <guid>http://localhost:1313/tags/endpoint-manager/</guid>
         <description></description>
         </item>
         <item>
         <title>Microsoft Intune</title>
-        <link>https://patrick-koehler.com/tags/microsoft-intune/</link>
+        <link>http://localhost:1313/tags/microsoft-intune/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/microsoft-intune/</guid>
+        <guid>http://localhost:1313/tags/microsoft-intune/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows 10</title>
-        <link>https://patrick-koehler.com/tags/windows-10/</link>
+        <link>http://localhost:1313/tags/windows-10/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/windows-10/</guid>
+        <guid>http://localhost:1313/tags/windows-10/</guid>
         <description></description>
         </item>
         <item>
         <title>Windows 11</title>
-        <link>https://patrick-koehler.com/tags/windows-11/</link>
+        <link>http://localhost:1313/tags/windows-11/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/windows-11/</guid>
+        <guid>http://localhost:1313/tags/windows-11/</guid>
         <description></description>
         </item>
         <item>
         <title>FSLogix</title>
-        <link>https://patrick-koehler.com/tags/fslogix/</link>
+        <link>http://localhost:1313/tags/fslogix/</link>
         <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/fslogix/</guid>
+        <guid>http://localhost:1313/tags/fslogix/</guid>
         <description></description>
         </item>
         <item>
         <title>Profile Management</title>
-        <link>https://patrick-koehler.com/tags/profile-management/</link>
+        <link>http://localhost:1313/tags/profile-management/</link>
         <pubDate>Tue, 27 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/profile-management/</guid>
+        <guid>http://localhost:1313/tags/profile-management/</guid>
         <description></description>
         </item>
         <item>
         <title>Microsoft Edge</title>
-        <link>https://patrick-koehler.com/tags/microsoft-edge/</link>
+        <link>http://localhost:1313/tags/microsoft-edge/</link>
         <pubDate>Mon, 08 Mar 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/microsoft-edge/</guid>
+        <guid>http://localhost:1313/tags/microsoft-edge/</guid>
         <description></description>
         </item>
         <item>
         <title>MSIX</title>
-        <link>https://patrick-koehler.com/tags/msix/</link>
+        <link>http://localhost:1313/tags/msix/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/msix/</guid>
+        <guid>http://localhost:1313/tags/msix/</guid>
         <description></description>
         </item>
         <item>
         <title>MSIX App Attach</title>
-        <link>https://patrick-koehler.com/tags/msix-app-attach/</link>
+        <link>http://localhost:1313/tags/msix-app-attach/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/tags/msix-app-attach/</guid>
+        <guid>http://localhost:1313/tags/msix-app-attach/</guid>
         <description></description>
         </item>
         
