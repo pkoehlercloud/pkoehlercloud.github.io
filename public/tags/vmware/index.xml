@@ -7,7 +7,225 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 22 Apr 2024 12:50:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 24 Apr 2024 11:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mastering Azure VMware Solution - The architecture</title>
+        <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/</link>
+        <pubDate>Wed, 24 Apr 2024 11:56:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/title.png" alt="Featured image of post Mastering Azure VMware Solution - The architecture" /&gt;&lt;p&gt;Welcome to part 2 of the Mastering Azure VMware Solution series!&lt;/p&gt;
+&lt;p&gt;In this part we will have a look at the design of Azure VMware Solution and the general architecture of components deployed in Microsoft Azure.&lt;/p&gt;
+&lt;p&gt;Disclaimer: In this article I&amp;rsquo;m mentioning and refering to a lot of valuable resources from the Cloud Adoption Framework of Microsoft. Microsoft&amp;rsquo;s Cloud Adoption Framework is a collection of best practices, guidance, and tools designed to help organizations adopt cloud services with confidence and efficiency. It provides a structured approach to cloud adoption, addressing key areas such as strategy, readiness, migration, and governance.&lt;/p&gt;
+&lt;p&gt;I will focus especially on the design pillars that describe the Azure VMware Solution landing zone rather than covering the landing zone for Identity, Networking or other related services that might exist.&lt;/p&gt;
+&lt;h2 id=&#34;architecture-diagram&#34;&gt;
+    &lt;a href=&#34;#architecture-diagram&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Architecture diagram
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1.png&#34;
+	width=&#34;1882&#34;
+	height=&#34;1749&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Source: Patrick Köhler - Azure VMware Solution landing zone diagram&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;258px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-components-explained&#34;&gt;
+    &lt;a href=&#34;#the-components-explained&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The components explained
+&lt;/h2&gt;&lt;p&gt;The components that you see in the landing zone concept of Azure VMware Solution are the bare minimum of resources (including some optional ones mentioned) that are relevant to&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;networking-landing-zone&#34;&gt;
+    &lt;a href=&#34;#networking-landing-zone&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Networking landing zone
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;host our central networking resources&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resource Group - Azure Resources&lt;/li&gt;
+&lt;li&gt;Azure vWAN - Our central hub for all things connectivity
+&lt;ul&gt;
+&lt;li&gt;Express Route or Site-to-Site VPN connectivity from on-premises.&lt;/li&gt;
+&lt;li&gt;Express Route towards our Azure VMware Solution instace.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Azure Firewall (optional) - Used to secure the traffic, can also be attached to the vWAN Hub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;allow for interconnectivity between all relevant resources&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Resource Group - External connectivity&lt;/li&gt;
+&lt;li&gt;Virtual Network/s - One or multiple virtual networks which provide a direct connectivity to other resources located in the AVS landing zone. Examples: Azure NetApp Files volumes, Azure Virtual Desktops etc. These networks will be peered with the vWAN Hub.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;azure-vmware-solution-landing-zone&#34;&gt;
+    &lt;a href=&#34;#azure-vmware-solution-landing-zone&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Azure VMware Solution landing zone
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;host our infrastructure
+&lt;ul&gt;
+&lt;li&gt;Resource Group - AVS&lt;/li&gt;
+&lt;li&gt;AVS - SDDC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;get insights on our infrastructure
+&lt;ul&gt;
+&lt;li&gt;Resource Group - Operational&lt;/li&gt;
+&lt;li&gt;Metrics&lt;/li&gt;
+&lt;li&gt;Alerts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;provide additional storage to our infrastructure for applications, as well as additional datastores.
+&lt;ul&gt;
+&lt;li&gt;Azure NetApp Files (Premium storage service)&lt;/li&gt;
+&lt;li&gt;Azure Disk Pools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ensure that we can access the infrastructure securely from a desktop to manage the infrastructure in case that we don&amp;rsquo;t implement on-premises connectivity yet.
+&lt;ul&gt;
+&lt;li&gt;Azure Bastion&lt;/li&gt;
+&lt;li&gt;Azure Virtual Desktop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;additional-resources&#34;&gt;
+    &lt;a href=&#34;#additional-resources&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Additional resources
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;to ensure we can deploy resources
+&lt;ul&gt;
+&lt;li&gt;Subscription - Which must be an Enterprise Agreement or CSP subscription for AVS. The subscription is required for each of these landing zones, if you&amp;rsquo;re following the mentioned concept. However, it is not a 100% requirement. All of the mentioned resources can also live in one subscription. The consequence is that in terms of billing, a good tagging structure must be put in place.&lt;/li&gt;
+&lt;li&gt;Entra ID IAM - This related to Identity and Access Management ensuring that administrative users that need to manage the required resources in either landing zone have the appropriate permissions to do their job.&lt;/li&gt;
+&lt;li&gt;Azure Policies - Ensure the integrity and compliance of the infrastructure by setting a baseline of policies that define how resources can be deployed, where they can be deployed etc.&lt;/li&gt;
+&lt;li&gt;Network Watcher - Provides tools to monitor, diagnose, view metrics and enable or disable logs for Azure networking resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;which-design-pillars-are-relevant-to-an-azure-vmware-solution-design&#34;&gt;
+    &lt;a href=&#34;#which-design-pillars-are-relevant-to-an-azure-vmware-solution-design&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Which design pillars are relevant to an Azure VMware Solution design?
+&lt;/h2&gt;&lt;p&gt;Besides the fact that we need to understand our on-premises or existing VMware infrastructure and the dependencies between workloads running in our datacenter, I recommend having a look at the following design pillars in more detail:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Identity and Access Management&lt;/b&gt;: After deploying Azure VMware Solution, the vCenter environment includes a built-in local user named &amp;lsquo;cloudadmin&amp;rsquo; with the CloudAdmin role. Design considerations emphasize using custom roles with role-based access control (RBAC) to implement the principle of least privilege.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Considerations
+&lt;ul&gt;
+&lt;li&gt;Azure VMware Solution&amp;rsquo;s vCenter contains a built-in local user, &amp;lsquo;cloudadmin&amp;rsquo;, with the CloudAdmin role&lt;/li&gt;
+&lt;li&gt;Custom roles can be created using RBAC to ensure least privilege access.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Design recommendations
+&lt;ul&gt;
+&lt;li&gt;Deploy an Active Directory Domain Services (AD DS) domain controller in the identity subscription for IAM.&lt;/li&gt;
+&lt;li&gt;Update Active Directory Sites and Services for directing AD DS traffic to the correct domain controllers.&lt;/li&gt;
+&lt;li&gt;Limit assigning the CloudAdmin role to a minimal number of users.&lt;/li&gt;
+&lt;li&gt;Exercise caution when changing passwords for &amp;lsquo;cloudadmin&amp;rsquo; and NSX admin.&lt;/li&gt;
+&lt;li&gt;Restrict Azure RBAC permissions to the specific resource group of Azure VMware Solution and its necessary users.&lt;/li&gt;
+&lt;li&gt;Apply vSphere permissions using custom roles at appropriate VM folder or resource pool levels, avoiding permissions at or above the datacenter level.&lt;/li&gt;
+&lt;li&gt;Utilize the Run command in the private cloud to add AD DS as an identity source, manage vsphere.local\CloudAdmins group, and create groups in Active Directory for RBAC management of vCenter Server and NSX-T Data Center.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Networking&lt;/b&gt;: When establishing an Azure VMware Solution landing zone, it&amp;rsquo;s crucial to design and implement networking capabilities tailored to your organization&amp;rsquo;s needs. Azure offers diverse networking products and services to support various scenarios. Before deploying Azure VMware Solution, consider the following key requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Determine whether HTTP/S or non-HTTP/S internet ingress is needed for Azure VMware Solution applications.&lt;/li&gt;
+&lt;li&gt;Plan the internet egress path.&lt;/li&gt;
+&lt;li&gt;Evaluate the need for L2 extension for migrations.&lt;/li&gt;
+&lt;li&gt;Assess the current use of Network Virtual Appliances (NVA) in your architecture.&lt;/li&gt;
+&lt;li&gt;Decide on the connectivity of Azure VMware Solution to either a standard hub virtual network or Virtual WAN hub.&lt;/li&gt;
+&lt;li&gt;Consider Private ExpressRoute connectivity from on-premises datacenters to Azure VMware Solution and whether to enable ExpressRoute Global Reach.&lt;/li&gt;
+&lt;li&gt;Define traffic inspection requirements for various scenarios:&lt;/li&gt;
+&lt;li&gt;Internet ingress into Azure VMware Solution applications.&lt;/li&gt;
+&lt;li&gt;Azure VMware Solution egress access to the internet.&lt;/li&gt;
+&lt;li&gt;Azure VMware Solution access to on-premises datacenters.&lt;/li&gt;
+&lt;li&gt;Azure VMware Solution access to Azure Virtual Network.&lt;/li&gt;
+&lt;li&gt;Traffic within the Azure VMware Solution private cloud.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Governance&lt;/b&gt;: This section provides comprehensive guidance on securely implementing and governing Azure VMware Solution (AVS) throughout its lifecycle, focusing on security, governance, and compliance aspects.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identity Security
+&lt;ul&gt;
+&lt;li&gt;Limit permanent access using the Contributor role and privileged account management solutions.&lt;/li&gt;
+&lt;li&gt;Create Microsoft Entra ID privileged access groups in Azure PIM for managing AVS clusters with time-bound access.&lt;/li&gt;
+&lt;li&gt;Use cloudadmin account for integrating AD DS or Microsoft Entra Domain Services with vCenter Server and NSX-T Data Center.&lt;/li&gt;
+&lt;li&gt;Rotate vCenter Server and NSX-T Data Center administrative account passwords regularly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Environment and Network Security
+&lt;ul&gt;
+&lt;li&gt;Implement traffic filtering, OWASP rule compliance, unified firewall management, and DDoS protection.&lt;/li&gt;
+&lt;li&gt;Utilize VSAN Encryption with Customer Managed Keys (CMK) for encryption at rest.&lt;/li&gt;
+&lt;li&gt;Control vCenter Server access using dedicated privileged access workstations (PAWs).&lt;/li&gt;
+&lt;li&gt;Implement inbound internet request logging for guest workloads and session monitoring for outbound internet connection security.&lt;/li&gt;
+&lt;li&gt;Use specialized firewall and NVA services for outbound internet connectivity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Backups
+&lt;ul&gt;
+&lt;li&gt;Implement backup solutions with encryption in transit and at rest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Guest Application and VM Security
+&lt;ul&gt;
+&lt;li&gt;Implement advanced threat detection e.g. using Microsoft Defender for Cloud.&lt;/li&gt;
+&lt;li&gt;Onboard guest VMs using Azure Arc or VMware Aria Operations for centralized management and monitoring.&lt;/li&gt;
+&lt;li&gt;Enable diagnostics metrics, logging, and near-real-time VM insights for workload VMs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Environment governance
+&lt;ul&gt;
+&lt;li&gt;Monitor vSAN storage space, VM template storage policy, and host quota governance.&lt;/li&gt;
+&lt;li&gt;Implement Failure-to-tolerate (FTT) governance based on cluster size. (We will cover that later in the blog as well)&lt;/li&gt;
+&lt;li&gt;Monitor network traffic and configure alerts for security, planned maintenance, and Service Health.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Workload application and VM governance
+&lt;ul&gt;
+&lt;li&gt;Enable security posture awareness and compliance monitoring for Azure VMware Solution workload VMs.&lt;/li&gt;
+&lt;li&gt;Use Azure Arc enabled servers for VM management and Azure native resource tooling.&lt;/li&gt;
+&lt;li&gt;Implement workload VM logging, monitoring, update governance, backup governance, and DR governance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compliance
+&lt;ul&gt;
+&lt;li&gt;Monitor compliance using Microsoft Defender for Cloud.&lt;/li&gt;
+&lt;li&gt;Ensure DR configuration compliance and backup compliance for workload VMs.&lt;/li&gt;
+&lt;li&gt;Adhere to country/region-specific or industry-specific compliance requirements.&lt;/li&gt;
+&lt;li&gt;Implement firewall audit reporting on endpoints for regulatory compliance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;which-resources-can-i-leverage-for-more-information&#34;&gt;
+    &lt;a href=&#34;#which-resources-can-i-leverage-for-more-information&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Which resources can I leverage for more information?
+&lt;/h2&gt;&lt;p&gt;In terms of the mentioned design pillars you can get more information from the following resources that I linked you down below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=BGw5Nv_Kpiw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/watch?v=BGw5Nv_Kpiw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ravi0130/azure-avs-microhack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/ravi0130/azure-avs-microhack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Conclusion
+&lt;/h2&gt;&lt;p&gt;And thats it! I hope this article helped you to get a better understanding of the AVS architecture. In my next blog we will start deploying the service and let the magic happen!&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>How the vExpert program helped me to become a better Cloud architect.</title>
         <link>https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</link>
         <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>

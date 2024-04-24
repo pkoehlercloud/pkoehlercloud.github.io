@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="I explore the design and architecture of Azure VMware Solution within Microsoft Azure. I delve into key components like networking, infrastructure, and additional resources, detailing essential design pillars such as Identity and Access Management, Networking, and Governance. I emphasize integrating best practices from Microsoft's Cloud Adoption Framework to ensure a structured and efficient approach to adopting AVS.">
+<title>Mastering Azure VMware Solution - The architecture</title>
+
+<link rel='canonical' href='https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/'>
+
+<link rel="stylesheet" href="/scss/style.min.e733519129d2cfe1ba92a4207e21f074c2efb106e22901c6ad0c4a4972161dd0.css"><meta property='og:title' content="Mastering Azure VMware Solution - The architecture">
+<meta property='og:description' content="I explore the design and architecture of Azure VMware Solution within Microsoft Azure. I delve into key components like networking, infrastructure, and additional resources, detailing essential design pillars such as Identity and Access Management, Networking, and Governance. I emphasize integrating best practices from Microsoft's Cloud Adoption Framework to ensure a structured and efficient approach to adopting AVS.">
+<meta property='og:url' content='https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/'>
+<meta property='og:site_name' content='Patrick&#39;s Multi-Cloud Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Azure VMware Solution' /><meta property='article:tag' content='Azure' /><meta property='article:tag' content='VMware' /><meta property='article:published_time' content='2024-04-24T11:56:47&#43;06:00'/><meta property='article:modified_time' content='2024-04-24T11:56:47&#43;06:00'/><meta property='og:image' content='https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/title.png' />
+<meta name="twitter:site" content="@wvdlogix">
+    <meta name="twitter:creator" content="@wvdlogix"><meta name="twitter:title" content="Mastering Azure VMware Solution - The architecture">
+<meta name="twitter:description" content="I explore the design and architecture of Azure VMware Solution within Microsoft Azure. I delve into key components like networking, infrastructure, and additional resources, detailing essential design pillars such as Identity and Access Management, Networking, and Governance. I emphasize integrating best practices from Microsoft's Cloud Adoption Framework to ensure a structured and efficient approach to adopting AVS."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/title.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huc59d5fe30e8b430128cebedffe7532de_4365636_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Patrick&#39;s Multi-Cloud Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/patrick-koehler/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/wvdlogix'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.strava.com/athletes/117484839'
+                        target="_blank"
+                        title="Strava"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-strava"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 13l-5 -10l-5 10m6 0l4 8l4 -8" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/pkoehlercloud'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/about-patrick/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Patrick</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/cycling/' >
+                
+                
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bike"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M19 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0" /><path d="M17 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                
+                <span>Cycling</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#architecture-diagram">Architecture diagram</a></li>
+    <li><a href="#the-components-explained">The components explained</a>
+      <ol>
+        <li><a href="#networking-landing-zone">Networking landing zone</a></li>
+        <li><a href="#azure-vmware-solution-landing-zone">Azure VMware Solution landing zone</a></li>
+        <li><a href="#additional-resources">Additional resources</a></li>
+      </ol>
+    </li>
+    <li><a href="#which-design-pillars-are-relevant-to-an-azure-vmware-solution-design">Which design pillars are relevant to an Azure VMware Solution design?</a></li>
+    <li><a href="#which-resources-can-i-leverage-for-more-information">Which resources can I leverage for more information?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/mastering-azure-vmware-solution-the-architecture/">
+                <img src="/p/mastering-azure-vmware-solution-the-architecture/title_hu47f31a060c17741ed671fdc891fc1e2a_85168_800x0_resize_box_3.png"
+                        srcset="/p/mastering-azure-vmware-solution-the-architecture/title_hu47f31a060c17741ed671fdc891fc1e2a_85168_800x0_resize_box_3.png 800w, /p/mastering-azure-vmware-solution-the-architecture/title_hu47f31a060c17741ed671fdc891fc1e2a_85168_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="457" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering Azure VMware Solution - The architecture" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/microsoft-azure/" style="background-color: #2a9d8f; color: #fff;">
+                Microsoft Azure
+            </a>
+        
+            <a href="/categories/vmware/" style="background-color: #2a9d8f; color: #fff;">
+                VMware
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/mastering-azure-vmware-solution-the-architecture/">Mastering Azure VMware Solution - The architecture</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            I explore the design and architecture of Azure VMware Solution within Microsoft Azure. I delve into key components like networking, infrastructure, and additional resources, detailing essential design pillars such as Identity and Access Management, Networking, and Governance. I emphasize integrating best practices from Microsoft&#39;s Cloud Adoption Framework to ensure a structured and efficient approach to adopting AVS.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 24, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Welcome to part 2 of the Mastering Azure VMware Solution series!</p>
+<p>In this part we will have a look at the design of Azure VMware Solution and the general architecture of components deployed in Microsoft Azure.</p>
+<p>Disclaimer: In this article I&rsquo;m mentioning and refering to a lot of valuable resources from the Cloud Adoption Framework of Microsoft. Microsoft&rsquo;s Cloud Adoption Framework is a collection of best practices, guidance, and tools designed to help organizations adopt cloud services with confidence and efficiency. It provides a structured approach to cloud adoption, addressing key areas such as strategy, readiness, migration, and governance.</p>
+<p>I will focus especially on the design pillars that describe the Azure VMware Solution landing zone rather than covering the landing zone for Identity, Networking or other related services that might exist.</p>
+<h2 id="architecture-diagram">
+    <a href="#architecture-diagram" class="header-anchor">#</a>
+    Architecture diagram
+</h2><p><img src="/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1.png"
+	width="1882"
+	height="1749"
+	srcset="/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_480x0_resize_box_3.png 480w, /p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Source: Patrick Köhler - Azure VMware Solution landing zone diagram"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="107"
+		data-flex-basis="258px"
+	
+></p>
+<h2 id="the-components-explained">
+    <a href="#the-components-explained" class="header-anchor">#</a>
+    The components explained
+</h2><p>The components that you see in the landing zone concept of Azure VMware Solution are the bare minimum of resources (including some optional ones mentioned) that are relevant to&hellip;</p>
+<h3 id="networking-landing-zone">
+    <a href="#networking-landing-zone" class="header-anchor">#</a>
+    Networking landing zone
+</h3><ul>
+<li>
+<p>host our central networking resources</p>
+<ul>
+<li>Resource Group - Azure Resources</li>
+<li>Azure vWAN - Our central hub for all things connectivity
+<ul>
+<li>Express Route or Site-to-Site VPN connectivity from on-premises.</li>
+<li>Express Route towards our Azure VMware Solution instace.</li>
+</ul>
+</li>
+<li>Azure Firewall (optional) - Used to secure the traffic, can also be attached to the vWAN Hub.</li>
+</ul>
+</li>
+<li>
+<p>allow for interconnectivity between all relevant resources</p>
+<ul>
+<li>Resource Group - External connectivity</li>
+<li>Virtual Network/s - One or multiple virtual networks which provide a direct connectivity to other resources located in the AVS landing zone. Examples: Azure NetApp Files volumes, Azure Virtual Desktops etc. These networks will be peered with the vWAN Hub.</li>
+</ul>
+</li>
+</ul>
+<h3 id="azure-vmware-solution-landing-zone">
+    <a href="#azure-vmware-solution-landing-zone" class="header-anchor">#</a>
+    Azure VMware Solution landing zone
+</h3><ul>
+<li>host our infrastructure
+<ul>
+<li>Resource Group - AVS</li>
+<li>AVS - SDDC</li>
+</ul>
+</li>
+<li>get insights on our infrastructure
+<ul>
+<li>Resource Group - Operational</li>
+<li>Metrics</li>
+<li>Alerts</li>
+</ul>
+</li>
+<li>provide additional storage to our infrastructure for applications, as well as additional datastores.
+<ul>
+<li>Azure NetApp Files (Premium storage service)</li>
+<li>Azure Disk Pools</li>
+</ul>
+</li>
+<li>ensure that we can access the infrastructure securely from a desktop to manage the infrastructure in case that we don&rsquo;t implement on-premises connectivity yet.
+<ul>
+<li>Azure Bastion</li>
+<li>Azure Virtual Desktop</li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-resources">
+    <a href="#additional-resources" class="header-anchor">#</a>
+    Additional resources
+</h3><ul>
+<li>to ensure we can deploy resources
+<ul>
+<li>Subscription - Which must be an Enterprise Agreement or CSP subscription for AVS. The subscription is required for each of these landing zones, if you&rsquo;re following the mentioned concept. However, it is not a 100% requirement. All of the mentioned resources can also live in one subscription. The consequence is that in terms of billing, a good tagging structure must be put in place.</li>
+<li>Entra ID IAM - This related to Identity and Access Management ensuring that administrative users that need to manage the required resources in either landing zone have the appropriate permissions to do their job.</li>
+<li>Azure Policies - Ensure the integrity and compliance of the infrastructure by setting a baseline of policies that define how resources can be deployed, where they can be deployed etc.</li>
+<li>Network Watcher - Provides tools to monitor, diagnose, view metrics and enable or disable logs for Azure networking resources.</li>
+</ul>
+</li>
+</ul>
+<h2 id="which-design-pillars-are-relevant-to-an-azure-vmware-solution-design">
+    <a href="#which-design-pillars-are-relevant-to-an-azure-vmware-solution-design" class="header-anchor">#</a>
+    Which design pillars are relevant to an Azure VMware Solution design?
+</h2><p>Besides the fact that we need to understand our on-premises or existing VMware infrastructure and the dependencies between workloads running in our datacenter, I recommend having a look at the following design pillars in more detail:</p>
+<ul>
+<li>
+<p><b>Identity and Access Management</b>: After deploying Azure VMware Solution, the vCenter environment includes a built-in local user named &lsquo;cloudadmin&rsquo; with the CloudAdmin role. Design considerations emphasize using custom roles with role-based access control (RBAC) to implement the principle of least privilege.</p>
+<ul>
+<li>Considerations
+<ul>
+<li>Azure VMware Solution&rsquo;s vCenter contains a built-in local user, &lsquo;cloudadmin&rsquo;, with the CloudAdmin role</li>
+<li>Custom roles can be created using RBAC to ensure least privilege access.</li>
+</ul>
+</li>
+<li>Design recommendations
+<ul>
+<li>Deploy an Active Directory Domain Services (AD DS) domain controller in the identity subscription for IAM.</li>
+<li>Update Active Directory Sites and Services for directing AD DS traffic to the correct domain controllers.</li>
+<li>Limit assigning the CloudAdmin role to a minimal number of users.</li>
+<li>Exercise caution when changing passwords for &lsquo;cloudadmin&rsquo; and NSX admin.</li>
+<li>Restrict Azure RBAC permissions to the specific resource group of Azure VMware Solution and its necessary users.</li>
+<li>Apply vSphere permissions using custom roles at appropriate VM folder or resource pool levels, avoiding permissions at or above the datacenter level.</li>
+<li>Utilize the Run command in the private cloud to add AD DS as an identity source, manage vsphere.local\CloudAdmins group, and create groups in Active Directory for RBAC management of vCenter Server and NSX-T Data Center.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><b>Networking</b>: When establishing an Azure VMware Solution landing zone, it&rsquo;s crucial to design and implement networking capabilities tailored to your organization&rsquo;s needs. Azure offers diverse networking products and services to support various scenarios. Before deploying Azure VMware Solution, consider the following key requirements:</p>
+<ul>
+<li>Determine whether HTTP/S or non-HTTP/S internet ingress is needed for Azure VMware Solution applications.</li>
+<li>Plan the internet egress path.</li>
+<li>Evaluate the need for L2 extension for migrations.</li>
+<li>Assess the current use of Network Virtual Appliances (NVA) in your architecture.</li>
+<li>Decide on the connectivity of Azure VMware Solution to either a standard hub virtual network or Virtual WAN hub.</li>
+<li>Consider Private ExpressRoute connectivity from on-premises datacenters to Azure VMware Solution and whether to enable ExpressRoute Global Reach.</li>
+<li>Define traffic inspection requirements for various scenarios:</li>
+<li>Internet ingress into Azure VMware Solution applications.</li>
+<li>Azure VMware Solution egress access to the internet.</li>
+<li>Azure VMware Solution access to on-premises datacenters.</li>
+<li>Azure VMware Solution access to Azure Virtual Network.</li>
+<li>Traffic within the Azure VMware Solution private cloud.</li>
+</ul>
+</li>
+<li>
+<p><b>Governance</b>: This section provides comprehensive guidance on securely implementing and governing Azure VMware Solution (AVS) throughout its lifecycle, focusing on security, governance, and compliance aspects.</p>
+<ul>
+<li>Identity Security
+<ul>
+<li>Limit permanent access using the Contributor role and privileged account management solutions.</li>
+<li>Create Microsoft Entra ID privileged access groups in Azure PIM for managing AVS clusters with time-bound access.</li>
+<li>Use cloudadmin account for integrating AD DS or Microsoft Entra Domain Services with vCenter Server and NSX-T Data Center.</li>
+<li>Rotate vCenter Server and NSX-T Data Center administrative account passwords regularly.</li>
+</ul>
+</li>
+<li>Environment and Network Security
+<ul>
+<li>Implement traffic filtering, OWASP rule compliance, unified firewall management, and DDoS protection.</li>
+<li>Utilize VSAN Encryption with Customer Managed Keys (CMK) for encryption at rest.</li>
+<li>Control vCenter Server access using dedicated privileged access workstations (PAWs).</li>
+<li>Implement inbound internet request logging for guest workloads and session monitoring for outbound internet connection security.</li>
+<li>Use specialized firewall and NVA services for outbound internet connectivity.</li>
+</ul>
+</li>
+<li>Backups
+<ul>
+<li>Implement backup solutions with encryption in transit and at rest.</li>
+</ul>
+</li>
+<li>Guest Application and VM Security
+<ul>
+<li>Implement advanced threat detection e.g. using Microsoft Defender for Cloud.</li>
+<li>Onboard guest VMs using Azure Arc or VMware Aria Operations for centralized management and monitoring.</li>
+<li>Enable diagnostics metrics, logging, and near-real-time VM insights for workload VMs.</li>
+</ul>
+</li>
+<li>Environment governance
+<ul>
+<li>Monitor vSAN storage space, VM template storage policy, and host quota governance.</li>
+<li>Implement Failure-to-tolerate (FTT) governance based on cluster size. (We will cover that later in the blog as well)</li>
+<li>Monitor network traffic and configure alerts for security, planned maintenance, and Service Health.</li>
+</ul>
+</li>
+<li>Workload application and VM governance
+<ul>
+<li>Enable security posture awareness and compliance monitoring for Azure VMware Solution workload VMs.</li>
+<li>Use Azure Arc enabled servers for VM management and Azure native resource tooling.</li>
+<li>Implement workload VM logging, monitoring, update governance, backup governance, and DR governance.</li>
+</ul>
+</li>
+<li>Compliance
+<ul>
+<li>Monitor compliance using Microsoft Defender for Cloud.</li>
+<li>Ensure DR configuration compliance and backup compliance for workload VMs.</li>
+<li>Adhere to country/region-specific or industry-specific compliance requirements.</li>
+<li>Implement firewall audit reporting on endpoints for regulatory compliance.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="which-resources-can-i-leverage-for-more-information">
+    <a href="#which-resources-can-i-leverage-for-more-information" class="header-anchor">#</a>
+    Which resources can I leverage for more information?
+</h2><p>In terms of the mentioned design pillars you can get more information from the following resources that I linked you down below:</p>
+<ul>
+<li><a class="link" href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/"  target="_blank" rel="noopener"
+    >https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-vmware/</a></li>
+<li><a class="link" href="https://www.youtube.com/watch?v=BGw5Nv_Kpiw"  target="_blank" rel="noopener"
+    >https://www.youtube.com/watch?v=BGw5Nv_Kpiw</a></li>
+<li><a class="link" href="https://github.com/ravi0130/azure-avs-microhack"  target="_blank" rel="noopener"
+    >https://github.com/ravi0130/azure-avs-microhack</a></li>
+</ul>
+<h2 id="conclusion">
+    <a href="#conclusion" class="header-anchor">#</a>
+    Conclusion
+</h2><p>And thats it! I hope this article helped you to get a better understanding of the AVS architecture. In my next blog we will start deploying the service and let the magic happen!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/azure-vmware-solution/">Azure VMware Solution</a>
+        
+            <a href="/tags/azure/">Azure</a>
+        
+            <a href="/tags/vmware/">VMware</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title.196c0e73a7c33133221ea846116dcb50_hu47f31a060c17741ed671fdc891fc1e2a_85444_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering Azure VMware Solution - Is it the fastest path to the cloud?"
+                        
+                        data-hash="md5-GWwOc6fDMTMiHqhGEW3LUA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mastering Azure VMware Solution - Is it the fastest path to the cloud?</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.5e9b7416c6eefd4754b64989bdd44265_hu47f31a060c17741ed671fdc891fc1e2a_100651_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup"
+                        
+                        data-hash="md5-Xpt0Fsbu/UdUtkmJvdRCZQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mastering-vmware-horizon-cloud-on-azure-configuring-active-directory-and-broker/title.653568da128b9ba67626de1caff724bf_hu47f31a060c17741ed671fdc891fc1e2a_80306_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker"
+                        
+                        data-hash="md5-ZTVo2hKLm6Z2Jt4cr/ckvw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mastering VMware Horizon Cloud on Azure – Configuring Active Directory and Broker</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/workspace-one-access-22.09-integration-with-horizon-on-premises/">
+        
+        
+            <div class="article-image">
+                <img src="/p/workspace-one-access-22.09-integration-with-horizon-on-premises/title.101f2ebbe58075ff9b5b4893dba7a5dd_hu47f31a060c17741ed671fdc891fc1e2a_84440_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Workspace ONE Access 22.09 – Integration with Horizon On-Premises"
+                        
+                        data-hash="md5-EB8uu&#43;WAdf&#43;bW0iT26el3Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Workspace ONE Access 22.09 – Integration with Horizon On-Premises</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./">
+        
+        
+            <div class="article-image">
+                <img src="/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.bdbc8185070ee32a847b72071b603a4b_hu47f31a060c17741ed671fdc891fc1e2a_99060_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post How the vExpert program helped me to become a better Cloud architect."
+                        
+                        data-hash="md5-vbyBhQcO4yqEe3IHG2A6Sw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How the vExpert program helped me to become a better Cloud architect.</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 Patrick Köhler
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.25.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
