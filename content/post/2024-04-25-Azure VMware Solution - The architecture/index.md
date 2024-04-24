@@ -11,7 +11,7 @@ tags = [
 ]
 categories = ["Microsoft Azure", "VMware"]
 image = "title.png"
-description = "I explore the design and architecture of Azure VMware Solution within Microsoft Azure. I delve into key components like networking, infrastructure, and additional resources, detailing essential design pillars such as Identity and Access Management, Networking, and Governance. I emphasize integrating best practices from Microsoft's Cloud Adoption Framework to ensure a structured and efficient approach to adopting AVS."
+description = "I explore the design and architecture of Azure VMware Solution within Microsoft Azure and go over the architectural components in more detail"
 +++
 
 Welcome to part 2 of the Mastering Azure VMware Solution series!
