@@ -7,7 +7,91 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Wed, 24 Apr 2024 11:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 02 May 2024 19:23:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mastering Azure VMware Solution - Stretched clusters explained</title>
+        <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/</link>
+        <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/title.png" alt="Featured image of post Mastering Azure VMware Solution - Stretched clusters explained" /&gt;&lt;p&gt;Welcome back to my article series on Azure VMware Solution!
+As we covered the general architectural components last time, we want to take a special round around a feature that comes especially handy when you must ensure the high reliability and availability of the AVS infrastructure. Recently I was delving deeper into Azure VMware Solutions Stretched Clusters and want to give you more information and what it is, and what needs to be considered in this blog!&lt;/p&gt;
+&lt;h2 id=&#34;azure-availability-overview&#34;&gt;
+    &lt;a href=&#34;#azure-availability-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Azure Availability overview
+&lt;/h2&gt;&lt;p&gt;Let me break it down for you.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Azure’s infrastructure is organized into Regions, each catering to specific geographical areas.&lt;/li&gt;
+&lt;li&gt;Within these regions, Azure erects isolated and redundant islands of infrastructure called Availability Zones (AZs).&lt;/li&gt;
+&lt;li&gt;These AZs act as boundaries for resource management, ensuring that failures in one AZ don&amp;rsquo;t cascade into others.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, enter Azure VMware Solution, a game-changer for deploying VMware workloads seamlessly on Azure infrastructure. Traditionally, ESXi hosts in an AVS vSphere cluster reside in a single Azure Availability Zone, shielded by vSphere high availability (HA). However, this setup lacks protection against Availability Zone failures. That&amp;rsquo;s where the concept of Stretched Clusters comes into play.&lt;/p&gt;
+&lt;p&gt;Picture this: a vSAN cluster spanning two separate AZs, aptly named a vSAN Stretched Cluster. By extending across AZs, this setup bolsters application availability and introduces a zero recovery point objective (RPO) capability for enterprise applications without overhauling the design or resorting to expensive disaster recovery solutions.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s impressive about Stretched Clusters is their resilience to AZ failures, offering a robust private cloud infrastructure with a staggering &lt;b&gt;99.99% availability&lt;/b&gt;. This frees you from worrying about infrastructure availability, allowing you to focus squarely on their core application needs.&lt;/p&gt;
+&lt;h2 id=&#34;how-does-avs-stretched-clusters-work&#34;&gt;
+    &lt;a href=&#34;#how-does-avs-stretched-clusters-work&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    How does AVS Stretched Clusters work?
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image.png&#34;
+	width=&#34;1684&#34;
+	height=&#34;779&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Source: https://learn.microsoft.com/en-us/azure/azure-vmware/architecture-stretched-clusters&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;518px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s dive a bit deeper. Stretched Clusters employ vSAN Fault Domains across two AZs, with a managed vSAN Witness in a third AZ to monitor site health and prevent split-brain scenarios. In the event of an AZ failure, vSphere HA steps in, seamlessly restarting virtual machines in the unaffected AZ, ensuring uninterrupted service delivery.&lt;/p&gt;
+&lt;p&gt;However, it&amp;rsquo;s essential to grasp that Stretched Clusters aren&amp;rsquo;t a panacea for all failure scenarios. While they shield against single AZ failures, they may falter in the face of double or progressive failures. Rare occurrences like inter-AZ failures leading to partitioning demand a comprehensive disaster recovery strategy beyond the scope of Stretched Clusters.&lt;/p&gt;
+&lt;p&gt;Moreover, Stretched Clusters come with certain limitations and considerations. They necessitate a minimum of six nodes deployed across AZs, adhere to specific storage policies, and rely on vSphere HA for restarts and replication, influencing recovery time objectives (RTOs).&lt;/p&gt;
+&lt;h2 id=&#34;in-which-regions-are-avs-stretched-clusters-available&#34;&gt;
+    &lt;a href=&#34;#in-which-regions-are-avs-stretched-clusters-available&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    In which regions are AVS Stretched Clusters available?
+&lt;/h2&gt;&lt;p&gt;Microsoft is currently providing Stretched Clusters in the following regions (last updated 02.05.2024):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UK South (on AV36, and AV36P)&lt;/li&gt;
+&lt;li&gt;West Europe (on AV36, and AV36P)&lt;/li&gt;
+&lt;li&gt;Germany West Central (on AV36, and AV36P)&lt;/li&gt;
+&lt;li&gt;Australia East (on AV36P)&lt;/li&gt;
+&lt;li&gt;East US (on AV36P)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;important-notice-on-storage-policies&#34;&gt;
+    &lt;a href=&#34;#important-notice-on-storage-policies&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Important notice on storage policies
+&lt;/h2&gt;&lt;p&gt;The following SPBM policies are supported with a PFTT of &amp;ldquo;Dual Site Mirroring&amp;rdquo; and SFTT of &amp;ldquo;RAID 1 (Mirroring)&amp;rdquo; enabled as the default policies for the cluster:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Site disaster tolerance settings (PFTT):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dual site mirroring&lt;/li&gt;
+&lt;li&gt;None - keep data on preferred
+*None - keep data on nonpreferred&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Local failures to tolerate (SFTT):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 failure – RAID 1 (Mirroring)&lt;/li&gt;
+&lt;li&gt;1 failure – RAID 5 (Erasure coding), requires a minimum of four hosts in each AZ&lt;/li&gt;
+&lt;li&gt;2 failures – RAID 1 (Mirroring)&lt;/li&gt;
+&lt;li&gt;2 failures – RAID 6 (Erasure coding), requires a minimum of six hosts in each AZ&lt;/li&gt;
+&lt;li&gt;3 failures – RAID 1 (Mirroring)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Conclusion
+&lt;/h2&gt;&lt;p&gt;AVS Stretched Clusters are fantastic in order to ensure a high availability of the cloud based infrastructure. However it&amp;rsquo;s important to mention that this high availability comes with a high cost as the nodes must be doubled accordingly (as a minimum of 6 nodes is required for such a scenario). From my perspective I always recommend thinking about the criticality of applications running on this infrastructure before booking the serive / configuring the Stretched Clusters to avoid an overspend in certain scenarios (DR DC for High Availability purposes).&lt;/p&gt;
+&lt;p&gt;Again, whenever you have a question, feel free to reach out!&lt;/p&gt;
+&lt;p&gt;Cheers,
+Patrick&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Mastering Azure VMware Solution - The architecture</title>
         <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/</link>
         <pubDate>Wed, 24 Apr 2024 11:56:47 +0600</pubDate>
