@@ -7,7 +7,47 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 02 May 2024 19:23:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 May 2024 15:00:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Horizon</title>
+        <link>https://patrick-koehler.com/tags/horizon/</link>
+        <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/tags/horizon/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Horizon Cloud</title>
+        <link>https://patrick-koehler.com/tags/horizon-cloud/</link>
+        <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/tags/horizon-cloud/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Omnissa</title>
+        <link>https://patrick-koehler.com/tags/omnissa/</link>
+        <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/tags/omnissa/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VMware</title>
+        <link>https://patrick-koehler.com/tags/vmware/</link>
+        <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/tags/vmware/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Workspace ONE</title>
+        <link>https://patrick-koehler.com/tags/workspace-one/</link>
+        <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/tags/workspace-one/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Azure</title>
         <link>https://patrick-koehler.com/tags/azure/</link>
         <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>
@@ -21,14 +61,6 @@
         <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>
         
         <guid>https://patrick-koehler.com/tags/azure-vmware-solution/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>VMware</title>
-        <link>https://patrick-koehler.com/tags/vmware/</link>
-        <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/vmware/</guid>
         <description></description>
         </item>
         <item>
@@ -72,27 +104,11 @@
         <description></description>
         </item>
         <item>
-        <title>Horizon Cloud</title>
-        <link>https://patrick-koehler.com/tags/horizon-cloud/</link>
-        <pubDate>Mon, 27 Mar 2023 16:56:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/horizon-cloud/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>IdP</title>
         <link>https://patrick-koehler.com/tags/idp/</link>
         <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
         
         <guid>https://patrick-koehler.com/tags/idp/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Workspace ONE</title>
-        <link>https://patrick-koehler.com/tags/workspace-one/</link>
-        <pubDate>Wed, 25 Jan 2023 16:56:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/tags/workspace-one/</guid>
         <description></description>
         </item>
         <item>

@@ -7,7 +7,42 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 02 May 2024 19:23:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 May 2024 15:00:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VMware EUC becomes Omnissa</title>
+        <link>https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/</link>
+        <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
+        
+        <guid>https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/</guid>
+        <description>&lt;img src="https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/title.png" alt="Featured image of post VMware EUC becomes Omnissa" /&gt;&lt;p&gt;Yesterday was an exciting day for the EUC world!&lt;/p&gt;
+&lt;p&gt;The transformation from VMware EUC to Omnissa has begun and the website appeared for the first time using the URL: &lt;a class=&#34;link&#34; href=&#34;https://omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://omnissa.com&lt;/a&gt;. Today I want to cover some demanding questions that I heard from the community and partners in the last days and weeks!&lt;/p&gt;
+&lt;p&gt;But what is Omnissa exactly? Omnissa represents the progression from the established business unit, VMware End-User Computing. This transformative shift is geared towards deepening our comprehension of user requirements and furnishing tools that empower productive work within a fluid digital landscape.&lt;/p&gt;
+&lt;p&gt;Which products are combined under the Omnissa umbrella?
+In short, nearly the entire Workspace ONE suite and Horizon. Based on the website, the following products will be taken over:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Workspace ONE UEM - Unified Endpoint Solution to securely manage and control devices, applications and content within a single platform. It enables administrators to apply policies and streamline desktop and application management accross various operating systems and device types.&lt;/li&gt;
+&lt;li&gt;Workspace ONE Intelligence - Intelligence provides advanced analytics and automation capabilities and can be considered as part of the Workspace ONE suite in general. With the solution, organisations can proactively identify threats, optimize resource allocation and automate routine tasks to further enhance productivity.&lt;/li&gt;
+&lt;li&gt;Workspace ONE Mobile Threat Defense - Besides the huge management and automation capabilities, Mobile Threat Defense adds a security layer on top of the previously mentioned solutions. It supports in protecting against the dangers of phishing, device vulnerabilities, risky applications, rogue WiFi networks and web threats.&lt;/li&gt;
+&lt;li&gt;Horizon 8 &amp;amp; Horizon Cloud Service - Provisioning and management of virtual desktops on-premises and cloud based.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What about the knowledge base and technical documentation that were based on the VMware Techzone?
+Hereafter you can find some valuable resources that have been replaced with the Omnissa branding.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Omnissa Homepage: &lt;a class=&#34;link&#34; href=&#34;https://www.omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.omnissa.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Techzone: &lt;a class=&#34;link&#34; href=&#34;https://techzone.omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://techzone.omnissa.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Customer Connect: &lt;a class=&#34;link&#34; href=&#34;https://customerconnect.omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://customerconnect.omnissa.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Product Documentation: &lt;a class=&#34;link&#34; href=&#34;https://docs.omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.omnissa.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Knowledge Base: &lt;a class=&#34;link&#34; href=&#34;https://kb.omnissa.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://kb.omnissa.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All in all I&amp;rsquo;m personally happy that this awesome product that Horizon and Workspace ONE (in it&amp;rsquo;s entire suite) is and that Omnissa will be the next step into a more independent and customer centric future!&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Mastering Azure VMware Solution - Stretched clusters explained</title>
         <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/</link>
         <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>
