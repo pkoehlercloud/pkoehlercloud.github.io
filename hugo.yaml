@@ -252,9 +252,3 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
-
-imaging: 
-  bgColor: '#ffffff'
-  hint: photo
-  quality: 100
-  resampleFilter: lanczos
