@@ -33,7 +33,7 @@ As we covered the general architectural components last time, we want to take a 
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image.png&#34;
 	width=&#34;1684&#34;
 	height=&#34;779&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Source: https://learn.microsoft.com/en-us/azure/azure-vmware/architecture-stretched-clusters&#34;
@@ -107,7 +107,7 @@ Patrick&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1.png&#34;
 	width=&#34;1882&#34;
 	height=&#34;1749&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Source: Patrick Köhler - Azure VMware Solution landing zone diagram&#34;
@@ -333,7 +333,7 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image.png&#34;
 	width=&#34;895&#34;
 	height=&#34;487&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Slide from Patrick Koehler - Datacentre evacuation using AVS - presented at VMUG 2023&#34;
@@ -367,7 +367,7 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1.png&#34;
 	width=&#34;903&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
@@ -383,7 +383,7 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2.png&#34;
 	width=&#34;1250&#34;
 	height=&#34;871&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;
@@ -426,7 +426,7 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
 	width=&#34;454&#34;
 	height=&#34;67&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -441,7 +441,7 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
 	width=&#34;123&#34;
 	height=&#34;214&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -456,7 +456,7 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
 	width=&#34;454&#34;
 	height=&#34;121&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -474,7 +474,7 @@ URI: http://localhost:8000&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -490,7 +490,7 @@ URI: http://localhost:8000&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
 	width=&#34;454&#34;
 	height=&#34;95&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -505,7 +505,7 @@ URI: http://localhost:8000&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
 	width=&#34;141&#34;
 	height=&#34;286&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -520,7 +520,7 @@ URI: http://localhost:8000&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -535,7 +535,7 @@ URI: http://localhost:8000&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
 	width=&#34;454&#34;
 	height=&#34;52&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -553,7 +553,7 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
 	width=&#34;454&#34;
 	height=&#34;57&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -568,7 +568,7 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
 	width=&#34;330&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -583,7 +583,7 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
 	width=&#34;342&#34;
 	height=&#34;407&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -920,7 +920,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
 	width=&#34;682&#34;
 	height=&#34;342&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -935,7 +935,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
 	width=&#34;371&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -950,7 +950,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;823&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -965,7 +965,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;705&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -980,7 +980,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
 	width=&#34;823&#34;
 	height=&#34;317&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1000,7 +1000,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
 	width=&#34;787&#34;
 	height=&#34;704&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1015,7 +1015,7 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
 	width=&#34;773&#34;
 	height=&#34;733&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1054,7 +1054,7 @@ Patrick&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;543&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image_hu8c76d5980bae0e729108c32a0f020bd3_305517_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1108,7 +1108,7 @@ Patrick&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1.png&#34;
 	width=&#34;766&#34;
 	height=&#34;250&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-1_hudc453d7173deed0ae4eeb47c057fddad_24078_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1130,7 +1130,7 @@ Patrick&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;247&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-2_hu507e8f0c79a650128652823732053012_222483_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1160,7 +1160,7 @@ Patrick&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3.png&#34;
 	width=&#34;757&#34;
 	height=&#34;403&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-3_hue0fc19c001dfa8c1fd11f201f71bb37e_38654_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1208,7 +1208,7 @@ Attention: Connection type 7 is required.&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4.png&#34;
 	width=&#34;799&#34;
 	height=&#34;636&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-4_hucde487b0d0d45992195f544085b63ca9_59262_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1231,7 +1231,7 @@ Attention: Connection type 7 is required.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5.png&#34;
 	width=&#34;480&#34;
 	height=&#34;92&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-5_hudd10de91167c6cec05e72dce079240cc_7810_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1248,7 +1248,7 @@ Attention: Connection type 7 is required.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6.png&#34;
 	width=&#34;269&#34;
 	height=&#34;117&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-6_hu6b0058488c022512f2bbe8ca5f210197_5011_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1275,7 +1275,7 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7.png&#34;
 	width=&#34;436&#34;
 	height=&#34;115&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-7_hu90b11eb624a273f79a128fd7f999f2d8_9297_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1292,7 +1292,7 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8.png&#34;
 	width=&#34;487&#34;
 	height=&#34;106&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-8_hu054a75aee5790751072630d851277710_5071_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1325,7 +1325,7 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9.png&#34;
 	width=&#34;488&#34;
 	height=&#34;152&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-9_hu433ade95154642da84c7018c9e39b07a_13122_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1344,7 +1344,7 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10.png&#34;
 	width=&#34;704&#34;
 	height=&#34;290&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-10_hua744517be5c9889fc43c5aed75ba1fff_29840_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1370,7 +1370,7 @@ Attention! Redirecting all USB drives is just a very simplified option! For secu
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11.png&#34;
 	width=&#34;736&#34;
 	height=&#34;249&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-the-complete-rdp-property-guide/image-11_hu0e6abba3c429e6876e59702e5f7c99da_17749_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1442,7 +1442,7 @@ Patrick&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
 	width=&#34;846&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1459,7 +1459,7 @@ Patrick&lt;/p&gt;
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
 	width=&#34;2700&#34;
 	height=&#34;1393&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1533,7 +1533,7 @@ All these mentioned topics depend on the right setup of your Browsing experience
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
 	width=&#34;2120&#34;
 	height=&#34;1192&#34;
-	srcset=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1649,7 +1649,7 @@ The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
 	width=&#34;290&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1668,7 +1668,7 @@ The App Manifest is an XML based document that contains information an OS needs 
 &lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1690,7 +1690,7 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
 	width=&#34;347&#34;
 	height=&#34;504&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1721,7 +1721,7 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1740,7 +1740,7 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2285,7 +2285,7 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image.png&#34;
 	width=&#34;720&#34;
 	height=&#34;406&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image_huc4bb7ba5c5e9426ecd6a74dbd4ebdf6f_245606_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2300,7 +2300,7 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1.png&#34;
 	width=&#34;606&#34;
 	height=&#34;518&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-1_hua1687a0f8bc1e4907f36ee1915924e9e_51207_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2450,7 +2450,7 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2.png&#34;
 	width=&#34;646&#34;
 	height=&#34;677&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-2_hucb9c472d52a5c3e78c9ef91dfe891260_73015_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2480,7 +2480,7 @@ It´s been busy weeks since my last article about Host Pool Automation (part 3),
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3.png&#34;
 	width=&#34;346&#34;
 	height=&#34;206&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-3_huef4762bfbc783cbceb70932d2f9ec150_9157_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2514,7 +2514,7 @@ shutdown -l -f -t 0&lt;/li&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4.png&#34;
 	width=&#34;799&#34;
 	height=&#34;39&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-4_hu21817e4a846c41796fee0f35aefeebab_8073_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -2573,7 +2573,7 @@ shutdown -l -f -t 0&lt;/li&gt;
 &lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5.png&#34;
 	width=&#34;720&#34;
 	height=&#34;223&#34;
-	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_480x0_resize_lanczos_3.png 480w, https://patrick-koehler.com/p/azure-virtual-desktop-windows-10-start-menu-optimization-guide/image-5_hu693a7c8a641f13064d66a36dab2e903d_167790_1024x0_resize_lanczos_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
