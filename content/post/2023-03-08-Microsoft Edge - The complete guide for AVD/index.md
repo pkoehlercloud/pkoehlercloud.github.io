@@ -1,8 +1,8 @@
 ---
-title: "Microsoft Edge – The complete guide for AVD"
+title: "Microsoft Edge – The complete guide for Azure Virtual Desktop"
 description: "meta description"
 image: "title.png"
-date: 2023-03-08T16:56:47+06:00
+date: 2023-03-08T13:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Edge", "Azure", "Windows 11", "Windows 10"]
