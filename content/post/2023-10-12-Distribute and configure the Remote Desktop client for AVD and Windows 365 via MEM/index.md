@@ -1,7 +1,7 @@
 ---
 title: "Distribute and Configure the Remote Desktop app via Intune"
 image: "title.png"
-date: 2021-07-29T16:56:47+06:00
+date: 2023-10-12T11:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Endpoint Manager"]
