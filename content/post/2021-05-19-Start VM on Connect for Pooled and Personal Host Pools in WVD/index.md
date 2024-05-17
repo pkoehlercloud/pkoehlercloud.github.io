@@ -1,7 +1,7 @@
 ---
 title: "Start VM on Connect for Pooled and Personal Host Pools in WVD"
 image: "title.png"
-date: 2021-07-29T16:56:47+06:00
+date: 2023-07-29T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Windows 365", "Azure Virtual Desktop", "Microsoft Intune", "Azure", "Windows 11", "Windows 10"]
