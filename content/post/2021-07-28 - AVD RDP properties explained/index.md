@@ -2,7 +2,7 @@
 title: "Azure Virtual Desktop - The complete RDP Property guide"
 description: "meta description"
 image: "title.png"
-date: 2021-07-27T16:56:47+06:00
+date: 2023-07-29T16:56:47+06:00
 draft: false
 author: "Patrick Koehler"
 tags: ["Azure Virtual Desktop", "Azure"]
