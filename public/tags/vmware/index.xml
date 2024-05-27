@@ -2,18 +2,99 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>VMware on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/vmware/</link>
+        <link>http://localhost:1313/tags/vmware/</link>
         <description>Recent content in VMware on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Tue, 07 May 2024 15:00:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 May 2024 08:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>.Next 2024 impressions and recap</title>
+        <link>http://localhost:1313/p/.next-2024-impressions-and-recap/</link>
+        <pubDate>Mon, 27 May 2024 08:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/.next-2024-impressions-and-recap/</guid>
+        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post .Next 2024 impressions and recap" /&gt;&lt;p&gt;&lt;path class=&#34;cls-2-logo&#34; d=&#34;m187.34,166.85c0-27.35-14.66-48.98-40.84-48.98-8,0-20.91.39-29.95,12.05v-10.42h-27.42v81.71c3.8-3.83,8.82-5.75,13.84-5.71,4.61.03,9.21,1.71,12.87,5.05l.72.66v-31.42c1.22-11.94,8-24.49,23.31-24.49,11.25,0,20.06,9.74,20.06,22.17l.06,57.82h27.42l-.06-58.43Z&#34;&gt;&lt;/path&gt;&lt;/p&gt;
+&lt;p&gt;Last week I got the chance to attend Nutanix .Next 2024, the annual Nutanix conference that took place in beautiful Barcelona, Spain last week. This was very special for me, not only because it was my very first time in Barcelona, but also because it&amp;rsquo;s a rare occasion for Nutanix employees in Professional Services to attend a conference.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/image.png&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/image_hubd6f302f388a0ba78c2f30a33bb2d5be_1982774_480x0_resize_box_3.png 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/image_hubd6f302f388a0ba78c2f30a33bb2d5be_1982774_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Me, wrapping up three days full of learning, exchange and fantastic collaboration.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-community-iniative&#34;&gt;
+    &lt;a href=&#34;#the-community-iniative&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The community iniative
+&lt;/h2&gt;&lt;p&gt;But I was there for a special reason, because me and the team around me built a unique community initiative for current VMware vExperts to get to know Nutanix and their software stack, while learning from the best minds in the company and having the chance to meet the CTO and the engineering team, which was a huge success.&lt;/p&gt;
+&lt;p&gt;In addition to the community building, I met a lot of industry experts and friends, which I haven&amp;rsquo;t seen in a while and this was one of the primary take aways that proof how strong our community really is!&lt;/p&gt;
+&lt;h2 id=&#34;personal-highlights-and-reflection&#34;&gt;
+    &lt;a href=&#34;#personal-highlights-and-reflection&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Personal highlights and reflection
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/EA1BC03A-8A8C-4F84-B293-BA32B2ED4EDC_1_105_c.jpeg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/EA1BC03A-8A8C-4F84-B293-BA32B2ED4EDC_1_105_c_hudcf357a964fda4dedf15511b52b63efd_246129_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/EA1BC03A-8A8C-4F84-B293-BA32B2ED4EDC_1_105_c_hudcf357a964fda4dedf15511b52b63efd_246129_1024x0_resize_q75_box.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+&lt;br&gt;An absolute highlight was meeting CEO Rajiv Ramaswami. This happened immediately after the Keynote on day 1. Me and my friends saw him, sitting closely to us and we just wanted to take the opportunity to say hallo and thanks for having us sharing our feedback on the technology.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/66475DDF-951D-48A8-808E-7B1C1C980440_1_102_o.jpeg&#34;
+	width=&#34;2048&#34;
+	height=&#34;1536&#34;
+	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/66475DDF-951D-48A8-808E-7B1C1C980440_1_102_o_hu0a0bc679f4bd55b7077c99db22b0c7dc_892178_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/66475DDF-951D-48A8-808E-7B1C1C980440_1_102_o_hu0a0bc679f4bd55b7077c99db22b0c7dc_892178_1024x0_resize_q75_box.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;
+Another highlight of mine was seeing Sebastian Vettel, 4x Formula 1 champion speaking about sustainability and diversity on stage.&lt;/p&gt;
+&lt;p&gt;All in all I can say that I had a fun time and am excited on where Nutanix continues their journey. While I still believe, that Nutanix have to adopt in the future to keep up with its competitors, I think there on a right track moving forward, especially with the support of the community to get feedback and allowing them to support the future of the software stack.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c.jpeg&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c_hu555179cb1b04e5acac67814d431caa89_168731_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c_hu555179cb1b04e5acac67814d431caa89_168731_1024x0_resize_q75_box.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A picture with the best team I had the chance to work with at Nutanix! Missing on the pic: Bas Raayman&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Conclusion
+&lt;/h2&gt;&lt;p&gt;I want to conclude this blog with a thank you to my friends and team mates Carmen, Dinah, Chris and Bas. Without them it would have never been possible to make this event for our vExperts possible. In addition, I want to say a HUGE THANK YOU, to the community for being open minded, honest (as always), and eagerness to learn more! See you maybe next year?!&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>VMware EUC becomes Omnissa</title>
-        <link>https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/</link>
+        <link>http://localhost:1313/p/vmware-euc-becomes-omnissa/</link>
         <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/title.png" alt="Featured image of post VMware EUC becomes Omnissa" /&gt;&lt;p&gt;Yesterday was an exciting day for the EUC world!&lt;/p&gt;
+        <guid>http://localhost:1313/p/vmware-euc-becomes-omnissa/</guid>
+        <description>&lt;img src="http://localhost:1313/p/vmware-euc-becomes-omnissa/title.png" alt="Featured image of post VMware EUC becomes Omnissa" /&gt;&lt;p&gt;Yesterday was an exciting day for the EUC world!&lt;/p&gt;
 &lt;p&gt;The transformation from VMware EUC to Omnissa has begun and the website appeared for the first time using the URL: &lt;a class=&#34;link&#34; href=&#34;https://omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://omnissa.com&lt;/a&gt;. Today I want to cover some demanding questions that I heard from the community and partners in the last days and weeks!&lt;/p&gt;
 &lt;p&gt;But what is Omnissa exactly? Omnissa represents the progression from the established business unit, VMware End-User Computing. This transformative shift is geared towards deepening our comprehension of user requirements and furnishing tools that empower productive work within a fluid digital landscape.&lt;/p&gt;
@@ -44,11 +125,11 @@ Hereafter you can find some valuable resources that have been replaced with the 
         </item>
         <item>
         <title>Mastering Azure VMware Solution - Stretched clusters explained</title>
-        <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/</link>
+        <link>http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/</link>
         <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/title.png" alt="Featured image of post Mastering Azure VMware Solution - Stretched clusters explained" /&gt;&lt;p&gt;Welcome back to my article series on Azure VMware Solution!
+        <guid>http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/title.png" alt="Featured image of post Mastering Azure VMware Solution - Stretched clusters explained" /&gt;&lt;p&gt;Welcome back to my article series on Azure VMware Solution!
 As we covered the general architectural components last time, we want to take a special round around a feature that comes especially handy when you must ensure the high reliability and availability of the AVS infrastructure. Recently I was delving deeper into Azure VMware Solutions Stretched Clusters and want to give you more information and what it is, and what needs to be considered in this blog!&lt;/p&gt;
 &lt;h2 id=&#34;azure-availability-overview&#34;&gt;
     &lt;a href=&#34;#azure-availability-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -65,10 +146,10 @@ As we covered the general architectural components last time, we want to take a 
 &lt;h2 id=&#34;how-does-avs-stretched-clusters-work&#34;&gt;
     &lt;a href=&#34;#how-does-avs-stretched-clusters-work&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     How does AVS Stretched Clusters work?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/image.png&#34;
 	width=&#34;1684&#34;
 	height=&#34;779&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/image_hu9a6f3a376bf22826c0e7a5933acddf06_139253_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Source: https://learn.microsoft.com/en-us/azure/azure-vmware/architecture-stretched-clusters&#34;
@@ -128,21 +209,21 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Mastering Azure VMware Solution - The architecture</title>
-        <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/</link>
+        <link>http://localhost:1313/p/mastering-azure-vmware-solution-the-architecture/</link>
         <pubDate>Wed, 24 Apr 2024 11:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/title.png" alt="Featured image of post Mastering Azure VMware Solution - The architecture" /&gt;&lt;p&gt;Welcome to part 2 of the Mastering Azure VMware Solution series!&lt;/p&gt;
+        <guid>http://localhost:1313/p/mastering-azure-vmware-solution-the-architecture/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-azure-vmware-solution-the-architecture/title.png" alt="Featured image of post Mastering Azure VMware Solution - The architecture" /&gt;&lt;p&gt;Welcome to part 2 of the Mastering Azure VMware Solution series!&lt;/p&gt;
 &lt;p&gt;In this part we will have a look at the design of Azure VMware Solution and the general architecture of components deployed in Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;Disclaimer: In this article I&amp;rsquo;m mentioning and refering to a lot of valuable resources from the Cloud Adoption Framework of Microsoft. Microsoft&amp;rsquo;s Cloud Adoption Framework is a collection of best practices, guidance, and tools designed to help organizations adopt cloud services with confidence and efficiency. It provides a structured approach to cloud adoption, addressing key areas such as strategy, readiness, migration, and governance.&lt;/p&gt;
 &lt;p&gt;I will focus especially on the design pillars that describe the Azure VMware Solution landing zone rather than covering the landing zone for Identity, Networking or other related services that might exist.&lt;/p&gt;
 &lt;h2 id=&#34;architecture-diagram&#34;&gt;
     &lt;a href=&#34;#architecture-diagram&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Architecture diagram
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1.png&#34;
 	width=&#34;1882&#34;
 	height=&#34;1749&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-azure-vmware-solution-the-architecture/avs-architecture-1_hubac5dfb5d30e439dcbed996b139eb9b6_199831_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Source: Patrick Köhler - Azure VMware Solution landing zone diagram&#34;
@@ -346,11 +427,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>How the vExpert program helped me to become a better Cloud architect.</title>
-        <link>https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</link>
+        <link>http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</link>
         <pubDate>Mon, 22 Apr 2024 12:50:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.png" alt="Featured image of post How the vExpert program helped me to become a better Cloud architect." /&gt;&lt;p&gt;Hey everybody it&amp;rsquo;s Patrick again from the new blog site (yes I finally made it to GitHub with a static page build with Hugo),&lt;/p&gt;
+        <guid>http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./</guid>
+        <description>&lt;img src="http://localhost:1313/p/how-the-vexpert-program-helped-me-to-become-a-better-cloud-architect./title.png" alt="Featured image of post How the vExpert program helped me to become a better Cloud architect." /&gt;&lt;p&gt;Hey everybody it&amp;rsquo;s Patrick again from the new blog site (yes I finally made it to GitHub with a static page build with Hugo),&lt;/p&gt;
 &lt;p&gt;this time I want to share my story around why I believe the vExpert program has helped me become a better architect.
 As some of you know, I started my IT career already a while back in 2009 where I completed an apprenticeship at IT-Haus (a local German consulting firm and reseller). I started to dig deeper into emerging technologies, got my first steps in vCenter done, learned how cool vMotion is and what it means to host and manage larger IT estates. Moving forward in my career I brought cloud technologies like Microsoft Azure, Amazon Web Services etc. to the mix and I transitioned slightly from the on-premises three tier architecture towards more cloud consultancy.&lt;/p&gt;
 &lt;p&gt;But from who did I learn all these things, and what are my resources? Is something I got asked frequently. And to tell you the trough, besides reading books and searching the internet for the solutions I needed, most of the time I landed on pages from vExperts, MVP&amp;rsquo;s etc. Those guys I considered as my rockstars (and they obviously are) in the industry. The knowledge they shared, the passion for technology combined with the willing to help the community inspired me a lot, which is the reason why I started my first blog page back in 2020 with wvdlogix.net. The blog should help me get into EUC and to share my thoughts around Azure Virtual Desktop, VMware Horizon and later on the combination of both.&lt;/p&gt;
@@ -382,11 +463,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>Mastering Azure VMware Solution - Is it the fastest path to the cloud?</title>
-        <link>https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/</link>
+        <link>http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/</link>
         <pubDate>Mon, 22 Apr 2024 11:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Mastering Azure VMware Solution - Is it the fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
+        <guid>http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/title.png" alt="Featured image of post Mastering Azure VMware Solution - Is it the fastest path to the cloud?" /&gt;&lt;p&gt;Hi everyone it&amp;rsquo;s Patrick again with the first blogpost on my new site!&lt;/p&gt;
 &lt;p&gt;This time I want to share with you my experiences with Azure VMware Solution and if it&amp;rsquo;s really the fastest path to the cloud.
 In this blog series we&amp;rsquo;re discovering the service from a technical perspective and will have a look at competitive products, like Nutanix Cloud Clusters (in short, NC2).&lt;/p&gt;
 &lt;p&gt;After the completion of the aquisition of VMware by Broadcom, many customers, partners and customers are afraid of high license costs and uncertanties when it comes to product development and support in their on-premises environments. While many community folks have written blogs about this fact (some more related to bashing VMware rather than having an objective view on the technology,), this blog series has the intention of&amp;hellip;&lt;/p&gt;
@@ -401,10 +482,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;h2 id=&#34;azure-vmware-solution---technical-overview&#34;&gt;
     &lt;a href=&#34;#azure-vmware-solution---technical-overview&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Azure VMware Solution - Technical Overview
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image.png&#34;
 	width=&#34;895&#34;
 	height=&#34;487&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image_hu0946ba1982f064c712f2b81abfef3d72_232955_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Slide from Patrick Koehler - Datacentre evacuation using AVS - presented at VMUG 2023&#34;
@@ -435,10 +516,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &lt;h2 id=&#34;alternative-nutanix-cloud-clusters-nc2&#34;&gt;
     &lt;a href=&#34;#alternative-nutanix-cloud-clusters-nc2&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Alternative: Nutanix Cloud Clusters (NC2)
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1.png&#34;
 	width=&#34;903&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-1_hu33e4d8c2b6cdd28c9fd968000340cb80_92926_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure&#34;
@@ -451,10 +532,10 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
 &gt;&lt;/p&gt;
 &lt;p&gt;Nutanix launched their Cloud Clusters product (available for Microsoft Azure and AWS) last year to allow customers to benefit from  hybrid functionalities and workload mobility features than VMware, with the exception that the service is not a first party service of Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;With Nutanix cloud clusters on Azure, the deployment will consist of Bare Metal hardware (the same as Azure VMware Solution uses), with the Nutanix software stack consisting of AOS (Storage), AHV (Hypervisor), Flow (Network virtualization), Prism Central (Management GUI) and a bunch of other tehcnologies, which will be deployed Azure natively like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2.png&#34;
 	width=&#34;1250&#34;
 	height=&#34;871&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-azure-vmware-solution-is-it-the-fastest-path-to-the-cloud/image-2_hu23f78a1ab558bc9d0dfba773309d8b4d_143954_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image Source: https://learn.microsoft.com/en-us/azure/baremetal-infrastructure/workloads/nc2-on-azure/media/nc2-on-azure-deployment-architecture.png&#34;
@@ -482,11 +563,11 @@ In this blog series we&amp;rsquo;re discovering the service from a technical per
         </item>
         <item>
         <title>Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup</title>
-        <link>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
+        <link>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</link>
         <pubDate>Thu, 14 Dec 2023 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
+        <guid>http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/title.png" alt="Featured image of post Mastering VMware Horizon Cloud on Azure - Configuring UAG Setup" /&gt;&lt;p&gt;Welcome back to my article series on VMware Horizon Cloud on Microsoft Azure. In the previous articles, we have learned what is needed to prepare the infrastructure to be able to enroll new virtual desktop via the VMware Universal Console. We went through the initial Azure configuration and had a look on how to prepare the certificate for the UAG setup, which we will complete in this tutorial.
 If you missed my previous articles, please find them hereafter:
 In this article, I will walk you through the configuration settings to enroll our first cloud based POD on Microsoft Azure.
 Table of Contents
@@ -494,10 +575,10 @@ Prepare a Service Principal for the VMware Universal Console
 Before we can start to configure the Universal Console and create the core infrastructure, we need to ensure that we equip our account with administrative privileges in a secure way. For that reason we require to have a Service Principal in place that provides the console with the necessary rights in our tenant, while ensuring that no passwords are exchanged in clear text.
 To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&#34;https://portal.azure.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://portal.azure.com&lt;/a&gt; and select Azure Active Directory.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10.png&#34;
 	width=&#34;454&#34;
 	height=&#34;67&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-10_hu5989e7236ac8c27cb8d5fc6d3c74edaf_11971_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -509,10 +590,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In the following window, we need to select App registrations to be able to create our Service Account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9.png&#34;
 	width=&#34;123&#34;
 	height=&#34;214&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-9_hu460ea2b30fea1d5e2178c21c4b1d65f0_14357_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -524,10 +605,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once, we entered the App registrations view, click on “+ New registration” in the top center of the screen.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8.png&#34;
 	width=&#34;454&#34;
 	height=&#34;121&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-8_hue2d89010c11a5859a71d01d686a3ac97_29245_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -542,10 +623,10 @@ To do so, please login to the Azure portal via &lt;a class=&#34;link&#34; href=&
 Name: SP-HZNC-AVDLogix
 Redirect URI: Web
 URI: http://localhost:8000&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-7_hua129965d92b1d9e8c8a0d09551321cf3_31072_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -558,10 +639,10 @@ URI: http://localhost:8000&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;Attention! Once the Service Principal has been create make sure to copy the following information and store them in a safe location, as you will need them for later.&lt;/p&gt;
 &lt;p&gt;Copy the application (client) ID and Directory ID (Azure AD tenant ID)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6.png&#34;
 	width=&#34;454&#34;
 	height=&#34;95&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-6_hu1fdc2a68417c8d4466159c75fa6a6f31_17512_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -573,10 +654,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Once you noted down the information, we navigate to “Certificates &amp;amp; secrets” on the left hand side to generate the required secret.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5.png&#34;
 	width=&#34;141&#34;
 	height=&#34;286&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-5_hu83331bc69b9191e9a92e095ae1a95864_17799_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -588,10 +669,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here we need to click on “+ New client secret” and provide a client secret description, which is “Client Secret Horizon” in my case and we set the duration to “24 months“. You can also choose a lower time, before the secret expires, but you have to keep in mind to regenerate the secret and update the Universal Console to not lose access or control over the resources.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4.png&#34;
 	width=&#34;454&#34;
 	height=&#34;243&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-4_huf8ce80f1e352db9f7f98e9bce8e92ca9_34355_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -603,10 +684,10 @@ URI: http://localhost:8000&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Attention! Please make sure to copy the Secret Value once you see it, because it will only appear once like this. In case that you missed to copy it, you need to regenerate the client secret.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3.png&#34;
 	width=&#34;454&#34;
 	height=&#34;52&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-3_hu5ea7cc166cdf43feeddd45d9ee14163f_8174_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -621,10 +702,10 @@ URI: http://localhost:8000&lt;/p&gt;
 Now we are nearly finished with our Service Principal creation, but need to equip it with the required permissions in order to perform tasks in our environment. While doing this we have two options. First, we can assign Contributor rights to our new Service Principal on our subscription, which provides quite a lot of permissions, which we might don’t want if we want to follow the principal of least permissions.&lt;/p&gt;
 &lt;p&gt;I recommend creating a custom role, with only the required rights, the Service Principal needs on our subscription. I found an article on the VMware KB, stating the creation of the custom role, which unfortunately doesn’t work for my tenant, for that reason, I’m sharing with you the steps that worked out for me.
 To do so, we switch to the Subscription menu in our Azure tenant, while searching for “Subscriptions” or selecting it from the portal menu.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2.png&#34;
 	width=&#34;454&#34;
 	height=&#34;57&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-2_hu733fa076949b6108c3c7b2a21c5089a9_11821_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -636,10 +717,10 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Now, we switch to the Access control (IAM) menu on the left hand side, clicking on “+ Add” and selecting “Add custom role” as the following step.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1.png&#34;
 	width=&#34;330&#34;
 	height=&#34;181&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image-1_hu78a05e0419498575a723ea15bd40a85d_33341_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -651,10 +732,10 @@ To do so, we switch to the Subscription menu in our Azure tenant, while searchin
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Now we need to provide the name for our custom role, I called mine “CR-AVDLogix-HorizonCloudAzure“. Select “Start from scratch” as the Baseline permission and continue to the “JSON” tab by clicking “Next” two times or by directly clicking on “JSON“&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image.png&#34;
 	width=&#34;342&#34;
 	height=&#34;407&#34;
-	srcset=&#34;https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_480x0_resize_box_3.png 480w, http://localhost:1313/p/mastering-vmware-horizon-cloud-on-azure-configuring-uag-setup/image_hue7a254036670359ae5fe20c5675f3cad_26465_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;

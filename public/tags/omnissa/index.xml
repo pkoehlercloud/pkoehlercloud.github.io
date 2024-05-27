@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Omnissa on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/omnissa/</link>
+        <link>http://localhost:1313/tags/omnissa/</link>
         <description>Recent content in Omnissa on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Tue, 07 May 2024 15:00:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/omnissa/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 May 2024 15:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/omnissa/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VMware EUC becomes Omnissa</title>
-        <link>https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/</link>
+        <link>http://localhost:1313/p/vmware-euc-becomes-omnissa/</link>
         <pubDate>Tue, 07 May 2024 15:00:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/vmware-euc-becomes-omnissa/title.png" alt="Featured image of post VMware EUC becomes Omnissa" /&gt;&lt;p&gt;Yesterday was an exciting day for the EUC world!&lt;/p&gt;
+        <guid>http://localhost:1313/p/vmware-euc-becomes-omnissa/</guid>
+        <description>&lt;img src="http://localhost:1313/p/vmware-euc-becomes-omnissa/title.png" alt="Featured image of post VMware EUC becomes Omnissa" /&gt;&lt;p&gt;Yesterday was an exciting day for the EUC world!&lt;/p&gt;
 &lt;p&gt;The transformation from VMware EUC to Omnissa has begun and the website appeared for the first time using the URL: &lt;a class=&#34;link&#34; href=&#34;https://omnissa.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://omnissa.com&lt;/a&gt;. Today I want to cover some demanding questions that I heard from the community and partners in the last days and weeks!&lt;/p&gt;
 &lt;p&gt;But what is Omnissa exactly? Omnissa represents the progression from the established business unit, VMware End-User Computing. This transformative shift is geared towards deepening our comprehension of user requirements and furnishing tools that empower productive work within a fluid digital landscape.&lt;/p&gt;

@@ -2,18 +2,134 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Windows 10 on Patrick&#39;s Multi-Cloud Blog</title>
-        <link>https://patrick-koehler.com/tags/windows-10/</link>
+        <link>http://localhost:1313/tags/windows-10/</link>
         <description>Recent content in Windows 10 on Patrick&#39;s Multi-Cloud Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 29 Jul 2021 16:56:47 +0600</lastBuildDate><atom:link href="https://patrick-koehler.com/tags/windows-10/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Aug 2023 14:22:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/windows-10/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Microsoft Edge – The complete guide for Azure Virtual Desktop</title>
+        <link>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-azure-virtual-desktop/</link>
+        <pubDate>Tue, 08 Aug 2023 14:22:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/microsoft-edge-the-complete-guide-for-azure-virtual-desktop/</guid>
+        <description>&lt;img src="http://localhost:1313/p/microsoft-edge-the-complete-guide-for-azure-virtual-desktop/title.png" alt="Featured image of post Microsoft Edge – The complete guide for Azure Virtual Desktop" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
+&lt;p&gt;it’s been a while since my last blog post and I think it’s getting time for a very important topic for your end users – BROWSING!&lt;/p&gt;
+&lt;p&gt;Regardless of which browser you’re using, we know that the correct configuration, paired with optimization and security is key to let users work smoothly.&lt;/p&gt;
+&lt;p&gt;But why do we need to optimize the browsing experience?&lt;/p&gt;
+&lt;p&gt;I’m sure you know at least one of the types of users:&lt;/p&gt;
+&lt;p&gt;At least 15 tabs open because closing is too dangerous and pages need to be directly accessible
+From those 15 tabs, 3 are videos where specific playlists are running, even if the Tab itself is muted
+The virtual session starts to slow down over time
+All these mentioned topics depend on the right setup of your Browsing experience.&lt;/p&gt;
+&lt;h2 id=&#34;overview--microsoft-edge--chromium&#34;&gt;
+    &lt;a href=&#34;#overview--microsoft-edge--chromium&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Overview – Microsoft Edge – Chromium
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-azure-virtual-desktop/image.png&#34;
+	width=&#34;2120&#34;
+	height=&#34;1192&#34;
+	srcset=&#34;http://localhost:1313/p/microsoft-edge-the-complete-guide-for-azure-virtual-desktop/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, http://localhost:1313/p/microsoft-edge-the-complete-guide-for-azure-virtual-desktop/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Microsoft released the evolution of its classic Edge browser on 15. January 2020, so about one year ago. Since October 2020, the browser will be installed by default into the operating system by Windows Version 20H2. This version of Microsoft Edge is based on Chromium, an open-source project behind the Google Chrome Browser project.&lt;/p&gt;
+&lt;p&gt;But the Edge Chromium version isn’t just a copy of Google Chrome with a Microsoft branding – furthermore it includes additional functionalities and removes several interfaces to Google directly (which are obviously part of the Chromium project itself).&lt;/p&gt;
+&lt;p&gt;Some of the advantages, why to choose the Edge Chromium Browser are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Own Add-On store Microsoft Edge-Add-Ons (&lt;a class=&#34;link&#34; href=&#34;https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=de&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=de&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Advanced Privacy options, which can be configured using this link (edge://settings/privacy)&lt;/li&gt;
+&lt;li&gt;Progressive Web Apps (literally converting Websites in to small apps which can be added to the Desktop or Startmenu – basically an advanced shortcut)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;edge-stable-version-89-released&#34;&gt;
+    &lt;a href=&#34;#edge-stable-version-89-released&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Edge Stable version 89 released
+&lt;/h2&gt;&lt;p&gt;Microsoft announced on 04.03.2021, that the new stable version 89 of Edge is being released.
+The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;A summary of the key features can be found below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Startup boost functionality – improves app start time from 29% – 41% depending on your hardware resources&lt;/li&gt;
+&lt;li&gt;Sleeping Tabs – Previously, Tabs that were opened in the background, still consumed hardware resources on the system. With resource heavy websites opened (such as video portals), the performance might suffer a lot! This has been tackled by Sleeping Tabs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;impact-on-azure-virtual-desktop&#34;&gt;
+    &lt;a href=&#34;#impact-on-azure-virtual-desktop&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Impact on Azure Virtual Desktop
+&lt;/h2&gt;&lt;p&gt;Especially those two new features, have a major impact on systems with shared hardware resources such as Windows 10 Enterprise Multi-Session. As browsing is an essential part of our work time and several applications transforming from classical Windows Apps to web applications, speed and intelligent resource consumptions are key to operate a virtual desktop environment.&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1--configure-sleeping-tabs&#34;&gt;
+    &lt;a href=&#34;#chapter-1--configure-sleeping-tabs&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 1 – Configure Sleeping Tabs
+&lt;/h2&gt;&lt;p&gt;To enable the sleeping tabs functionality, simply type the following path into the address bar of your Edge Chromium browser:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#edge-sleeping-tabs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You will be presented with the option to enable the setting, by clicking on “Default” on the right side and select “Enabled” from the drop-down list.&lt;/p&gt;
+&lt;p&gt;Afterwards, Microsoft Edge requires you to perform a restart of the browser.&lt;/p&gt;
+&lt;p&gt;Now, back in the browser, you can use the following path in the address bar to adjust your settings:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleeping&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;20tabs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The now visible options allow you to configure, when a tab will be set to “sleep”. By default this value is set to 2 hours of inactivity. I recommend you to change this value to really benefit of resource savings. I made good experiences, which the setting defined to 15 minutes. Simply click on the drop down of the value and select what fits for you the best.&lt;/p&gt;
+&lt;p&gt;If there are pages, you never want to go to sleep, you can select and define them below “add” underneath the point “Never put these sites to sleep”.&lt;/p&gt;
+&lt;p&gt;Type the URL or wildcard and click on add to enable your selection.&lt;/p&gt;
+&lt;p&gt;When does this make sense? Especially, when you’re using CRMs or other database relying applications it might make sense to exclude them to avoid data loss in case that you forgot to return to a specific application.&lt;/p&gt;
+&lt;h3 id=&#34;chapter-1-1-enable-sleeping-tabs-via-group-policy&#34;&gt;
+    &lt;a href=&#34;#chapter-1-1-enable-sleeping-tabs-via-group-policy&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 1-1 Enable Sleeping Tabs via Group Policy
+&lt;/h3&gt;&lt;p&gt;The more company related approach would be to enable Sleeping Tabs via Group Policies.&lt;/p&gt;
+&lt;p&gt;You can find the specific setting to define sleeping tabs here:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Computer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Configuration&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Administrative&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Templates&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Edge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Select Sleeping Tabs settings and set the policy to “Enabled“&lt;/p&gt;
+&lt;h2 id=&#34;chapter-2--how-to-enable-startup-boost&#34;&gt;
+    &lt;a href=&#34;#chapter-2--how-to-enable-startup-boost&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 2 – How to enable startup boost
+&lt;/h2&gt;&lt;p&gt;To give your browser the required boost to startup, you can configure startup boost via the settings of your Edge browser:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SOFTWARE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Policies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Edge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Create a “DWORD” with the name “StartupBoostEnabled” and set it to “1”&lt;/p&gt;
+&lt;h2 id=&#34;chapter-3--conclusion&#34;&gt;
+    &lt;a href=&#34;#chapter-3--conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    Chapter 3 – Conclusion
+&lt;/h2&gt;&lt;p&gt;Microsoft have released a great way in Edge version 89 to optimize the browsing performance and experience in mutli-session environments. I can just highly encourage everyone to enable the above defined settings. I’m looking forward hearing your feedback about it!&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Start VM on Connect for Pooled and Personal Host Pools in WVD</title>
-        <link>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
+        <link>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</link>
         <pubDate>Thu, 29 Jul 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
+        <guid>http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/</guid>
+        <description>&lt;img src="http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/title.png" alt="Featured image of post Start VM on Connect for Pooled and Personal Host Pools in WVD" /&gt;&lt;p&gt;This announcement of Eva Seydl, Program Manager at Microsoft, made my week! Start VM on Connect, a feature well known to most of the WVD rockstars as a solution to start virtual machines in Personal Host Pool scenarios is now also available for Pooled Host Pools.&lt;/p&gt;
 &lt;p&gt;In this blog you will learn, how to configure Start VM on Connect for Pooled Host Pools, Personal Host Pools and how to shut down VMs, when the users are logging off.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;
     &lt;a href=&#34;#prerequisites&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -327,10 +443,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Using the WVDLogix Autoscale Tool to scale down machines&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To shut down the VMs based on a time based metric, we need to create an Automation Account in our subscription.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image.png&#34;
 	width=&#34;682&#34;
 	height=&#34;342&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image_hu053f6ecd58df2510c95ac837fcb6de50_88227_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -342,10 +458,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;On the next page, we´ll give our Automation Account a name, select the subscription, the RG we´ve created, and the operating location, which is West Europe in my case. You also have the possibility to create a RunAs Account, which is not needed for the solution, which we´re going to provision right afterwards. Hit “Create” once you´re finished.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1.png&#34;
 	width=&#34;371&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-1_hu9ec759cac849b289ce22d31f9c047f14_258271_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -357,10 +473,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After a few seconds, our storage account is ready to be used and we can go to the resource, which presents us the basic overview of an Automation account.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;823&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-2_hu2fb28a82cb71bb555a297d41dda1e6f2_466115_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -372,10 +488,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In here, we need to scroll down on the left hend side until we reach “Start/Stop VM”, which is the solution we want to install.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3.png&#34;
 	width=&#34;832&#34;
 	height=&#34;705&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-3_hud409c485d1e58c445ea7536ec39e4073_250570_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -387,10 +503,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;It´s obvious that we´re going to click on “Create”, but I´m very excited to see, what you´re saying about what this solution delivers additionally, when correctly configured. For now we click “Create” again to provision the solution.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4.png&#34;
 	width=&#34;823&#34;
 	height=&#34;317&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-4_hud5c1f4708f7a58db907aa91021ab34f9_105114_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -407,10 +523,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 &lt;li&gt;Azure Automation Account (which has been created previously)&lt;/li&gt;
 &lt;li&gt;Parameters&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5.png&#34;
 	width=&#34;787&#34;
 	height=&#34;704&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-5_hu8172b88afe41ccb92eb176903ffdcd0b_154315_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -422,10 +538,10 @@ The iOS client is currently NOT supported! Updates can happen at any time to cha
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After you´ve created the Log Analytics Workspace and select the Automation Account created by us earlier, we leave the parameters empty for the moment. To not hide the possibilities from you, here is the screenshot of the initial configuration, to be defined from over here already.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6.png&#34;
 	width=&#34;773&#34;
 	height=&#34;733&#34;
-	srcset=&#34;https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_480x0_resize_box_3.png 480w, http://localhost:1313/p/start-vm-on-connect-for-pooled-and-personal-host-pools-in-wvd/image-6_hu1cd23b2dfdb2e5df852f9c186dfa1331_197962_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -446,11 +562,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>How to reset the Remote Desktop Client on Windows 10 &amp; 11</title>
-        <link>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
+        <link>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</link>
         <pubDate>Mon, 14 Jun 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
+        <guid>http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/</guid>
+        <description>&lt;img src="http://localhost:1313/p/how-to-reset-the-remote-desktop-client-on-windows-10-11/title.png" alt="Featured image of post How to reset the Remote Desktop Client on Windows 10 &amp; 11" /&gt;&lt;p&gt;Welcome to this very quick blog post about a topic that you may have experienced while enabling customers to use Azure Virtual Desktop. You installed the latest version on a computer and everything works fine, until the Remote Desktop app starts to crash frequently, or connections aren’t possible anymore. In some rare cases, you can’t even click anywhere.&lt;/p&gt;
 &lt;p&gt;For that reason, you can reset the Remote Desktop Client on Windows easily via PowerShell.&lt;/p&gt;
 &lt;p&gt;The feature is available from version 1.2.790, which has been released already in 2020.&lt;/p&gt;
 &lt;p&gt;Just run this small line of code and you’ll be fine again:&lt;/p&gt;
@@ -471,11 +587,11 @@ Patrick&lt;/p&gt;
         </item>
         <item>
         <title>What you have to know about the WVD Required URL check tool</title>
-        <link>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
+        <link>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</link>
         <pubDate>Tue, 20 Apr 2021 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/</guid>
+        <description>&lt;img src="http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/title.png" alt="Featured image of post What you have to know about the WVD Required URL check tool" /&gt;&lt;p&gt;On 16.04.2021 Tom Hickling (&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/@tomhickling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://twitter.com/@tomhickling&lt;/a&gt;) announced via LinkedIn, that Microsoft released a tool to validate that Session Hosts can reach the required services to ensure full connectivity to the WVD services.&lt;/p&gt;
 &lt;p&gt;The tool is built to present you the URLs which are accessible or not, if that’s the case. However there are a few things you need to keep in mind, before running the tool.&lt;/p&gt;
 &lt;p&gt;In this blog, I will tell you what you must know about the URLs and ports to be opened for WVD, as well as what the required URL check tool can do for not and what it can’t do!&lt;/p&gt;
@@ -483,10 +599,10 @@ Patrick&lt;/p&gt;
     &lt;a href=&#34;#which-urls-and-ports-are-required-for-a-session-host-to-connect-to-the-wvd-backplane&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Which URLs and ports are required for a Session Host to connect to the WVD backplane?
 &lt;/h2&gt;&lt;p&gt;Let’s start with the first question on which URLs and ports you need to open to let your Session Hosts access the WVD backplane. You will see a few URLs with an asterisk (*), or a wildcard in front of the URL, you have to know that the WVD required URL check tool is NOT able to resolve or check against those, so you have to ensure proper connectivity.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image.png&#34;
 	width=&#34;846&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image_hu1c892ca0e5535204f2c472a240144391_93805_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -500,10 +616,10 @@ Patrick&lt;/p&gt;
 &lt;h2 id=&#34;is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34;&gt;
     &lt;a href=&#34;#is-there-an-easier-way-to-enable-the-required-ports-if-im-using-azure-firewall&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Is there an easier way to enable the required ports if I’m using Azure Firewall?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1.png&#34;
 	width=&#34;2700&#34;
 	height=&#34;1393&#34;
-	srcset=&#34;https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_480x0_resize_box_3.png 480w, http://localhost:1313/p/what-you-have-to-know-about-the-wvd-required-url-check-tool/image-1_hu86dfc430d4e7e505b1ffb978c4dea9ff_928583_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -557,128 +673,12 @@ Patrick&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Microsoft Edge – The complete guide for AVD</title>
-        <link>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</link>
-        <pubDate>Mon, 08 Mar 2021 16:56:47 +0600</pubDate>
-        
-        <guid>https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/title.png" alt="Featured image of post Microsoft Edge – The complete guide for AVD" /&gt;&lt;p&gt;Hi everyone,&lt;/p&gt;
-&lt;p&gt;it’s been a while since my last blog post and I think it’s getting time for a very important topic for your end users – BROWSING!&lt;/p&gt;
-&lt;p&gt;Regardless of which browser you’re using, we know that the correct configuration, paired with optimization and security is key to let users work smoothly.&lt;/p&gt;
-&lt;p&gt;But why do we need to optimize the browsing experience?&lt;/p&gt;
-&lt;p&gt;I’m sure you know at least one of the types of users:&lt;/p&gt;
-&lt;p&gt;At least 15 tabs open because closing is too dangerous and pages need to be directly accessible
-From those 15 tabs, 3 are videos where specific playlists are running, even if the Tab itself is muted
-The virtual session starts to slow down over time
-All these mentioned topics depend on the right setup of your Browsing experience.&lt;/p&gt;
-&lt;h2 id=&#34;overview--microsoft-edge--chromium&#34;&gt;
-    &lt;a href=&#34;#overview--microsoft-edge--chromium&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Overview – Microsoft Edge – Chromium
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image.png&#34;
-	width=&#34;2120&#34;
-	height=&#34;1192&#34;
-	srcset=&#34;https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/microsoft-edge-the-complete-guide-for-avd/image_hu69d84530e8d0eb30bd6057ead6532d73_1890026_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;alt text&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;177&#34;
-		data-flex-basis=&#34;426px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;Microsoft released the evolution of its classic Edge browser on 15. January 2020, so about one year ago. Since October 2020, the browser will be installed by default into the operating system by Windows Version 20H2. This version of Microsoft Edge is based on Chromium, an open-source project behind the Google Chrome Browser project.&lt;/p&gt;
-&lt;p&gt;But the Edge Chromium version isn’t just a copy of Google Chrome with a Microsoft branding – furthermore it includes additional functionalities and removes several interfaces to Google directly (which are obviously part of the Chromium project itself).&lt;/p&gt;
-&lt;p&gt;Some of the advantages, why to choose the Edge Chromium Browser are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Own Add-On store Microsoft Edge-Add-Ons (&lt;a class=&#34;link&#34; href=&#34;https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=de&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=de&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Advanced Privacy options, which can be configured using this link (edge://settings/privacy)&lt;/li&gt;
-&lt;li&gt;Progressive Web Apps (literally converting Websites in to small apps which can be added to the Desktop or Startmenu – basically an advanced shortcut)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;edge-stable-version-89-released&#34;&gt;
-    &lt;a href=&#34;#edge-stable-version-89-released&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Edge Stable version 89 released
-&lt;/h2&gt;&lt;p&gt;Microsoft announced on 04.03.2021, that the new stable version 89 of Edge is being released.
-The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://blogs.windows.com/msedgedev/2021/03/04/edge-89-performance/&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;A summary of the key features can be found below:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Startup boost functionality – improves app start time from 29% – 41% depending on your hardware resources&lt;/li&gt;
-&lt;li&gt;Sleeping Tabs – Previously, Tabs that were opened in the background, still consumed hardware resources on the system. With resource heavy websites opened (such as video portals), the performance might suffer a lot! This has been tackled by Sleeping Tabs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;impact-on-azure-virtual-desktop&#34;&gt;
-    &lt;a href=&#34;#impact-on-azure-virtual-desktop&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Impact on Azure Virtual Desktop
-&lt;/h2&gt;&lt;p&gt;Especially those two new features, have a major impact on systems with shared hardware resources such as Windows 10 Enterprise Multi-Session. As browsing is an essential part of our work time and several applications transforming from classical Windows Apps to web applications, speed and intelligent resource consumptions are key to operate a virtual desktop environment.&lt;/p&gt;
-&lt;h2 id=&#34;chapter-1--configure-sleeping-tabs&#34;&gt;
-    &lt;a href=&#34;#chapter-1--configure-sleeping-tabs&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Chapter 1 – Configure Sleeping Tabs
-&lt;/h2&gt;&lt;p&gt;To enable the sleeping tabs functionality, simply type the following path into the address bar of your Edge Chromium browser:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#edge-sleeping-tabs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;You will be presented with the option to enable the setting, by clicking on “Default” on the right side and select “Enabled” from the drop-down list.&lt;/p&gt;
-&lt;p&gt;Afterwards, Microsoft Edge requires you to perform a restart of the browser.&lt;/p&gt;
-&lt;p&gt;Now, back in the browser, you can use the following path in the address bar to adjust your settings:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleeping&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;20tabs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;The now visible options allow you to configure, when a tab will be set to “sleep”. By default this value is set to 2 hours of inactivity. I recommend you to change this value to really benefit of resource savings. I made good experiences, which the setting defined to 15 minutes. Simply click on the drop down of the value and select what fits for you the best.&lt;/p&gt;
-&lt;p&gt;If there are pages, you never want to go to sleep, you can select and define them below “add” underneath the point “Never put these sites to sleep”.&lt;/p&gt;
-&lt;p&gt;Type the URL or wildcard and click on add to enable your selection.&lt;/p&gt;
-&lt;p&gt;When does this make sense? Especially, when you’re using CRMs or other database relying applications it might make sense to exclude them to avoid data loss in case that you forgot to return to a specific application.&lt;/p&gt;
-&lt;h3 id=&#34;chapter-1-1-enable-sleeping-tabs-via-group-policy&#34;&gt;
-    &lt;a href=&#34;#chapter-1-1-enable-sleeping-tabs-via-group-policy&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Chapter 1-1 Enable Sleeping Tabs via Group Policy
-&lt;/h3&gt;&lt;p&gt;The more company related approach would be to enable Sleeping Tabs via Group Policies.&lt;/p&gt;
-&lt;p&gt;You can find the specific setting to define sleeping tabs here:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Computer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Configuration&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Administrative&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Templates&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Edge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Select Sleeping Tabs settings and set the policy to “Enabled“&lt;/p&gt;
-&lt;h2 id=&#34;chapter-2--how-to-enable-startup-boost&#34;&gt;
-    &lt;a href=&#34;#chapter-2--how-to-enable-startup-boost&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Chapter 2 – How to enable startup boost
-&lt;/h2&gt;&lt;p&gt;To give your browser the required boost to startup, you can configure startup boost via the settings of your Edge browser:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SOFTWARE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Policies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Microsoft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Edge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Create a “DWORD” with the name “StartupBoostEnabled” and set it to “1”&lt;/p&gt;
-&lt;h2 id=&#34;chapter-3--conclusion&#34;&gt;
-    &lt;a href=&#34;#chapter-3--conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Chapter 3 – Conclusion
-&lt;/h2&gt;&lt;p&gt;Microsoft have released a great way in Edge version 89 to optimize the browsing performance and experience in mutli-session environments. I can just highly encourage everyone to enable the above defined settings. I’m looking forward hearing your feedback about it!&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>Container up your applications: fast, secure &amp; efficient with MSIX App Attach</title>
-        <link>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
+        <link>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</link>
         <pubDate>Fri, 11 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+        <guid>http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/</guid>
+        <description>&lt;img src="http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/title.png" alt="Featured image of post Container up your applications: fast, secure &amp; efficient with MSIX App Attach" /&gt;&lt;iframe width=&#34;650&#34; height=&#34;500&#34; src=&#34;https://www.youtube.com/embed/4rPEWSHnDIM?si=n3qf2DWP6pP4xLgl&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;First of all a very huge thanks to Christiaan Brinkhoff and Dean Cefola for having me at this awesome event, happened today, the 11.12.2020 in an XXL format! Microsoft Meets Community: Windows Virtual Desktop.&lt;/p&gt;
 &lt;p&gt;It was an absolute honour to speak for 2000 registered users from the community!&lt;/p&gt;
 &lt;h2 id=&#34;chapter-1--what-is-msix--app-attach&#34;&gt;
@@ -690,10 +690,10 @@ The official link can be found here: (&lt;a class=&#34;link&#34; href=&#34;https
     &lt;a href=&#34;#chapter-11--how-is-a-msix-package-built&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 1.1 – How is a MSIX package built?
 &lt;/h3&gt;&lt;p&gt;A MSIX package consists usually of the following set of files:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image.png&#34;
 	width=&#34;290&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image_hu984b8fddc8fa23bc60a1831b5d000a1b_40298_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -709,10 +709,10 @@ These are the files that represents the application/s itself and the dependencie
 &lt;p&gt;&lt;b&gt; AppManifest: &lt;/b&gt;
 The App Manifest is an XML based document that contains information an OS needs for the deployment, display and update of an MSIX application. This info includes usually identity, package dependency information, required capabilities, visual elements of extensibility points.&lt;/p&gt;
 &lt;p&gt;The following example represents a screenshot from an opened AppManifest.xml:
-&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-1_hu35d07846bd3fe31bf2cf719ebd8ab9eb_206238_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -731,10 +731,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h2 id=&#34;chapter-2--msix-app-attach&#34;&gt;
     &lt;a href=&#34;#chapter-2--msix-app-attach&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2 – MSIX App Attach
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2.png&#34;
 	width=&#34;347&#34;
 	height=&#34;504&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-2_hubf09f8d1f309cdfde2f5229764511298_23633_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -762,10 +762,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-211--expand&#34;&gt;
     &lt;a href=&#34;#chapter-211--expand&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.1 – Expand
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-3_huaf73683df0515d5fa7df035392c8f318_31783_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -781,10 +781,10 @@ To deploy and run apps, they need to be signed first. This can be through a CA (
 &lt;h4 id=&#34;chapter-212--stage&#34;&gt;
     &lt;a href=&#34;#chapter-212--stage&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
     Chapter 2.1.2 – Stage
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4.png&#34;
 	width=&#34;739&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, https://patrick-koehler.com/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_480x0_resize_box_3.png 480w, http://localhost:1313/p/container-up-your-applications-fast-secure-efficient-with-msix-app-attach/image-4_hud9addac52ea2e91a203e22bcc755da5f_21900_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;alt text&#34;
@@ -1277,11 +1277,11 @@ The schema above represents the signing process of an MSIX package. As you have 
         </item>
         <item>
         <title>FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation</title>
-        <link>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
+        <link>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</link>
         <pubDate>Tue, 08 Dec 2020 16:56:47 +0600</pubDate>
         
-        <guid>https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
-        <description>&lt;img src="https://patrick-koehler.com/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
+        <guid>http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/</guid>
+        <description>&lt;img src="http://localhost:1313/p/fslogix-and-microsoft-365-apps-for-enterprise-activation-issue-remediation/title.png" alt="Featured image of post FSLogix and Microsoft 365 Apps for Enterprise Activation issue remediation" /&gt;&lt;p&gt;Last week I faced an issue at the client site while getting a Microsoft 365 Apps for Enterprise Activation notification after the user login.&lt;/p&gt;
 &lt;p&gt;In the menu bar in the center top we can see Word [Non-Commercial Use] [Unlicensed Product]&lt;/p&gt;
 &lt;p&gt;Office has worked for the last couple of months perfectly on WVD, so I had to investigate the issue and obviously, the first thing I’ve tried, is to Sign in again to see the application behavior. Finally, the screen was flickering a few times, but the error message persists and Office was simply unusable for all users on the system.&lt;/p&gt;
 &lt;p&gt;So first of all I started to analyze the base parameters like:&lt;/p&gt;
