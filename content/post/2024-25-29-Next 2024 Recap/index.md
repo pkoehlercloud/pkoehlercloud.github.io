@@ -18,7 +18,7 @@ Last week I got the chance to attend Nutanix .Next 2024, the annual Nutanix conf
 
 ![Me, wrapping up three days full of learning, exchange and fantastic collaboration.](image.png)
 
-## The community iniative
+## The community initiative
 
 But I was there for a special reason, because me and the team built a unique community initiative for current VMware vExperts to get to know Nutanix and their software stack, while learning from the best minds in the company and having the chance to meet the CTO and the engineering team, which was a huge success. 
 

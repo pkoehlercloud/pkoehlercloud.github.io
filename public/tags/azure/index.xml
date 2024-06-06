@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Thu, 02 May 2024 19:23:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 31 May 2024 11:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mastering Azure VMware Solution - Licensing portability for VCF on AVS</title>
+        <link>http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/</link>
+        <pubDate>Fri, 31 May 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/</guid>
+        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post Mastering Azure VMware Solution - Licensing portability for VCF on AVS" /&gt;&lt;p&gt;After the recent news around VMC on AWS and that AWS is no longer allowed to resell VMware licenses directly, a lot of customers and community folks were expecting actions to be taken for the other hyperscaler solutions. Yesterday, Microsoft announced that they have worked together with Broadcom to allow customers to take their existing / already purchased VMware Cloud Foundation (VCF) licenses and use them in the Azure Cloud with the AVS offering.&lt;/p&gt;
+&lt;p&gt;This will give customers now two possibilities on how to consume the service:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Purchase AVS through the Azure marketplace (we will cover this in the next blog post).&lt;/li&gt;
+&lt;li&gt;Purchase VCF through Broadcom or a reseller and use these licenses in Azure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/videoplayer/embed/RW1gjSB&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.microsoft.com/en-us/videoplayer/embed/RW1gjSB&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Mastering Azure VMware Solution - Stretched clusters explained</title>
         <link>http://localhost:1313/p/mastering-azure-vmware-solution-stretched-clusters-explained/</link>
         <pubDate>Thu, 02 May 2024 19:23:47 +0600</pubDate>

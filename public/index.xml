@@ -7,14 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 27 May 2024 08:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 31 May 2024 11:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mastering Azure VMware Solution - Licensing portability for VCF on AVS</title>
+        <link>http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/</link>
+        <pubDate>Fri, 31 May 2024 11:00:47 +0600</pubDate>
+        
+        <guid>http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/title.png" alt="Featured image of post Mastering Azure VMware Solution - Licensing portability for VCF on AVS" /&gt;&lt;p&gt;After the recent news around VMC on AWS and that AWS is no longer allowed to resell VMware licenses directly, a lot of customers and community folks were expecting actions to be taken for the other hyperscaler solutions. Yesterday, Microsoft announced that they have worked together with Broadcom to allow customers to take their existing / already purchased VMware Cloud Foundation (VCF) licenses and use them in the Azure Cloud with the AVS offering.&lt;/p&gt;
+&lt;p&gt;Microsoft is handling the licensing for AVS customers since 2019 and with the new capability, that enables customrs to consume already purchased licenses for VCF to consume the AVS service by only paying for the actual hardware costs. The remaining way of purchasing the licenses through a partner or through the marketplace directly will still remain.&lt;/p&gt;
+&lt;p&gt;This will give customers now two possibilities on how to consume the service:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Purchase AVS through the Azure marketplace (we will cover this in the next blog post).&lt;/li&gt;
+&lt;li&gt;Purchase VCF through Broadcom or a reseller and use these licenses in Azure and back on-premises if needed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following video explains the advantages of AVS:&lt;/p&gt;
+&lt;iframe src=&#34;https://www.microsoft.com/en-us/videoplayer/embed/RW1gjSB&#34; 
+            width=&#34;640&#34; 
+            height=&#34;360&#34; 
+            frameborder=&#34;0&#34; 
+            allowfullscreen&gt;
+    &lt;/iframe&gt;</description>
+        </item>
+        <item>
         <title>.Next 2024 impressions and recap</title>
         <link>http://localhost:1313/p/.next-2024-impressions-and-recap/</link>
         <pubDate>Mon, 27 May 2024 08:00:47 +0600</pubDate>
         
         <guid>http://localhost:1313/p/.next-2024-impressions-and-recap/</guid>
-        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post .Next 2024 impressions and recap" /&gt;&lt;p&gt;&lt;path class=&#34;cls-2-logo&#34; d=&#34;m187.34,166.85c0-27.35-14.66-48.98-40.84-48.98-8,0-20.91.39-29.95,12.05v-10.42h-27.42v81.71c3.8-3.83,8.82-5.75,13.84-5.71,4.61.03,9.21,1.71,12.87,5.05l.72.66v-31.42c1.22-11.94,8-24.49,23.31-24.49,11.25,0,20.06,9.74,20.06,22.17l.06,57.82h27.42l-.06-58.43Z&#34;&gt;&lt;/path&gt;&lt;/p&gt;
-&lt;p&gt;Last week I got the chance to attend Nutanix .Next 2024, the annual Nutanix conference that took place in beautiful Barcelona, Spain last week. This was very special for me, not only because it was my very first time in Barcelona, but also because it&amp;rsquo;s a rare occasion for Nutanix employees in Professional Services to attend a conference.&lt;/p&gt;
+        <description>&lt;img src="http://localhost:1313/p/.next-2024-impressions-and-recap/title.png" alt="Featured image of post .Next 2024 impressions and recap" /&gt;&lt;p&gt;Last week I got the chance to attend Nutanix .Next 2024, the annual Nutanix conference that took place in beautiful Barcelona, Spain last week. This was very special for me, not only because it was my very first time in Barcelona, but also because it&amp;rsquo;s a rare occasion for Nutanix employees in Professional Services to attend a conference.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/image.png&#34;
 	width=&#34;4032&#34;
 	height=&#34;3024&#34;
@@ -29,10 +49,10 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;the-community-iniative&#34;&gt;
-    &lt;a href=&#34;#the-community-iniative&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    The community iniative
-&lt;/h2&gt;&lt;p&gt;But I was there for a special reason, because me and the team around me built a unique community initiative for current VMware vExperts to get to know Nutanix and their software stack, while learning from the best minds in the company and having the chance to meet the CTO and the engineering team, which was a huge success.&lt;/p&gt;
+&lt;h2 id=&#34;the-community-initiative&#34;&gt;
+    &lt;a href=&#34;#the-community-initiative&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
+    The community initiative
+&lt;/h2&gt;&lt;p&gt;But I was there for a special reason, because me and the team built a unique community initiative for current VMware vExperts to get to know Nutanix and their software stack, while learning from the best minds in the company and having the chance to meet the CTO and the engineering team, which was a huge success.&lt;/p&gt;
 &lt;p&gt;In addition to the community building, I met a lot of industry experts and friends, which I haven&amp;rsquo;t seen in a while and this was one of the primary take aways that proof how strong our community really is!&lt;/p&gt;
 &lt;h2 id=&#34;personal-highlights-and-reflection&#34;&gt;
     &lt;a href=&#34;#personal-highlights-and-reflection&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
@@ -67,7 +87,7 @@
 	
 &gt;
 Another highlight of mine was seeing Sebastian Vettel, 4x Formula 1 champion speaking about sustainability and diversity on stage.&lt;/p&gt;
-&lt;p&gt;All in all I can say that I had a fun time and am excited on where Nutanix continues their journey. While I still believe, that Nutanix have to adopt in the future to keep up with its competitors, I think there on a right track moving forward, especially with the support of the community to get feedback and allowing them to support the future of the software stack.&lt;/p&gt;
+&lt;p&gt;All in all I can say that I had a fun time and am excited on where Nutanix continues their journey. Personally, I&amp;rsquo;m also looking forward where the vExpert initiative leads to and how Nutanix is going to expand the program with even more valuable feedback opportunities for the Technologists of our industry.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c.jpeg&#34;
 	width=&#34;1024&#34;
 	height=&#34;768&#34;

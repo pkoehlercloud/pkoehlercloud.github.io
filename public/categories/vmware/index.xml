@@ -7,85 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Patrick Köhler</copyright>
-        <lastBuildDate>Mon, 27 May 2024 08:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>.Next 2024 impressions and recap</title>
-        <link>http://localhost:1313/p/.next-2024-impressions-and-recap/</link>
-        <pubDate>Mon, 27 May 2024 08:00:47 +0600</pubDate>
+        <lastBuildDate>Fri, 31 May 2024 11:00:47 +0600</lastBuildDate><atom:link href="http://localhost:1313/categories/vmware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mastering Azure VMware Solution - Licensing portability for VCF on AVS</title>
+        <link>http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/</link>
+        <pubDate>Fri, 31 May 2024 11:00:47 +0600</pubDate>
         
-        <guid>http://localhost:1313/p/.next-2024-impressions-and-recap/</guid>
-        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post .Next 2024 impressions and recap" /&gt;&lt;p&gt;&lt;path class=&#34;cls-2-logo&#34; d=&#34;m187.34,166.85c0-27.35-14.66-48.98-40.84-48.98-8,0-20.91.39-29.95,12.05v-10.42h-27.42v81.71c3.8-3.83,8.82-5.75,13.84-5.71,4.61.03,9.21,1.71,12.87,5.05l.72.66v-31.42c1.22-11.94,8-24.49,23.31-24.49,11.25,0,20.06,9.74,20.06,22.17l.06,57.82h27.42l-.06-58.43Z&#34;&gt;&lt;/path&gt;&lt;/p&gt;
-&lt;p&gt;Last week I got the chance to attend Nutanix .Next 2024, the annual Nutanix conference that took place in beautiful Barcelona, Spain last week. This was very special for me, not only because it was my very first time in Barcelona, but also because it&amp;rsquo;s a rare occasion for Nutanix employees in Professional Services to attend a conference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/image.png&#34;
-	width=&#34;4032&#34;
-	height=&#34;3024&#34;
-	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/image_hubd6f302f388a0ba78c2f30a33bb2d5be_1982774_480x0_resize_box_3.png 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/image_hubd6f302f388a0ba78c2f30a33bb2d5be_1982774_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Me, wrapping up three days full of learning, exchange and fantastic collaboration.&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;the-community-iniative&#34;&gt;
-    &lt;a href=&#34;#the-community-iniative&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    The community iniative
-&lt;/h2&gt;&lt;p&gt;But I was there for a special reason, because me and the team around me built a unique community initiative for current VMware vExperts to get to know Nutanix and their software stack, while learning from the best minds in the company and having the chance to meet the CTO and the engineering team, which was a huge success.&lt;/p&gt;
-&lt;p&gt;In addition to the community building, I met a lot of industry experts and friends, which I haven&amp;rsquo;t seen in a while and this was one of the primary take aways that proof how strong our community really is!&lt;/p&gt;
-&lt;h2 id=&#34;personal-highlights-and-reflection&#34;&gt;
-    &lt;a href=&#34;#personal-highlights-and-reflection&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Personal highlights and reflection
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/EA1BC03A-8A8C-4F84-B293-BA32B2ED4EDC_1_105_c.jpeg&#34;
-	width=&#34;1024&#34;
-	height=&#34;768&#34;
-	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/EA1BC03A-8A8C-4F84-B293-BA32B2ED4EDC_1_105_c_hudcf357a964fda4dedf15511b52b63efd_246129_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/EA1BC03A-8A8C-4F84-B293-BA32B2ED4EDC_1_105_c_hudcf357a964fda4dedf15511b52b63efd_246129_1024x0_resize_q75_box.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;alt text&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;
-&lt;br&gt;An absolute highlight was meeting CEO Rajiv Ramaswami. This happened immediately after the Keynote on day 1. Me and my friends saw him, sitting closely to us and we just wanted to take the opportunity to say hallo and thanks for having us sharing our feedback on the technology.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/66475DDF-951D-48A8-808E-7B1C1C980440_1_102_o.jpeg&#34;
-	width=&#34;2048&#34;
-	height=&#34;1536&#34;
-	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/66475DDF-951D-48A8-808E-7B1C1C980440_1_102_o_hu0a0bc679f4bd55b7077c99db22b0c7dc_892178_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/66475DDF-951D-48A8-808E-7B1C1C980440_1_102_o_hu0a0bc679f4bd55b7077c99db22b0c7dc_892178_1024x0_resize_q75_box.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;alt text&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;
-Another highlight of mine was seeing Sebastian Vettel, 4x Formula 1 champion speaking about sustainability and diversity on stage.&lt;/p&gt;
-&lt;p&gt;All in all I can say that I had a fun time and am excited on where Nutanix continues their journey. While I still believe, that Nutanix have to adopt in the future to keep up with its competitors, I think there on a right track moving forward, especially with the support of the community to get feedback and allowing them to support the future of the software stack.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c.jpeg&#34;
-	width=&#34;1024&#34;
-	height=&#34;768&#34;
-	srcset=&#34;http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c_hu555179cb1b04e5acac67814d431caa89_168731_480x0_resize_q75_box.jpeg 480w, http://localhost:1313/p/.next-2024-impressions-and-recap/8DDFDFFC-EBE6-4497-A8A9-D55D9B33EFB1_1_105_c_hu555179cb1b04e5acac67814d431caa89_168731_1024x0_resize_q75_box.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;A picture with the best team I had the chance to work with at Nutanix! Missing on the pic: Bas Raayman&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;
-    &lt;a href=&#34;#conclusion&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;
-    Conclusion
-&lt;/h2&gt;&lt;p&gt;I want to conclude this blog with a thank you to my friends and team mates Carmen, Dinah, Chris and Bas. Without them it would have never been possible to make this event for our vExperts possible. In addition, I want to say a HUGE THANK YOU, to the community for being open minded, honest (as always), and eagerness to learn more! See you maybe next year?!&lt;/p&gt;
+        <guid>http://localhost:1313/p/mastering-azure-vmware-solution-licensing-portability-for-vcf-on-avs/</guid>
+        <description>&lt;img src="http://localhost:1313/title.png" alt="Featured image of post Mastering Azure VMware Solution - Licensing portability for VCF on AVS" /&gt;&lt;p&gt;After the recent news around VMC on AWS and that AWS is no longer allowed to resell VMware licenses directly, a lot of customers and community folks were expecting actions to be taken for the other hyperscaler solutions. Yesterday, Microsoft announced that they have worked together with Broadcom to allow customers to take their existing / already purchased VMware Cloud Foundation (VCF) licenses and use them in the Azure Cloud with the AVS offering.&lt;/p&gt;
+&lt;p&gt;This will give customers now two possibilities on how to consume the service:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Purchase AVS through the Azure marketplace (we will cover this in the next blog post).&lt;/li&gt;
+&lt;li&gt;Purchase VCF through Broadcom or a reseller and use these licenses in Azure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/videoplayer/embed/RW1gjSB&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.microsoft.com/en-us/videoplayer/embed/RW1gjSB&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
